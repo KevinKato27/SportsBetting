@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>OVERLAY — bet research desk</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{
+  --bg:#0d1017; --panel:#141922; --panel-2:#1b212c; --line:#242c39; --line-2:#2f3a4a;
+  --ink:#e8ecf3; --ink-2:#aeb8c7; --muted:#6b7688;
+  --accent:#4c8dff; --accent-2:#2f6fe0; --paper:#c07bff; --paper-2:#9b5be0;
+  --pos:#3fd08b; --neg:#f0655f; --warn:#efb552;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:14px;line-height:1.45;-webkit-text-size-adjust:100%}
+.mono{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
+#root{min-height:100vh}
+.boot{min-height:100vh;display:grid;place-items:center;color:var(--muted)}
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;padding:11px 20px;background:rgba(13,16,23,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;margin-right:6px}
+.brand-mark{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--accent),#7db0ff);box-shadow:0 0 0 1px rgba(255,255,255,.06) inset,0 4px 14px rgba(76,141,255,.35)}
+.brand-name{font-family:'Space Grotesk';font-weight:700;letter-spacing:.16em;font-size:15px}
+.brand-sub{font-size:10px;color:var(--muted);letter-spacing:.04em}
+.tabs{display:flex;gap:2px;flex-wrap:wrap}
+.tab{background:none;border:none;color:var(--ink-2);padding:8px 13px;border-radius:8px;cursor:pointer;font-size:13.5px;font-family:inherit}
+.tab:hover{color:var(--ink);background:var(--panel)}
+.tab.on{color:#fff;background:var(--panel-2);box-shadow:inset 0 -2px 0 var(--accent)}
+.keydot{width:8px;height:8px;border-radius:50%;margin-left:auto}
+.main{max-width:1180px;margin:0 auto;padding:20px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:16px}
+.panel-head{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid var(--line);gap:10px}
+.panel-head h3{margin:0;font-size:13px;font-weight:600}
+.panel-body{padding:16px}
+.hint{font-size:11.5px;color:var(--muted)}
+.grow{flex:1}
+.row-flex{display:flex;align-items:center;gap:10px}
+.badge{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:2px 7px;border:1px solid var(--line-2);border-radius:6px;line-height:1.5;white-space:nowrap}
+.tag-real{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.tag-paper{color:var(--paper);border-color:color-mix(in srgb,var(--paper) 45%,transparent)}
+.btn{font-family:inherit;font-size:13px;font-weight:500;border-radius:9px;padding:8px 15px;border:1px solid var(--line-2);background:var(--panel-2);color:var(--ink);cursor:pointer}
+.btn:hover{background:#232b38}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-2)}
+.btn.paper{background:var(--paper-2);border-color:var(--paper-2);color:#fff}
+.btn.paper:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent}
+.btn.danger{background:transparent;border-color:color-mix(in srgb,var(--neg) 45%,transparent);color:var(--neg)}
+.btn.small{padding:5px 11px;font-size:12px}
+.btn:disabled{opacity:.55;cursor:default}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+.stat-label{font-size:11px;color:var(--muted)}
+.stat-value{font-family:'Space Grotesk';font-weight:600;font-size:23px;margin-top:5px}
+.stat-sub{font-size:11px;color:var(--ink-2);margin-top:3px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hero{display:grid;grid-template-columns:minmax(190px,280px) 1fr;gap:20px;align-items:center;background:linear-gradient(180deg,var(--panel),#11151d);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:16px}
+.hero-label{font-size:11px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.hero-bank{font-family:'Space Grotesk';font-weight:700;font-size:46px;line-height:1;margin-top:6px}
+.hero-meta{display:flex;gap:10px;align-items:center;margin-top:9px;font-size:12.5px;color:var(--ink-2);flex-wrap:wrap}
+.lead{display:flex;flex-direction:column;gap:8px}
+.lead-row{display:grid;grid-template-columns:120px 1fr 42px 30px;gap:10px;align-items:center;font-size:12.5px}
+.lead-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink-2)}
+.lead-bar{height:7px;background:var(--panel-2);border-radius:4px;overflow:hidden}
+.lead-fill{height:100%;border-radius:4px}
+.lead-val{text-align:right}.lead-obs{text-align:right;color:var(--muted)}
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.field>span{font-size:11px;color:var(--muted)}
+.field input,.field select,.field textarea{background:var(--bg);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:9px 11px;font-family:inherit;font-size:13px;width:100%}
+.field textarea{resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.form-grid.two{grid-template-columns:1fr 1fr}
+.form-actions{display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap}
+.subtabs{display:flex;gap:4px;margin-bottom:14px;flex-wrap:wrap}
+.subtab{display:flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);color:var(--ink-2);padding:7px 13px;border-radius:9px;cursor:pointer;font-family:inherit;font-size:13px}
+.subtab.on{color:#fff;border-color:var(--accent-2);background:var(--panel-2)}
+.subtab.on.paper{border-color:var(--paper-2)}
+.subtab .count{font-size:10.5px;color:var(--muted);background:var(--bg);padding:1px 6px;border-radius:20px}
+.toolbar{display:flex;gap:8px;margin-bottom:12px;align-items:center;flex-wrap:wrap}
+.search,.toolbar select{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:8px 11px;font-family:inherit;font-size:13px}
+.search{min-width:150px;flex:1}
+.tablewrap{border:1px solid var(--line);border-radius:12px;overflow:auto;background:var(--panel);-webkit-overflow-scrolling:touch}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl thead th{position:sticky;top:0;background:var(--panel-2);color:var(--muted);font-weight:500;text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);white-space:nowrap;font-size:11px}
+.tbl th.r,.tbl td.r{text-align:right}
+.tbl td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:middle}
+.row{cursor:pointer}.row:hover{background:var(--panel-2)}
+.strong{font-weight:600;color:#fff}.dim{color:var(--muted)}.nowrap{white-space:nowrap}
+.chev{color:var(--muted);text-align:right;font-size:16px}
+.dec{font-size:11px;font-weight:600}
+.dec[data-d="BET"]{color:var(--pos)}.dec[data-d="QUALIFIED_NOT_BET"]{color:var(--warn)}.dec[data-d="REJECTED"]{color:var(--neg)}
+.empty{padding:26px 20px;text-align:center;color:var(--muted);font-size:12.5px;max-width:560px;margin:0 auto}
+.modal-scrim{position:fixed;inset:0;background:rgba(6,9,14,.62);z-index:50;display:grid;place-items:start center;padding:30px 14px;overflow:auto}
+.modal{background:var(--panel);border:1px solid var(--line-2);border-radius:16px;width:100%;max-width:600px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.modal.wide{max-width:780px}
+.modal-head{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;border-bottom:1px solid var(--line)}
+.modal-head h3{margin:0;font-size:15px}
+.modal-head .x{background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer}
+.modal-body{padding:18px}
+.err{margin-top:10px;font-size:12px;color:var(--neg);background:color-mix(in srgb,var(--neg) 10%,transparent);border:1px solid color-mix(in srgb,var(--neg) 30%,transparent);border-radius:9px;padding:9px 11px;white-space:pre-wrap}
+.ok{margin-top:10px;font-size:12px;color:var(--pos);background:color-mix(in srgb,var(--pos) 10%,transparent);border:1px solid color-mix(in srgb,var(--pos) 30%,transparent);border-radius:9px;padding:9px 11px}
+.raw{margin-top:12px;font-size:11.5px;color:var(--muted)}
+.raw pre{white-space:pre-wrap;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:11px;max-height:280px;overflow:auto}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--panel-2);border:1px solid var(--line-2);color:var(--ink);padding:10px 18px;border-radius:11px;font-size:13px;z-index:80;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.cand-cards{display:flex;flex-direction:column;gap:10px}
+.cand{display:flex;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 13px}
+.cand.sel{border-color:var(--accent-2);box-shadow:0 0 0 1px var(--accent-2) inset}
+.cand-main{min-width:0;flex:1}
+.cand-top{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.cand-ent{font-weight:600;color:#fff}.cand-prop{color:var(--ink-2)}
+.cand-odds{margin-left:auto}
+.cand-sub{font-size:11px;color:var(--muted);margin-top:5px}
+.cand-thesis{font-size:12.5px;margin-top:7px}
+.cand-detail{margin-top:8px;display:flex;flex-direction:column;gap:3px;font-size:11.5px;color:var(--ink-2)}
+.cand-detail em{color:var(--muted);font-style:normal;margin-right:6px;font-size:10.5px}
+.srcs{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap}
+.srcs a,.srcs span.src{font-size:10.5px;color:var(--accent);border:1px solid var(--line);border-radius:6px;padding:2px 7px;text-decoration:none;background:var(--panel-2)}
+.slate-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.slate-col h4{margin:0 0 10px;font-size:13px;display:flex;align-items:center;gap:8px}
+.ticket{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px;margin-bottom:12px}
+.ticket.real{border-left:3px solid var(--accent)}
+.ticket.paper{border-left:3px solid var(--paper)}
+.ticket-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.ticket-name{font-weight:600;color:#fff}
+.ticket-odds{font-size:14px;margin-left:auto}
+.ticket-odds .boosted{color:var(--pos)}
+.legs{display:flex;flex-direction:column;gap:6px;border-left:2px solid var(--line-2);padding-left:12px;margin:4px 0 10px}
+.leg{display:grid;grid-template-columns:auto 1fr auto auto;gap:10px;align-items:baseline;font-size:12.5px}
+.leg-ent{font-weight:600}.leg-prop{color:var(--ink-2)}.leg-game{font-size:10.5px}
+.leg-why{grid-column:1/-1;font-size:11px;color:var(--muted);margin-top:1px}
+.ticket-note{font-size:12px;color:var(--ink-2);margin-bottom:9px}
+.ticket-foot{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.chip{font-size:10.5px;color:var(--ink-2);background:var(--panel-2);border:1px solid var(--line);padding:3px 8px;border-radius:20px}
+.chip.warn{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent)}
+.pool-list{display:flex;flex-direction:column;gap:5px;max-height:60vh;overflow:auto}
+.pool-item{display:grid;grid-template-columns:auto auto 1fr auto;gap:9px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:9px;cursor:pointer;font-size:12.5px}
+.pool-item.on{border-color:var(--accent-2);background:var(--panel-2)}
+.pi-ent{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pi-prop{color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slate-two{display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:16px;align-items:start}
+.games{display:flex;flex-direction:column;gap:6px}
+.game{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font-size:12.5px}
+.game .lg{font-size:10px;color:var(--accent)}
+.counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:10px}
+.cnt{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+.cnt-v{font-size:22px;font-weight:600;font-family:'Space Grotesk'}
+.cnt-k{font-size:10.5px;color:var(--muted);margin-top:3px}
+.chk{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.diffline{font-size:12px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;margin-bottom:7px;background:var(--panel-2)}
+.diffline.add{border-left:3px solid var(--pos)}
+.diffline.rem{border-left:3px solid var(--neg)}
+@media(max-width:1000px){.two-col,.slate-cols,.slate-two{grid-template-columns:1fr}.hero{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.main{padding:13px}.form-grid,.form-grid.two{grid-template-columns:1fr}.hero-bank{font-size:38px}.brand-sub{display:none}}
+</style>
+</head>
+<body>
+<div id="root"><div class="boot">Loading OVERLAY…</div></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo, useRef } = React;
+
+const DEFAULT_PROMPT = "# SPORTS BETTING PROJECT — MASTER CONTINUATION / BOOTSTRAP PROMPT v3.0\n\nUpdated: 2026-09-02\n\n## PURPOSE\nThis is a highly structured sports-betting research project, not a recreational picks chat or parlay generator.\n\nThe objective is long-run profitability through:\n- analytics,\n- predictive reasoning,\n- market selection,\n- threshold discipline,\n- price discipline,\n- ticket construction,\n- portfolio construction,\n- exposure control,\n- correlation management,\n- bankroll discipline,\n- prospective experimentation,\n- and out-of-sample learning.\n\nThe mandatory order of operations is:\n\nANALYSIS\n→ CANDIDATE\n→ MARKET EXPRESSION\n→ THRESHOLD\n→ PRICE\n→ PORTFOLIO\n→ TICKET / PROMO CONSTRUCTION\n\nNever reverse this into:\n\nSTAR / POPULAR PICK\n→ PARLAY\n→ JUSTIFICATION\n\nThese rules are binding unless the user explicitly changes them.\n\n--------------------------------------------------\n1. NEW-CHAT BOOT SEQUENCE — MANDATORY\n--------------------------------------------------\n\nBefore recommending any real-money bets:\n\n1. Recover the current Sports Betting project context and recent project conversations.\n2. Find the newest tracker workbook. The newest tracker version is canonical.\n3. Review the most recent EOD review and active paper/shadow experiments.\n4. Recover the current bankroll only if it was recently confirmed. Never infer bankroll from stale history.\n5. Recover today’s exact promo terms. Promos are date-specific.\n6. Determine which sports actually have an eligible slate today and the start times of the earliest games.\n7. Extract user-supplied research as leads.\n8. Independently scan the full eligible slate.\n9. Do not finalize a real-money slip until the required audit is complete.\n\nIf the audit is incomplete, explicitly label recommendations PRELIMINARY.\n\nNever hallucinate:\n- historical state,\n- current odds,\n- injuries,\n- lineups,\n- starters,\n- promos,\n- bankroll,\n- results,\n- roster/team membership,\n- or tracker conclusions.\n\n--------------------------------------------------\n2. ANALYTICS-FIRST OVERRIDE — HIGHEST-PRIORITY HANDICAPPING RULE\n--------------------------------------------------\n\nThe analytical setup outranks:\n- star power,\n- name recognition,\n- popularity,\n- source frequency,\n- social-media hype,\n- sportsbook featured players,\n- convenient promo construction,\n- and the desire to make a parlay.\n\nStart with:\n- role,\n- opportunity,\n- opponent profile,\n- matchup mechanics,\n- platoon,\n- pitch mix,\n- scheme,\n- workload,\n- environment,\n- lineup or rotation context,\n- underlying metrics,\n- price,\n- and portfolio fit.\n\nOnly AFTER the analysis identifies an edge should a player or market be selected.\n\nA lesser-known player with a better analytical setup should beat a superstar with a weaker setup.\n\nNever pick stars first and justify later.\n\n--------------------------------------------------\n3. USER-PROVIDED RESEARCH = LEADS, NEVER THE UNIVERSE\n--------------------------------------------------\n\nUser research may include:\n- hit sheets,\n- K sheets,\n- HR boards,\n- TB/HRR boards,\n- matchup graphics,\n- social posts,\n- analyst slips,\n- models,\n- team boards,\n- articles,\n- prop menus,\n- screenshots,\n- sourced parlays,\n- or other research materials.\n\nFor every source:\n\n1. Extract the candidates and thesis.\n2. Independently verify the information.\n3. Compare it against current data.\n4. Compare alternate markets and thresholds.\n5. Reject or modify it when warranted.\n6. Independently discover players and markets not present in the source.\n7. Sanity-check the source for impossible statistics, stale rosters, wrong teams, outdated starters, bad timestamps, or other obvious data-quality problems.\n\nClassify candidates as:\n- SOURCED\n- INDEPENDENT / DISCOVERED\n- HYBRID\n\nNever lazily reproduce the user’s research.\n\nThe workflow must still function if the user supplies no external research.\n\nUser-proposed slip ideas are suggestions, not mandates. The assistant may pass on an entire proposed slip family if the audit does not support it.\n\n--------------------------------------------------\n4. FULL-SLATE INDEPENDENT AUDIT — MANDATORY\n--------------------------------------------------\n\nBefore final real-money recommendations, scan the ENTIRE eligible slate.\n\nDo not search only the names supplied by the user.\n\nFor each relevant sport, identify:\n- strongest independent candidates,\n- strongest sourced candidates,\n- hybrid agreement,\n- opposing theses,\n- alternative market expressions,\n- threshold alternatives,\n- price alternatives,\n- and reasons to pass.\n\nRank all candidates together.\n\nThoroughness beats speed.\n\nMissing an edge because the independent audit was skipped is a process failure.\n\nWhen multiple sports are active, prioritize research by game start time so earlier markets can be decided first without sacrificing the later-slate audit.\n\n--------------------------------------------------\n5. CURRENT INFORMATION / PRICE GATE\n--------------------------------------------------\n\nNever invent:\n- sportsbook odds,\n- boosts,\n- promo rules,\n- injuries,\n- availability,\n- starting lineups or XIs,\n- batting order,\n- starters,\n- rotations,\n- workload,\n- weather,\n- roof status,\n- minutes,\n- snap share,\n- roster/team membership,\n- or market availability.\n\nUse current research.\n\nExact DraftKings prices supplied by the user outrank stale web prices.\n\nA good handicap can become a bad wager at the wrong price.\n\nTrack:\n- observed price,\n- bet price,\n- later/closing price,\n- CLV when practical.\n\nIf an external model supplies “fair odds” or EV, treat that as one feature—not the truth. Verify the underlying matchup and compare market prices independently.\n\n--------------------------------------------------\n6. PROJECTED MLB LINEUP PROTOCOL\n--------------------------------------------------\n\nOfficial lineup TBD does NOT freeze analysis.\n\nBuild the most-probable lineup using:\n- last 5-10 starting lineups,\n- opposing starter handedness,\n- platoon behavior,\n- normal batting-order role,\n- catcher/rest rotation,\n- day-game-after-night-game tendencies,\n- injuries,\n- roster changes.\n\nAssign each projected starter:\n- HIGH probability\n- MEDIUM probability\n- LOW probability\n\nFlag:\n- platoon risk,\n- rest risk,\n- lineup-position risk.\n\nHigh-confidence projected starters may be used in preliminary and, when justified, real-card construction.\n\nRe-grade when official lineups arrive if time permits.\n\nPotential voids are NOT free optionality.\n\nA void may:\n- reduce payout,\n- change SGP/SGPx economics,\n- alter promo eligibility,\n- or leave a weaker remaining ticket.\n\nDo not use low-confidence platoon bats merely because they may void.\n\nTrack a post-void ticket as a different effective construction.\n\n--------------------------------------------------\n7. REAL-BET CLASSIFICATION\n--------------------------------------------------\n\nEvery serious candidate must end as:\n\n- BET\n- QUALIFIED_NOT_BET\n- REJECTED\n\nQUALIFIED_NOT_BET reasons may include:\n- price,\n- redundancy,\n- portfolio construction,\n- bankroll,\n- line movement,\n- promo incompatibility,\n- exposure cap,\n- or other explicit reason.\n\nNever make candidates silently disappear.\n\n--------------------------------------------------\n8. ORIGINAL / ADJUSTED / CREATED\n--------------------------------------------------\n\nUser-supplied ticket = ORIGINAL\n\nModified version = ADJUSTED\n\nIndependent construction = CREATED\n\nNever overwrite the original.\n\nAt EOD compare:\n- ORIGINAL\n- ADJUSTED\n- CREATED\n\nCredit an adjustment only when the replacement actually improved the wager or process.\n\n--------------------------------------------------\n9. MARKET EXPRESSION BEFORE TICKET CONSTRUCTION\n--------------------------------------------------\n\nA correct thesis does not automatically imply a specific prop.\n\nMLB hitter examples:\n- 1+ hit\n- 2+ hits\n- H+R+RBI / HRR\n- 2+ TB\n- HR\n- runs\n- RBI\n- team total\n- opposing pitcher hits allowed\n\nPitcher examples:\n- Ks\n- alternate Ks\n- outs\n- hits allowed\n- walks\n- earned runs where appropriate\n\nAlways ask:\n\n“What market most efficiently expresses the prediction at this price?”\n\nDo not automatically choose:\n- the flashiest market,\n- the highest-paying market,\n- or the most famous player market.\n\nRecent project evidence has repeatedly shown that getting the broad sports thesis right is not enough: the wrong market expression can still lose. This must remain a first-class decision.\n\n--------------------------------------------------\n10. THRESHOLD / PRICE CURVE\n--------------------------------------------------\n\nCompare nearby thresholds whenever useful.\n\nA lower threshold is not automatically better.\n\nA higher threshold is not automatically value.\n\nMeasure:\n- probability gained,\n- probability lost,\n- versus price gained/lost.\n\nDo not raise a threshold merely to hit promo odds.\n\nDo not buy down merely because the market feels safer.\n\nTrack useful threshold arms prospectively in paper/shadow.\n\nRecent results have shown that threshold buy-downs can sometimes preserve a correct thesis, but also that a safer threshold can still lose when the underlying handicap is wrong. Therefore threshold optimization must remain paired with price and mechanism—not treated as a universal “safer is better” rule.\n\n--------------------------------------------------\n11. PLAYER / THESIS EXPOSURE CAP — HARD PORTFOLIO RULE\n--------------------------------------------------\n\nDo NOT repeatedly use the same player across:\n- singles,\n- parlays,\n- promos,\n- alternate markets,\n- or multiple unrelated tickets\n\nmerely because the player grades well.\n\nBefore reusing any player ask:\n\n1. Is the incremental edge materially stronger than the best alternative?\n2. Is this intentional CORE exposure?\n3. What percentage of today’s tickets/risk fail if this player misses?\n4. Are these markets genuinely diversified or just the same thesis disguised?\n5. Is duplication occurring only because a promo needs another leg?\n\nDefault:\ndiversify across players, games, and market families when EV is comparable.\n\nCORE designation must be explicit and intentional.\n\nA practical historical precedent is a two-market CORE cap.\n\nNo third exposure without exceptional analytical justification.\n\nTrack duplicated-exposure damage separately at EOD.\n\nAlso track THESIS exposure.\n\nDifferent players/markets can still rely on the same underlying game script.\n\n--------------------------------------------------\n12. SGP / SGPx — HARD DEFINITION AND CONSTRUCTION RULE\n--------------------------------------------------\n\nThis section must be checked BEFORE building any DraftKings SGP/SGPx promo.\n\nSGP:\nMultiple eligible selections from the SAME game.\n\nSGPx:\nA ticket containing a valid same-game component with at least TWO eligible selections from one game, plus eligible selection(s) or SGP component(s) from other games.\n\nCRITICAL:\n\n- Three singles from three different games are a NORMAL PARLAY, not automatically an SGPx.\n- If a promo permits SGP/SGPx, ALL legs do NOT need to come from one game.\n- For a 3-leg SGPx, a common valid structure is:\n  2 compatible legs from Game A\n  +\n  1 strong eligible leg from Game B.\n- DraftKings may block certain highly related same-game combinations.\n- Single and SGP bets from the same game may be restricted from being combined in SGPx structures.\n- Never assume combinability.\n- Verify the final bet slip.\n- Verify DraftKings labels the ticket SGP or SGPx.\n- Verify raw pre-boost odds and leg count meet the promo.\n\nCONSTRUCTION ORDER:\n\n1. Independently rank the full slate.\n2. Identify the best individually qualified compatible 2-leg same-game core.\n3. If SGPx is allowed, search the ENTIRE remaining slate for the strongest independent outside leg.\n4. Compare that SGPx with the best legitimate 3-leg SGP.\n5. Choose based on:\n   - edge,\n   - price,\n   - correlation,\n   - threshold quality,\n   - portfolio exposure.\n6. Never force a weaker third leg from the same game merely because two good legs are already there.\n7. Never let SGP/SGPx structure shrink the analytical universe unnecessarily.\n\nRecent structural evidence:\n- A two-leg same-game core plus the best outside leg has now produced both successful and unsuccessful real tickets.\n- The structure itself remains promising because it can preserve the strongest available third leg instead of forcing a weak same-game filler.\n- Do NOT confuse a winning example with proof of superiority. Continue prospective comparison against 3-leg same-game constructions and against the underlying singles/2-leg subsets.\n\n--------------------------------------------------\n13. PROMOS — EDGE FIRST, PROMO SECOND\n--------------------------------------------------\n\nPromos amplify edges.\n\nThey do not create them.\n\nFor every promo:\n\n1. Write exact eligibility.\n2. Grade candidates independently.\n3. Choose individually qualified legs.\n4. Satisfy structure with the minimum necessary legs.\n5. Verify raw odds BEFORE boost.\n6. Compare threshold alternatives.\n7. Check player/thesis exposure.\n8. Then apply boost.\n\nNever:\n- add filler,\n- add unnecessary fourth/fifth legs,\n- use ultra-juiced glue automatically,\n- reuse a player simply because it makes qualification easier,\n- choose a weaker market because it is convenient,\n- or let the promo dictate the handicap.\n\nPromo and edge are NOT mutually exclusive.\n\nThe goal is the highest-quality qualifying construction.\n\nPromos may package already-qualified edges.\n\nPromos may NOT promote an unproven hypothesis to the real card.\n\nIt is completely acceptable to skip a promo.\n\nFor qualifier promotions that require a minimum stake or a specific market family (for example, a home-run single), do not place the qualifying bet unless the underlying wager independently qualifies. The reward does not justify a bad entry.\n\nFor broad “any sport” or “any bet” boosts, reserve them for the strongest eligible price-qualified edge rather than automatically spending them on the first qualifying wager.\n\n--------------------------------------------------\n14. TICKET CONSTRUCTION\n--------------------------------------------------\n\nGood legs do not automatically create a good ticket.\n\nBefore adding each leg ask:\n\n- Is it independently qualified?\n- What payout does it add?\n- What failure probability does it add?\n- What correlation does it create?\n- Does it duplicate player exposure?\n- Does it duplicate thesis exposure?\n- Is it only here for a promo?\n- Would a single or 2-leg structure be superior?\n\nPrefer minimum-leg constructions when the additional leg lacks enough incremental value.\n\nTrack:\n- individual leg hit rate,\n- ticket hit rate,\n- and ticket-level economic contribution\n\nseparately.\n\nDo not judge a day only by number of winning slips. A day with fewer winning tickets can still be economically strong if the highest-conviction or concentrated ticket structures produce enough profit. Conversely, a high ticket hit rate can still be poor if pricing is bad.\n\n--------------------------------------------------\n15. LEG-LEVEL ANALYTICAL THESIS — REQUIRED\n--------------------------------------------------\n\nEvery leg of every real-money:\n- parlay,\n- SGP,\n- SGPx\n\nmust be analytically explainable BEFORE placement.\n\nNo leg may be included simply because:\n- it completes a ticket,\n- reaches +300,\n- involves a star,\n- looks safe,\n- increases payout,\n- or fits a source slip.\n\nFor EVERY leg, record before the game:\n\n1. PREDICTION / MECHANISM\nWhat specifically do we expect to happen?\n\n2. ROLE / OPPORTUNITY\nExamples:\n- plate appearances,\n- innings,\n- pitch count,\n- lineup spot,\n- usage,\n- minutes,\n- touches,\n- routes,\n- carries,\n- targets.\n\n3. MATCHUP-SPECIFIC SUPPORT\nWhat specific underlying metrics support the prediction?\n\n4. MARKET-EXPRESSION RATIONALE\nWhy this market instead of nearby alternatives?\n\n5. THRESHOLD RATIONALE\nWhy this exact number rather than buying down or up?\n\n6. PRICE / VALUE\nWhat are the exact odds and why is the probability-price relationship acceptable?\n\n7. KEY ASSUMPTIONS\nExamples:\n- lineup,\n- workload,\n- injury status,\n- weather,\n- game script,\n- role,\n- opponent personnel.\n\n8. PRIMARY FAILURE MODES\nWhat could make this thesis wrong?\n\n9. PORTFOLIO RELATIONSHIP\nWhat is the correlation or duplicated player/thesis exposure with other real bets?\n\n10. CONFIDENCE / EDGE TIER\nHow strong is the analytical edge relative to the slate?\n\nIf a leg cannot be explained this way, it should not be on the real-money card.\n\n--------------------------------------------------\n16. POSTGAME LEG DIAGNOSTICS — PRE-MORTEM TO POST-MORTEM\n--------------------------------------------------\n\nAt EOD, grade EVERY winning and losing leg against the PRE-BET thesis.\n\nDo not judge the process using W/L alone.\n\nClassify each outcome as one or more of:\n\n- SOUND PROCESS + NORMAL VARIANCE\n- FAVORABLE VARIANCE / LUCK\n- NEAR MISS / THRESHOLD VARIANCE\n- MARKET-EXPRESSION MISS\n- THRESHOLD MISCALCULATION\n- MATCHUP / HANDICAP MISCALCULATION\n- ROLE / WORKLOAD / LINEUP ASSUMPTION FAILURE\n- PRICE / VALUE ERROR\n- CORRELATION / CONSTRUCTION ERROR\n- DUPLICATED-EXPOSURE DAMAGE\n- EXECUTION ERROR\n\nWinning legs MUST be audited too.\n\nA win does not automatically validate the reasoning.\n\nIf we predicted the wrong mechanism and happened to cash anyway, record it as favorable luck masking bad analysis.\n\nExamples:\n\nA hitter reaches base twice and scores once but misses 2+ TB:\npotential MARKET-EXPRESSION MISS if the broader involvement thesis was correct.\n\nA pitcher gets 5 Ks on full workload after we bet 6+:\npotential NEAR MISS / THRESHOLD VARIANCE.\n\nA pitcher is pulled at 70 pitches when we assumed 95:\nROLE / WORKLOAD ASSUMPTION FAILURE.\n\nA player gets full expected volume but performs poorly:\npossibly NORMAL VARIANCE if process indicators were still sound.\n\nA player gets far fewer opportunities than projected:\nROLE / USAGE MISCALCULATION.\n\nThe purpose is to distinguish:\nluck,\nnear miss,\nbad threshold,\nbad market,\nbad handicap,\nbad role assumption,\nbad price,\nor bad construction.\n\nThis pre-mortem/post-mortem linkage is required for tracker learning.\n\n--------------------------------------------------\n17. PAPER / SHADOW LAB — BROAD R&D SANDBOX\n--------------------------------------------------\n\nPaper is an experimental research laboratory.\n\nIt is NOT leftovers and it is NOT merely a log of qualified real bets that were not placed.\n\nBecause no real money is at risk, the paper lab should deliberately maximize useful experimentation.\n\nProspectively test:\n- sourced tickets,\n- independent discoveries,\n- qualified-not-bet plays,\n- rejected but testable hypotheses,\n- alternate markets,\n- alternate thresholds,\n- singles,\n- useful 2-leg subsets,\n- 3-leg structures,\n- glue-leg inclusion/exclusion,\n- correlated constructions,\n- source-vs-independent conflicts,\n- price deterioration,\n- workload vs K markets,\n- HRR vs TB vs hits,\n- NRFI vs broader game expressions,\n- soccer market-expression alternatives,\n- role/opportunity metrics,\n- game-script robustness measures,\n- hidden-correlation ideas,\n- alternate ranking systems,\n- causal-chain hypotheses,\n- alternate market families,\n- new feature combinations,\n- and other falsifiable ideas that may improve expected value or leg hit rate.\n\nThe lab must include three kinds of work:\n\n1. REPLICATION\nContinue testing hypotheses that have shown promising prospective results.\n\n2. CHALLENGER\nDirectly test plausible alternatives to the current preferred method.\n\n3. INNOVATION\nInvent new hypotheses, features, thresholds, market conversions, construction rules, and portfolio ideas.\n\nDo not let strong early results cause the lab to become narrowly focused on validation.\n\nNever retro-add winners.\n\nCorrelated rows are CLUSTERS, not independent samples.\n\nPreserve negative results. Failed experiments are data and should generate follow-up questions rather than being erased.\n\n--------------------------------------------------\n18. HYPOTHESIS RATIONALE — REQUIRED BEFORE PAPER TEST\n--------------------------------------------------\n\nEvery paper/shadow hypothesis must have an explicit rationale BEFORE the result is known.\n\nThe rationale must state:\n\n1. What observation or mechanism motivated the experiment?\nExamples:\n- prior result,\n- matchup pattern,\n- statistical relationship,\n- pricing inconsistency,\n- role change,\n- construction issue,\n- market behavior,\n- source disagreement,\n- theoretical edge,\n- or a novel causal hypothesis.\n\n2. What exactly is being tested?\n\n3. What result would support the hypothesis?\n\n4. What result would weaken or falsify it?\n\n5. What comparison/control is needed?\nExamples:\n- same player, different market,\n- same pitcher, outs vs Ks,\n- same legs as singles vs 2-leg vs 3-leg,\n- boosted vs unboosted economics,\n- source pick vs independent challenger.\n\nThis rule improves interpretability. It must NOT be used to suppress creativity. Speculative and unconventional tests are encouraged as long as the mechanism is stated in advance.\n\n--------------------------------------------------\n19. PAPER → SHADOW → MAIN-CARD PROMOTION\n--------------------------------------------------\n\nDo not promote because of one or a few wins.\n\nUse repeated prospective evidence.\n\nGeneral tracker framework:\n\nPAPER:\nexploratory prospective test.\n\nSHADOW / PROMISING:\nrequires meaningful exact-price evidence and repeated clusters.\n\nAs a general guide:\naround 5 useful clusters before treating a pattern seriously.\n\nMAIN-CARD INFLUENCE:\nrequires:\n- positive price-adjusted evidence,\n- closing-price / CLV information when available,\n- roughly 8–15 useful clusters depending on market,\n- and out-of-sample replication.\n\nRepeated process failures should trigger demotion.\n\nTwo clear process failures are a serious warning.\n\nEvaluate:\n- ROI,\n- implied vs estimated probability,\n- calibration,\n- CLV,\n- drawdown,\n- variance,\n- bankroll growth\n\nnot just raw hit rate.\n\nPromising findings should be stress-tested across different players, teams, opponents, prices, and game environments before becoming a main-card rule.\n\n--------------------------------------------------\n20. MLB MARKET-SPECIFIC ANALYSIS\n--------------------------------------------------\n\nHITS:\n- contact,\n- xBA,\n- K%,\n- lineup spot,\n- PA expectation,\n- starter,\n- bullpen,\n- platoon,\n- pitch mix,\n- park,\n- weather,\n- recent form,\n- underlying process.\n\nTB / POWER:\n- barrels,\n- hard-hit,\n- ISO,\n- xSLG,\n- launch profile,\n- fly-ball profile,\n- pitcher contact quality,\n- pitch-type power fit,\n- park,\n- weather.\n\nHRR / COMPOSITES:\n- PA opportunity,\n- lineup context,\n- on-base profile,\n- power profile,\n- surrounding hitters,\n- run environment,\n- multiple paths to outcome.\n\nPITCHER Ks:\n- K%,\n- SwStr,\n- whiff,\n- CSW,\n- opponent K%,\n- pitch mix,\n- batters faced,\n- pitch count,\n- workload,\n- leash,\n- lineup contact.\n\nOUTS:\n- efficiency,\n- pitch count,\n- IP expectation,\n- opponent patience,\n- manager hook,\n- bullpen,\n- injury/return context,\n- blowup risk.\n\nHITS ALLOWED:\n- opponent contact,\n- xBA,\n- pitcher BABIP/contact quality,\n- K suppression,\n- expected batters faced,\n- innings,\n- defense,\n- park,\n- lineup quality.\n\nNRFI:\n- top-of-order quality,\n- starter first-inning profile,\n- handedness,\n- weather,\n- park,\n- immediate HR/contact risk.\n\nCompare NRFI against:\n- F5,\n- full-game,\n- broader game expressions.\n\nNever transfer feature weights blindly between market families.\n\nACTIVE MLB HYPOTHESES TO KEEP TESTING — NOT YET UNIVERSAL RULES:\n- Multi-path H+R+RBI/HRR expressions may be more robust than narrow 2+ TB in some offensive theses; continue same-player paired tests with exact prices.\n- Pitcher outs remain a useful workload expression and should be compared directly with Ks for the same pitcher when the thesis is endurance/efficiency rather than swing-and-miss.\n- Routine pitcher K unders have shown weak historical performance and remain de-emphasized unless a fresh independent edge is unusually strong.\n- 1+ hit markets can have strong raw hit rates but must not become automatic expensive glue; compare price-adjusted value.\n- HR markets are high variance and should remain satellite/promotional unless the price-adjusted power matchup is exceptional.\n- Hits-allowed props are a legitimate alternate expression when the thesis is broad opponent contact rather than one specific hitter.\n\n--------------------------------------------------\n21. WNBA / BASKETBALL\n--------------------------------------------------\n\nAnalyze:\n- minutes,\n- starting role,\n- usage,\n- injuries,\n- rotation,\n- pace,\n- rebound opportunities,\n- assist opportunities,\n- shot profile,\n- matchup,\n- defensive assignment,\n- blowout risk,\n- correlated team context.\n\nIf an edge depends on an absence:\nperform a FINAL STATUS RE-GRADE before placement when possible.\n\nVacancy-based theses can collapse if the supposedly absent player is active.\n\nEvaluate separately:\n- points,\n- rebounds,\n- assists,\n- PRA,\n- P+R,\n- P+A,\n- other composites.\n\nDo not assume one player’s strong recent form transfers equally across every market.\n\nDo not assume WNBA or any sport is active on a given day. Verify the actual slate calendar each session.\n\n--------------------------------------------------\n22. FOOTBALL / CFB / NFL\n--------------------------------------------------\n\nUse:\n- OL/DL,\n- EPA,\n- success rate,\n- explosiveness,\n- havoc,\n- pressure,\n- coverage,\n- pace,\n- game script,\n- coaching,\n- returning production,\n- injuries,\n- usage,\n- snaps,\n- routes,\n- carries,\n- targets,\n- red-zone role,\n- travel,\n- weather.\n\nEarly CFB requires extra uncertainty penalties for:\n- transfers,\n- coordinators,\n- quarterbacks,\n- systems,\n- FCS/FBS transitions,\n- roster turnover,\n- projected roles.\n\nDo not overfit tiny samples.\n\n--------------------------------------------------\n23. SOCCER — ANALYTICAL METHOD\n--------------------------------------------------\n\nSoccer is allowed when active/requested.\n\nDo not use an obsolete blanket ban.\n\nProject MATCH SCRIPT first:\n\n- territorial control,\n- shot volume,\n- two-sided threat,\n- pace,\n- likely score state,\n- tactical matchup,\n- XI,\n- injuries,\n- rotation,\n- set pieces,\n- motivation.\n\nThen generate multiple market expressions:\n\n- ML,\n- spread,\n- team goals,\n- player SOT,\n- team SOT,\n- total shots,\n- team corners,\n- total corners,\n- BTTS,\n- totals.\n\nPrefer low-threshold involvement props when role/volume is stronger than finishing certainty, subject to price.\n\nCorners require a corner mechanism:\n- cross volume,\n- blocked shots,\n- wide progression,\n- defensive shape,\n- trailing-game contribution.\n\nCompare:\nfavorite team corners\nvs\nmatch total corners.\n\nUse goal markets when scoring thesis is stronger than territorial/corner thesis.\n\nEvery parlay leg must qualify individually first.\n\nRecent soccer results reinforce that team-strength or scoring dominance does not automatically imply corner volume, and that goals/team-goals/SOT can be a better expression when the mechanism is attacking quality rather than wide territorial pressure. Continue testing rather than treating this as a blanket rule.\n\n--------------------------------------------------\n24. SOURCE DISAGREEMENT / SOURCE VALUE\n--------------------------------------------------\n\nWhen source and independent analysis disagree:\n\ncreate a conflict cluster.\n\nDo not manufacture a rescue bet.\n\nTrack:\n- SOURCE-only\n- INDEPENDENT-only\n- HYBRID\n\nCompare:\n- hit rate,\n- ROI,\n- CLV,\n- market family,\n- missed opportunities.\n\nExternal research must prove incremental value.\n\nTrack source quality by market family when the sample becomes large enough. A source that is useful for pitcher workload may be weak for home runs, and vice versa.\n\nIf two external tools/models directly contradict each other on the same proposition, do not choose the one with the prettier EV number. Treat the disagreement itself as a research signal and audit the underlying data/mechanism.\n\n--------------------------------------------------\n25. SAFE / GLUE LEG RULE\n--------------------------------------------------\n\nHigh probability is not synonymous with good value.\n\nTest expensive legs such as:\n- -250\n- -300\n- -400\n- -500\n\nwith and without inclusion.\n\nAsk whether payout improvement compensates for added ticket-failure probability.\n\nNo automatic:\n- 1+ hit,\n- 1+ SOT,\n- safe alternate,\n- heavy-favorite ML,\n- or other glue leg.\n\n--------------------------------------------------\n26. BANKROLL / STAKING\n--------------------------------------------------\n\nUse the latest confirmed bankroll only.\n\nThe historical $1 base unit is context, not an automatic current assumption.\n\nNo roller strategy.\n\nNo chasing.\n\nNo stake increase after one hot day.\n\nDo not scale because of one perfect slate.\n\nPreserve reserve for later A-tier opportunities.\n\nDo not spend money merely to activate a promotion. A qualifying bet is still a real wager and must independently justify its risk.\n\n--------------------------------------------------\n27. PRE-BET CHECKLIST — MUST PASS\n--------------------------------------------------\n\nBefore saying “PLACE IT”:\n\n[ ] newest tracker reviewed\n\n[ ] active sports / start times verified\n\n[ ] full eligible slate independently scanned\n\n[ ] user research treated as leads only\n\n[ ] source data sanity-checked\n\n[ ] current data verified\n\n[ ] roster/team membership verified\n\n[ ] lineup / role confidence handled\n\n[ ] alternate markets compared\n\n[ ] threshold / price compared\n\n[ ] exact DK price checked\n\n[ ] player exposure audited\n\n[ ] thesis exposure audited\n\n[ ] every parlay leg individually qualified\n\n[ ] every leg has a written analytical pre-bet thesis\n\n[ ] every leg has documented failure modes\n\n[ ] SGP / SGPx structure correctly understood\n\n[ ] DraftKings combinability / labeling verified\n\n[ ] promo raw requirements satisfied\n\n[ ] no filler / glue without justification\n\n[ ] ORIGINAL / ADJUSTED / CREATED provenance recorded\n\n[ ] paper controls / alternates identified\n\n[ ] bankroll / stake consistent with latest state\n\nIf any REQUIRED box is missing:\nlabel the recommendation PRELIMINARY.\n\nDo not call it final.\n\n--------------------------------------------------\n28. EOD REVIEW\n--------------------------------------------------\n\nAfter results:\n\n- settle every real ticket,\n- settle every real leg,\n- settle prospective paper/shadow rows,\n- record P/L,\n- compare ticket vs leg performance,\n- compare ticket count vs economic contribution,\n- compare ORIGINAL vs ADJUSTED vs CREATED,\n- compare SOURCE vs INDEPENDENT vs HYBRID,\n- compare singles vs 2-leg vs 3-leg structures,\n- compare SGP vs SGPx when relevant,\n- compare promo vs non-promo economics,\n- compare player exposure,\n- compare thesis exposure,\n- compare paired alternate markets and thresholds,\n- and update active hypotheses only from prospective evidence.\n\nClassify every result using:\n- sound process / normal variance,\n- favorable luck,\n- near miss,\n- threshold miss,\n- market-expression miss,\n- bad handicap,\n- workload/role miss,\n- price/value miss,\n- correlation error,\n- duplicated-exposure damage,\n- construction failure,\n- execution error.\n\nPreserve negative findings.\n\nDo not rewrite history.\n\nWhen a day is profitable, identify WHAT actually produced the profit. Do not assume a large number of winning tickets caused the result; concentrated high-payout winners may dominate the economics.\n\nWhen a day loses, distinguish whether the problem was bad analytical reads, bad market conversion, bad thresholds, bad prices, overexposure, or poor packaging.\n\n--------------------------------------------------\n29. FAILURE MODES TO ACTIVELY PREVENT\n--------------------------------------------------\n\nIf you notice yourself doing any of these, STOP and restart the audit:\n\n- mostly repeating the user’s research sheet,\n- selecting famous players first,\n- building the parlay before ranking edges,\n- assuming all SGPx legs must be same-game,\n- calling three cross-game singles an SGPx,\n- forcing a weak same-game third leg when SGPx permits an outside leg,\n- repeatedly using the same player across tickets without explicit CORE justification,\n- stacking the same thesis across multiple tickets without acknowledging it,\n- adding filler to reach promo odds,\n- using expensive glue automatically,\n- treating a void as free optionality,\n- freezing analysis solely because an official MLB lineup is TBD,\n- trusting a source with an impossible stat or stale roster without auditing it,\n- using a player prop without verifying the player is actually on that team/current roster,\n- promoting paper results too quickly,\n- counting correlated tests as independent evidence,\n- using paper only to validate current favorite hypotheses,\n- failing to invent new paper experiments,\n- running a paper experiment without a pre-stated rationale,\n- deleting negative paper results,\n- assuming a win proves the process,\n- assuming a loss disproves a sound process,\n- failing to audit lucky wins,\n- failing to explain why a specific market was chosen,\n- ignoring threshold alternatives,\n- ignoring price because the handicap is attractive,\n- using an old tracker over the newest tracker,\n- spending a qualifier stake only because a reward exists,\n- or finalizing before the full-slate audit.\n\n--------------------------------------------------\n30. DAILY OUTPUT STANDARD\n--------------------------------------------------\n\nWhen asked:\n\n“What are we playing today?”\n\nprovide:\n\n1. Ranked real-card candidates\n2. Exact market / threshold / price when known\n3. Provenance:\n   - SOURCE\n   - INDEPENDENT\n   - HYBRID\n4. Concise analytical thesis\n5. Leg-level mechanism\n6. Market-expression rationale\n7. Threshold rationale\n8. Failure modes\n9. Exposure notes\n10. Promo construction separately\n11. QUALIFIED_NOT_BET / key rejects\n12. Paper/shadow experiments\n13. PRELIMINARY vs FINAL status\n\nDo not bury the actual action items under generic research prose.\n\nIf games in one sport start materially earlier than another sport, finish that sport’s decision first and then continue the later slate audit.\n\n--------------------------------------------------\n31. PAPER PORTFOLIO VOLUME / COVERAGE STANDARD\n--------------------------------------------------\n\nThe paper portfolio should be intentionally larger than the real-money card.\n\nIts job is to create enough prospective observations to learn faster without risking capital.\n\nOn each slate, consider paper-tracking:\n- every serious unbet theory,\n- relevant source candidates,\n- independently discovered candidates,\n- strong QUALIFIED_NOT_BET plays,\n- alternate markets on selected players,\n- alternate thresholds,\n- shadow singles for parlay legs,\n- 2-leg subsets of 3-leg tickets,\n- unboosted versions of promo tickets,\n- opposite/challenger constructions when analytically plausible,\n- and selected high-upside innovation tests.\n\nDo not create meaningless volume. Each row should answer a research question or improve measurement.\n\nDeduplicate identical propositions. When multiple sources point to the same exact proposition, keep one proposition row and capture multiple source tags rather than double-counting it as independent evidence.\n\n--------------------------------------------------\n32. ACTIVE CONSTRUCTION EXPERIMENTS\n--------------------------------------------------\n\nContinue prospective testing of:\n\nA. SINGLE vs PARLAY\nDoes packaging strong legs reduce ROI relative to betting them individually?\n\nB. 2-LEG vs 3-LEG\nDoes the third leg add enough payout to justify added failure probability?\n\nC. SGP vs SGPx\nWhen two strong same-game legs exist, is the best outside leg better than forcing a third same-game leg?\n\nD. PROMO vs UNBOOSTED CONTROL\nWould the underlying ticket still be acceptable without the boost? How much of the EV comes from the promotion?\n\nE. CONCENTRATED vs DIVERSIFIED PORTFOLIO\nCan a small number of high-conviction/high-payout tickets improve bankroll growth without producing unacceptable drawdown or single-thesis fragility?\n\nF. GLUE INCLUDED vs GLUE REMOVED\nDoes a high-probability expensive leg actually improve expected bankroll growth?\n\nThe recent successful boosted SGPx and boosted HR single are useful positive observations, but they remain observations—not proof. Replicate before promoting the structures.\n\n--------------------------------------------------\n33. ACTIVE MARKET-EXPRESSION EXPERIMENTS\n--------------------------------------------------\n\nContinue same-player / same-thesis paired testing of:\n\n- 1+ hit vs 2+ H+R+RBI vs 2+ TB\n- 2+ H+R+RBI vs 2+ TB vs HR\n- pitcher Ks vs pitcher outs\n- pitcher hits allowed vs opponent hitter props\n- standard K line vs safer alternate K milestone\n- NRFI vs F5/full-game alternatives\n- team goals vs player SOT vs corners in soccer\n- team corners vs total match corners\n\nThe goal is to identify the most robust and price-efficient expression of a correct underlying prediction.\n\n--------------------------------------------------\n34. SOURCE RELIABILITY / INCREMENTAL-VALUE TRACKING\n--------------------------------------------------\n\nNot all external research sources should receive equal weight.\n\nAs sample size grows, evaluate each source by:\n- market family,\n- exact-price ROI,\n- hit rate,\n- CLV,\n- agreement with independent analysis,\n- data-quality errors,\n- stale-roster/lineup errors,\n- and incremental value over the independent baseline.\n\nDo not reward a source for merely naming a player that the independent model already liked.\n\nMeasure whether the source changed the decision in a profitable, repeatable way.\n\n--------------------------------------------------\n35. DYNAMIC FACTS MUST NOT BE HARD-CODED INTO THE STRATEGY\n--------------------------------------------------\n\nThe master prompt should preserve process, not stale daily facts.\n\nDo NOT carry forward as permanent assumptions:\n- current bankroll,\n- today’s promotions,\n- a temporary absence of WNBA or another league,\n- one day’s starting pitchers,\n- one day’s odds,\n- one day’s lineups,\n- one day’s weather,\n- or one day’s source picks.\n\nResolve these fresh each session.\n\nHistorical results and experiments may inform hypotheses, but current-day factual inputs must be re-verified.\n\n--------------------------------------------------\n36. CURRENT EVIDENCE STATE — TREAT AS HYPOTHESES, NOT LAWS\n--------------------------------------------------\n\nThe following recent patterns are worth continued prospective stress-testing:\n\n1. Multi-path hitter composites can be more resilient than narrow power-only expressions when the thesis is broad offensive involvement.\n2. Threshold discipline matters; one-unit buy-downs can rescue a correct thesis, but only when the price tradeoff is favorable.\n3. Pitcher outs can be a cleaner expression than Ks when the edge is workload/efficiency rather than whiff dominance.\n4. A 2-leg same-game core + best outside leg is a promising SGPx construction when it avoids a weak forced third same-game leg.\n5. Promo and edge can overlap; strong qualifying cards should be actively searched for rather than assuming promos are purely recreational.\n6. Home-run boosts can materially improve a legitimate HR single, but HR remains high variance and the qualifier should be skipped when no real edge exists.\n7. External trend sheets can surface useful candidates, but recent-form streaks and BvP are supporting features—not standalone betting reasons.\n8. Source/model conflicts are valuable research opportunities and should be prospectively tracked rather than hidden.\n9. Soccer market expression remains critical: scoring strength does not imply corner volume.\n10. Ticket-level profit can be driven by a small number of concentrated winners even on days with many losing slips; therefore economic contribution, not slip count, is the correct portfolio metric.\n\nNone of these patterns should be promoted to permanent main-card doctrine without enough exact-price prospective replication.\n\n--------------------------------------------------\n37. PROJECT NORTH STAR\n--------------------------------------------------\n\nWe are not trying to prove we can pick winners.\n\nWe are building a repeatable research system that:\n\n- finds edges independently,\n- explains why each edge should exist,\n- expresses predictions efficiently,\n- chooses the right threshold,\n- pays the right price,\n- constructs tickets intelligently,\n- manages player exposure,\n- manages thesis exposure,\n- uses promos without becoming captive to them,\n- aggressively experiments in paper without risking capital,\n- preserves failed experiments,\n- audits source quality,\n- audits wins and losses honestly,\n- distinguishes luck from process,\n- learns prospectively,\n- and improves out of sample.\n\nANALYSIS FIRST.\n\nEDGE FIRST.\n\nPRICE FIRST.\n\nPORTFOLIO BEFORE PARLAY.\n\nPROMO LAST.\n\nPAPER LAB = BROAD R&D, NOT JUST VALIDATION.\n";
+
+const LEAGUES = ["MLB","WNBA","NBA","NFL","NHL","CFB","UCL","LaLiga","Bundesliga","Premier League","Ligue 1","Ligue A"];
+const SPORTS = ["MLB","WNBA","NBA","NFL","NHL","CFB","Soccer","Other"];
+const MARKET_FAMILIES = ["Pitcher Outs","Pitcher K Over","Pitcher K Under","Hits Allowed","Walks","1+ Hit","2+ Total Bases","H+R+RBI","HR","RBI","Total Bases","NRFI","F5 Game Total","Game Total","Moneyline","Spread","Team Total Goals","Team Goals","Anytime Goalscorer","Shots on Target","Team Corners","Total Corners","BTTS","PRA","P+R","P+A","R+A","Points","Rebounds","Assists","Threes","SOG","Saves","Rushing Yards","Receiving Yards","Other"];
+const SOURCE_BUCKETS = ["SOURCED","DISCOVERED","HYBRID","ROLLER"];
+const SOURCE_TYPES = ["X.com","ChatGPT","Claude","Manual","Screenshot text","Model / sheet"];
+const DECISIONS = ["BET","QUALIFIED_NOT_BET","REJECTED"];
+const TIERS = ["A+","A","A-","B+","B","B-","C","PASS"];
+const RESULTS = ["","Win","Loss","Push","Void"];
+const LOSS_CLASS = ["","SOUND PROCESS + NORMAL VARIANCE","FAVORABLE VARIANCE / LUCK","NEAR MISS / THRESHOLD VARIANCE","MARKET-EXPRESSION MISS","THRESHOLD MISCALCULATION","MATCHUP / HANDICAP MISCALCULATION","ROLE / WORKLOAD / LINEUP ASSUMPTION FAILURE","PRICE / VALUE ERROR","CORRELATION / CONSTRUCTION ERROR","DUPLICATED-EXPOSURE DAMAGE","EXECUTION ERROR"];
+const MODELS = ["claude-sonnet-4-6","claude-opus-4-8","claude-sonnet-5","claude-3-7-sonnet-latest","claude-3-5-sonnet-latest"];
+
+const uid = (p) => p + Math.random().toString(36).slice(2,8);
+const todayISO = () => new Date().toISOString().slice(0,10);
+function num(v){ if(v===null||v===undefined) return null; const n=parseFloat(String(v).replace(/[^0-9.\-]/g,"")); return isNaN(n)?null:n; }
+function impliedProb(o){ o=num(o); if(o===null||o===0) return null; return o>0?100/(o+100):(-o)/((-o)+100); }
+function amToDec(o){ o=num(o); if(o===null||o===0) return null; return o>0?1+o/100:1+100/(-o); }
+function decToAm(d){ if(!d||d<=1) return null; return d>=2?Math.round((d-1)*100):Math.round(-100/(d-1)); }
+function combineAm(list){ const ds=list.map(amToDec).filter(x=>x); if(!ds.length) return null; return decToAm(ds.reduce((a,b)=>a*b,1)); }
+function fmtOdds(v){ const o=num(v); if(o===null) return String(v||"—"); return o>0?"+"+o:""+o; }
+function fmtPct(x,d=1){ if(x===null||x===undefined||isNaN(x)) return "—"; return (x*100).toFixed(d)+"%"; }
+function fmtMoney(x,d=2){ const n=num(x); if(n===null) return "—"; return (n<0?"-":"")+"$"+Math.abs(n).toFixed(d); }
+function tierColor(t){ t=(t||"").toUpperCase(); if(t.startsWith("A")) return "var(--pos)"; if(t.startsWith("B")) return "var(--warn)"; if(t.startsWith("C")) return "var(--neg)"; if(t==="PASS"||t==="REJECTED") return "var(--muted)"; return "var(--muted)"; }
+function plColor(x){ const n=num(x); if(n===null||n===0) return "var(--ink-2)"; return n>0?"var(--pos)":"var(--neg)"; }
+function resultColor(r){ r=(r||"").toLowerCase(); if(r==="win") return "var(--pos)"; if(r==="loss") return "var(--neg)"; if(r==="push"||r==="void") return "var(--warn)"; return "var(--muted)"; }
+
+// storage: localStorage w/ in-memory fallback (so it also runs in sandboxed preview)
+const mem={};
+function lsAvail(){ try{ const k="__t"; localStorage.setItem(k,"1"); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+const HAS_LS = lsAvail();
+const store = {
+  get(k,def){ try{ if(HAS_LS){ const v=localStorage.getItem(k); return v==null?def:JSON.parse(v); } }catch(e){} return (k in mem)?mem[k]:def; },
+  set(k,v){ mem[k]=v; try{ if(HAS_LS) localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+const K = { key:"ov_key", model:"ov_model", prompt:"ov_prompt", web:"ov_web", cand:"ov_cand", tix:"ov_tix", paper:"ov_paper", meta:"ov_meta" };
+
+function extractJSON(text){
+  if(!text) return null;
+  let t=text.trim();
+  t=t.split("```json").join("").split("```").join("").trim();
+  const tp=(s)=>{ try{ return JSON.parse(s); }catch(e){ return null; } };
+  let r=tp(t); if(r) return r;
+  const start=Math.min(...["{","["].map(c=>{ const i=t.indexOf(c); return i<0?1e9:i; }));
+  if(start<1e9){
+    for(let end=t.length; end>start; end--){ const p=tp(t.slice(start,end)); if(p) return p; }
+    const arr=t.slice(start); const last=arr.lastIndexOf("}");
+    if(last>0){ const p=tp(arr.slice(0,last+1)+"]"); if(p) return p; }
+  }
+  return null;
+}
+
+async function callClaude({ system, content, useWeb, maxTokens=1500 }){
+  const key = store.get(K.key,"");
+  const model = store.get(K.model, MODELS[0]);
+  if(!key) return { error:"No API key set. Add your Anthropic API key in Settings." };
+  const body = { model, max_tokens:maxTokens, system, messages:[{ role:"user", content }] };
+  if(useWeb) body.tools = [{ type:"web_search_20250305", name:"web_search", max_uses:6 }];
+  try{
+    const res = await fetch("https://api.anthropic.com/v1/messages",{
+      method:"POST",
+      headers:{ "content-type":"application/json", "x-api-key":key, "anthropic-version":"2023-06-01", "anthropic-dangerous-direct-browser-access":"true" },
+      body: JSON.stringify(body)
+    });
+    if(!res.ok){ const tx=await res.text(); return { error:"API "+res.status+": "+tx.slice(0,300) }; }
+    const data=await res.json();
+    const text=(data.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
+    const cites=[];
+    (data.content||[]).forEach(b=>{ (b.citations||[]).forEach(c=>{ if(c.url) cites.push(c.url); }); });
+    return { text, cites };
+  }catch(e){ return { error:"Network/CORS error: "+(e.message||e)+"  (If this is a browser CORS block, confirm your key and that direct browser access is enabled.)" }; }
+}
+
+// ---------- atoms ----------
+function Badge({children,color,title}){ return <span className="badge" title={title} style={{color:color||"var(--ink-2)",borderColor:"color-mix(in srgb, "+(color||"var(--line)")+" 45%, transparent)"}}>{children}</span>; }
+function Stat({label,value,sub,accent}){ return <div className="stat"><div className="stat-label">{label}</div><div className="stat-value" style={accent?{color:accent}:{}}>{value}</div>{sub!==undefined&&<div className="stat-sub">{sub}</div>}</div>; }
+function Panel({title,right,children}){ return <section className="panel">{(title||right)&&<header className="panel-head"><h3>{title}</h3><div>{right}</div></header>}<div className="panel-body">{children}</div></section>; }
+function Field({label,children}){ return <label className="field"><span>{label}</span>{children}</label>; }
+function Empty({msg}){ return <div className="empty">{msg}</div>; }
+function isUrl(s){ return /^https?:/.test(String(s||"")); }
+function SrcChips({items}){
+  const list=(items||[]).filter(Boolean).slice(0,6);
+  if(!list.length) return null;
+  return <div className="srcs">{list.map((s,k)=> isUrl(s)
+    ? <a key={k} href={s} target="_blank" rel="noreferrer">{String(s).replace(/^https?:\/\//,"").slice(0,28)}</a>
+    : <span className="src" key={k}>{s}</span>
+  )}</div>;
+}
+function Modal({open,onClose,title,children,wide}){ if(!open) return null; return <div className="modal-scrim" onMouseDown={onClose}><div className={"modal"+(wide?" wide":"")} onMouseDown={e=>e.stopPropagation()}><header className="modal-head"><h3>{title}</h3><button className="x" onClick={onClose}>×</button></header><div className="modal-body">{children}</div></div></div>; }
+
+function Spark({data,w=520,h=110}){
+  if(!data||data.length<2) return <div className="empty">Not enough data to chart.</div>;
+  const vals=data.map(d=>d.v); const mn=Math.min(...vals),mx=Math.max(...vals); const rng=(mx-mn)||1;
+  const px=(i)=> (i/(data.length-1))*(w-10)+5;
+  const py=(v)=> h-8-((v-mn)/rng)*(h-20);
+  const pts=data.map((d,i)=>px(i)+","+py(d.v)).join(" ");
+  const area=`5,${h-8} `+pts+` ${w-5},${h-8}`;
+  return <svg viewBox={"0 0 "+w+" "+h} width="100%" height={h} preserveAspectRatio="none">
+    <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="var(--accent)" stopOpacity="0.32"/><stop offset="100%" stopColor="var(--accent)" stopOpacity="0"/></linearGradient></defs>
+    <polygon points={area} fill="url(#g1)"/>
+    <polyline points={pts} fill="none" stroke="var(--accent)" strokeWidth="2"/>
+  </svg>;
+}
+function Bars({data,h=180}){
+  if(!data||!data.length) return <div className="empty">No daily data.</div>;
+  const vals=data.map(d=>d.v); const mx=Math.max(1,...vals.map(Math.abs));
+  return <div style={{display:"flex",alignItems:"flex-end",gap:4,height:h,padding:"6px 0"}}>
+    {data.map((d,i)=>{ const ph=Math.abs(d.v)/mx*(h/2-6); return (
+      <div key={i} title={d.k+": "+fmtMoney(d.v)} style={{flex:1,display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",height:"100%"}}>
+        <div style={{flex:1,display:"flex",alignItems:"flex-end",width:"100%"}}>{d.v>=0&&<div style={{width:"100%",height:ph,background:"var(--pos)",borderRadius:"3px 3px 0 0"}}/>}</div>
+        <div style={{flex:1,display:"flex",alignItems:"flex-start",width:"100%"}}>{d.v<0&&<div style={{width:"100%",height:ph,background:"var(--neg)",borderRadius:"0 0 3px 3px"}}/>}</div>
+      </div>
+    );})}
+  </div>;
+}
+
+// ============================================================ APP
+function App(){
+  const [tab,setTab]=useState("dashboard");
+  const [cand,setCand]=useState(()=>store.get(K.cand,[]));
+  const [tix,setTix]=useState(()=>store.get(K.tix,[]));
+  const [paper,setPaper]=useState(()=>store.get(K.paper,[]));
+  const [meta,setMeta]=useState(()=>store.get(K.meta,{bankroll:null,unit:1,daily:[],market:[]}));
+  const [hasKey,setHasKey]=useState(()=>!!store.get(K.key,""));
+  const [toast,setToast]=useState(null);
+  const flash=(m)=>{ setToast(m); setTimeout(()=>setToast(null),2600); };
+
+  const saveCand=(v)=>{ setCand(v); store.set(K.cand,v); };
+  const saveTix=(v)=>{ setTix(v); store.set(K.tix,v); };
+  const savePaper=(v)=>{ setPaper(v); store.set(K.paper,v); };
+  const saveMeta=(v)=>{ setMeta(v); store.set(K.meta,v); };
+
+  const ctx={ cand,tix,paper,meta,saveCand,saveTix,savePaper,saveMeta,flash,setHasKey };
+  return (
+    <div>
+      <header className="topbar">
+        <div className="brand"><span className="brand-mark"/><div><div className="brand-name">OVERLAY</div><div className="brand-sub">bet research &amp; backtest desk</div></div></div>
+        <nav className="tabs">
+          {[["dashboard","Dashboard"],["research","Research"],["slate","Slate"],["log","Log"],["settings","Settings"]].map(([id,l])=>(
+            <button key={id} className={"tab"+(tab===id?" on":"")} onClick={()=>setTab(id)}>{l}</button>
+          ))}
+        </nav>
+        <span className="keydot" title={hasKey?"API key set":"No API key — add one in Settings"} style={{background:hasKey?"var(--pos)":"var(--neg)"}}/>
+      </header>
+      <main className="main">
+        {!hasKey && tab!=="settings" && <div className="panel" style={{borderColor:"var(--warn)"}}><div className="panel-body row-flex"><span className="hint" style={{color:"var(--warn)",flex:1}}>Add your Anthropic API key in Settings to enable the AI features (grading, slate building, live slate).</span><button className="btn small primary" onClick={()=>setTab("settings")}>Open Settings</button></div></div>}
+        {tab==="dashboard" && <Dashboard ctx={ctx}/>}
+        {tab==="research" && <Research ctx={ctx}/>}
+        {tab==="slate" && <Slate ctx={ctx}/>}
+        {tab==="log" && <Log ctx={ctx}/>}
+        {tab==="settings" && <Settings ctx={ctx}/>}
+      </main>
+      {toast && <div className="toast">{toast}</div>}
+    </div>
+  );
+}
+
+// ============================================================ DASHBOARD
+function recStats(rows, resultKey="Result"){
+  const s=rows.filter(r=>["win","loss"].includes((r[resultKey]||"").toLowerCase()));
+  const w=s.filter(r=>(r[resultKey]||"").toLowerCase()==="win").length;
+  return { n:s.length, w, l:s.length-w, rate:s.length?w/s.length:null };
+}
+function Dashboard({ctx}){
+  const { tix,paper,cand,meta }=ctx;
+  const daily=meta.daily||[]; const market=meta.market||[];
+  const bankSeries=daily.filter(d=>d.Date).map(d=>({k:d.Date.slice(5),v:num(d["Ending Bankroll"])})).filter(d=>d.v!==null);
+  const plSeries=daily.filter(d=>d.Date).map(d=>({k:d.Date.slice(5),v:num(d["P/L"])||0}));
+  const curBank=meta.bankroll ?? (bankSeries.length?bankSeries[bankSeries.length-1].v:null);
+  const startBank=bankSeries.length?bankSeries[0].v:null;
+  const traj=(curBank!==null&&startBank!==null)?curBank-startBank:null;
+  const totalPL=tix.reduce((a,t)=>a+(num(t["P/L"])||0),0);
+  const totalRisk=tix.reduce((a,t)=>a+(num(t.Stake)||0),0);
+  const realTix=recStats(tix);
+  const realProps=recStats(cand.filter(c=>(c["Placed?"]||"").toUpperCase()==="Y"||c.Decision==="BET"));
+  const paperStat=recStats(paper);
+  const marketRows=market.map(m=>({name:m["Market Family"],obs:num(m["All Obs"]),hit:num(m["All Hit Rate"])})).filter(m=>m.name&&m.obs).sort((a,b)=>(b.hit||0)-(a.hit||0));
+
+  // source performance (from candidates: bucket + research set)
+  const srcPerf=useMemo(()=>{
+    const map={};
+    cand.forEach(c=>{ const s=(c["Source / Research Set"]||c["Source Bucket"]||"—"); if(!map[s]) map[s]={s,n:0,w:0}; const r=(c.Result||"").toLowerCase(); if(r==="win"||r==="loss"){ map[s].n++; if(r==="win") map[s].w++; } });
+    return Object.values(map).filter(x=>x.n>=2).sort((a,b)=>(b.w/b.n)-(a.w/a.n)).slice(0,8);
+  },[cand]);
+
+  return (
+    <div>
+      <div className="hero">
+        <div><div className="hero-label">Current bankroll</div><div className="hero-bank">{curBank!==null?fmtMoney(curBank):"—"}</div>
+          <div className="hero-meta"><span style={{color:plColor(traj)}}>{traj!==null?(traj>=0?"▲ ":"▼ ")+fmtMoney(Math.abs(traj)):"—"} since start</span><span className="dim">·</span><span>{daily.length} tracked days</span></div>
+        </div>
+        <div><Spark data={bankSeries}/></div>
+      </div>
+
+      <div className="stat-row" style={{marginBottom:16}}>
+        <Stat label="Net P/L (real)" value={fmtMoney(totalPL)} sub={"on "+fmtMoney(totalRisk)+" risked"} accent={plColor(totalPL)}/>
+        <Stat label="ROI (real)" value={fmtPct(totalRisk?totalPL/totalRisk:null)} accent={plColor(totalPL)}/>
+        <Stat label="Real tickets" value={realTix.w+"-"+realTix.l} sub={fmtPct(realTix.rate)+" hit"}/>
+        <Stat label="Real props" value={realProps.w+"-"+realProps.l} sub={fmtPct(realProps.rate)+" hit"}/>
+        <Stat label="Paper lab" value={paperStat.w+"-"+paperStat.l} sub={fmtPct(paperStat.rate)+" hit"} accent="var(--paper)"/>
+      </div>
+
+      <div className="two-col">
+        <Panel title="Market leaderboard" right={<span className="hint">imported hit rate</span>}>
+          {marketRows.length===0?<Empty msg="Import your tracker in Settings to populate market history."/>:
+          <div className="lead">{marketRows.slice(0,12).map((m,i)=>(
+            <div className="lead-row" key={i}><div className="lead-name">{m.name}</div><div className="lead-bar"><div className="lead-fill" style={{width:Math.max(4,(m.hit||0)*100)+"%",background:m.hit>=0.55?"var(--pos)":m.hit>=0.45?"var(--warn)":"var(--neg)"}}/></div><div className="lead-val mono">{fmtPct(m.hit,0)}</div><div className="lead-obs mono">{m.obs}</div></div>
+          ))}</div>}
+        </Panel>
+        <Panel title="Daily P/L">{plSeries.length===0?<Empty msg="No daily summary yet."/>:<Bars data={plSeries}/>}</Panel>
+      </div>
+
+      <Panel title="Source performance" right={<span className="hint">settled candidates, ≥2 obs</span>}>
+        {srcPerf.length===0?<Empty msg="Grade candidates and log results to see which sources actually move your win rate (per prompt §34)."/>:
+        <div className="lead">{srcPerf.map((s,i)=>(
+          <div className="lead-row" key={i}><div className="lead-name">{s.s}</div><div className="lead-bar"><div className="lead-fill" style={{width:Math.max(4,(s.w/s.n)*100)+"%",background:(s.w/s.n)>=0.55?"var(--pos)":"var(--warn)"}}/></div><div className="lead-val mono">{fmtPct(s.w/s.n,0)}</div><div className="lead-obs mono">{s.n}</div></div>
+        ))}</div>}
+      </Panel>
+    </div>
+  );
+}
+
+// ============================================================ RESEARCH
+function Research({ctx}){
+  const { meta,saveCand,savePaper,cand,paper,flash }=ctx;
+  const [srcType,setSrcType]=useState("X.com");
+  const [handle,setHandle]=useState("");
+  const [research,setResearch]=useState("");
+  const [promo,setPromo]=useState("");
+  const [league,setLeague]=useState("MLB");
+  const [date,setDate]=useState(todayISO());
+  const [useWeb,setUseWeb]=useState(store.get(K.web,true));
+  const [loading,setLoading]=useState(false);
+  const [err,setErr]=useState(null); const [raw,setRaw]=useState(null);
+  const [cards,setCards]=useState([]);
+
+  const run=async()=>{
+    setLoading(true); setErr(null); setCards([]); setRaw(null);
+    const srcLabel = srcType+(handle?" @"+handle.replace(/^@/,""):"");
+    const content=
+`CONTEXT
+Date: ${date}
+League(s): ${league}
+Confirmed bankroll: ${meta.bankroll!=null?"$"+meta.bankroll:"unknown — do not infer"}
+Today's promos/boosts (verbatim):
+${promo||"(none)"}
+
+EXTERNAL RESEARCH — source: ${srcLabel} (LEADS ONLY; verify, expand, independently discover; sanity-check for stale rosters/impossible stats):
+${research||"(none provided — run an independent audit)"}
+
+TASK
+${useWeb?"Use web search to verify current lines, roles, injuries, lineups and to confirm today's slate. Cite the exact source URL for each key stat.":"Reason from the provided leads and your knowledge; mark anything unverified as PRELIMINARY."}
+Apply the full order of operations. Produce up to 6 graded candidates (mix SOURCED/HYBRID and at least one INDEPENDENT discovery). Choose the most efficient market expression and a defensible threshold. Explain each pick simply.
+Return STRICT JSON ONLY (no markdown). Keep text fields under ~180 chars.
+{"candidates":[{"date":"${date}","sport":"","league":"${league}","game":"","entity":"","marketFamily":"","proposition":"","line":"","odds":"","provenance":"SOURCED|INDEPENDENT|HYBRID","tier":"A+|A|A-|B+|B|B-|C|PASS","decision":"BET|QUALIFIED_NOT_BET|REJECTED","why":"plain-language reason this leg","mechanism":"","marketExpression":"why this market vs alternatives","thresholdRationale":"","priceNote":"","failureModes":"","exposureNote":"","suggest":"REAL|PAPER","sources":["url or source name"]}]}`;
+    const r=await callClaude({ system: store.get(K.prompt,DEFAULT_PROMPT), content, useWeb });
+    setLoading(false);
+    if(r.error){ setErr(r.error); return; }
+    setRaw(r.text);
+    const parsed=extractJSON(r.text); const arr=parsed?.candidates||(Array.isArray(parsed)?parsed:[]);
+    if(!arr.length){ setErr("Parsed no candidates. See raw output below."); return; }
+    setCards(arr.map(c=>({ ...c, _sel:true, _src:srcLabel, _cites:r.cites||[] })));
+  };
+
+  const toCand=(c)=>({ _id:uid("c_"), Date:c.date||date, "Candidate ID":"", "Source Bucket":(c.provenance||"SOURCED").replace("INDEPENDENT","DISCOVERED"), "Source / Research Set":c._src||"AI", Sport:c.sport||league, League:c.league||league, Game:c.game||"", Entity:c.entity||"", "Market Family":c.marketFamily||"Other", "Bet / Proposition":c.proposition||"", Line:c.line||"", "Odds (American)":c.odds||"", Decision:c.decision||"BET", "Placed?":"N", Result:"", "Loss Classification":"", Tier:c.tier||"", Why:c.why||"", Thesis:[c.mechanism].filter(Boolean).join(""), Sources:(c.sources||[]).concat(c._cites||[]).join(" | "), Notes:[c.marketExpression&&("Market: "+c.marketExpression),c.thresholdRationale&&("Threshold: "+c.thresholdRationale),c.priceNote&&("Price: "+c.priceNote),c.failureModes&&("Fails: "+c.failureModes),c.exposureNote&&("Exposure: "+c.exposureNote)].filter(Boolean).join(" | ") });
+  const toPaper=(c)=>({ _id:uid("p_"), Date:c.date||date, "Paper ID":"", Portfolio:"PAPER", Sport:c.sport||league, Game:c.game||"", Entity:c.entity||"", "Market Family":c.marketFamily||"Other", Proposition:c.proposition||"", "Odds (American)":c.odds||"", "Source Bucket":(c.provenance||"SOURCED").replace("INDEPENDENT","DISCOVERED"), "Model Tier":c.tier||"", Result:"", "Loss Classification":"", "Experiment ID":"", Why:c.why||"", "Pre-Game Hypothesis":[c.mechanism].filter(Boolean).join(""), Sources:(c.sources||[]).concat(c._cites||[]).join(" | "), Notes:[c.marketExpression,c.thresholdRationale,c.priceNote].filter(Boolean).join(" | ") });
+
+  const add=(asPaper)=>{ const sel=cards.filter(c=>c._sel); if(!sel.length){ flash("Nothing selected"); return; } if(asPaper) savePaper([...sel.map(toPaper),...paper]); else saveCand([...sel.map(toCand),...cand]); flash(sel.length+" added to "+(asPaper?"paper":"candidate log")); };
+
+  return (
+    <div className="two-col" style={{gridTemplateColumns:"minmax(340px,430px) 1fr"}}>
+      <div>
+        <Panel title="Intake &amp; grade" right={<span className="hint">runs your prompt</span>}>
+          <div className="form-grid two">
+            <Field label="Source"><select value={srcType} onChange={e=>setSrcType(e.target.value)}>{SOURCE_TYPES.map(s=><option key={s}>{s}</option>)}</select></Field>
+            <Field label="Handle / label"><input value={handle} onChange={e=>setHandle(e.target.value)} placeholder="@user or sheet name"/></Field>
+            <Field label="League"><select value={league} onChange={e=>setLeague(e.target.value)}>{LEAGUES.map(s=><option key={s}>{s}</option>)}</select></Field>
+            <Field label="Date"><input type="date" value={date} onChange={e=>setDate(e.target.value)}/></Field>
+          </div>
+          <Field label="Paste research — tweets, ChatGPT/Claude analysis, prop menus, hit sheets (leads only)"><textarea rows={7} value={research} onChange={e=>setResearch(e.target.value)} placeholder="Paste from X.com, ChatGPT, Claude, or a sheet…"/></Field>
+          <Field label="Promos / boosts (verbatim)"><textarea rows={2} value={promo} onChange={e=>setPromo(e.target.value)} placeholder="DK 50% SGPx, 3+ legs, +300 min…"/></Field>
+          <label className="chk" style={{margin:"2px 0 10px"}}><input type="checkbox" checked={useWeb} onChange={e=>{ setUseWeb(e.target.checked); store.set(K.web,e.target.checked); }}/> use web search (verify lines &amp; cite sources)</label>
+          <div className="form-actions"><span className="hint">{meta.bankroll!=null?"Bankroll $"+meta.bankroll:"Bankroll unset"}</span><div className="grow"/><button className="btn primary" disabled={loading} onClick={run}>{loading?"Analyzing…":"Grade candidates"}</button></div>
+          {err&&<div className="err">{err}</div>}
+        </Panel>
+      </div>
+      <div>
+        {cards.length>0&&<div className="row-flex" style={{marginBottom:12}}>
+          <label className="chk"><input type="checkbox" checked={cards.every(c=>c._sel)} onChange={e=>setCards(cards.map(c=>({...c,_sel:e.target.checked})))}/> select all</label>
+          <div className="grow"/>
+          <button className="btn paper small" onClick={()=>add(true)}>+ Paper</button>
+          <button className="btn primary small" onClick={()=>add(false)}>+ Candidate log</button>
+        </div>}
+        <div className="cand-cards">
+          {cards.map((c,i)=>(
+            <div className={"cand"+(c._sel?" sel":"")} key={i}>
+              <label style={{paddingTop:2}}><input type="checkbox" checked={!!c._sel} onChange={e=>setCards(cards.map((x,j)=>j===i?{...x,_sel:e.target.checked}:x))}/></label>
+              <div className="cand-main">
+                <div className="cand-top"><Badge color={tierColor(c.tier)}>{c.tier}</Badge><span className="cand-ent">{c.entity}</span><span className="cand-prop">{c.proposition}</span><span className="mono cand-odds">{fmtOdds(c.odds)}</span></div>
+                <div className="cand-sub mono">{c.league||c.sport} · {c.game} · {c.marketFamily} · <span style={{color:"var(--accent)"}}>{c.provenance}</span> · <span className="dec" data-d={c.decision}>{c.decision}</span> · <Badge color={c.suggest==="PAPER"?"var(--paper)":"var(--accent)"}>{c.suggest||"—"}</Badge></div>
+                {c.why&&<div className="cand-thesis"><strong>Why:</strong> {c.why}{c.mechanism?" — "+c.mechanism:""}</div>}
+                <div className="cand-detail">
+                  {c.marketExpression&&<div><em>Market</em>{c.marketExpression}</div>}
+                  {c.thresholdRationale&&<div><em>Threshold</em>{c.thresholdRationale}</div>}
+                  {c.priceNote&&<div><em>Price</em>{c.priceNote}</div>}
+                  {c.failureModes&&<div><em>Fails if</em>{c.failureModes}</div>}
+                  {c.exposureNote&&<div><em>Exposure</em>{c.exposureNote}</div>}
+                </div>
+                <SrcChips items={(c.sources||[]).concat(c._cites||[])}/>
+              </div>
+            </div>
+          ))}
+          {!loading&&!cards.length&&!err&&<Empty msg="Grade candidates to see A/B-tiered legs — each with a plain-language why, market-expression, threshold, price, failure modes, and the exact sources it used. Then send them to your candidate log or paper lab."/>}
+          {raw&&!cards.length&&<details className="raw"><summary>Raw model output</summary><pre>{raw}</pre></details>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================ SLATE
+function Slate({ctx}){
+  const { cand,meta,saveTix,savePaper,tix,paper,flash }=ctx;
+  const pool=useMemo(()=>cand.filter(c=>c.Decision!=="REJECTED"),[cand]);
+  const [sel,setSel]=useState({});
+  const [boost,setBoost]=useState(""); const [minLegs,setMinLegs]=useState(""); const [minOdds,setMinOdds]=useState("");
+  const [structures,setStructures]=useState("SGP, SGPx, parlay, single");
+  const [useWeb,setUseWeb]=useState(store.get(K.web,true));
+  const [loading,setLoading]=useState(false); const [err,setErr]=useState(null); const [raw,setRaw]=useState(null);
+  const [out,setOut]=useState(null);
+  // find slate
+  const [sday,setSday]=useState(todayISO()); const [leaguesSel,setLeaguesSel]=useState({MLB:true,WNBA:true});
+  const [games,setGames]=useState([]); const [gload,setGload]=useState(false); const [gerr,setGerr]=useState(null);
+
+  const chosen=pool.filter(c=>sel[c._id]);
+  const toggle=(id)=>setSel(s=>({...s,[id]:!s[id]}));
+
+  const findSlate=async()=>{
+    const ls=Object.keys(leaguesSel).filter(k=>leaguesSel[k]);
+    if(!ls.length){ setGerr("Pick at least one league."); return; }
+    setGload(true); setGerr(null); setGames([]);
+    const content=`Use web search to list today's (${sday}) scheduled games for these leagues: ${ls.join(", ")}. Include start times (local US/Eastern if known) and confirm each is actually on the slate for that date. Return STRICT JSON only: {"games":[{"league":"","away":"","home":"","start":"","note":""}]}. If a league has no games that date, omit it. Cite nothing in the JSON.`;
+    const r=await callClaude({ system:"You are a precise sports-schedule lookup. Verify with web search; never invent games.", content, useWeb:true, maxTokens:1500 });
+    setGload(false);
+    if(r.error){ setGerr(r.error); return; }
+    const p=extractJSON(r.text); const g=p?.games||[];
+    if(!g.length){ setGerr("No games parsed. Try fewer leagues or check the date. Raw: "+(r.text||"").slice(0,200)); return; }
+    setGames(g);
+  };
+
+  const build=async()=>{
+    if(chosen.length<2){ setErr("Select at least 2 candidates."); return; }
+    setLoading(true); setErr(null); setOut(null); setRaw(null);
+    const poolText=chosen.map(c=>`- [${c.Tier||"?"}] ${c.Entity} ${c["Bet / Proposition"]} @ ${fmtOdds(c["Odds (American)"])} | ${c.Sport||c.League} ${c.Game} | ${c["Market Family"]} | ${c["Source Bucket"]}`).join("\n");
+    const content=
+`CONTEXT
+Bankroll: ${meta.bankroll!=null?"$"+meta.bankroll:"unknown"} | base unit: $${meta.unit||1}
+PROMO/BOOST: ${boost||"none"}${minLegs?` | min legs ${minLegs}`:""}${minOdds?` | min raw odds ${minOdds}`:""}
+Allowed structures: ${structures}
+
+GRADED CANDIDATE POOL (already analyzed — construct, do not re-pick stars):
+${poolText}
+
+TASK
+Produce TWO slates.
+1) REAL slate: the disciplined main card. Portfolio-before-parlay; hard two-market CORE exposure cap; minimum-leg constructions; no filler; correct SGP vs SGPx (SGPx needs a >=2-leg same-game core PLUS an outside leg; three cross-game singles = normal parlay); verify raw odds meet the promo BEFORE the boost. It is fine to recommend few or zero real tickets.
+2) PAPER slate: broad R&D per the paper-lab standard — alternate markets/thresholds, shadow singles for real legs, 2-leg subsets, unboosted controls, challenger constructions, source-vs-independent conflicts. Larger than the real card. Each row must answer a research question.
+Give every leg a plain-language "why". Flag duplicated player/thesis exposure.
+Return STRICT JSON ONLY (no markdown), text fields under ~160 chars:
+{"real":[{"name":"","type":"SINGLE|SGP|SGPx|PARLAY","legs":[{"entity":"","proposition":"","odds":"","game":"","why":""}],"rawOdds":"","boostedOdds":"","stake":"","rationale":"","exposureNote":"","promoFit":""}],"paper":[{"name":"","type":"","legs":[{"entity":"","proposition":"","odds":"","game":"","why":""}],"rawOdds":"","experiment":"what this tests","rationale":""}],"rejects":[{"entity":"","proposition":"","reason":""}],"notes":""}`;
+    const r=await callClaude({ system: store.get(K.prompt,DEFAULT_PROMPT), content, useWeb, maxTokens:2000 });
+    setLoading(false);
+    if(r.error){ setErr(r.error); return; }
+    setRaw(r.text);
+    const p=extractJSON(r.text);
+    if(!p||(!p.real&&!p.paper)){ setErr("Could not parse slates. See raw output."); return; }
+    setOut(p);
+  };
+
+  const exposureWarn=(tickets)=>{ const cnt={}; (tickets||[]).forEach(t=>(t.legs||[]).forEach(l=>{ const k=(l.entity||"").trim(); if(k) cnt[k]=(cnt[k]||0)+1; })); return Object.entries(cnt).filter(([k,v])=>v>2).map(([k,v])=>k+" ×"+v); };
+
+  const saveReal=(t)=>{ const legs=t.legs||[]; const rawCombo=t.rawOdds||combineAm(legs.map(l=>l.odds)); saveTix([{ _id:uid("t_"), Date:todayISO(), "Ticket ID":"", Origin:"CREATED", Description:t.name||legs.map(l=>l.entity+" "+l.proposition).join(" + "), Stake:String(num(t.stake)||meta.unit||1), "Odds (American)":t.boostedOdds||rawCombo||"", "Boosted?":t.boostedOdds?"Y":"N", Legs:String(legs.length||1), Result:"", "Loss Classification":"", Payout:"", "P/L":"", "Promo / Special":boost||"", "Execution Note":[t.rationale,t.exposureNote,t.promoFit].filter(Boolean).join(" | ") },...tix]); flash("Saved to real tickets"); };
+  const savePaperT=(t)=>{ const legs=t.legs||[]; savePaper([...legs.map(l=>({ _id:uid("p_"), Date:todayISO(), "Paper ID":"", Portfolio:"PAPER", Sport:"", Game:l.game||"", Entity:l.entity||"", "Market Family":"", Proposition:l.proposition||"", "Odds (American)":l.odds||"", "Source Bucket":"DISCOVERED", "Model Tier":"", Result:"", "Loss Classification":"", "Experiment ID":t.experiment||t.name||"", Why:l.why||"", "Pre-Game Hypothesis":t.rationale||"", Sources:"", Notes:t.name||"" })),...paper]); flash("Paper ticket legs saved to paper log"); };
+
+  const realWarn=out?exposureWarn(out.real):[];
+
+  return (
+    <div>
+      <Panel title="Today's slate" right={<span className="hint">web-verified schedule</span>}>
+        <div className="row-flex" style={{flexWrap:"wrap",gap:8,marginBottom:10}}>
+          <input type="date" className="search" style={{maxWidth:160,flex:"none"}} value={sday} onChange={e=>setSday(e.target.value)}/>
+          <div className="grow"/>
+          <button className="btn primary small" disabled={gload} onClick={findSlate}>{gload?"Searching…":"Find today's slate"}</button>
+        </div>
+        <div className="row-flex" style={{flexWrap:"wrap",gap:6,marginBottom:10}}>
+          {LEAGUES.map(l=><label key={l} className="chk" style={{border:"1px solid var(--line)",borderRadius:20,padding:"4px 10px"}}><input type="checkbox" checked={!!leaguesSel[l]} onChange={e=>setLeaguesSel(s=>({...s,[l]:e.target.checked}))}/>{l}</label>)}
+        </div>
+        {gerr&&<div className="err">{gerr}</div>}
+        {games.length>0&&<div className="games">{games.map((g,i)=>(<div className="game" key={i}><span className="lg mono">{g.league}</span><span>{g.away} @ {g.home}</span><span className="mono dim">{g.start}</span></div>))}</div>}
+      </Panel>
+
+      <div className="slate-two">
+        <Panel title="Candidate pool" right={<span className="hint">{chosen.length} selected</span>}>
+          {pool.length===0?<Empty msg="No candidates yet. Generate them in Research or add in Log."/>:
+          <div className="pool-list">{pool.map(c=>(
+            <label className={"pool-item"+(sel[c._id]?" on":"")} key={c._id}><input type="checkbox" checked={!!sel[c._id]} onChange={()=>toggle(c._id)}/><Badge color={tierColor(c.Tier)}>{c.Tier||"?"}</Badge><span className="pi-ent">{c.Entity}</span><span className="pi-prop">{c["Bet / Proposition"]}</span><span className="mono">{fmtOdds(c["Odds (American)"])}</span></label>
+          ))}</div>}
+        </Panel>
+
+        <div>
+          <Panel title="Promo &amp; construction">
+            <Field label="Boost / promo terms"><input value={boost} onChange={e=>setBoost(e.target.value)} placeholder="DK 50% SGPx"/></Field>
+            <div className="form-grid two"><Field label="Min legs"><input value={minLegs} onChange={e=>setMinLegs(e.target.value)} placeholder="3"/></Field><Field label="Min raw odds"><input value={minOdds} onChange={e=>setMinOdds(e.target.value)} placeholder="+300"/></Field></div>
+            <Field label="Allowed structures"><input value={structures} onChange={e=>setStructures(e.target.value)}/></Field>
+            <div className="form-actions"><label className="chk"><input type="checkbox" checked={useWeb} onChange={e=>{setUseWeb(e.target.checked);store.set(K.web,e.target.checked);}}/> web verify</label><div className="grow"/><button className="btn primary" disabled={loading} onClick={build}>{loading?"Constructing…":"Build real + paper slates"}</button></div>
+            {err&&<div className="err">{err}</div>}
+          </Panel>
+
+          {out&&<div className="slate-cols">
+            <div className="slate-col">
+              <h4><Badge color="var(--accent)">REAL</Badge> main card</h4>
+              {realWarn.length>0&&<div className="err" style={{color:"var(--warn)",borderColor:"var(--warn)",background:"color-mix(in srgb,var(--warn) 8%,transparent)"}}>Exposure cap: {realWarn.join(", ")} exceed the two-market default.</div>}
+              {(out.real||[]).length===0?<Empty msg="No real tickets recommended — acceptable per your prompt."/>:(out.real||[]).map((t,i)=>{ const rc=t.rawOdds||combineAm((t.legs||[]).map(l=>l.odds)); return (
+                <div className="ticket real" key={i}>
+                  <div className="ticket-head"><Badge color="var(--accent)">{t.type}</Badge><span className="ticket-name">{t.name}</span><span className="ticket-odds mono">{fmtOdds(rc)}{t.boostedOdds&&<span className="boosted"> → {fmtOdds(t.boostedOdds)}</span>}</span></div>
+                  <div className="legs">{(t.legs||[]).map((l,j)=>(<div className="leg" key={j}><span className="leg-ent">{l.entity}</span><span className="leg-prop">{l.proposition}</span><span className="mono">{fmtOdds(l.odds)}</span><span className="mono dim leg-game">{l.game}</span>{l.why&&<div className="leg-why">{l.why}</div>}</div>))}</div>
+                  {t.rationale&&<div className="ticket-note">{t.rationale}</div>}
+                  <div className="ticket-foot">{t.exposureNote&&<span className="chip">exposure: {t.exposureNote}</span>}{t.promoFit&&<span className="chip">promo: {t.promoFit}</span>}{t.stake&&<span className="chip">stake {fmtMoney(t.stake,0)}</span>}<div className="grow"/><button className="btn small primary" onClick={()=>saveReal(t)}>Save</button></div>
+                </div>
+              );})}
+            </div>
+            <div className="slate-col">
+              <h4><Badge color="var(--paper)">PAPER</Badge> R&amp;D lab</h4>
+              {(out.paper||[]).length===0?<Empty msg="No paper tests proposed."/>:(out.paper||[]).map((t,i)=>{ const rc=t.rawOdds||combineAm((t.legs||[]).map(l=>l.odds)); return (
+                <div className="ticket paper" key={i}>
+                  <div className="ticket-head"><Badge color="var(--paper)">{t.type}</Badge><span className="ticket-name">{t.name}</span><span className="ticket-odds mono">{fmtOdds(rc)}</span></div>
+                  <div className="legs">{(t.legs||[]).map((l,j)=>(<div className="leg" key={j}><span className="leg-ent">{l.entity}</span><span className="leg-prop">{l.proposition}</span><span className="mono">{fmtOdds(l.odds)}</span><span className="mono dim leg-game">{l.game}</span>{l.why&&<div className="leg-why">{l.why}</div>}</div>))}</div>
+                  {t.experiment&&<div className="ticket-note"><strong>Tests:</strong> {t.experiment}</div>}
+                  {t.rationale&&<div className="ticket-note">{t.rationale}</div>}
+                  <div className="ticket-foot"><div className="grow"/><button className="btn small paper" onClick={()=>savePaperT(t)}>Save to paper</button></div>
+                </div>
+              );})}
+            </div>
+          </div>}
+          {out&&(out.rejects||[]).length>0&&<Panel title="Qualified-not-bet / rejects"><div>{out.rejects.map((r,i)=>(<div key={i} style={{fontSize:12,color:"var(--ink-2)",marginBottom:5}}><span className="strong">{r.entity}</span> {r.proposition} <span className="dim">— {r.reason}</span></div>))}</div></Panel>}
+          {out&&out.notes&&<div className="hint" style={{padding:"4px 2px"}}>{out.notes}</div>}
+          {raw&&!out&&<details className="raw"><summary>Raw model output</summary><pre>{raw}</pre></details>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================ LOG
+function Log({ctx}){
+  const [sub,setSub]=useState("cand");
+  const tabs=[["cand","Candidates",(ctx.cand||[]).length,""],["tix","Real tickets",(ctx.tix||[]).length,""],["paper","Paper",(ctx.paper||[]).length,"paper"]];
+  return (<div>
+    <div className="subtabs">{tabs.map(([id,l,n,cls])=>(<button key={id} className={"subtab"+(sub===id?" on "+cls:"")} onClick={()=>setSub(id)}>{l}<span className="count">{n}</span></button>))}</div>
+    {sub==="cand"&&<CandLog ctx={ctx}/>}
+    {sub==="tix"&&<TixLog ctx={ctx}/>}
+    {sub==="paper"&&<PaperLog ctx={ctx}/>}
+  </div>);
+}
+function useFilter(rows,fields){
+  const [q,setQ]=useState(""),[sport,setSport]=useState(""),[dec,setDec]=useState("");
+  const filtered=useMemo(()=>rows.filter(r=>{ if(sport&&(r.Sport||r.sport)!==sport) return false; if(dec&&r.Decision!==dec) return false; if(q){ const s=q.toLowerCase(); return fields.some(f=>String(r[f]||"").toLowerCase().includes(s)); } return true; }),[rows,q,sport,dec,fields]);
+  return {q,setQ,sport,setSport,dec,setDec,filtered};
+}
+function Toolbar({F,onAdd,dec}){
+  return (<div className="toolbar"><input className="search" placeholder="Search…" value={F.q} onChange={e=>F.setQ(e.target.value)}/><select value={F.sport} onChange={e=>F.setSport(e.target.value)}><option value="">All sports</option>{SPORTS.map(s=><option key={s}>{s}</option>)}</select>{dec&&<select value={F.dec} onChange={e=>F.setDec(e.target.value)}><option value="">All decisions</option>{DECISIONS.map(d=><option key={d}>{d}</option>)}</select>}<div className="grow"/><button className="btn primary" onClick={onAdd}>+ Add</button></div>);
+}
+const E_CAND={ Date:todayISO(),"Candidate ID":"","Source Bucket":"SOURCED","Source / Research Set":"",Sport:"MLB",Game:"",Entity:"","Market Family":"Pitcher Outs","Bet / Proposition":"",Line:"","Odds (American)":"",Decision:"BET","Placed?":"N",Result:"","Loss Classification":"",Tier:"",Why:"",Thesis:"",Sources:"",Notes:"" };
+function CandLog({ctx}){
+  const rows=ctx.cand||[]; const F=useFilter(rows,["Entity","Game","Bet / Proposition","Market Family","Source / Research Set"]); const [edit,setEdit]=useState(null);
+  const up=(r)=>{ const l=[...rows]; const i=l.findIndex(x=>x._id===r._id); if(i>=0)l[i]=r; else l.unshift(r); ctx.saveCand(l); setEdit(null); ctx.flash(i>=0?"Updated":"Added"); };
+  const del=(r)=>{ ctx.saveCand(rows.filter(x=>x._id!==r._id)); setEdit(null); ctx.flash("Deleted"); };
+  return (<div>
+    <Toolbar F={F} dec onAdd={()=>setEdit({...E_CAND,_id:uid("c_")})}/>
+    <div className="tablewrap"><table className="tbl"><thead><tr><th>Date</th><th>Sport</th><th>Entity</th><th>Market</th><th>Proposition</th><th className="r">Odds</th><th className="r">Imp</th><th>Prov</th><th>Tier</th><th>Decision</th><th>Result</th><th></th></tr></thead><tbody>
+      {F.filtered.length===0&&<tr><td colSpan={12}><Empty msg="No candidates. Generate in Research or add here."/></td></tr>}
+      {F.filtered.map(r=>(<tr key={r._id} className="row" onClick={()=>setEdit(r)}><td className="mono dim">{(r.Date||"").slice(5)}</td><td>{r.Sport}</td><td className="strong">{r.Entity}</td><td className="dim">{r["Market Family"]}</td><td>{r["Bet / Proposition"]}</td><td className="mono r">{fmtOdds(r["Odds (American)"])}</td><td className="mono r dim">{fmtPct(impliedProb(r["Odds (American)"]),0)}</td><td><Badge>{(r["Source Bucket"]||"").slice(0,4)}</Badge></td><td>{r.Tier?<Badge color={tierColor(r.Tier)}>{r.Tier}</Badge>:null}</td><td><span className="dec" data-d={r.Decision}>{(r.Decision||"").replace("QUALIFIED_NOT_BET","QNB")}</span></td><td><span style={{color:resultColor(r.Result)}}>{r.Result||"—"}</span></td><td className="chev">›</td></tr>))}
+    </tbody></table></div>
+    <CandForm rec={edit} onSave={up} onDelete={del} onClose={()=>setEdit(null)}/>
+  </div>);
+}
+function CandForm({rec,onSave,onDelete,onClose}){
+  const [f,setF]=useState(rec); useEffect(()=>setF(rec),[rec]); if(!rec) return null; const set=(k,v)=>setF(p=>({...p,[k]:v}));
+  const settled=["Win","Loss"].includes(f.Result);
+  return (<Modal open={!!rec} onClose={onClose} title={f.Entity?"Edit candidate":"New candidate"} wide>
+    <div className="form-grid">
+      <Field label="Date"><input type="date" value={f.Date||""} onChange={e=>set("Date",e.target.value)}/></Field>
+      <Field label="Sport"><select value={f.Sport} onChange={e=>set("Sport",e.target.value)}>{SPORTS.map(s=><option key={s}>{s}</option>)}</select></Field>
+      <Field label="Source bucket"><select value={f["Source Bucket"]} onChange={e=>set("Source Bucket",e.target.value)}>{SOURCE_BUCKETS.map(s=><option key={s}>{s}</option>)}</select></Field>
+      <Field label="Game"><input value={f.Game||""} onChange={e=>set("Game",e.target.value)}/></Field>
+      <Field label="Entity"><input value={f.Entity||""} onChange={e=>set("Entity",e.target.value)}/></Field>
+      <Field label="Market family"><select value={f["Market Family"]} onChange={e=>set("Market Family",e.target.value)}>{MARKET_FAMILIES.map(s=><option key={s}>{s}</option>)}</select></Field>
+      <Field label="Proposition"><input value={f["Bet / Proposition"]||""} onChange={e=>set("Bet / Proposition",e.target.value)}/></Field>
+      <Field label="Odds"><input value={f["Odds (American)"]||""} onChange={e=>set("Odds (American)",e.target.value)} placeholder="-125"/></Field>
+      <Field label="Tier"><select value={f.Tier||""} onChange={e=>set("Tier",e.target.value)}><option value=""></option>{TIERS.map(t=><option key={t}>{t}</option>)}</select></Field>
+      <Field label="Decision"><select value={f.Decision} onChange={e=>set("Decision",e.target.value)}>{DECISIONS.map(d=><option key={d}>{d}</option>)}</select></Field>
+      <Field label="Placed?"><select value={f["Placed?"]||"N"} onChange={e=>set("Placed?",e.target.value)}><option>N</option><option>Y</option></select></Field>
+      <Field label="Result"><select value={f.Result||""} onChange={e=>set("Result",e.target.value)}>{RESULTS.map(r=><option key={r} value={r}>{r||"—"}</option>)}</select></Field>
+      <Field label="Source / research set"><input value={f["Source / Research Set"]||""} onChange={e=>set("Source / Research Set",e.target.value)}/></Field>
+    </div>
+    {settled&&<Field label="Loss / result classification (§16)"><select value={f["Loss Classification"]||""} onChange={e=>set("Loss Classification",e.target.value)}>{LOSS_CLASS.map(c=><option key={c} value={c}>{c||"—"}</option>)}</select></Field>}
+    <Field label="Why (plain language)"><input value={f.Why||""} onChange={e=>set("Why",e.target.value)}/></Field>
+    <Field label="Sources"><input value={f.Sources||""} onChange={e=>set("Sources",e.target.value)}/></Field>
+    <Field label="Notes"><textarea rows={2} value={f.Notes||""} onChange={e=>set("Notes",e.target.value)}/></Field>
+    <div className="form-actions">{onDelete&&<button className="btn danger" onClick={()=>onDelete(f)}>Delete</button>}<div className="grow"/><button className="btn ghost" onClick={onClose}>Cancel</button><button className="btn primary" onClick={()=>onSave(f)}>Save</button></div>
+  </Modal>);
+}
+const E_TIX={ Date:todayISO(),"Ticket ID":"",Origin:"CREATED",Description:"",Stake:"1","Odds (American)":"","Boosted?":"N",Legs:"1",Result:"","Loss Classification":"",Payout:"","P/L":"","Promo / Special":"","Execution Note":"" };
+function TixLog({ctx}){
+  const rows=ctx.tix||[]; const F=useFilter(rows,["Description","Ticket ID","Promo / Special","Origin"]); const [edit,setEdit]=useState(null);
+  const up=(r)=>{ const l=[...rows]; const i=l.findIndex(x=>x._id===r._id); if(num(r.Payout)!==null&&num(r.Stake)!==null&&(r["P/L"]===""||r["P/L"]==null)){ r["P/L"]=(r.Result||"").toLowerCase()==="loss"?String(-num(r.Stake)):String((num(r.Payout)||0)-(num(r.Stake)||0)); } if(i>=0)l[i]=r; else l.unshift(r); ctx.saveTix(l); setEdit(null); ctx.flash(i>=0?"Updated":"Added"); };
+  const del=(r)=>{ ctx.saveTix(rows.filter(x=>x._id!==r._id)); setEdit(null); ctx.flash("Deleted"); };
+  return (<div>
+    <Toolbar F={F} onAdd={()=>setEdit({...E_TIX,_id:uid("t_")})}/>
+    <div className="tablewrap"><table className="tbl"><thead><tr><th>Date</th><th>ID</th><th>Origin</th><th>Description</th><th className="r">Stake</th><th className="r">Odds</th><th>B?</th><th className="r">Legs</th><th>Result</th><th className="r">P/L</th><th></th></tr></thead><tbody>
+      {F.filtered.length===0&&<tr><td colSpan={11}><Empty msg="No real tickets. Build them in Slate or add here."/></td></tr>}
+      {F.filtered.map(r=>(<tr key={r._id} className="row" onClick={()=>setEdit(r)}><td className="mono dim">{(r.Date||"").slice(5)}</td><td className="mono">{r["Ticket ID"]}</td><td><Badge>{r.Origin}</Badge></td><td className="strong">{r.Description}</td><td className="mono r">{fmtMoney(r.Stake,0)}</td><td className="mono r">{fmtOdds(r["Odds (American)"])}</td><td>{(r["Boosted?"]||"")==="Y"?<Badge color="var(--accent)">B</Badge>:""}</td><td className="mono r">{r.Legs}</td><td><span style={{color:resultColor(r.Result)}}>{r.Result||"—"}</span></td><td className="mono r" style={{color:plColor(r["P/L"])}}>{r["P/L"]!==""&&r["P/L"]!=null?fmtMoney(r["P/L"]):"—"}</td><td className="chev">›</td></tr>))}
+    </tbody></table></div>
+    <TixForm rec={edit} onSave={up} onDelete={del} onClose={()=>setEdit(null)}/>
+  </div>);
+}
+function TixForm({rec,onSave,onDelete,onClose}){
+  const [f,setF]=useState(rec); useEffect(()=>setF(rec),[rec]); if(!rec) return null; const set=(k,v)=>setF(p=>({...p,[k]:v})); const settled=["Win","Loss"].includes(f.Result);
+  return (<Modal open={!!rec} onClose={onClose} title={f.Description?"Edit ticket":"New ticket"} wide>
+    <div className="form-grid">
+      <Field label="Date"><input type="date" value={f.Date||""} onChange={e=>set("Date",e.target.value)}/></Field>
+      <Field label="Ticket ID"><input value={f["Ticket ID"]||""} onChange={e=>set("Ticket ID",e.target.value)}/></Field>
+      <Field label="Origin"><select value={f.Origin} onChange={e=>set("Origin",e.target.value)}><option>CREATED</option><option>SOURCED</option><option>HYBRID</option><option>ADJUSTED</option><option>ORIGINAL</option><option>ROLLER</option></select></Field>
+      <Field label="Stake"><input value={f.Stake||""} onChange={e=>set("Stake",e.target.value)}/></Field>
+      <Field label="Odds"><input value={f["Odds (American)"]||""} onChange={e=>set("Odds (American)",e.target.value)}/></Field>
+      <Field label="Boosted?"><select value={f["Boosted?"]||"N"} onChange={e=>set("Boosted?",e.target.value)}><option>N</option><option>Y</option></select></Field>
+      <Field label="Legs"><input value={f.Legs||""} onChange={e=>set("Legs",e.target.value)}/></Field>
+      <Field label="Result"><select value={f.Result||""} onChange={e=>set("Result",e.target.value)}>{RESULTS.map(r=><option key={r} value={r}>{r||"—"}</option>)}</select></Field>
+      <Field label="Payout"><input value={f.Payout||""} onChange={e=>set("Payout",e.target.value)}/></Field>
+      <Field label="P/L (auto)"><input value={f["P/L"]||""} onChange={e=>set("P/L",e.target.value)}/></Field>
+    </div>
+    {settled&&<Field label="Loss / result classification (§16)"><select value={f["Loss Classification"]||""} onChange={e=>set("Loss Classification",e.target.value)}>{LOSS_CLASS.map(c=><option key={c} value={c}>{c||"—"}</option>)}</select></Field>}
+    <Field label="Description"><input value={f.Description||""} onChange={e=>set("Description",e.target.value)}/></Field>
+    <Field label="Promo / special"><input value={f["Promo / Special"]||""} onChange={e=>set("Promo / Special",e.target.value)}/></Field>
+    <Field label="Execution note"><textarea rows={2} value={f["Execution Note"]||""} onChange={e=>set("Execution Note",e.target.value)}/></Field>
+    <div className="form-actions">{onDelete&&<button className="btn danger" onClick={()=>onDelete(f)}>Delete</button>}<div className="grow"/><button className="btn ghost" onClick={onClose}>Cancel</button><button className="btn primary" onClick={()=>onSave(f)}>Save</button></div>
+  </Modal>);
+}
+const E_PAPER={ Date:todayISO(),"Paper ID":"",Portfolio:"PAPER",Sport:"MLB",Game:"",Entity:"","Market Family":"Pitcher Outs",Proposition:"","Odds (American)":"","Source Bucket":"SOURCED","Model Tier":"",Result:"","Loss Classification":"","Experiment ID":"",Why:"","Pre-Game Hypothesis":"",Sources:"",Notes:"" };
+function PaperLog({ctx}){
+  const rows=ctx.paper||[]; const F=useFilter(rows,["Entity","Game","Proposition","Market Family","Experiment ID"]); const [edit,setEdit]=useState(null);
+  const up=(r)=>{ const l=[...rows]; const i=l.findIndex(x=>x._id===r._id); if(i>=0)l[i]=r; else l.unshift(r); ctx.savePaper(l); setEdit(null); ctx.flash(i>=0?"Updated":"Added"); };
+  const del=(r)=>{ ctx.savePaper(rows.filter(x=>x._id!==r._id)); setEdit(null); ctx.flash("Deleted"); };
+  return (<div>
+    <Toolbar F={F} onAdd={()=>setEdit({...E_PAPER,_id:uid("p_")})}/>
+    <div className="tablewrap"><table className="tbl"><thead><tr><th>Date</th><th>Sport</th><th>Entity</th><th>Market</th><th>Proposition</th><th className="r">Odds</th><th>Tier</th><th>Exp</th><th>Result</th><th></th></tr></thead><tbody>
+      {F.filtered.length===0&&<tr><td colSpan={10}><Empty msg="No paper bets. Send graded candidates or paper slates here."/></td></tr>}
+      {F.filtered.map(r=>(<tr key={r._id} className="row" onClick={()=>setEdit(r)}><td className="mono dim">{(r.Date||"").slice(5)}</td><td>{r.Sport}</td><td className="strong">{r.Entity}</td><td className="dim">{r["Market Family"]}</td><td>{r.Proposition}</td><td className="mono r">{fmtOdds(r["Odds (American)"])}</td><td>{r["Model Tier"]?<Badge color={tierColor(r["Model Tier"])}>{r["Model Tier"]}</Badge>:null}</td><td className="mono dim">{r["Experiment ID"]}</td><td><span style={{color:resultColor(r.Result)}}>{r.Result||"—"}</span></td><td className="chev">›</td></tr>))}
+    </tbody></table></div>
+    <PaperForm rec={edit} onSave={up} onDelete={del} onClose={()=>setEdit(null)}/>
+  </div>);
+}
+function PaperForm({rec,onSave,onDelete,onClose}){
+  const [f,setF]=useState(rec); useEffect(()=>setF(rec),[rec]); if(!rec) return null; const set=(k,v)=>setF(p=>({...p,[k]:v})); const settled=["Win","Loss"].includes(f.Result);
+  return (<Modal open={!!rec} onClose={onClose} title={f.Entity?"Edit paper bet":"New paper bet"} wide>
+    <div className="form-grid">
+      <Field label="Date"><input type="date" value={f.Date||""} onChange={e=>set("Date",e.target.value)}/></Field>
+      <Field label="Sport"><select value={f.Sport} onChange={e=>set("Sport",e.target.value)}>{SPORTS.map(s=><option key={s}>{s}</option>)}</select></Field>
+      <Field label="Game"><input value={f.Game||""} onChange={e=>set("Game",e.target.value)}/></Field>
+      <Field label="Entity"><input value={f.Entity||""} onChange={e=>set("Entity",e.target.value)}/></Field>
+      <Field label="Market family"><select value={f["Market Family"]} onChange={e=>set("Market Family",e.target.value)}>{MARKET_FAMILIES.map(s=><option key={s}>{s}</option>)}</select></Field>
+      <Field label="Proposition"><input value={f.Proposition||""} onChange={e=>set("Proposition",e.target.value)}/></Field>
+      <Field label="Odds"><input value={f["Odds (American)"]||""} onChange={e=>set("Odds (American)",e.target.value)}/></Field>
+      <Field label="Tier"><select value={f["Model Tier"]||""} onChange={e=>set("Model Tier",e.target.value)}><option value=""></option>{TIERS.map(t=><option key={t}>{t}</option>)}</select></Field>
+      <Field label="Experiment ID"><input value={f["Experiment ID"]||""} onChange={e=>set("Experiment ID",e.target.value)} placeholder="EXP-03"/></Field>
+      <Field label="Result"><select value={f.Result||""} onChange={e=>set("Result",e.target.value)}>{RESULTS.map(r=><option key={r} value={r}>{r||"—"}</option>)}</select></Field>
+    </div>
+    {settled&&<Field label="Result classification (§16)"><select value={f["Loss Classification"]||""} onChange={e=>set("Loss Classification",e.target.value)}>{LOSS_CLASS.map(c=><option key={c} value={c}>{c||"—"}</option>)}</select></Field>}
+    <Field label="Why / pre-game hypothesis"><textarea rows={2} value={f["Pre-Game Hypothesis"]||""} onChange={e=>set("Pre-Game Hypothesis",e.target.value)}/></Field>
+    <Field label="Notes"><textarea rows={2} value={f.Notes||""} onChange={e=>set("Notes",e.target.value)}/></Field>
+    <div className="form-actions">{onDelete&&<button className="btn danger" onClick={()=>onDelete(f)}>Delete</button>}<div className="grow"/><button className="btn ghost" onClick={onClose}>Cancel</button><button className="btn primary" onClick={()=>onSave(f)}>Save</button></div>
+  </Modal>);
+}
+
+// ============================================================ SETTINGS
+function Settings({ctx}){
+  const { meta,saveMeta,cand,tix,paper,flash,setHasKey }=ctx;
+  const [key,setKey]=useState(store.get(K.key,""));
+  const [model,setModel]=useState(store.get(K.model,MODELS[0]));
+  const [prompt,setPrompt]=useState(store.get(K.prompt,DEFAULT_PROMPT));
+  const [bank,setBank]=useState(meta.bankroll??""); const [unit,setUnit]=useState(meta.unit??1);
+  const [testMsg,setTestMsg]=useState(null); const [testing,setTesting]=useState(false);
+  const [refine,setRefine]=useState(null); const [rload,setRload]=useState(false); const [rerr,setRerr]=useState(null);
+  const fileRef=useRef(); const [paste,setPaste]=useState("");
+
+  const saveKey=()=>{ store.set(K.key,key.trim()); store.set(K.model,model); setHasKey(!!key.trim()); flash("API settings saved"); };
+  const savePrompt=()=>{ store.set(K.prompt,prompt); flash("Prompt saved"); };
+  const resetPrompt=()=>{ setPrompt(DEFAULT_PROMPT); store.set(K.prompt,DEFAULT_PROMPT); flash("Prompt reset to your Master v3"); };
+  const saveBank=()=>{ saveMeta({...meta,bankroll:num(bank),unit:num(unit)||1}); flash("Bankroll saved"); };
+
+  const test=async()=>{ store.set(K.key,key.trim()); store.set(K.model,model); setTesting(true); setTestMsg(null); const r=await callClaude({ system:"Reply with the single word: ok", content:"ping", useWeb:false, maxTokens:10 }); setTesting(false); if(r.error) setTestMsg({err:r.error}); else { setHasKey(true); setTestMsg({ok:"Connected. Model replied: "+(r.text||"").slice(0,40)}); } };
+
+  const importData=(obj)=>{
+    const map={ "Candidate Log":"cand","Ticket Log":"tix","Paper Portfolio":"paper", candidates:"cand",tickets:"tix",paper:"paper" };
+    let n=0; const setters={cand:ctx.saveCand,tix:ctx.saveTix,paper:ctx.savePaper}; const pfx={cand:"c_",tix:"t_",paper:"p_"};
+    for(const [k,t] of Object.entries(map)){ if(Array.isArray(obj[k])){ const w=obj[k].map(r=>r._id?r:{...r,_id:uid(pfx[t])}); setters[t](w); n+=w.length; } }
+    const daily=obj["Daily Summary"]||obj.daily; const market=obj["Market Summary"]||obj.market;
+    const nm={...meta}; if(Array.isArray(daily)) nm.daily=daily; if(Array.isArray(market)) nm.market=market;
+    if(Array.isArray(daily)&&daily.length){ const last=daily[daily.length-1]; const b=num(last["Ending Bankroll"]); if(b!=null){ nm.bankroll=b; setBank(b); } }
+    saveMeta(nm); flash("Imported "+n+" rows"+(Array.isArray(daily)?" + daily/market":""));
+  };
+  const onFile=(e)=>{ const f=e.target.files?.[0]; if(!f) return; const rd=new FileReader(); rd.onload=()=>{ try{ importData(JSON.parse(rd.result)); }catch(x){ flash("Invalid JSON file"); } }; rd.readAsText(f); };
+  const exportAll=()=>{ const blob={candidates:cand,tickets:tix,paper,meta}; const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(blob,null,2)],{type:"application/json"})); a.download="overlay_export_"+todayISO()+".json"; a.click(); };
+
+  const summarize=()=>{
+    const byMarket={}; const push=(rows,realFlag)=>rows.forEach(r=>{ const m=r["Market Family"]||"?"; const res=(r.Result||"").toLowerCase(); if(res!=="win"&&res!=="loss") return; const k=(realFlag?"REAL:":"PAPER:")+m; byMarket[k]=byMarket[k]||{w:0,n:0}; byMarket[k].n++; if(res==="win") byMarket[k].w++; });
+    push(cand.filter(c=>c.Decision==="BET"),true); push(paper,false);
+    const lc={}; [...cand,...tix,...paper].forEach(r=>{ const c=r["Loss Classification"]; if(c){ lc[c]=(lc[c]||0)+1; } });
+    const lines=Object.entries(byMarket).map(([k,v])=>`${k}: ${v.w}/${v.n} (${Math.round(100*v.w/v.n)}%)`);
+    const lcl=Object.entries(lc).map(([k,v])=>`${k}: ${v}`);
+    return "MARKET HIT RATES (real vs paper):\n"+(lines.join("\n")||"none")+"\n\nRESULT CLASSIFICATIONS:\n"+(lcl.join("\n")||"none");
+  };
+  const proposeRefine=async()=>{
+    setRload(true); setRerr(null); setRefine(null);
+    const content=`Here is my current betting system prompt and my prospective results so far. Suggest CONCRETE, MINIMAL amendments to the prompt so it better matches what is actually winning/losing. Do not rewrite it wholesale. Prefer small rule additions, de-emphasis of weak markets, and threshold/market-expression tweaks that the data supports. Preserve the philosophy.\n\n=== RESULTS ===\n${summarize()}\n\n=== CURRENT PROMPT (may be long) ===\n${prompt.slice(0,6000)}\n\nReturn STRICT JSON only: {"additions":["exact sentence to add"],"deemphasize":["what to soften and why"],"rationale":["1-2 lines tying each to the data"]}`;
+    const r=await callClaude({ system:"You refine betting research prompts from prospective results. Be conservative, specific, and data-driven.", content, useWeb:false, maxTokens:1200 });
+    setRload(false);
+    if(r.error){ setRerr(r.error); return; }
+    const p=extractJSON(r.text); if(!p){ setRerr("Could not parse suggestions. Raw: "+(r.text||"").slice(0,200)); return; }
+    setRefine(p);
+  };
+  const applyAddition=(s)=>{ const np=prompt+"\n\n"+s; setPrompt(np); store.set(K.prompt,np); flash("Appended to prompt"); };
+
+  return (<div>
+    <Panel title="API connection" right={<span className="hint">stored only in your browser</span>}>
+      <Field label="Anthropic API key"><input type="password" value={key} onChange={e=>setKey(e.target.value)} placeholder="sk-ant-…"/></Field>
+      <div className="form-grid two">
+        <Field label="Model"><input list="models" value={model} onChange={e=>setModel(e.target.value)}/><datalist id="models">{MODELS.map(m=><option key={m} value={m}/>)}</datalist></Field>
+        <div className="field"><span>&nbsp;</span><div className="row-flex"><button className="btn" onClick={test} disabled={testing}>{testing?"Testing…":"Test connection"}</button><button className="btn primary" onClick={saveKey}>Save</button></div></div>
+      </div>
+      {testMsg?.ok&&<div className="ok">{testMsg.ok}</div>}
+      {testMsg?.err&&<div className="err">{testMsg.err}</div>}
+      <p className="hint">Your key stays in this browser (localStorage) and is sent only to Anthropic. If Test fails with an invalid-model error, the message lists valid model names — paste one here. {HAS_LS?"":"Note: storage is blocked in this preview, so data won't persist here — it will once deployed."}</p>
+    </Panel>
+
+    <Panel title="Bankroll">
+      <div className="form-grid two"><Field label="Confirmed bankroll ($)"><input value={bank} onChange={e=>setBank(e.target.value)}/></Field><Field label="Base unit ($)"><input value={unit} onChange={e=>setUnit(e.target.value)}/></Field></div>
+      <div className="form-actions"><div className="grow"/><button className="btn primary" onClick={saveBank}>Save</button></div>
+      <p className="hint">Passed to the AI so it never infers bankroll from stale history.</p>
+    </Panel>
+
+    <Panel title="System prompt (mutable)" right={<span className="hint">your Master v3 is the default</span>}>
+      <Field label="This exact text is sent as the system prompt on every grade/build"><textarea rows={12} value={prompt} onChange={e=>setPrompt(e.target.value)} style={{fontFamily:"'IBM Plex Mono',monospace",fontSize:12}}/></Field>
+      <div className="form-actions"><button className="btn ghost" onClick={resetPrompt}>Reset to Master v3</button><div className="grow"/><button className="btn" onClick={proposeRefine} disabled={rload}>{rload?"Analyzing results…":"Propose refinements from results"}</button><button className="btn primary" onClick={savePrompt}>Save prompt</button></div>
+      {rerr&&<div className="err">{rerr}</div>}
+      {refine&&<div style={{marginTop:14}}>
+        {(refine.additions||[]).map((s,i)=>(<div className="diffline add" key={"a"+i}><div className="row-flex"><span style={{flex:1}}>+ {s}</span><button className="btn small" onClick={()=>applyAddition(s)}>Append</button></div></div>))}
+        {(refine.deemphasize||[]).map((s,i)=>(<div className="diffline rem" key={"d"+i}>~ {s}</div>))}
+        {(refine.rationale||[]).length>0&&<p className="hint" style={{marginTop:8}}>Rationale: {(refine.rationale||[]).join(" · ")}</p>}
+      </div>}
+    </Panel>
+
+    <Panel title="Data">
+      <div className="counts" style={{marginBottom:12}}>
+        {[["candidates",cand.length],["real tickets",tix.length],["paper",paper.length],["daily",(meta.daily||[]).length],["market",(meta.market||[]).length]].map(([k,v])=>(<div className="cnt" key={k}><div className="cnt-v mono">{v}</div><div className="cnt-k">{k}</div></div>))}
+      </div>
+      <div className="form-actions">
+        <button className="btn primary" onClick={()=>fileRef.current?.click()}>Import history JSON</button>
+        <input ref={fileRef} type="file" accept="application/json,.json" hidden onChange={onFile}/>
+        <div className="grow"/>
+        <button className="btn ghost" onClick={exportAll}>Export all</button>
+      </div>
+      <Field label="…or paste JSON"><textarea rows={3} value={paste} onChange={e=>setPaste(e.target.value)} placeholder='{"Candidate Log":[...],"Ticket Log":[...]}'/></Field>
+      <div className="form-actions"><div className="grow"/><button className="btn ghost" onClick={()=>{ try{ importData(JSON.parse(paste)); setPaste(""); }catch(x){ flash("Invalid JSON"); } }}>Import pasted</button></div>
+      <p className="hint">Accepts your tracker's sheet-style keys ("Candidate Log", "Ticket Log", "Paper Portfolio", "Daily Summary", "Market Summary") or app-style keys.</p>
+    </Panel>
+  </div>);
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

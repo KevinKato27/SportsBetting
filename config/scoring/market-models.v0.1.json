@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "activated": "2026-09-03",
+  "status": "PROSPECTIVE_EXPERIMENT",
+  "formula": "adjusted = 50 + (raw - 50) * confidence; overall = sum(adjusted * weight)",
+  "confidenceFormula": "sum(metric confidence * metric weight)",
+  "governance": "Weights may be proposed from prospective evidence but never silently rewritten.",
+  "models": {
+    "MLB_2_PLUS_TOTAL_BASES": [
+      { "metric": "Opportunity", "weight": 0.14 },
+      { "metric": "Matchup", "weight": 0.12 },
+      { "metric": "Pitch-Type Fit", "weight": 0.14 },
+      { "metric": "Quality of Contact", "weight": 0.14 },
+      { "metric": "Environment", "weight": 0.08 },
+      { "metric": "Market Expression", "weight": 0.10 },
+      { "metric": "Threshold / Price", "weight": 0.10 },
+      { "metric": "Source Agreement", "weight": 0.06 },
+      { "metric": "Portfolio Fit", "weight": 0.10 },
+      { "metric": "Player Rate", "weight": 0.02 }
+    ],
+    "MLB_PITCHER_OUTS": [
+      { "metric": "Expected workload", "weight": 0.25 },
+      { "metric": "Opponent baserunner rate", "weight": 0.20 },
+      { "metric": "Pitch efficiency", "weight": 0.20 },
+      { "metric": "Recent innings stability", "weight": 0.15 },
+      { "metric": "Bullpen context", "weight": 0.10 },
+      { "metric": "Environment / price", "weight": 0.10 }
+    ],
+    "MLB_PITCHER_K_OVER": [
+      { "metric": "K skill / whiff / CSW", "weight": 0.30 },
+      { "metric": "Opponent K profile", "weight": 0.25 },
+      { "metric": "Expected batters faced", "weight": 0.15 },
+      { "metric": "Pitch-mix matchup", "weight": 0.15 },
+      { "metric": "Threshold / price", "weight": 0.10 },
+      { "metric": "Called-strike environment", "weight": 0.05 }
+    ]
+  }
+}

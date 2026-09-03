@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-03",
+  "timezone": "America/New_York",
+  "lastVerified": "2026-09-03T19:25:00-04:00",
+  "leagues": [
+    {
+      "league": "MLB",
+      "status": "active",
+      "games": 9,
+      "earliestStart": "12:35 PM ET",
+      "source": "https://www.mlb.com/schedule/2026-09-03"
+    },
+    {
+      "league": "CFB",
+      "status": "active",
+      "games": 11,
+      "earliestStart": "6:00 PM ET",
+      "source": "https://www.espn.com/college-football/schedule/_/week/1/year/2026/seasontype/2"
+    },
+    {
+      "league": "WNBA",
+      "status": "verification_required",
+      "games": null,
+      "earliestStart": null,
+      "source": "https://cdn.wnba.com/sites/1611661331/2026/01/2026-Schedule_Print.pdf"
+    }
+  ],
+  "gate": "PRELIMINARY",
+  "note": "Slate presence is verified separately from odds, lineup, injury, weather, and market availability. No current wager is promoted to FINAL without those gates."
+}
