@@ -15,6 +15,7 @@ import {
   FileInput,
   FlaskConical,
   Gauge,
+  History as HistoryIcon,
   LayoutDashboard,
   LineChart,
   LockKeyhole,
@@ -57,6 +58,7 @@ const marketAlternatives = [
 const nav = [
   { value: 'today', label: 'Today', icon: LayoutDashboard },
   { value: 'real', label: 'Real Card', icon: WalletCards },
+  { value: 'history', label: 'Bet History', icon: HistoryIcon },
   { value: 'paper', label: 'Paper Lab', icon: FlaskConical },
   { value: 'results', label: 'Results', icon: BarChart3 },
   { value: 'learning', label: 'Learning', icon: Beaker },
@@ -163,6 +165,18 @@ function LegCard() {
           <MetricTable />
           <div className="evidence-grid">
             <Panel title="Pitch-type matchup" icon={Target}>
+              <div className="pitcher-profile">
+                <div className="pitcher-identity">
+                  <span className="pitcher-badge">RHP</span>
+                  <div><small>OPPOSING PITCHER</small><strong>Kevin Gausman</strong></div>
+                </div>
+                <div className="pitcher-stats">
+                  <div><span>ERA</span><strong>4.52</strong></div>
+                  <div><span>OPP AVG</span><strong>.253</strong></div>
+                  <div><span>STUFF</span><strong className="positive">GOOD</strong></div>
+                </div>
+                <p>Historical values from the supplied pitch-type mockup · current opponent and stats require verification</p>
+              </div>
               {[
                 ['Four-seam', 92, '.412 xwOBA', '51% HH'],
                 ['Slider', 78, '.298 xwOBA', '43% HH'],
@@ -286,9 +300,22 @@ export default function OverlayDashboard() {
         </TabsContent>
 
         <TabsContent value="real">
-          <div className="page-heading"><div><span className="kicker">PORTFOLIO GATE</span><h1>Real Card</h1><p>Historical real-money record. No current ticket is marked final.</p></div><div className="gate-pill"><CircleAlert size={15} /><span><b>0 FINAL</b> · today</span></div></div>
+          <div className="page-heading"><div><span className="kicker">TODAY ONLY · SEP 3, 2026</span><h1>Real Card</h1><p>Only wagers from today’s slate appear here. Prior days live in Bet History.</p></div><div className="gate-pill"><CircleAlert size={15} /><span><b>0 FINAL</b> · today</span></div></div>
+          <div className="status-grid three"><div className="status-card accent"><span>TODAY’S TICKETS</span><strong>0</strong><small>nothing approved yet</small></div><div className="status-card"><span>TODAY’S RISK</span><strong>$0.00</strong><small>no bankroll committed</small></div><div className="status-card"><span>CARD STATUS</span><strong>PRELIM</strong><small>odds, lineup, weather and audit gates open</small></div></div>
+          <Panel title="Today’s real-money card" icon={WalletCards} action={<span className="tag">SEP 3</span>}>
+            <div className="empty-real-card">
+              <div className="empty-real-icon"><LockKeyhole size={28} /></div>
+              <strong>No bets have cleared today’s final gate.</strong>
+              <p>Today’s candidate research remains preliminary. A ticket appears here only after the full-slate audit, exact-price check, role and lineup verification, exposure review, and bankroll confirmation.</p>
+              <div className="gate-checks"><span><i /> Full slate scan</span><span><i /> Exact odds</span><span><i /> Lineup / role</span><span><i /> Portfolio audit</span></div>
+            </div>
+          </Panel>
+        </TabsContent>
+
+        <TabsContent value="history">
+          <div className="page-heading"><div><span className="kicker">ARCHIVED REAL-MONEY RECORD</span><h1>Bet History</h1><p>All settled and prior-day tickets stay here, separate from today’s card.</p></div><div className="gate-pill"><HistoryIcon size={15} /><span><b>THROUGH SEP 2</b></span></div></div>
           <div className="status-grid three"><div className="status-card accent"><span>SETTLED TICKETS</span><strong>{stats.tickets.length}</strong><small>imported historical record</small></div><div className="status-card"><span>TICKET HIT RATE</span><strong>{percent(stats.winRate)}</strong><small>{stats.wins} wins</small></div><div className="status-card"><span>NET P/L</span><strong className={stats.pnl >= 0 ? 'positive' : 'negative'}>{money(stats.pnl)}</strong><small>sum of recorded ticket P/L</small></div></div>
-          <Panel title="Recent real tickets" icon={WalletCards} action={<span className="tag">IMPORTED</span>}>
+          <Panel title="Prior real tickets" icon={HistoryIcon} action={<span className="tag">IMPORTED</span>}>
             <div className="data-table"><div className="data-row data-header"><span>Date</span><span>Ticket</span><span>Origin</span><span>Odds</span><span>Result</span><span>P/L</span></div>{recentTickets.map((row, index) => <div className="data-row" key={`${row['Ticket ID']}-${index}`}><span>{row.Date}</span><strong>{row.Description || row['Ticket ID']}</strong><span>{row.Origin}</span><span>{row['Odds (American)'] || '—'}</span><span className={row.Result === 'Win' ? 'positive' : row.Result === 'Loss' ? 'negative' : ''}>{row.Result || 'Pending'}</span><b>{row['P/L'] ? money(number(row['P/L'])) : '—'}</b></div>)}</div>
           </Panel>
         </TabsContent>
@@ -339,7 +366,7 @@ export default function OverlayDashboard() {
         </TabsContent>
       </main>
 
-      <TabsList className="mobile-nav">{nav.slice(0, 5).map(({ value, label, icon: Icon }) => <TabsTrigger key={value} value={value}><Icon size={18} /><span>{label === 'Real Card' ? 'Real' : label === 'Paper Lab' ? 'Paper' : label}</span></TabsTrigger>)}</TabsList>
+      <TabsList className="mobile-nav">{nav.slice(0, 5).map(({ value, label, icon: Icon }) => <TabsTrigger key={value} value={value}><Icon size={18} /><span>{label === 'Real Card' ? 'Real' : label === 'Paper Lab' ? 'Paper' : label === 'Bet History' ? 'History' : label}</span></TabsTrigger>)}</TabsList>
       <footer className="site-footer"><span>OVERLAY v0.1</span><p>Research system only. No automated wagering.</p><span>History through 2026-09-02</span></footer>
     </Tabs>
   );
