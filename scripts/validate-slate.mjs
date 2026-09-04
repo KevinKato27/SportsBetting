@@ -4,6 +4,7 @@ const file = process.argv[2] ?? 'data/slates/current.json';
 const slate = JSON.parse(await readFile(file, 'utf8'));
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 const allowedStatuses = new Set(['active', 'no_slate', 'source_error']);
+const soccerScope = ['EPL', 'LA LIGA', 'BUNDESLIGA', 'SERIE A', 'LIGUE 1', 'UCL', 'UEL'];
 
 function assert(condition, message) {
   if (!condition) throw new Error(`Slate validation failed: ${message}`);
@@ -17,6 +18,7 @@ assert(Array.isArray(slate.leagues) && slate.leagues.length > 0, 'leagues must b
 assert(new Set(slate.leagues.map((league) => league.league)).size === slate.leagues.length, 'league names must be unique');
 
 for (const league of slate.leagues) {
+  assert(typeof league.sport === 'string' && league.sport.length > 0, `${league.league} sport missing`);
   assert(typeof league.league === 'string' && league.league.length > 0, 'league name missing');
   assert(allowedStatuses.has(league.status), `${league.league} has invalid status`);
   assert(typeof league.source === 'string' && league.source.startsWith('https://'), `${league.league} source missing`);
@@ -30,5 +32,9 @@ for (const league of slate.leagues) {
     if (league.games > 0) assert(!Number.isNaN(Date.parse(league.earliestStartIso)), `${league.league} earliest start is invalid`);
   }
 }
+
+assert(JSON.stringify(slate.soccerScope?.included) === JSON.stringify(soccerScope), 'major soccer scope changed');
+assert(JSON.stringify(slate.soccerScope?.excluded) === JSON.stringify(['MLS', 'SAUDI PRO LEAGUE']), 'soccer exclusions changed');
+assert(!slate.leagues.some((league) => ['MLS', 'SAUDI PRO LEAGUE'].includes(league.league)), 'excluded soccer league present');
 
 console.log(`Validated ${file}: ${slate.date}, ${slate.leagues.length} leagues.`);

@@ -10,18 +10,21 @@ The production website is published by GitHub Pages at `https://kevinkato27.gith
 
 - `config/master-prompt/Master_Sports_Betting_Prompt_v4_2026-09-03.txt` is the preserved constitution.
 - `config/scoring/market-models.v0.1.json` contains versioned prospective scoring models.
+- `config/sports-scope.v0.2.json` defines the approved soccer competitions and blocks unsourced soccer grades.
 - `data/history/edge_lab_full_history.json` is the imported historical datastore.
-- `data/imports/sports_betting_backtest_tracker_v0_45.xlsx` remains the reconciliation/export source during migration.
+- `data/imports/sports_betting_backtest_tracker_v0_45.xlsx` remains the reconciliation/export source and receives the same current slate in its `Daily Slate` worksheet.
 - `data/slates/YYYY-MM-DD.json` holds daily facts so future updates change data/config instead of creating a new site.
 - `data/slates/current.json` is the dashboard pointer generated from the newest validated daily snapshot.
 
 ## Automatic updates
 
-The GitHub Pages workflow refreshes schedule and result facts at 7:17 AM, 11:17 AM, 4:17 PM, and 11:17 PM America/New_York time. Each run records the exact endpoint, provider, and verification time, validates the payload, commits the dated snapshot, and deploys the current site. A failed source is labeled `source_error`; the updater never invents a game count. Betting inputs remain unavailable until authenticated providers are configured.
+The GitHub Pages workflow refreshes schedule and result facts at 7:17 AM, 11:17 AM, 4:17 PM, and 11:17 PM America/New_York time. Each run records the exact endpoint, provider, and verification time, validates the payload, syncs the tracker workbook, commits both artifacts, and deploys the current site. A failed source is labeled `source_error`; the updater never invents a game count. Betting inputs remain unavailable until authenticated providers are configured.
+
+Soccer coverage is intentionally limited to the Premier League, La Liga, Bundesliga, Serie A, Ligue 1, UEFA Champions League, and UEFA Europa League. MLS and the Saudi Pro League are excluded.
 
 ## Local development
 
-Install dependencies and run `pnpm dev`. Use `pnpm build` to validate the Sites build and `pnpm build:pages` to validate the GitHub Pages artifact.
+Install dependencies and run `pnpm dev`. Use `pnpm refresh:data`, `pnpm validate:data`, and `pnpm sync:workbook` for the daily pipeline. Use `pnpm build` to validate the Sites build and `pnpm build:pages` to validate the GitHub Pages artifact.
 
 ## Guardrails
 

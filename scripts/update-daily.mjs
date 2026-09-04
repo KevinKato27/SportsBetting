@@ -1,10 +1,11 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const TIMEZONE = 'America/New_York';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_DIR = path.join(ROOT, 'data', 'slates');
+const sportsScope = JSON.parse(await readFile(path.join(ROOT, 'config', 'sports-scope.v0.2.json'), 'utf8'));
 const requestedDate = process.argv.find((arg) => arg.startsWith('--date='))?.split('=')[1];
 const date = requestedDate ?? new Intl.DateTimeFormat('en-CA', {
   timeZone: TIMEZONE,
@@ -64,12 +65,13 @@ function earliestStartIso(events) {
   return events.map((event) => event.date).filter((value) => value && Number.isFinite(Date.parse(value))).sort()[0] ?? null;
 }
 
-function summarizedLeague({ league, provider, source, endpoint, events }) {
+function summarizedLeague({ sport, league, provider, source, endpoint, events }) {
   const exactDateEvents = events.filter((event) => event.date && localDate(event.date) === date);
   const completed = exactDateEvents.filter((event) => event.completed).length;
   const live = exactDateEvents.filter((event) => event.state === 'in').length;
   const games = exactDateEvents.length;
   return {
+    sport,
     league,
     status: games > 0 ? 'active' : 'no_slate',
     games,
@@ -94,6 +96,7 @@ async function mlb() {
     state: game.status?.abstractGameState === 'Live' ? 'in' : 'pre',
   }));
   return summarizedLeague({
+    sport: 'Baseball',
     league: 'MLB',
     provider: 'MLB Stats API',
     source: `https://www.mlb.com/schedule/${date}`,
@@ -103,15 +106,29 @@ async function mlb() {
 }
 
 const espnLeagues = [
-  ['CFB', 'football', 'college-football', 'college-football'],
-  ['NFL', 'football', 'nfl', 'nfl'],
-  ['WNBA', 'basketball', 'wnba', 'wnba'],
-  ['NBA', 'basketball', 'nba', 'nba'],
-  ['NHL', 'hockey', 'nhl', 'nhl'],
+  { league: 'CFB', sport: 'Football', apiSport: 'football', slug: 'college-football', pageSlug: 'college-football' },
+  { league: 'NFL', sport: 'Football', apiSport: 'football', slug: 'nfl', pageSlug: 'nfl' },
+  { league: 'WNBA', sport: 'Basketball', apiSport: 'basketball', slug: 'wnba', pageSlug: 'wnba' },
+  { league: 'NBA', sport: 'Basketball', apiSport: 'basketball', slug: 'nba', pageSlug: 'nba' },
+  { league: 'NHL', sport: 'Hockey', apiSport: 'hockey', slug: 'nhl', pageSlug: 'nhl' },
+  ...sportsScope.soccer.included.map((competition) => ({
+    league: competition.league,
+    sport: 'Soccer',
+    apiSport: 'soccer',
+    slug: competition.espnSlug,
+    pageSlug: 'soccer',
+    sourceLeague: competition.espnSlug,
+  })),
 ];
 
-async function espn([league, sport, slug, pageSlug]) {
-  const endpoint = `https://site.api.espn.com/apis/site/v2/sports/${sport}/${slug}/scoreboard?dates=${compactDate}&limit=200`;
+function espnSource(definition) {
+  return definition.apiSport === 'soccer'
+    ? `https://www.espn.com/soccer/scoreboard/_/league/${definition.sourceLeague}/date/${compactDate}`
+    : `https://www.espn.com/${definition.pageSlug}/scoreboard/_/date/${compactDate}`;
+}
+
+async function espn(definition) {
+  const endpoint = `https://site.api.espn.com/apis/site/v2/sports/${definition.apiSport}/${definition.slug}/scoreboard?dates=${compactDate}&limit=200`;
   const payload = await fetchJson(endpoint);
   const events = (payload.events ?? []).map((event) => ({
     date: event.date,
@@ -119,16 +136,18 @@ async function espn([league, sport, slug, pageSlug]) {
     state: event.status?.type?.state,
   }));
   return summarizedLeague({
-    league,
+    sport: definition.sport,
+    league: definition.league,
     provider: 'ESPN Scoreboard API',
-    source: `https://www.espn.com/${pageSlug}/scoreboard/_/date/${compactDate}`,
+    source: espnSource(definition),
     endpoint,
     events,
   });
 }
 
-function sourceError(league, provider, source, endpoint, error) {
+function sourceError(sport, league, provider, source, endpoint, error) {
   return {
+    sport,
     league,
     status: 'source_error',
     games: null,
@@ -146,20 +165,21 @@ function sourceError(league, provider, source, endpoint, error) {
 }
 
 const jobs = [
-  { league: 'MLB', run: mlb, provider: 'MLB Stats API', source: `https://www.mlb.com/schedule/${date}`, endpoint: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${date}` },
+  { sport: 'Baseball', league: 'MLB', run: mlb, provider: 'MLB Stats API', source: `https://www.mlb.com/schedule/${date}`, endpoint: `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${date}` },
   ...espnLeagues.map((definition) => ({
-    league: definition[0],
+    sport: definition.sport,
+    league: definition.league,
     run: () => espn(definition),
     provider: 'ESPN Scoreboard API',
-    source: `https://www.espn.com/${definition[3]}/scoreboard/_/date/${compactDate}`,
-    endpoint: `https://site.api.espn.com/apis/site/v2/sports/${definition[1]}/${definition[2]}/scoreboard?dates=${compactDate}&limit=200`,
+    source: espnSource(definition),
+    endpoint: `https://site.api.espn.com/apis/site/v2/sports/${definition.apiSport}/${definition.slug}/scoreboard?dates=${compactDate}&limit=200`,
   })),
 ];
 
 const settled = await Promise.allSettled(jobs.map((job) => job.run()));
 const leagues = settled.map((result, index) => result.status === 'fulfilled'
   ? result.value
-  : sourceError(jobs[index].league, jobs[index].provider, jobs[index].source, jobs[index].endpoint, result.reason));
+  : sourceError(jobs[index].sport, jobs[index].league, jobs[index].provider, jobs[index].source, jobs[index].endpoint, result.reason));
 
 const errors = leagues.filter((league) => league.status === 'source_error').map((league) => `${league.league}: ${league.error}`);
 const activeGames = leagues.reduce((sum, league) => sum + (league.games ?? 0), 0);
@@ -183,7 +203,14 @@ const slate = {
     gptGrades: 'unavailable',
   },
   errors,
-  note: `${activeGames} schedule entries found across ${leagues.filter((league) => league.status === 'active').length} active leagues. Schedule and result facts are collected separately from betting inputs. No wager may become FINAL from this file.`,
+  soccerScope: {
+    configVersion: sportsScope.version,
+    trackingMode: sportsScope.soccer.trackingMode,
+    included: sportsScope.soccer.included.map((competition) => competition.league),
+    excluded: sportsScope.soccer.excluded,
+    analysisGate: sportsScope.soccer.analysisGate,
+  },
+  note: `${activeGames} schedule entries found across ${leagues.filter((league) => league.status === 'active').length} active leagues. Soccer is limited to the European Big Five plus UEFA Champions League and Europa League; MLS and the Saudi Pro League are excluded. Schedule and result facts are collected separately from betting inputs. No wager may become FINAL from this file.`,
 };
 
 await mkdir(OUT_DIR, { recursive: true });

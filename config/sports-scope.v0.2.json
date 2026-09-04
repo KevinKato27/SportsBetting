@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "effectiveDate": "2026-09-04",
+  "soccer": {
+    "trackingMode": "schedule_and_results_only",
+    "included": [
+      { "league": "EPL", "name": "Premier League", "espnSlug": "eng.1" },
+      { "league": "LA LIGA", "name": "La Liga", "espnSlug": "esp.1" },
+      { "league": "BUNDESLIGA", "name": "Bundesliga", "espnSlug": "ger.1" },
+      { "league": "SERIE A", "name": "Serie A", "espnSlug": "ita.1" },
+      { "league": "LIGUE 1", "name": "Ligue 1", "espnSlug": "fra.1" },
+      { "league": "UCL", "name": "UEFA Champions League", "espnSlug": "uefa.champions" },
+      { "league": "UEL", "name": "UEFA Europa League", "espnSlug": "uefa.europa" }
+    ],
+    "excluded": ["MLS", "SAUDI PRO LEAGUE"],
+    "analysisGate": "Do not issue a soccer Leg Grade, Confidence score, recommendation, or FINAL wager until a versioned soccer market model and all required market inputs have been verified."
+  }
+}
