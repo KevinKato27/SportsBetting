@@ -37,6 +37,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import history from '@/data/history/edge_lab_full_history.json';
 import slate from '@/data/slates/current.json';
 import chatIntake from '@/data/chat-intake/current.json';
+import morningScan from '@/data/morning-scan/current.json';
 import models from '@/config/scoring/market-models.v0.1.json';
 import sportsbooks from '@/config/sportsbooks.v0.1.json';
 import discoveryPolicy from '@/config/candidate-discovery-policy.v0.2.json';
@@ -60,6 +61,8 @@ type SlateEvent = {
   league: string;
   provider: string;
 };
+type MorningParticipant = { name: string; role: string; basis: string };
+type MorningGame = { id: string; sport: string; league: string; event: string; projectionStatus: string; projectedParticipants: MorningParticipant[] };
 
 const metrics = [
   { name: 'Opportunity', raw: 92, confidence: 80, weight: 14, values: 'Leadoff role shown in reference', note: 'Reference input only; today’s lineup is unavailable.', source: 'User-supplied dashboard mockup' },
@@ -173,9 +176,7 @@ function SlipWorkspace() {
   );
 }
 
-const candidates = [
-  { entity: 'Jackson Chourio reference', market: '2+ Total Bases', matchup: 'Supplied mockup · not today’s wager', grade: referenceLegGrade, confidence: referenceLegConfidence, status: 'REFERENCE', tone: 'blue' },
-  ...slate.leagues.map((league) => ({
+const candidates = slate.leagues.map((league) => ({
     entity: league.status === 'active' ? `${league.league} full-slate audit` : league.league,
     market: league.status === 'active' ? 'Daily discovery queue' : league.status === 'no_slate' ? 'No slate today' : 'Source unavailable',
     matchup: league.status === 'source_error' ? `${league.provider} failed · no facts inferred` : `${league.games} games · ${league.provider}`,
@@ -183,8 +184,7 @@ const candidates = [
     confidence: null,
     status: league.status === 'active' ? 'NEEDS DATA' : league.status === 'no_slate' ? 'NO SLATE' : 'SOURCE ERROR',
     tone: league.status === 'active' ? 'amber' : league.status === 'no_slate' ? 'muted' : 'red',
-  })),
-];
+  }));
 
 function number(value: unknown) {
   const n = Number(value);
@@ -324,6 +324,26 @@ function DiscoveryProcess() {
   );
 }
 
+function MorningScan() {
+  const morningGames = morningScan.games as MorningGame[];
+  return (
+    <div className="morning-scan">
+      <div className="morning-scan-head">
+        <div><span className="eyebrow">INITIAL INDEPENDENT PASS</span><strong>{morningScan.status.replaceAll('_', ' ')}</strong><small>{morningScan.generatedAt ? `Generated ${verifiedLabel(morningScan.generatedAt)}` : 'Scheduled for the first morning automation run'}</small></div>
+        <span className="tag">{morningGames.length} GAMES · {morningScan.candidates.length} CANDIDATES</span>
+      </div>
+      {morningGames.length ? <Accordion className="morning-games">{morningGames.map((game) => (
+        <AccordionItem key={game.id} value={game.id} className="game-card">
+          <AccordionTrigger className="morning-game-trigger"><div><span>{game.sport} · {game.league}</span><strong>{game.event}</strong><small>{game.projectionStatus.replaceAll('_', ' ')} · {game.projectedParticipants.length} projected roles</small></div></AccordionTrigger>
+          <AccordionContent className="morning-game-detail"><div className="projected-participants">{game.projectedParticipants.map((participant, index) => <div key={`${game.id}-${index}`}><strong>{participant.name}</strong><span>{participant.role}</span><small>{participant.basis}</small></div>)}</div></AccordionContent>
+        </AccordionItem>
+      ))}</Accordion> : <div className="morning-empty"><Clock3 size={24} /><strong>No retrospective projections were created.</strong><p>{morningScan.notes}</p></div>}
+      <div className="morning-method"><span>1 · Detect every eligible game</span><span>2 · Project roles from recent usage</span><span>3 · Research the full slate independently</span><span>4 · Compare supplied cards afterward</span></div>
+      <p className="slate-freshness">Major soccer leagues only. MLS and Saudi Pro League remain excluded. Prospective lineups are never labeled confirmed.</p>
+    </div>
+  );
+}
+
 function MetricTable() {
   return (
     <div className="metric-table" aria-label="Leg grade score breakdown">
@@ -354,7 +374,7 @@ function MetricTable() {
   );
 }
 
-function LegCard() {
+export function LegCard() {
   return (
     <Accordion defaultValue={['jackson']} className="leg-accordion">
       <AccordionItem value="jackson" className="leg-card">
@@ -470,13 +490,13 @@ export default function OverlayDashboard() {
   const marketRows = history['Market Summary'] as Row[];
   const experimentRows = history['Experiment Registry'] as Row[];
   const paperRows = (history['Paper Portfolio'] as Row[]).slice(-10).reverse();
-  const recentTickets = (history['Ticket Log'] as Row[]).slice(-12).reverse();
+  const recentTickets = (history['Ticket Log'] as Row[]).filter((row) => row.Date !== slate.date).slice(-12).reverse();
   const activeGames = slate.leagues.reduce((sum, league) => sum + (league.status === 'active' ? (league.games ?? 0) : 0), 0);
   const activeLeagues = slate.leagues.filter((league) => league.status === 'active');
   const earliestLeague = [...activeLeagues].sort((a, b) => (a.earliestStartIso ?? '').localeCompare(b.earliestStartIso ?? ''))[0];
   const todayTickets = (history['Ticket Log'] as Row[]).filter((row) => row.Date === slate.date);
   const todayRisk = todayTickets.reduce((sum, row) => sum + number(row.Stake), 0);
-  const historyThrough = stats.latest.Date;
+  const historyThrough = stats.daily.find((row) => row['P/L'])?.Date ?? stats.latest.Date;
 
   return (
     <Tabs value={tab} onValueChange={(value) => { setTab(value); setMenuOpen(false); }} className="app-shell">
@@ -498,12 +518,12 @@ export default function OverlayDashboard() {
           <div className="truth-strip" aria-label="Data freshness and provenance">
             <span><i className="truth-dot live" /><b>SCHEDULE {slate.dataAvailability.schedules.toUpperCase()}</b> named source endpoints</span>
             <span><i className="truth-dot historical" /><b>HISTORY</b> through {historyThrough}</span>
-            <span><i className="truth-dot reference" /><b>REFERENCE</b> supplied mockups only</span>
+            <span><i className="truth-dot reference" /><b>MORNING SCAN</b> prospective roles before supplied cards</span>
             <span><i className="truth-dot unavailable" /><b>UNAVAILABLE</b> odds · lineups · weather · promos</span>
             <span><i className="truth-dot reference" /><b>DISCOVERY RULE</b> search the full slate beyond supplied cards</span>
           </div>
           <Tabs defaultValue="overview" className="today-sections">
-            <TabsList className="page-subnav" aria-label="Today sections"><TabsTrigger value="overview">Overview</TabsTrigger><TabsTrigger value="candidates">Candidates</TabsTrigger><TabsTrigger value="model">Reference model</TabsTrigger><TabsTrigger value="sources">Sources</TabsTrigger></TabsList>
+            <TabsList className="page-subnav" aria-label="Today sections"><TabsTrigger value="overview">Overview</TabsTrigger><TabsTrigger value="candidates">Candidates</TabsTrigger><TabsTrigger value="morning">Morning scan</TabsTrigger><TabsTrigger value="sources">Sources</TabsTrigger></TabsList>
             <TabsContent value="overview" className="today-section-content">
               <div className="status-grid">
                 <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>{activeLeagues.length ? `${activeLeagues.length} active competition${activeLeagues.length === 1 ? '' : 's'}` : 'no active leagues found'}</small></div>
@@ -529,7 +549,7 @@ export default function OverlayDashboard() {
                 <Panel title="Independent discovery sequence" icon={ShieldCheck}><DiscoveryProcess /></Panel>
               </div>
             </TabsContent>
-            <TabsContent value="model" className="today-section-content"><div id="featured-leg"><LegCard /></div></TabsContent>
+            <TabsContent value="morning" className="today-section-content"><Panel title="Prospective lineups and independent shortlist" icon={Clock3}><MorningScan /></Panel></TabsContent>
             <TabsContent value="sources" className="today-section-content">
               <Panel title="Slate detection sources" icon={Database}>
                 <div className="source-slate-grid">{slate.leagues.map((league) => (

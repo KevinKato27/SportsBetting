@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "0.1",
+  "date": "2026-09-04",
+  "timezone": "America/New_York",
+  "status": "PENDING_NEXT_MORNING_RUN",
+  "generatedAt": null,
+  "scope": ["MLB", "NFL", "NCAAF", "NBA", "WNBA", "NHL", "NCAAB", "Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1", "UEFA Champions League", "UEFA Europa League"],
+  "excluded": ["MLS", "Saudi Pro League"],
+  "games": [],
+  "candidates": [],
+  "sources": [],
+  "notes": "The morning prospective-lineup workflow starts on the first automation run of the next local day. No retrospective lineup projections were invented for this already-active slate."
+}

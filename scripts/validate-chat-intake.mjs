@@ -2,7 +2,8 @@ import { readFile } from 'node:fs/promises';
 
 const inputPath = process.argv[2] ?? 'data/chat-intake/current.json';
 const intake = JSON.parse(await readFile(inputPath, 'utf8'));
-const allowedStatuses = new Set(['PLACEMENT_REPORTED_IN_CHAT', 'RECOMMENDED_NOT_CONFIRMED', 'INCOMPLETE_RESEARCH_BUILD', 'HOLD_FOR_RECHECK']);
+const history = JSON.parse(await readFile('data/history/edge_lab_full_history.json', 'utf8'));
+const allowedStatuses = new Set(['PLACED_USER_CONFIRMED', 'RECOMMENDED_NOT_CONFIRMED', 'INCOMPLETE_RESEARCH_BUILD', 'HOLD_FOR_RECHECK']);
 const allowedOrigins = new Set(['INDEPENDENT', 'SUPPLIED', 'BOTH']);
 const allowedVerification = new Set(['NEEDS_RECHECK', 'PARTIALLY_VERIFIED', 'VERIFIED']);
 const forbiddenKeys = /thread.?id|conversation.?id|transcript|private.?url|account.?id/i;
@@ -39,4 +40,11 @@ function scan(value, path = 'root') {
 }
 
 scan(intake);
+const realDescriptions = history['Ticket Log'].filter((ticket) => ticket.Date === intake.date).map((ticket) => `${ticket.Description} ${ticket['Execution Note']}`.toLowerCase());
+for (const slip of intake.slips.filter((item) => item.status === 'PLACED_USER_CONFIRMED')) {
+  const entities = slip.legs.map((leg) => leg.entity.toLowerCase());
+  if (!realDescriptions.some((description) => entities.every((entity) => description.includes(entity)))) {
+    throw new Error(`${slip.id} is user-confirmed but missing from today’s Ticket Log.`);
+  }
+}
 console.log(`Validated ${intake.slips.length} public-safe chat intake slips for ${intake.date}.`);

@@ -21,12 +21,13 @@ The production website is published by GitHub Pages at `https://kevinkato27.gith
 - `data/slates/YYYY-MM-DD.json` holds daily facts so future updates change data/config instead of creating a new site.
 - `data/slates/current.json` is the dashboard pointer generated from the newest validated daily snapshot.
 - `data/chat-intake/YYYY-MM-DD.json` contains minimized, public-safe same-day slip summaries from user-authorized project chats. It never stores transcripts or conversation identifiers.
+- `data/morning-scan/current.json` holds the first daily independent slate pass, prospective lineups and role projections, candidate origins, and exact source URLs. Projections are never presented as confirmed lineups.
 
 ## Automatic updates
 
 The GitHub Pages workflow refreshes schedule and result facts at 7:17 AM, 11:17 AM, 4:17 PM, and 11:17 PM America/New_York time. Each run records the exact endpoint, provider, and verification time, validates the payload, syncs the tracker workbook, commits both artifacts, and deploys the current site. The game-level feed includes teams, scores, status, venue, broadcasts, and announced MLB probable pitchers. A failed source is labeled `source_error`; the updater never invents a game count. Betting inputs remain unavailable until authenticated providers are configured.
 
-An hourly Codex watcher separately checks the Sports Betting project for newly updated chats. Meaningful same-day slip changes are summarized into `data/chat-intake`, validated, synchronized to the workbook, and pushed to this same repository. Chat-reported prices and placement claims remain visibly labeled and never become verified facts or Real Card entries without separate evidence.
+An hourly Codex watcher checks the Sports Betting project for newly updated chats. Its first morning run builds the independent slate and prospective lineup map before reading supplied cards; later runs revise the same daily snapshot. Meaningful same-day slip changes are summarized into `data/chat-intake`, validated, synchronized to the workbook, and pushed to this repository. A ticket enters the Real Card when the user explicitly says it was placed, answers affirmatively to a direct placement question, or says “done” immediately after a specific placement instruction. Recommendations without that confirmation remain outside the Real Card.
 
 Soccer coverage is intentionally limited to the Premier League, La Liga, Bundesliga, Serie A, Ligue 1, UEFA Champions League, and UEFA Europa League. MLS and the Saudi Pro League are excluded.
 

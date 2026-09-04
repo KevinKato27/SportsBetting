@@ -5,6 +5,7 @@ const workbookPath = 'data/imports/sports_betting_backtest_tracker_v0_45.xlsx';
 const slatePath = process.argv[2] ?? 'data/slates/current.json';
 const slate = JSON.parse(await readFile(slatePath, 'utf8'));
 const chatIntake = JSON.parse(await readFile('data/chat-intake/current.json', 'utf8'));
+const morningScan = JSON.parse(await readFile('data/morning-scan/current.json', 'utf8'));
 const shortVerifiedAt = `${slate.lastVerified.slice(0, 10)} ${slate.lastVerified.slice(11, 16)}Z`;
 
 if (!Array.isArray(slate.leagues) || slate.leagues.length !== 13) {
@@ -135,5 +136,47 @@ const updatedIntakeWorksheetXml = intakeWorksheetXml
   .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, intakeSheetData);
 files[intakeWorksheetPath] = strToU8(updatedIntakeWorksheetXml);
 
+const morningWorksheetPath = worksheetPathFor('Morning Scan');
+const morningWorksheetXml = strFromU8(files[morningWorksheetPath]);
+const morningStyleAt = (reference, fallback) => morningWorksheetXml.match(new RegExp(`<x:c[^>]*r="${reference}"[^>]*s="(\\d+)"`))?.[1] ?? fallback;
+const morningStyles = {
+  title: morningStyleAt('A1', '0'),
+  note: morningStyleAt('A2', '0'),
+  header: morningStyleAt('A4', '0'),
+  body: morningStyleAt('A5', '0'),
+};
+const morningHeaders = ['Date', 'Sport', 'League', 'Event', 'Start', 'Projection status', 'Projected participant', 'Role / lineup slot', 'Projection basis', 'Candidate market', 'Origin', 'Source URL'];
+const morningColumns = 'ABCDEFGHIJKL'.split('');
+const morningRows = [
+  row(1, 28, [stringCell('A1', morningStyles.title, 'Morning Slate Scan')]),
+  row(2, 32, [stringCell('A2', morningStyles.note, 'Prospective lineups and independent candidates. Projections are never confirmed lineups; missing evidence remains blank.')]),
+  row(4, 30, morningHeaders.map((value, index) => stringCell(`${morningColumns[index]}4`, morningStyles.header, value))),
+];
+let morningRowNumber = 5;
+for (const game of morningScan.games) {
+  const participants = game.projectedParticipants.length ? game.projectedParticipants : [{ name: '', role: '', basis: '' }];
+  for (const participant of participants) {
+    const values = [morningScan.date, game.sport, game.league, game.event, game.startTime, game.projectionStatus, participant.name, participant.role, participant.basis, '', '', game.sources?.[0] ?? ''];
+    morningRows.push(row(morningRowNumber, 38, values.map((value, index) => stringCell(`${morningColumns[index]}${morningRowNumber}`, morningStyles.body, value))));
+    morningRowNumber += 1;
+  }
+}
+for (const candidate of morningScan.candidates) {
+  const values = [morningScan.date, candidate.sport ?? '', candidate.league ?? '', candidate.event ?? '', '', 'CANDIDATE', candidate.entity, candidate.role ?? '', candidate.rationale ?? '', candidate.marketFamily, candidate.origin, candidate.sources?.[0] ?? ''];
+  morningRows.push(row(morningRowNumber, 38, values.map((value, index) => stringCell(`${morningColumns[index]}${morningRowNumber}`, morningStyles.body, value))));
+  morningRowNumber += 1;
+}
+if (morningRowNumber === 5) {
+  const values = [morningScan.date, '', '', '', '', morningScan.status, '', '', morningScan.notes, '', '', ''];
+  morningRows.push(row(5, 38, values.map((value, index) => stringCell(`${morningColumns[index]}5`, morningStyles.body, value))));
+  morningRowNumber = 6;
+}
+const morningSheetData = `<x:sheetData>${morningRows.join('')}</x:sheetData>`;
+const morningLastRow = morningRowNumber - 1;
+const updatedMorningWorksheetXml = morningWorksheetXml
+  .replace(/<x:dimension ref="[^"]+"\s*\/>/, `<x:dimension ref="A1:L${morningLastRow}" />`)
+  .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, morningSheetData);
+files[morningWorksheetPath] = strToU8(updatedMorningWorksheetXml);
+
 await writeFile(workbookPath, zipSync(files, { level: 6 }));
-console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues, ${chatIntake.slips.length} chat slips).`);
+console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues, ${chatIntake.slips.length} chat slips, ${morningScan.games.length} morning games).`);
