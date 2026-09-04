@@ -36,6 +36,8 @@ jobs:
         run: pnpm refresh:data
       - name: Validate daily data
         run: pnpm validate:data
+      - name: Validate prompt and audit policy
+        run: pnpm validate:config
       - name: Sync tracker workbook
         if: github.event_name != 'push'
         run: pnpm sync:workbook

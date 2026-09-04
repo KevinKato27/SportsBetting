@@ -34,6 +34,8 @@ import history from '@/data/history/edge_lab_full_history.json';
 import slate from '@/data/slates/current.json';
 import models from '@/config/scoring/market-models.v0.1.json';
 import sportsbooks from '@/config/sportsbooks.v0.1.json';
+import auditPolicy from '@/config/audit-policy.v0.1.json';
+import promptStack from '@/config/prompt-stack.v4.1.json';
 
 type Row = Record<string, string>;
 
@@ -89,6 +91,7 @@ function SlipWorkspace() {
               <div><span>PRIMARY BOOK</span><strong>{sportsbooks.primarySportsbook}</strong><small>preferred pricing source</small></div>
               <div><span>ACTIVE GAMES</span><strong>{games}</strong><small>{active.length} active competition{active.length === 1 ? '' : 's'}</small></div>
               <div><span>VERIFIED LINES</span><strong>0</strong><small>DraftKings feed not connected</small></div>
+              <div><span>INDEPENDENT AUDIT</span><strong>NOT STARTED</strong><small>{auditPolicy.sourceRules.minimumIndependentOrigins} independent origins required</small></div>
               <div><span>SLIP GATE</span><strong>WAIT</strong><small>no price or market inferred</small></div>
             </div>
             <div className="slip-layout">
@@ -110,6 +113,9 @@ function SlipWorkspace() {
                 <p className="slip-note">These are research queues, not recommendations. Available DraftKings markets must be verified each day.</p>
               </Panel>
             </div>
+            <Panel title="Independent audit gate" icon={ShieldCheck} action={<span className="tag tag-demo">PASS REQUIRED</span>}>
+              <AuditChecklist />
+            </Panel>
             <Panel title={`${sportsbooks.primarySportsbook} slip builder`} icon={ListChecks} action={<span className="tag tag-demo">NO LIVE ODDS</span>}>
               <div className="slip-builder-head"><span>Candidate</span><span>Market</span><span>DK price</span><span>Grade</span><span>Confidence</span><span>Status</span></div>
               <div className="slip-empty">
@@ -176,6 +182,22 @@ function Panel({ title, icon: Icon, action, children, className = '' }: { title:
       </div>
       <div className="panel-body">{children}</div>
     </section>
+  );
+}
+
+function AuditChecklist() {
+  return (
+    <div className="audit-gate">
+      <div className="audit-status"><CircleAlert size={18} /><div><span>AUDIT STATUS</span><strong>BLOCKED UNTIL COMPLETED</strong></div></div>
+      <ol className="audit-steps">
+        <li><b>Separate the inputs</b><span>Label supplied evidence as USER-SUPPLIED; it never counts as independent confirmation.</span></li>
+        <li><b>Build an independent view</b><span>Use at least {auditPolicy.sourceRules.minimumIndependentOrigins} genuinely independent origins and collapse reposts to one origin.</span></li>
+        <li><b>Verify the facts</b><span>Check event, role or availability, matchup metrics, and environment when applicable.</span></li>
+        <li><b>Challenge the case</b><span>Search for counter-evidence and record every material source conflict.</span></li>
+        <li><b>Price separately</b><span>Capture the exact DraftKings market, threshold, side, price, and timestamp.</span></li>
+      </ol>
+      <p>A larger supplied-source packet never shortens this audit. Missing browsing, missing checks, or unresolved conflicts keep the leg BLOCKED.</p>
+    </div>
   );
 }
 
@@ -355,6 +377,7 @@ export default function OverlayDashboard() {
             <span><i className="truth-dot historical" /><b>HISTORY</b> through {historyThrough}</span>
             <span><i className="truth-dot reference" /><b>REFERENCE</b> supplied mockups only</span>
             <span><i className="truth-dot unavailable" /><b>UNAVAILABLE</b> odds · lineups · weather · promos</span>
+            <span><i className="truth-dot unavailable" /><b>AUDIT GATE</b> independent PASS required</span>
           </div>
           <div className="status-grid">
             <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>{activeLeagues.length ? activeLeagues.map((league) => `${league.games} ${league.league}`).join(' + ') : 'no active leagues found'}</small></div>
@@ -405,7 +428,7 @@ export default function OverlayDashboard() {
               <div className="empty-real-icon"><LockKeyhole size={28} /></div>
               <strong>No bets have cleared today’s final gate.</strong>
               <p>Today’s candidate research remains preliminary. A ticket appears here only after the full-slate audit, exact-price check, role and lineup verification, exposure review, and bankroll confirmation.</p>
-              <div className="gate-checks"><span><i /> Full slate scan</span><span><i /> Exact odds</span><span><i /> Lineup / role</span><span><i /> Portfolio audit</span></div>
+              <div className="gate-checks"><span><i /> Full slate scan</span><span><i /> {auditPolicy.sourceRules.minimumIndependentOrigins} independent origins</span><span><i /> Counter-evidence</span><span><i /> Exact odds</span><span><i /> Lineup / role</span><span><i /> Portfolio audit</span></div>
             </div>}
           </Panel>
         </TabsContent>
@@ -455,6 +478,7 @@ export default function OverlayDashboard() {
           <div className="page-heading"><div><span className="kicker">STRATEGIC SOURCE OF TRUTH</span><h1>Versioned configuration</h1><p>Daily changes belong in data and config. The product stays one persistent site.</p></div><div className="gate-pill"><Bot size={15} /><span><b>GPT ONLY</b> · no alternate model path</span></div></div>
           <div className="config-grid">
             <Panel title="Core constitution" icon={BookOpenCheck}><div className="config-card"><span>MASTER PROMPT</span><strong>v4.0 · 2026-09-03</strong><p>All 58 sections are preserved verbatim in the repository. Website behavior extends the strategy without replacing it.</p><div className="principles"><span>ANALYSIS FIRST</span><span>EDGE FIRST</span><span>PRICE FIRST</span><span>PROMO LAST</span></div></div></Panel>
+            <Panel title="Independent audit policy" icon={ShieldCheck}><div className="config-card"><span>PROMPT STACK</span><strong>v{promptStack.version} · PASS only</strong><p>Every chat loads the preserved constitution plus the audit addendum. Supplied evidence cannot replace the {auditPolicy.sourceRules.minimumIndependentOrigins}-origin independent check or the counter-case search.</p><div className="principles"><span>SUPPLIED ≠ INDEPENDENT</span><span>COUNTER-CASE REQUIRED</span><span>CONFLICTS BLOCK</span><span>NO PASS · NO CARD</span></div></div></Panel>
             <Panel title="Operational datastore" icon={Database}><div className="config-card"><span>IMPORTED HISTORY</span><strong>v0.45 reconciled</strong><p>{(history['Candidate Log'] as Row[]).length} candidates · {(history['Ticket Log'] as Row[]).length} tickets · {(history['Paper Portfolio'] as Row[]).length} paper observations · {(history['Experiment Registry'] as Row[]).length} experiments.</p><div className="data-health"><CircleCheck size={16} /> JSON and workbook retained for audit and export compatibility</div></div></Panel>
           </div>
           <Panel title="Market-specific scoring models" icon={Target} action={<span className="tag">{models.version}</span>}>

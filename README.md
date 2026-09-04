@@ -9,6 +9,9 @@ The production website is published by GitHub Pages at `https://kevinkato27.gith
 ## Strategic source of truth
 
 - `config/master-prompt/Master_Sports_Betting_Prompt_v4_2026-09-03.txt` is the preserved constitution.
+- `config/master-prompt/Independent_Audit_Addendum_v4.1_2026-09-04.txt` makes the independent audit a hard, PASS-only gate for every research chat.
+- `config/prompt-stack.v4.1.json` defines the two-file prompt package that must be loaded together.
+- `config/audit-policy.v0.1.json` makes the source-separation, counter-evidence, and qualification rules machine-checkable.
 - `config/scoring/market-models.v0.1.json` contains versioned prospective scoring models.
 - `config/sports-scope.v0.2.json` defines the approved soccer competitions and blocks unsourced soccer grades.
 - `config/sportsbooks.v0.1.json` sets DraftKings as the primary book and defines each sport's slip research markets.
@@ -25,8 +28,8 @@ Soccer coverage is intentionally limited to the Premier League, La Liga, Bundesl
 
 ## Local development
 
-Install dependencies and run `pnpm dev`. Use `pnpm refresh:data`, `pnpm validate:data`, and `pnpm sync:workbook` for the daily pipeline. Use `pnpm build` to validate the Sites build and `pnpm build:pages` to validate the GitHub Pages artifact.
+Install dependencies and run `pnpm dev`. Use `pnpm refresh:data`, `pnpm validate:data`, `pnpm validate:config`, and `pnpm sync:workbook` for the daily pipeline. Use `pnpm build` to validate the Sites build and `pnpm build:pages` to validate the GitHub Pages artifact.
 
 ## Guardrails
 
-OVERLAY is a research and tracking interface, not a sportsbook. Historical entries and design-demo cards are labeled. Current prices, lineups, injuries, weather, and bankroll must be independently re-verified before a card can move from PRELIMINARY to FINAL.
+OVERLAY is a research and tracking interface, not a sportsbook. Historical entries and design-demo cards are labeled. Current prices, lineups, injuries, weather, and bankroll must be independently re-verified before a card can move from PRELIMINARY to FINAL. Supplied sources never count toward the two-origin independent minimum, and unresolved material conflicts block qualification.
