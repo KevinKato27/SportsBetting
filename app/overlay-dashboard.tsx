@@ -36,6 +36,7 @@ import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import history from '@/data/history/edge_lab_full_history.json';
 import slate from '@/data/slates/current.json';
+import chatIntake from '@/data/chat-intake/current.json';
 import models from '@/config/scoring/market-models.v0.1.json';
 import sportsbooks from '@/config/sportsbooks.v0.1.json';
 import discoveryPolicy from '@/config/candidate-discovery-policy.v0.2.json';
@@ -106,15 +107,35 @@ function SlipWorkspace() {
         const leagues = slate.leagues.filter((league) => league.sport === slip.sport);
         const active = leagues.filter((league) => league.status === 'active');
         const games = active.reduce((sum, league) => sum + (league.games ?? 0), 0);
+        const suppliedSlips = chatIntake.slips.filter((item) => item.sport === slip.sport && item.date === slate.date);
         return (
           <TabsContent key={slip.id} value={slip.id} className="sport-slip-content">
             <div className="slip-status-grid">
               <div><span>PRIMARY BOOK</span><strong>{sportsbooks.primarySportsbook}</strong><small>preferred pricing source</small></div>
               <div><span>ACTIVE GAMES</span><strong>{games}</strong><small>{active.length} active competition{active.length === 1 ? '' : 's'}</small></div>
               <div><span>VERIFIED LINES</span><strong>0</strong><small>DraftKings feed not connected</small></div>
-              <div><span>INDEPENDENT DISCOVERY</span><strong>PENDING</strong><small>search beyond supplied cards</small></div>
+              <div><span>CHAT INTAKE</span><strong>{suppliedSlips.length}</strong><small>structured items · recheck required</small></div>
               <div><span>SLIP GATE</span><strong>WAIT</strong><small>no price or market inferred</small></div>
             </div>
+            <Panel title={`${slip.label} chat intake`} icon={FileInput} action={<span className="tag">{suppliedSlips.length} TODAY</span>}>
+              {suppliedSlips.length ? <div className="intake-list">
+                {suppliedSlips.map((item) => (
+                  <Accordion key={item.id} className="intake-accordion">
+                    <AccordionItem value={item.id} className="intake-card">
+                      <AccordionTrigger className="intake-trigger">
+                        <div><span className="eyebrow">{item.origin} · {item.verificationStatus.replaceAll('_', ' ')}</span><strong>{item.title}</strong><small>{item.league} · {item.legs.length} leg{item.legs.length === 1 ? '' : 's'} · {item.sportsbook}</small></div>
+                        <div className="intake-price"><strong>{item.displayedCombinedPrice ?? '—'}</strong><span>{item.status.replaceAll('_', ' ')}</span></div>
+                      </AccordionTrigger>
+                      <AccordionContent className="intake-detail">
+                        <div className="intake-warning"><CircleAlert size={15} /><span>Chat-reported research only. Recheck the event, market, price, lineup and source evidence before using it.</span></div>
+                        <div className="intake-legs">{item.legs.map((leg, index) => <div key={`${item.id}-${index}`}><b>{index + 1}</b><span><strong>{leg.entity}</strong><small>{leg.event}</small></span><span>{leg.market}{leg.threshold ? ` · ${leg.threshold}` : ''}</span><strong>{leg.displayedPrice ?? '—'}</strong></div>)}</div>
+                        <div className="intake-notes"><p><b>Audit note:</b> {item.auditSummary}</p><p><b>Placement evidence:</b> {item.placementEvidence}</p><p><b>Public source URLs:</b> {item.sources.length ? item.sources.join(' · ') : 'None preserved in the chat export; independent source check required.'}</p></div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ))}
+              </div> : <div className="slip-empty"><FileInput size={26} /><strong>No same-day chat items for this sport.</strong><p>The hourly watcher will add public-safe structured records when a project chat changes.</p></div>}
+            </Panel>
             <div className="slip-layout">
               <Panel title={`${slip.label} slate`} icon={Clock3}>
                 <div className="slip-leagues">
@@ -232,8 +253,18 @@ function SlateExplorer() {
     && (!normalizedQuery || `${event.name} ${event.shortName} ${event.league} ${event.venue ?? ''}`.toLowerCase().includes(normalizedQuery))
   ));
 
+  const liveCount = allEvents.filter((event) => event.state === 'in').length;
+  const upcomingCount = allEvents.filter((event) => event.state === 'pre').length;
+  const finalCount = allEvents.filter((event) => event.state === 'post').length;
+
   return (
-    <Panel title="Live slate explorer" icon={Radio} action={<span className="tag">{filtered.length} OF {allEvents.length} GAMES</span>} className="slate-explorer-panel">
+    <Accordion className="slate-explorer-drop">
+      <AccordionItem value="live-slate" className="slate-drop-card">
+        <AccordionTrigger className="slate-drop-trigger">
+          <div className="slate-drop-title"><Radio size={18} /><span><small>LIVE SLATE EXPLORER</small><strong>{allEvents.length} games across {sports.length - 1} sports</strong></span></div>
+          <div className="slate-drop-counts"><span><i className="truth-dot live" />{liveCount} live</span><span>{upcomingCount} upcoming</span><span>{finalCount} final</span><b>OPEN</b></div>
+        </AccordionTrigger>
+        <AccordionContent className="slate-drop-content">
       <div className="slate-controls">
         <div className="filter-chips" aria-label="Filter by sport">
           {sports.map((item) => <button type="button" className={sport === item ? 'active' : ''} onClick={() => setSport(item)} key={item}>{item}</button>)}
@@ -271,7 +302,9 @@ function SlateExplorer() {
         </Accordion>
       ) : <div className="slate-empty"><Search size={24} /><strong>No games match these filters.</strong><button type="button" onClick={() => { setSport('All'); setGameState('All'); setQuery(''); }}>Clear filters</button></div>}
       <p className="slate-freshness">Snapshot verified {verifiedLabel(slate.lastVerified)}. The scheduled GitHub workflow refreshes this feed four times daily.</p>
-    </Panel>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   );
 }
 
@@ -469,36 +502,46 @@ export default function OverlayDashboard() {
             <span><i className="truth-dot unavailable" /><b>UNAVAILABLE</b> odds · lineups · weather · promos</span>
             <span><i className="truth-dot reference" /><b>DISCOVERY RULE</b> search the full slate beyond supplied cards</span>
           </div>
-          <div className="status-grid">
-            <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>{activeLeagues.length ? activeLeagues.map((league) => `${league.games} ${league.league}`).join(' + ') : 'no active leagues found'}</small></div>
-            <div className="status-card"><span>EARLIEST START</span><strong>{earliestLeague?.earliestStart?.replace(/ E[DS]T$/, '') ?? '—'}</strong><small>{earliestLeague ? `${earliestLeague.league} · source verified` : 'no scheduled start'}</small></div>
-            <div className="status-card"><span>LATEST BANKROLL</span><strong>${number(stats.latest['Ending Bankroll']).toFixed(2)}</strong><small>historical snapshot · {stats.latest.Date}</small></div>
-            <div className="status-card"><span>PROMO STATUS</span><strong>—</strong><small>not supplied · no assumption</small></div>
-          </div>
-          <SlateExplorer />
-          <div className="today-layout">
-            <aside className="candidate-rail">
-              <div className="rail-head"><div><span className="eyebrow">RESEARCH QUEUE</span><strong>{candidates.length} surfaced items</strong></div><button>Grade ↓</button></div>
-              {candidates.map((candidate) => (
-                <button className="candidate-card" key={candidate.entity} onClick={() => candidate.grade && document.getElementById('featured-leg')?.scrollIntoView({ behavior: 'smooth' })}>
-                  <i className={`signal-dot ${candidate.tone}`} />
-                  <div><strong>{candidate.entity}</strong><span>{candidate.market}</span><small>{candidate.matchup}</small></div>
-                  {candidate.grade ? <div className="mini-score"><b className={gradeClass(candidate.grade)}>{candidate.grade}</b><small>{candidate.confidence} conf.</small></div> : <div className="mini-score pending">—</div>}
-                  <span className="card-tag">{candidate.status}</span><ChevronRight className="candidate-arrow" size={16} />
-                </button>
-              ))}
-              <Panel title="Slate detection" icon={Clock3} className="slate-panel">
-                {slate.leagues.map((league) => (
+          <Tabs defaultValue="overview" className="today-sections">
+            <TabsList className="page-subnav" aria-label="Today sections"><TabsTrigger value="overview">Overview</TabsTrigger><TabsTrigger value="candidates">Candidates</TabsTrigger><TabsTrigger value="model">Reference model</TabsTrigger><TabsTrigger value="sources">Sources</TabsTrigger></TabsList>
+            <TabsContent value="overview" className="today-section-content">
+              <div className="status-grid">
+                <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>{activeLeagues.length ? `${activeLeagues.length} active competition${activeLeagues.length === 1 ? '' : 's'}` : 'no active leagues found'}</small></div>
+                <div className="status-card"><span>EARLIEST START</span><strong>{earliestLeague?.earliestStart?.replace(/ E[DS]T$/, '') ?? '—'}</strong><small>{earliestLeague ? `${earliestLeague.league} · source verified` : 'no scheduled start'}</small></div>
+                <div className="status-card"><span>CHAT INTAKE</span><strong>{chatIntake.slips.length}</strong><small>today · all require a recheck</small></div>
+                <div className="status-card"><span>LATEST BANKROLL</span><strong>${number(stats.latest['Ending Bankroll']).toFixed(2)}</strong><small>historical snapshot · {stats.latest.Date}</small></div>
+              </div>
+              <SlateExplorer />
+            </TabsContent>
+            <TabsContent value="candidates" className="today-section-content">
+              <div className="candidate-page-grid">
+                <section className="candidate-list-section">
+                  <div className="rail-head"><div><span className="eyebrow">RESEARCH QUEUE</span><strong>{candidates.length} surfaced items</strong></div><span className="tag">UNVERIFIED</span></div>
+                  <div className="candidate-grid">{candidates.map((candidate) => (
+                    <button className="candidate-card" key={candidate.entity} onClick={() => candidate.grade && setTab('today')}>
+                      <i className={`signal-dot ${candidate.tone}`} />
+                      <div><strong>{candidate.entity}</strong><span>{candidate.market}</span><small>{candidate.matchup}</small></div>
+                      {candidate.grade ? <div className="mini-score"><b className={gradeClass(candidate.grade)}>{candidate.grade}</b><small>{candidate.confidence} conf.</small></div> : <div className="mini-score pending">—</div>}
+                      <span className="card-tag">{candidate.status}</span><ChevronRight className="candidate-arrow" size={16} />
+                    </button>
+                  ))}</div>
+                </section>
+                <Panel title="Independent discovery sequence" icon={ShieldCheck}><DiscoveryProcess /></Panel>
+              </div>
+            </TabsContent>
+            <TabsContent value="model" className="today-section-content"><div id="featured-leg"><LegCard /></div></TabsContent>
+            <TabsContent value="sources" className="today-section-content">
+              <Panel title="Slate detection sources" icon={Database}>
+                <div className="source-slate-grid">{slate.leagues.map((league) => (
                   <a className="slate-row" href={league.source} target="_blank" rel="noreferrer" key={league.league}>
                     <span><i className={league.status === 'active' ? 'signal-dot green' : league.status === 'source_error' ? 'signal-dot red' : 'signal-dot muted'} />{league.league}</span>
                     <b>{league.games ?? '—'}</b><small>{league.status === 'source_error' ? 'source error · no count inferred' : league.earliestStart ?? 'no games today'} · {league.provider}</small>
                   </a>
-                ))}
+                ))}</div>
                 <p className="timestamp">Verified {verifiedLabel(slate.lastVerified)} · schedule/results only</p>
               </Panel>
-            </aside>
-            <div className="candidate-stage" id="featured-leg"><LegCard /></div>
-          </div>
+            </TabsContent>
+          </Tabs>
         </TabsContent>
 
         <TabsContent value="slips">
@@ -579,7 +622,7 @@ export default function OverlayDashboard() {
         </TabsContent>
       </main>
 
-      <TabsList className="mobile-nav">{nav.slice(0, 5).map(({ value, label, icon: Icon }) => <TabsTrigger key={value} value={value}><Icon size={18} /><span>{label === 'Real Card' ? 'Real' : label === 'Paper Lab' ? 'Paper' : label === 'Bet History' ? 'History' : label}</span></TabsTrigger>)}</TabsList>
+      <TabsList className="mobile-nav">{nav.map(({ value, label, icon: Icon }) => <TabsTrigger key={value} value={value}><Icon size={18} /><span>{label === 'Real Card' ? 'Real' : label === 'Paper Lab' ? 'Paper' : label === 'Bet History' ? 'History' : label}</span></TabsTrigger>)}</TabsList>
       <footer className="site-footer"><span>OVERLAY v0.1</span><p>Research system only. No automated wagering.</p><span>History through {historyThrough}</span></footer>
     </Tabs>
   );

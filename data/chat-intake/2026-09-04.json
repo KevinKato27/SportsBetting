@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "0.1",
+  "date": "2026-09-04",
+  "timezone": "America/New_York",
+  "ingestedAt": "2026-09-04T22:20:00Z",
+  "sourceType": "user-authorized-project-chat-summary",
+  "publicExport": true,
+  "notes": "Public-safe structured summaries only. Chat statements are research inputs, not verified sportsbook records. Placement, current price, lineup, injury, weather, and result status require separate confirmation.",
+  "slips": [
+    {
+      "id": "2026-09-04-soccer-boost-01",
+      "date": "2026-09-04",
+      "sport": "Soccer",
+      "league": "Serie A + Premier League + La Liga",
+      "title": "Three-match soccer boost",
+      "status": "PLACEMENT_REPORTED_IN_CHAT",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "30% Soccer Parlay Boost",
+      "displayedCombinedPrice": "+736",
+      "origin": "BOTH",
+      "verificationStatus": "NEEDS_RECHECK",
+      "sourceLabel": "Sports Research Watch",
+      "sourceTurnTime": "2026-09-04T18:34:56Z",
+      "auditSummary": "The chat described each leg as independently audited before packaging, but OVERLAY has not reproduced that audit from public source URLs.",
+      "placementEvidence": "The research chat later stated that the soccer ticket was placed; no sportsbook receipt is stored in this public dataset.",
+      "legs": [
+        { "entity": "Como", "event": "Como vs Genoa", "market": "Moneyline", "threshold": null, "side": "Como", "displayedPrice": "-155", "status": "CHAT_REPORTED" },
+        { "entity": "Liverpool", "event": "Liverpool vs Ipswich", "market": "Team total goals", "threshold": "Over 2.5", "side": "Over", "displayedPrice": "+142", "status": "CHAT_REPORTED" },
+        { "entity": "Real Madrid", "event": "Real Madrid vs Real Betis", "market": "Team total goals", "threshold": "Over 2.5", "side": "Over", "displayedPrice": "+110", "status": "CHAT_REPORTED" }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-04-cfb-boost-01",
+      "date": "2026-09-04",
+      "sport": "Football",
+      "league": "NCAAF",
+      "title": "Two-leg CFB boost recommendation",
+      "status": "RECOMMENDED_NOT_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "50% CFB Boost",
+      "displayedCombinedPrice": "~+256",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "NEEDS_RECHECK",
+      "sourceLabel": "Sports Research Watch",
+      "sourceTurnTime": "2026-09-04T21:28:31Z",
+      "auditSummary": "The chat ranked these two sides after an independent review, but OVERLAY has not reproduced that review from public source URLs.",
+      "placementEvidence": "No user placement confirmation or sportsbook receipt was found in the reviewed chat turns.",
+      "legs": [
+        { "entity": "Miami", "event": "Miami vs Stanford", "market": "Spread", "threshold": "-24.5", "side": "Miami", "displayedPrice": "-108", "status": "CHAT_REPORTED" },
+        { "entity": "Fresno State", "event": "Fresno State vs USC", "market": "Spread", "threshold": "+22.5", "side": "Fresno State", "displayedPrice": "-118", "status": "CHAT_REPORTED" }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-04-mlb-sgpx-core-01",
+      "date": "2026-09-04",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "ATL–PHI SGPx core",
+      "status": "INCOMPLETE_RESEARCH_BUILD",
+      "stake": null,
+      "sportsbook": "DraftKings",
+      "promo": "30% MLB SGPx",
+      "displayedCombinedPrice": null,
+      "origin": "INDEPENDENT",
+      "verificationStatus": "NEEDS_RECHECK",
+      "sourceLabel": "Sports Research Watch",
+      "sourceTurnTime": "2026-09-04T21:32:54Z",
+      "auditSummary": "The chat selected a two-leg same-game core but was still searching for one outside leg. This is not a complete slip.",
+      "placementEvidence": "No placement confirmation; the build was explicitly incomplete.",
+      "legs": [
+        { "entity": "Ozzie Albies", "event": "Atlanta Braves at Philadelphia Phillies", "market": "Hits", "threshold": "1+", "side": "Over", "displayedPrice": "-229", "status": "CHAT_REPORTED" },
+        { "entity": "Lane Thomas", "event": "Atlanta Braves at Philadelphia Phillies", "market": "Hits", "threshold": "1+", "side": "Over", "displayedPrice": "-161", "status": "CHAT_REPORTED" }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-04-mlb-hr-watch-01",
+      "date": "2026-09-04",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Home-run boost watch",
+      "status": "HOLD_FOR_RECHECK",
+      "stake": null,
+      "sportsbook": "DraftKings",
+      "promo": "50% MLB Home Run Boost",
+      "displayedCombinedPrice": null,
+      "origin": "INDEPENDENT",
+      "verificationStatus": "NEEDS_RECHECK",
+      "sourceLabel": "Sports Research Watch",
+      "sourceTurnTime": "2026-09-04T18:35:53Z",
+      "auditSummary": "The chat named Yordan Alvarez as the current leader but explicitly required a final lineup, matchup, weather, and price check.",
+      "placementEvidence": "No placement confirmation; the chat instructed the user to hold.",
+      "legs": [
+        { "entity": "Yordan Alvarez", "event": "Arizona Diamondbacks at Houston Astros", "market": "Home run", "threshold": "1+", "side": "Over", "displayedPrice": "+216", "status": "CHAT_REPORTED" }
+      ],
+      "sources": []
+    }
+  ]
+}

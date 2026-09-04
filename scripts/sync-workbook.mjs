@@ -4,6 +4,7 @@ import { strFromU8, strToU8, unzipSync, zipSync } from 'fflate';
 const workbookPath = 'data/imports/sports_betting_backtest_tracker_v0_45.xlsx';
 const slatePath = process.argv[2] ?? 'data/slates/current.json';
 const slate = JSON.parse(await readFile(slatePath, 'utf8'));
+const chatIntake = JSON.parse(await readFile('data/chat-intake/current.json', 'utf8'));
 const shortVerifiedAt = `${slate.lastVerified.slice(0, 10)} ${slate.lastVerified.slice(11, 16)}Z`;
 
 if (!Array.isArray(slate.leagues) || slate.leagues.length !== 13) {
@@ -12,14 +13,19 @@ if (!Array.isArray(slate.leagues) || slate.leagues.length !== 13) {
 
 const files = unzipSync(new Uint8Array(await readFile(workbookPath)));
 const workbookXml = strFromU8(files['xl/workbook.xml']);
-const sheetMatch = workbookXml.match(/<x:sheet\s+name="Daily Slate"[^>]*r:id="([^"]+)"/);
-if (!sheetMatch) throw new Error('Daily Slate worksheet is missing from the tracker.');
-
 const relationshipsXml = strFromU8(files['xl/_rels/workbook.xml.rels']);
-const relationshipPattern = new RegExp(`<Relationship[^>]*Target="([^"]+)"[^>]*Id="${sheetMatch[1]}"[^>]*/>`);
-const relationshipMatch = relationshipsXml.match(relationshipPattern);
-if (!relationshipMatch) throw new Error('Daily Slate worksheet relationship is missing.');
-const worksheetPath = relationshipMatch[1].replace(/^\//, '');
+
+function worksheetPathFor(name) {
+  const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const sheetMatch = workbookXml.match(new RegExp(`<x:sheet\\s+name="${escapedName}"[^>]*r:id="([^"]+)"`));
+  if (!sheetMatch) throw new Error(`${name} worksheet is missing from the tracker.`);
+  const relationshipPattern = new RegExp(`<Relationship[^>]*Target="([^"]+)"[^>]*Id="${sheetMatch[1]}"[^>]*/>`);
+  const relationshipMatch = relationshipsXml.match(relationshipPattern);
+  if (!relationshipMatch) throw new Error(`${name} worksheet relationship is missing.`);
+  return relationshipMatch[1].replace(/^\//, '');
+}
+
+const worksheetPath = worksheetPathFor('Daily Slate');
 
 function escapeXml(value) {
   return String(value)
@@ -97,5 +103,37 @@ rows.push(row(20, 38, [stringCell('A20', 402, 'Schedule and result facts only. O
 const worksheetXml = `<?xml version="1.0" encoding="utf-8"?><x:worksheet xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><x:sheetPr><x:tabColor rgb="FF16A3B6" /></x:sheetPr><x:sheetViews><x:sheetView showGridLines="0" workbookViewId="0"><x:pane ySplit="4" topLeftCell="A5" activePane="bottomLeft" state="frozen" /></x:sheetView></x:sheetViews><x:sheetFormatPr defaultRowHeight="15" /><x:cols><x:col min="1" max="1" width="13" hidden="0" customWidth="1" /><x:col min="2" max="2" width="16" hidden="0" customWidth="1" /><x:col min="3" max="3" width="13" hidden="0" customWidth="1" /><x:col min="4" max="4" width="20" hidden="0" customWidth="1" /><x:col min="5" max="5" width="10" hidden="0" customWidth="1" /><x:col min="6" max="6" width="14" hidden="0" customWidth="1" /><x:col min="7" max="7" width="10" hidden="0" customWidth="1" /><x:col min="8" max="8" width="18" hidden="0" customWidth="1" /><x:col min="9" max="9" width="22" hidden="0" customWidth="1" /><x:col min="10" max="10" width="42" hidden="0" customWidth="1" /><x:col min="11" max="11" width="58" hidden="0" customWidth="1" /><x:col min="12" max="12" width="25" hidden="0" customWidth="1" /><x:col min="13" max="13" width="28" hidden="0" customWidth="1" /></x:cols><x:sheetData>${rows.join('')}</x:sheetData><x:mergeCells count="3"><x:mergeCell ref="A1:M1" /><x:mergeCell ref="A19:M19" /><x:mergeCell ref="A20:M20" /></x:mergeCells><x:pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3" /></x:worksheet>`;
 
 files[worksheetPath] = strToU8(worksheetXml);
+
+const intakeWorksheetPath = worksheetPathFor('Chat Intake');
+const intakeWorksheetXml = strFromU8(files[intakeWorksheetPath]);
+const styleAt = (reference, fallback) => intakeWorksheetXml.match(new RegExp(`<x:c[^>]*r="${reference}"[^>]*s="(\\d+)"`))?.[1] ?? fallback;
+const intakeStyles = {
+  title: styleAt('A1', '0'),
+  note: styleAt('A2', '0'),
+  header: styleAt('A4', '0'),
+  body: styleAt('A5', '0'),
+};
+const intakeHeaders = ['Date', 'Sport', 'League', 'Slip', 'Slip status', 'Entity', 'Event', 'Market', 'Threshold', 'Side', 'Displayed price', 'Sportsbook', 'Origin', 'Verification', 'Source label', 'Audit note', 'Placement evidence'];
+const intakeColumns = 'ABCDEFGHIJKLMNOPQ'.split('');
+const intakeRows = [
+  row(1, 28, [stringCell('A1', intakeStyles.title, 'Current Chat Intake')]),
+  row(2, 34, [stringCell('A2', intakeStyles.note, 'Public-safe structured summaries only. Recheck all chat-reported facts before use.')]),
+  row(4, 30, intakeHeaders.map((value, index) => stringCell(`${intakeColumns[index]}4`, intakeStyles.header, value))),
+];
+let intakeRowNumber = 5;
+for (const slip of chatIntake.slips) {
+  for (const leg of slip.legs) {
+    const values = [slip.date, slip.sport, slip.league, slip.title, slip.status, leg.entity, leg.event, leg.market, leg.threshold ?? '', leg.side, leg.displayedPrice ?? '', slip.sportsbook, slip.origin, slip.verificationStatus, slip.sourceLabel, slip.auditSummary, slip.placementEvidence];
+    intakeRows.push(row(intakeRowNumber, 42, values.map((value, index) => stringCell(`${intakeColumns[index]}${intakeRowNumber}`, intakeStyles.body, value))));
+    intakeRowNumber += 1;
+  }
+}
+const intakeSheetData = `<x:sheetData>${intakeRows.join('')}</x:sheetData>`;
+const intakeLastRow = Math.max(4, intakeRowNumber - 1);
+const updatedIntakeWorksheetXml = intakeWorksheetXml
+  .replace(/<x:dimension ref="[^"]+"\s*\/>/, `<x:dimension ref="A1:Q${intakeLastRow}" />`)
+  .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, intakeSheetData);
+files[intakeWorksheetPath] = strToU8(updatedIntakeWorksheetXml);
+
 await writeFile(workbookPath, zipSync(files, { level: 6 }));
-console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues).`);
+console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues, ${chatIntake.slips.length} chat slips).`);
