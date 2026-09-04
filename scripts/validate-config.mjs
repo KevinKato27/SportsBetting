@@ -1,23 +1,28 @@
 import fs from 'node:fs';
 
-const policyPath = 'config/audit-policy.v0.1.json';
-const stackPath = 'config/prompt-stack.v4.1.json';
+const policyPath = 'config/candidate-discovery-policy.v0.2.json';
+const stackPath = 'config/prompt-stack.v4.2.json';
+const evalPath = 'config/evals/candidate-discovery.v0.1.json';
 const policy = JSON.parse(fs.readFileSync(policyPath, 'utf8'));
 const stack = JSON.parse(fs.readFileSync(stackPath, 'utf8'));
+const discoveryEval = JSON.parse(fs.readFileSync(evalPath, 'utf8'));
 const failures = [];
 
 function requireRule(condition, message) {
   if (!condition) failures.push(message);
 }
 
-requireRule(policy.sourceRules.minimumIndependentOrigins >= 2, 'Independent audit requires at least two source origins.');
-requireRule(policy.sourceRules.userSuppliedSourcesCountTowardMinimum === false, 'User-supplied sources must not count toward the independent minimum.');
-requireRule(policy.sourceRules.draftKingsMarketCaptureCountsTowardMinimum === false, 'DraftKings market capture must remain a separate price gate.');
-requireRule(policy.sourceRules.independentAuditDepthMayDecreaseWhenMoreUserSourcesAreProvided === false, 'Independent audit depth must never shrink as supplied evidence grows.');
-requireRule(policy.requiredChecks.some((check) => check.id === 'counter_case'), 'A disconfirming counter-case check is required.');
-requireRule(policy.qualificationGate.qualificationRequires === 'PASS', 'Qualification must require an audit PASS.');
-requireRule(policy.qualificationGate.realCardAllowedStatuses.length === 1 && policy.qualificationGate.realCardAllowedStatuses[0] === 'PASS', 'Real Card must accept only audit PASS.');
-requireRule(stack.orderedFiles.length === 2, 'Prompt stack must contain the constitution and audit addendum.');
+requireRule(policy.discovery.scope === 'full_eligible_daily_slate', 'Discovery must cover the full eligible daily slate.');
+requireRule(policy.discovery.requiredMode === 'independent_then_compare', 'Independent discovery must happen before supplied-card comparison.');
+requireRule(policy.discovery.suppliedCardsMaySeedCandidateUniverse === false, 'Supplied cards must not define the candidate universe.');
+requireRule(policy.discovery.suppliedCardsMayReceivePreferentialRanking === false, 'Supplied cards must not receive preferential ranking.');
+requireRule(policy.discovery.moreSuppliedCardsMayReduceIndependentDiscovery === false, 'More supplied cards must not reduce independent discovery.');
+requireRule(policy.candidateOrigins.includes('INDEPENDENT') && policy.candidateOrigins.includes('SUPPLIED') && policy.candidateOrigins.includes('BOTH'), 'Candidate origins must distinguish independent, supplied, and overlap discoveries.');
+requireRule(policy.presentation.singleRankedList === true && policy.presentation.showOriginOnEveryCandidate === true, 'The final ranked list must show every candidate origin.');
+requireRule(policy.outputContract.includes('slateCoverage') && policy.outputContract.includes('independentCandidates'), 'Output must expose slate coverage and independently discovered candidates.');
+requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'find-stronger-unlisted-candidate'), 'Discovery eval must test an unlisted stronger candidate.');
+requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'allow-empty-shortlist'), 'Discovery eval must allow an honest empty shortlist.');
+requireRule(stack.orderedFiles.length === 2, 'Prompt stack must contain the constitution and candidate-discovery addendum.');
 
 for (const file of stack.orderedFiles) {
   requireRule(fs.existsSync(file), `Prompt stack file is missing: ${file}`);
@@ -28,4 +33,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Validated ${policy.version}: ${policy.sourceRules.minimumIndependentOrigins} independent origins and PASS-only qualification.`);
+console.log(`Validated ${policy.version} and ${discoveryEval.cases.length} anti-anchoring eval cases.`);

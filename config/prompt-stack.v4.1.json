@@ -1,9 +1,0 @@
-{
-  "version": "4.1",
-  "effectiveDate": "2026-09-04",
-  "orderedFiles": [
-    "config/master-prompt/Master_Sports_Betting_Prompt_v4_2026-09-03.txt",
-    "config/master-prompt/Independent_Audit_Addendum_v4.1_2026-09-04.txt"
-  ],
-  "policy": "Both files are required for every OVERLAY research chat. Later files clarify earlier files without deleting preserved rules."
-}

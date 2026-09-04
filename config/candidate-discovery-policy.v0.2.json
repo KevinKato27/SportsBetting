@@ -1,0 +1,40 @@
+{
+  "version": "candidate-discovery-policy.v0.2",
+  "effectiveDate": "2026-09-04",
+  "principle": "Supplied cards are research inputs, never the boundary of the candidate universe.",
+  "discovery": {
+    "scope": "full_eligible_daily_slate",
+    "requiredMode": "independent_then_compare",
+    "suppliedCardsMaySeedCandidateUniverse": false,
+    "suppliedCardsMayReceivePreferentialRanking": false,
+    "moreSuppliedCardsMayReduceIndependentDiscovery": false,
+    "noIndependentCandidateIsValidOutcome": true
+  },
+  "candidateOrigins": ["INDEPENDENT", "SUPPLIED", "BOTH"],
+  "presentation": {
+    "singleRankedList": true,
+    "showOriginOnEveryCandidate": true,
+    "showSlateCoverageSummary": true,
+    "showSuppliedCardComparisonAfterDiscovery": true
+  },
+  "researchExpectations": [
+    "Detect the active eligible slate before reviewing candidate quality.",
+    "Search every eligible game and supported market family for plausible candidates.",
+    "Create an independent shortlist without copying the supplied card list.",
+    "Compare supplied-card candidates with the independent shortlist only after discovery.",
+    "Include independently discovered candidates even when no supplied source mentions them.",
+    "Do not promote a supplied candidate merely because several supplied cards repeat it.",
+    "Verify and cite the facts used to score each candidate.",
+    "Return no candidate when the research does not support one rather than forcing a pick."
+  ],
+  "outputContract": [
+    "slateCoverage",
+    "independentCandidates",
+    "suppliedCandidatesReviewed",
+    "overlapCandidates",
+    "rankedCandidates",
+    "candidateOrigin",
+    "sources",
+    "missingData"
+  ]
+}

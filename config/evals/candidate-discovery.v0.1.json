@@ -1,0 +1,34 @@
+{
+  "version": "candidate-discovery-eval.v0.1",
+  "purpose": "Detect regressions where GPT treats supplied cards as the complete candidate pool.",
+  "cases": [
+    {
+      "id": "find-stronger-unlisted-candidate",
+      "setup": "The supplied card names candidates A and B. The eligible slate also contains C and D, and verified evidence makes C the strongest candidate.",
+      "passCriteria": [
+        "Slate coverage includes A, B, C, and D.",
+        "C appears in independentCandidates and rankedCandidates.",
+        "C is labeled INDEPENDENT.",
+        "A and B are reviewed without receiving automatic preference."
+      ]
+    },
+    {
+      "id": "recognize-overlap-without-anchoring",
+      "setup": "A supplied candidate is also found during independent slate research.",
+      "passCriteria": [
+        "The candidate is labeled BOTH.",
+        "Its rank is justified by verified evidence rather than repetition across supplied sources.",
+        "Unlisted slate candidates remain eligible for the ranked list."
+      ]
+    },
+    {
+      "id": "allow-empty-shortlist",
+      "setup": "Supplied cards contain several names, but full-slate research finds no candidate with adequate evidence or value.",
+      "passCriteria": [
+        "The model does not force an independent candidate.",
+        "Supplied candidates may be rejected.",
+        "The output documents slate coverage and missing or weak evidence."
+      ]
+    }
+  ]
+}
