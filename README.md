@@ -2,6 +2,10 @@
 
 OVERLAY is a persistent, mobile-first sports betting research workspace. It visualizes daily slate gates, auditable candidate grades, paper experiments, real-card history, P&L, and learning evidence without placing wagers.
 
+## Live site
+
+The production website is published by GitHub Pages at `https://kevinkato27.github.io/SportsBetting/`. Every push to `main` rebuilds and deploys the same persistent site.
+
 ## Strategic source of truth
 
 - `config/master-prompt/Master_Sports_Betting_Prompt_v4_2026-09-03.txt` is the preserved constitution.
@@ -12,7 +16,7 @@ OVERLAY is a persistent, mobile-first sports betting research workspace. It visu
 
 ## Local development
 
-Install dependencies and run `pnpm dev`. Use `pnpm build` before publishing.
+Install dependencies and run `pnpm dev`. Use `pnpm build` to validate the Sites build and `pnpm build:pages` to validate the GitHub Pages artifact.
 
 ## Guardrails
 
