@@ -1,7 +1,7 @@
 {
   "date": "2026-09-03",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-03T19:25:00-04:00",
+  "lastVerified": "2026-09-03T19:50:00-04:00",
   "leagues": [
     {
       "league": "MLB",
@@ -13,18 +13,18 @@
     {
       "league": "CFB",
       "status": "active",
-      "games": 11,
+      "games": 13,
       "earliestStart": "6:00 PM ET",
-      "source": "https://www.espn.com/college-football/schedule/_/week/1/year/2026/seasontype/2"
+      "source": "https://www.ncaa.com/news/football/article/2026-06-01/college-football-schedule-when-does-2026-college-football-season-start"
     },
     {
       "league": "WNBA",
-      "status": "verification_required",
-      "games": null,
+      "status": "no_slate",
+      "games": 0,
       "earliestStart": null,
-      "source": "https://cdn.wnba.com/sites/1611661331/2026/01/2026-Schedule_Print.pdf"
+      "source": "https://www.wnba.com/news/2026-fiba-world-cup-faq-and-things-to-know"
     }
   ],
   "gate": "PRELIMINARY",
-  "note": "Slate presence is verified separately from odds, lineup, injury, weather, and market availability. No current wager is promoted to FINAL without those gates."
+  "note": "Official schedule sources show 9 MLB games and 13 CFB games. The WNBA is in its Aug. 31-Sep. 16 FIBA break. Slate presence is separate from odds, lineup, injury, weather, and market availability; no wager is promoted to FINAL without those gates."
 }

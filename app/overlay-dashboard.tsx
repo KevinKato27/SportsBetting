@@ -36,23 +36,28 @@ import models from '@/config/scoring/market-models.v0.1.json';
 type Row = Record<string, string>;
 
 const metrics = [
-  { name: 'Opportunity', raw: 92, confidence: 80, weight: 14, contribution: 12.7, values: 'Projected leadoff · 4.5 PA', note: 'Top-order role creates the plate-appearance ceiling.', source: 'GPT-derived from design-demo inputs' },
-  { name: 'Matchup', raw: 86, confidence: 75, weight: 12, contribution: 9.9, values: 'RHP · elevated hard-hit allowed', note: 'Handedness and contact profile support extra-base upside.', source: 'User-supplied dashboard mockup' },
-  { name: 'Pitch-Type Fit', raw: 94, confidence: 80, weight: 14, contribution: 13.0, values: '4-seam .412 xwOBA · slider .298', note: 'Best contact bands align with the projected pitch mix.', source: 'User-supplied pitch-type mockup' },
-  { name: 'Quality of Contact', raw: 88, confidence: 80, weight: 14, contribution: 12.3, values: '51% HH vs 4-seam · 43% vs slider', note: 'Impact quality supports a total-base thesis.', source: 'User-supplied pitch-type mockup' },
-  { name: 'Environment', raw: 72, confidence: 60, weight: 8, contribution: 5.1, values: 'Neutral park · weather pending', note: 'Environment is not yet strong enough to lift the grade.', source: 'GPT-derived; current weather not verified' },
-  { name: 'Market Expression', raw: 74, confidence: 60, weight: 10, contribution: 6.4, values: '2+ TB preferred in design demo', note: 'Needs a live comparison with 1+ hit and HRR.', source: 'GPT-derived from mockup thesis' },
-  { name: 'Threshold / Price', raw: 80, confidence: 70, weight: 10, contribution: 7.1, values: 'Mockup price −102 · not live', note: 'Promising only if the displayed price is re-verified.', source: 'User-supplied dashboard mockup' },
-  { name: 'Source Agreement', raw: 70, confidence: 60, weight: 6, contribution: 3.7, values: '1 project reference · no live consensus', note: 'Source support is intentionally low-weight.', source: 'Project design references' },
-  { name: 'Portfolio Fit', raw: 78, confidence: 70, weight: 10, contribution: 7.0, values: 'No current exposure loaded', note: 'Portfolio fit cannot be final until today’s card exists.', source: 'GPT-derived from current repo state' },
-  { name: 'Player Rate', raw: 64, confidence: 50, weight: 2, contribution: 1.1, values: '7 of 50 comparable slates · 14%', note: 'Experimental; never overrides matchup or price.', source: 'User-supplied dashboard mockup' },
+  { name: 'Opportunity', raw: 92, confidence: 80, weight: 14, values: 'Leadoff role shown in reference', note: 'Reference input only; today’s lineup is unavailable.', source: 'User-supplied dashboard mockup' },
+  { name: 'Matchup', raw: 86, confidence: 75, weight: 12, values: 'RHP · hard-hit note in reference', note: 'Reference matchup only; today’s opponent is unverified.', source: 'User-supplied dashboard mockup' },
+  { name: 'Pitch-Type Fit', raw: 94, confidence: 80, weight: 14, values: '4-seam .412 xwOBA · slider .298', note: 'The supplied reference shows these pitch-band results.', source: 'User-supplied pitch-type mockup' },
+  { name: 'Quality of Contact', raw: 88, confidence: 80, weight: 14, values: '51% HH vs 4-seam · 43% vs slider', note: 'The supplied reference shows these contact values.', source: 'User-supplied pitch-type mockup' },
+  { name: 'Environment', raw: 72, confidence: 60, weight: 8, values: 'Reference score · live weather unavailable', note: 'No current park or weather inference is applied.', source: 'User-supplied dashboard mockup' },
+  { name: 'Market Expression', raw: 74, confidence: 60, weight: 10, values: '2+ TB selected in reference', note: 'Alternates remain ungraded without current prices.', source: 'User-supplied dashboard mockup' },
+  { name: 'Threshold / Price', raw: 80, confidence: 70, weight: 10, values: 'Reference price −102 · not live', note: 'A live price is required before any real decision.', source: 'User-supplied dashboard mockup' },
+  { name: 'Source Agreement', raw: 70, confidence: 60, weight: 6, values: 'Reference score · no live consensus', note: 'No agreement claim is made beyond the supplied design.', source: 'User-supplied dashboard mockup' },
+  { name: 'Portfolio Fit', raw: 78, confidence: 70, weight: 10, values: 'Reference score · today risk $0', note: 'Today’s Real Card has no approved exposure.', source: 'User-supplied dashboard mockup + imported ticket log' },
+  { name: 'Player Rate', raw: 64, confidence: 50, weight: 2, values: '7 of 50 · 14% in reference', note: 'Experimental; never overrides matchup or price.', source: 'User-supplied dashboard mockup' },
 ];
 
+const adjustedScore = (raw: number, confidence: number) => 50 + (raw - 50) * (confidence / 100);
+const metricContribution = (metric: (typeof metrics)[number]) => adjustedScore(metric.raw, metric.confidence) * (metric.weight / 100);
+const referenceLegGrade = Math.round(metrics.reduce((sum, metric) => sum + metricContribution(metric), 0));
+const referenceLegConfidence = Math.round(metrics.reduce((sum, metric) => sum + metric.confidence * (metric.weight / 100), 0));
+
 const marketAlternatives = [
-  { market: '1+ Hit', price: 'verify', grade: 79, why: 'Lower threshold; likely price-sensitive glue risk.' },
-  { market: '2+ Total Bases', price: '−102 mockup', grade: 86, why: 'Best match to the contact-quality thesis in the demo.' },
-  { market: '2+ H+R+RBI', price: 'verify', grade: 83, why: 'Multi-path challenger required by EXP-03.' },
-  { market: 'Home Run', price: 'verify', grade: 68, why: 'Higher variance; satellite only without exceptional price.' },
+  { market: '1+ Hit', price: 'unavailable', grade: null, why: 'Not graded without a current market and threshold check.' },
+  { market: '2+ Total Bases', price: '−102 reference', grade: referenceLegGrade, why: 'Reference selection only; not eligible for today’s card.' },
+  { market: '2+ H+R+RBI', price: 'unavailable', grade: null, why: 'Required challenger, but no current price is loaded.' },
+  { market: 'Home Run', price: 'unavailable', grade: null, why: 'Not graded without a current price and volatility audit.' },
 ];
 
 const nav = [
@@ -66,10 +71,10 @@ const nav = [
 ];
 
 const candidates = [
-  { entity: 'Jackson Chourio', market: '2+ Total Bases', matchup: 'Design demo · historical research pattern', grade: 86, confidence: 69, status: 'DEMO', tone: 'green' },
-  { entity: 'Pitcher Outs model', market: 'Historical market family', matchup: '10 observations · 80.0% all-observation hit rate', grade: 82, confidence: 58, status: 'EVIDENCE', tone: 'blue' },
-  { entity: 'H+R+RBI model', market: 'Historical market family', matchup: '13 observations · 84.6% all-observation hit rate', grade: 81, confidence: 55, status: 'EVIDENCE', tone: 'violet' },
-  { entity: 'CFB full-slate scan', market: 'Daily discovery queue', matchup: '11 games · first kickoff 6:00 PM ET', grade: null, confidence: null, status: 'NEEDS AUDIT', tone: 'amber' },
+  { entity: 'Jackson Chourio reference', market: '2+ Total Bases', matchup: 'Supplied mockup · not today’s wager', grade: referenceLegGrade, confidence: referenceLegConfidence, status: 'REFERENCE', tone: 'blue' },
+  { entity: 'MLB full-slate audit', market: 'Daily discovery queue', matchup: '9 games · schedule verified', grade: null, confidence: null, status: 'NEEDS DATA', tone: 'amber' },
+  { entity: 'CFB full-slate audit', market: 'Daily discovery queue', matchup: '13 games · schedule verified', grade: null, confidence: null, status: 'NEEDS DATA', tone: 'amber' },
+  { entity: 'WNBA', market: 'No slate today', matchup: 'FIBA break · resumes Sep 17', grade: null, confidence: null, status: 'NO SLATE', tone: 'muted' },
 ];
 
 function number(value: unknown) {
@@ -85,7 +90,8 @@ function money(value: number) {
   return `${value >= 0 ? '+' : '−'}$${Math.abs(value).toFixed(2)}`;
 }
 
-function gradeClass(grade: number) {
+function gradeClass(grade: number | null) {
+  if (grade === null) return '';
   if (grade >= 86) return 'grade-a';
   if (grade >= 78) return 'grade-b';
   if (grade >= 70) return 'grade-c';
@@ -108,7 +114,7 @@ function MetricTable() {
   return (
     <div className="metric-table" aria-label="Leg grade score breakdown">
       <div className="metric-row metric-header">
-        <span>Metric</span><span>Raw</span><span>Conf.</span><span>Weight</span><span>Contribution</span>
+        <span>Metric</span><span>Raw</span><span>Conf.</span><span>Adjusted</span><span>Weight</span><span>Contribution</span>
       </div>
       {metrics.map((metric) => (
         <div className="metric-row" key={metric.name}>
@@ -120,14 +126,15 @@ function MetricTable() {
           </div>
           <span className="metric-number">{metric.raw}</span>
           <span className="metric-number muted-number">{metric.confidence}</span>
+          <span className="metric-number muted-number">{adjustedScore(metric.raw, metric.confidence).toFixed(1)}</span>
           <span className="metric-number">{metric.weight}%</span>
-          <span className="metric-number contribution">+{metric.contribution.toFixed(1)}</span>
+          <span className="metric-number contribution">+{metricContribution(metric).toFixed(1)}</span>
         </div>
       ))}
       <div className="formula-strip">
         <span>Σ confidence-adjusted score × weight</span>
-        <strong>86 / 100</strong>
-        <small>Grade is wager quality, not hit probability.</small>
+        <strong>{referenceLegGrade} / 100</strong>
+        <small>Prompt v4 formula: 50 + (raw − 50) × confidence, then × weight. Grade is wager quality, not hit probability.</small>
       </div>
     </div>
   );
@@ -139,17 +146,17 @@ function LegCard() {
       <AccordionItem value="jackson" className="leg-card">
         <AccordionTrigger className="leg-summary">
           <div className="leg-summary-main">
-            <span className="entity-line"><i className="signal-dot green" />Jackson Chourio <span className="tag tag-demo">DESIGN DEMO</span></span>
+            <span className="entity-line"><i className="signal-dot blue" />Jackson Chourio <span className="tag tag-demo">REFERENCE ONLY</span></span>
             <strong>2+ Total Bases</strong>
             <span className="microcopy">Reference card · not a live wager · current price unverified</span>
           </div>
           <div className="leg-scores">
-            <div><span className="score-label">GRADE</span><strong className="grade-a">86</strong><small>/100</small></div>
-            <div><span className="score-label">CONF.</span><strong>69</strong><small>/100</small></div>
+            <div><span className="score-label">GRADE</span><strong className={gradeClass(referenceLegGrade)}>{referenceLegGrade}</strong><small>/100</small></div>
+            <div><span className="score-label">CONF.</span><strong>{referenceLegConfidence}</strong><small>/100</small></div>
           </div>
         </AccordionTrigger>
         <AccordionContent className="leg-detail">
-          <div className="warning-banner"><CircleAlert size={15} /><span>This card demonstrates the v0.1 grading surface using values from the supplied mockup. It is not today’s recommendation.</span></div>
+          <div className="warning-banner"><CircleAlert size={15} /><span>REFERENCE ONLY: all inputs below come from the supplied mockups. The score is formula-correct, but this is not a current candidate or recommendation.</span></div>
           <div className="detail-grid top-detail">
             <div className="summary-copy">
               <span className="eyebrow">THESIS</span>
@@ -202,9 +209,9 @@ function LegCard() {
           <Panel title="Market expression comparison" icon={Gauge}>
             <div className="market-comparison">
               {marketAlternatives.map((row) => (
-                <div className={row.grade === 86 ? 'market-choice selected' : 'market-choice'} key={row.market}>
+                <div className={row.market === '2+ Total Bases' ? 'market-choice selected' : 'market-choice'} key={row.market}>
                   <div><strong>{row.market}</strong><span>{row.price}</span></div>
-                  <b className={gradeClass(row.grade)}>{row.grade}</b>
+                  <b className={gradeClass(row.grade)}>{row.grade ?? '—'}</b>
                   <p>{row.why}</p>
                 </div>
               ))}
@@ -250,6 +257,7 @@ export default function OverlayDashboard() {
   const experimentRows = history['Experiment Registry'] as Row[];
   const paperRows = (history['Paper Portfolio'] as Row[]).slice(-10).reverse();
   const recentTickets = (history['Ticket Log'] as Row[]).slice(-12).reverse();
+  const activeGames = slate.leagues.reduce((sum, league) => sum + (league.status === 'active' ? (league.games ?? 0) : 0), 0);
 
   return (
     <Tabs value={tab} onValueChange={(value) => { setTab(value); setMenuOpen(false); }} className="app-shell">
@@ -268,10 +276,16 @@ export default function OverlayDashboard() {
             <div><span className="kicker">THURSDAY · SEP 3, 2026</span><h1>Today’s research desk</h1><p>Slate first. Analysis before market. Price before portfolio.</p></div>
             <div className="gate-pill"><LockKeyhole size={15} /><span><b>PRELIMINARY</b> · required gates open</span></div>
           </div>
+          <div className="truth-strip" aria-label="Data freshness and provenance">
+            <span><i className="truth-dot live" /><b>SCHEDULE VERIFIED</b> official league sources</span>
+            <span><i className="truth-dot historical" /><b>HISTORY</b> through Sep 2</span>
+            <span><i className="truth-dot reference" /><b>REFERENCE</b> supplied mockups only</span>
+            <span><i className="truth-dot unavailable" /><b>UNAVAILABLE</b> odds · lineups · weather · promos</span>
+          </div>
           <div className="status-grid">
-            <div className="status-card accent"><span>ACTIVE SLATE</span><strong>20</strong><small>verified games across MLB + CFB</small></div>
+            <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>9 MLB + 13 CFB schedule entries</small></div>
             <div className="status-card"><span>EARLIEST START</span><strong>12:35</strong><small>PM ET · MLB</small></div>
-            <div className="status-card"><span>LATEST BANKROLL</span><strong>$22.90</strong><small>historical snapshot · Sep 2</small></div>
+            <div className="status-card"><span>LATEST BANKROLL</span><strong>${number(stats.latest['Ending Bankroll']).toFixed(2)}</strong><small>historical snapshot · {stats.latest.Date}</small></div>
             <div className="status-card"><span>PROMO STATUS</span><strong>—</strong><small>not supplied · no assumption</small></div>
           </div>
           <div className="today-layout">
@@ -288,8 +302,8 @@ export default function OverlayDashboard() {
               <Panel title="Slate detection" icon={Clock3} className="slate-panel">
                 {slate.leagues.map((league) => (
                   <a className="slate-row" href={league.source} target="_blank" rel="noreferrer" key={league.league}>
-                    <span><i className={league.status === 'active' ? 'signal-dot green' : 'signal-dot amber'} />{league.league}</span>
-                    <b>{league.games ?? 'CHECK'}</b><small>{league.earliestStart ?? 'verification required'}</small>
+                    <span><i className={league.status === 'active' ? 'signal-dot green' : 'signal-dot muted'} />{league.league}</span>
+                    <b>{league.games ?? '—'}</b><small>{league.earliestStart ?? 'no games today'}</small>
                   </a>
                 ))}
                 <p className="timestamp">Verified {slate.lastVerified} · schedule only</p>
@@ -357,7 +371,7 @@ export default function OverlayDashboard() {
           <div className="page-heading"><div><span className="kicker">STRATEGIC SOURCE OF TRUTH</span><h1>Versioned configuration</h1><p>Daily changes belong in data and config. The product stays one persistent site.</p></div><div className="gate-pill"><Bot size={15} /><span><b>GPT ONLY</b> · no alternate model path</span></div></div>
           <div className="config-grid">
             <Panel title="Core constitution" icon={BookOpenCheck}><div className="config-card"><span>MASTER PROMPT</span><strong>v4.0 · 2026-09-03</strong><p>All 58 sections are preserved verbatim in the repository. Website behavior extends the strategy without replacing it.</p><div className="principles"><span>ANALYSIS FIRST</span><span>EDGE FIRST</span><span>PRICE FIRST</span><span>PROMO LAST</span></div></div></Panel>
-            <Panel title="Operational datastore" icon={Database}><div className="config-card"><span>IMPORTED HISTORY</span><strong>v0.45 reconciled</strong><p>446 candidates · 78 tickets · 219 paper observations · 27 experiments.</p><div className="data-health"><CircleCheck size={16} /> JSON and workbook retained for audit and export compatibility</div></div></Panel>
+            <Panel title="Operational datastore" icon={Database}><div className="config-card"><span>IMPORTED HISTORY</span><strong>v0.45 reconciled</strong><p>{(history['Candidate Log'] as Row[]).length} candidates · {(history['Ticket Log'] as Row[]).length} tickets · {(history['Paper Portfolio'] as Row[]).length} paper observations · {(history['Experiment Registry'] as Row[]).length} experiments.</p><div className="data-health"><CircleCheck size={16} /> JSON and workbook retained for audit and export compatibility</div></div></Panel>
           </div>
           <Panel title="Market-specific scoring models" icon={Target} action={<span className="tag">{models.version}</span>}>
             <div className="model-grid">{Object.entries(models.models).map(([name, weights]) => <article key={name}><span>{name.replaceAll('_', ' ')}</span><strong>{(weights as { weight: number }[]).reduce((sum, item) => sum + item.weight, 0) * 100}% total weight</strong><div>{(weights as { metric: string; weight: number }[]).map((item) => <p key={item.metric}><span>{item.metric}</span><b>{Math.round(item.weight * 100)}%</b></p>)}</div></article>)}</div>
