@@ -30,7 +30,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import history from '@/data/history/edge_lab_full_history.json';
-import slate from '@/data/slates/2026-09-03.json';
+import slate from '@/data/slates/current.json';
 import models from '@/config/scoring/market-models.v0.1.json';
 
 type Row = Record<string, string>;
@@ -72,9 +72,15 @@ const nav = [
 
 const candidates = [
   { entity: 'Jackson Chourio reference', market: '2+ Total Bases', matchup: 'Supplied mockup · not today’s wager', grade: referenceLegGrade, confidence: referenceLegConfidence, status: 'REFERENCE', tone: 'blue' },
-  { entity: 'MLB full-slate audit', market: 'Daily discovery queue', matchup: '9 games · schedule verified', grade: null, confidence: null, status: 'NEEDS DATA', tone: 'amber' },
-  { entity: 'CFB full-slate audit', market: 'Daily discovery queue', matchup: '13 games · schedule verified', grade: null, confidence: null, status: 'NEEDS DATA', tone: 'amber' },
-  { entity: 'WNBA', market: 'No slate today', matchup: 'FIBA break · resumes Sep 17', grade: null, confidence: null, status: 'NO SLATE', tone: 'muted' },
+  ...slate.leagues.map((league) => ({
+    entity: league.status === 'active' ? `${league.league} full-slate audit` : league.league,
+    market: league.status === 'active' ? 'Daily discovery queue' : league.status === 'no_slate' ? 'No slate today' : 'Source unavailable',
+    matchup: league.status === 'source_error' ? `${league.provider} failed · no facts inferred` : `${league.games} games · ${league.provider}`,
+    grade: null,
+    confidence: null,
+    status: league.status === 'active' ? 'NEEDS DATA' : league.status === 'no_slate' ? 'NO SLATE' : 'SOURCE ERROR',
+    tone: league.status === 'active' ? 'amber' : league.status === 'no_slate' ? 'muted' : 'red',
+  })),
 ];
 
 function number(value: unknown) {
@@ -88,6 +94,14 @@ function percent(value: unknown) {
 
 function money(value: number) {
   return `${value >= 0 ? '+' : '−'}$${Math.abs(value).toFixed(2)}`;
+}
+
+function dateLabel(value: string) {
+  return new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', timeZone: slate.timezone }).format(new Date(`${value}T12:00:00Z`)).toUpperCase();
+}
+
+function verifiedLabel(value: string) {
+  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short', timeZone: slate.timezone }).format(new Date(value));
 }
 
 function gradeClass(grade: number | null) {
@@ -258,6 +272,11 @@ export default function OverlayDashboard() {
   const paperRows = (history['Paper Portfolio'] as Row[]).slice(-10).reverse();
   const recentTickets = (history['Ticket Log'] as Row[]).slice(-12).reverse();
   const activeGames = slate.leagues.reduce((sum, league) => sum + (league.status === 'active' ? (league.games ?? 0) : 0), 0);
+  const activeLeagues = slate.leagues.filter((league) => league.status === 'active');
+  const earliestLeague = [...activeLeagues].sort((a, b) => (a.earliestStartIso ?? '').localeCompare(b.earliestStartIso ?? ''))[0];
+  const todayTickets = (history['Ticket Log'] as Row[]).filter((row) => row.Date === slate.date);
+  const todayRisk = todayTickets.reduce((sum, row) => sum + number(row.Stake), 0);
+  const historyThrough = stats.latest.Date;
 
   return (
     <Tabs value={tab} onValueChange={(value) => { setTab(value); setMenuOpen(false); }} className="app-shell">
@@ -273,18 +292,18 @@ export default function OverlayDashboard() {
       <main className="main-content">
         <TabsContent value="today">
           <div className="page-heading">
-            <div><span className="kicker">THURSDAY · SEP 3, 2026</span><h1>Today’s research desk</h1><p>Slate first. Analysis before market. Price before portfolio.</p></div>
+            <div><span className="kicker">{dateLabel(slate.date)}</span><h1>Today’s research desk</h1><p>Slate first. Analysis before market. Price before portfolio.</p></div>
             <div className="gate-pill"><LockKeyhole size={15} /><span><b>PRELIMINARY</b> · required gates open</span></div>
           </div>
           <div className="truth-strip" aria-label="Data freshness and provenance">
-            <span><i className="truth-dot live" /><b>SCHEDULE VERIFIED</b> official league sources</span>
-            <span><i className="truth-dot historical" /><b>HISTORY</b> through Sep 2</span>
+            <span><i className="truth-dot live" /><b>SCHEDULE {slate.dataAvailability.schedules.toUpperCase()}</b> named source endpoints</span>
+            <span><i className="truth-dot historical" /><b>HISTORY</b> through {historyThrough}</span>
             <span><i className="truth-dot reference" /><b>REFERENCE</b> supplied mockups only</span>
             <span><i className="truth-dot unavailable" /><b>UNAVAILABLE</b> odds · lineups · weather · promos</span>
           </div>
           <div className="status-grid">
-            <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>9 MLB + 13 CFB schedule entries</small></div>
-            <div className="status-card"><span>EARLIEST START</span><strong>12:35</strong><small>PM ET · MLB</small></div>
+            <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>{activeLeagues.length ? activeLeagues.map((league) => `${league.games} ${league.league}`).join(' + ') : 'no active leagues found'}</small></div>
+            <div className="status-card"><span>EARLIEST START</span><strong>{earliestLeague?.earliestStart?.replace(/ E[DS]T$/, '') ?? '—'}</strong><small>{earliestLeague ? `${earliestLeague.league} · source verified` : 'no scheduled start'}</small></div>
             <div className="status-card"><span>LATEST BANKROLL</span><strong>${number(stats.latest['Ending Bankroll']).toFixed(2)}</strong><small>historical snapshot · {stats.latest.Date}</small></div>
             <div className="status-card"><span>PROMO STATUS</span><strong>—</strong><small>not supplied · no assumption</small></div>
           </div>
@@ -302,11 +321,11 @@ export default function OverlayDashboard() {
               <Panel title="Slate detection" icon={Clock3} className="slate-panel">
                 {slate.leagues.map((league) => (
                   <a className="slate-row" href={league.source} target="_blank" rel="noreferrer" key={league.league}>
-                    <span><i className={league.status === 'active' ? 'signal-dot green' : 'signal-dot muted'} />{league.league}</span>
-                    <b>{league.games ?? '—'}</b><small>{league.earliestStart ?? 'no games today'}</small>
+                    <span><i className={league.status === 'active' ? 'signal-dot green' : league.status === 'source_error' ? 'signal-dot red' : 'signal-dot muted'} />{league.league}</span>
+                    <b>{league.games ?? '—'}</b><small>{league.status === 'source_error' ? 'source error · no count inferred' : league.earliestStart ?? 'no games today'} · {league.provider}</small>
                   </a>
                 ))}
-                <p className="timestamp">Verified {slate.lastVerified} · schedule only</p>
+                <p className="timestamp">Verified {verifiedLabel(slate.lastVerified)} · schedule/results only</p>
               </Panel>
             </aside>
             <div className="candidate-stage" id="featured-leg"><LegCard /></div>
@@ -314,20 +333,20 @@ export default function OverlayDashboard() {
         </TabsContent>
 
         <TabsContent value="real">
-          <div className="page-heading"><div><span className="kicker">TODAY ONLY · SEP 3, 2026</span><h1>Real Card</h1><p>Only wagers from today’s slate appear here. Prior days live in Bet History.</p></div><div className="gate-pill"><CircleAlert size={15} /><span><b>0 FINAL</b> · today</span></div></div>
-          <div className="status-grid three"><div className="status-card accent"><span>TODAY’S TICKETS</span><strong>0</strong><small>nothing approved yet</small></div><div className="status-card"><span>TODAY’S RISK</span><strong>$0.00</strong><small>no bankroll committed</small></div><div className="status-card"><span>CARD STATUS</span><strong>PRELIM</strong><small>odds, lineup, weather and audit gates open</small></div></div>
-          <Panel title="Today’s real-money card" icon={WalletCards} action={<span className="tag">SEP 3</span>}>
-            <div className="empty-real-card">
+          <div className="page-heading"><div><span className="kicker">TODAY ONLY · {dateLabel(slate.date)}</span><h1>Real Card</h1><p>Only wagers from today’s slate appear here. Prior days live in Bet History.</p></div><div className="gate-pill"><CircleAlert size={15} /><span><b>{todayTickets.length} FINAL</b> · today</span></div></div>
+          <div className="status-grid three"><div className="status-card accent"><span>TODAY’S TICKETS</span><strong>{todayTickets.length}</strong><small>{todayTickets.length ? 'recorded for today' : 'nothing approved yet'}</small></div><div className="status-card"><span>TODAY’S RISK</span><strong>${todayRisk.toFixed(2)}</strong><small>{todayRisk ? 'recorded ticket stakes' : 'no bankroll committed'}</small></div><div className="status-card"><span>CARD STATUS</span><strong>{todayTickets.length ? 'RECORDED' : 'PRELIM'}</strong><small>odds, lineup, weather and audit gates remain explicit</small></div></div>
+          <Panel title="Today’s real-money card" icon={WalletCards} action={<span className="tag">{slate.date}</span>}>
+            {todayTickets.length ? <div className="data-table"><div className="data-row data-header"><span>Date</span><span>Ticket</span><span>Origin</span><span>Odds</span><span>Result</span><span>Stake</span></div>{todayTickets.map((row, index) => <div className="data-row" key={`${row['Ticket ID']}-${index}`}><span>{row.Date}</span><strong>{row.Description || row['Ticket ID']}</strong><span>{row.Origin}</span><span>{row['Odds (American)'] || '—'}</span><span className={row.Result === 'Win' ? 'positive' : row.Result === 'Loss' ? 'negative' : ''}>{row.Result || 'Pending'}</span><b>${number(row.Stake).toFixed(2)}</b></div>)}</div> : <div className="empty-real-card">
               <div className="empty-real-icon"><LockKeyhole size={28} /></div>
               <strong>No bets have cleared today’s final gate.</strong>
               <p>Today’s candidate research remains preliminary. A ticket appears here only after the full-slate audit, exact-price check, role and lineup verification, exposure review, and bankroll confirmation.</p>
               <div className="gate-checks"><span><i /> Full slate scan</span><span><i /> Exact odds</span><span><i /> Lineup / role</span><span><i /> Portfolio audit</span></div>
-            </div>
+            </div>}
           </Panel>
         </TabsContent>
 
         <TabsContent value="history">
-          <div className="page-heading"><div><span className="kicker">ARCHIVED REAL-MONEY RECORD</span><h1>Bet History</h1><p>All settled and prior-day tickets stay here, separate from today’s card.</p></div><div className="gate-pill"><HistoryIcon size={15} /><span><b>THROUGH SEP 2</b></span></div></div>
+          <div className="page-heading"><div><span className="kicker">ARCHIVED REAL-MONEY RECORD</span><h1>Bet History</h1><p>All settled and prior-day tickets stay here, separate from today’s card.</p></div><div className="gate-pill"><HistoryIcon size={15} /><span><b>THROUGH {historyThrough}</b></span></div></div>
           <div className="status-grid three"><div className="status-card accent"><span>SETTLED TICKETS</span><strong>{stats.tickets.length}</strong><small>imported historical record</small></div><div className="status-card"><span>TICKET HIT RATE</span><strong>{percent(stats.winRate)}</strong><small>{stats.wins} wins</small></div><div className="status-card"><span>NET P/L</span><strong className={stats.pnl >= 0 ? 'positive' : 'negative'}>{money(stats.pnl)}</strong><small>sum of recorded ticket P/L</small></div></div>
           <Panel title="Prior real tickets" icon={HistoryIcon} action={<span className="tag">IMPORTED</span>}>
             <div className="data-table"><div className="data-row data-header"><span>Date</span><span>Ticket</span><span>Origin</span><span>Odds</span><span>Result</span><span>P/L</span></div>{recentTickets.map((row, index) => <div className="data-row" key={`${row['Ticket ID']}-${index}`}><span>{row.Date}</span><strong>{row.Description || row['Ticket ID']}</strong><span>{row.Origin}</span><span>{row['Odds (American)'] || '—'}</span><span className={row.Result === 'Win' ? 'positive' : row.Result === 'Loss' ? 'negative' : ''}>{row.Result || 'Pending'}</span><b>{row['P/L'] ? money(number(row['P/L'])) : '—'}</b></div>)}</div>
@@ -381,7 +400,7 @@ export default function OverlayDashboard() {
       </main>
 
       <TabsList className="mobile-nav">{nav.slice(0, 5).map(({ value, label, icon: Icon }) => <TabsTrigger key={value} value={value}><Icon size={18} /><span>{label === 'Real Card' ? 'Real' : label === 'Paper Lab' ? 'Paper' : label === 'Bet History' ? 'History' : label}</span></TabsTrigger>)}</TabsList>
-      <footer className="site-footer"><span>OVERLAY v0.1</span><p>Research system only. No automated wagering.</p><span>History through 2026-09-02</span></footer>
+      <footer className="site-footer"><span>OVERLAY v0.1</span><p>Research system only. No automated wagering.</p><span>History through {historyThrough}</span></footer>
     </Tabs>
   );
 }

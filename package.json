@@ -10,6 +10,8 @@
     "build": "vinext build",
     "build:pages": "vite build --config vite.github.config.ts",
     "preview:pages": "vite preview --config vite.github.config.ts",
+    "refresh:data": "node scripts/update-daily.mjs",
+    "validate:data": "node scripts/validate-slate.mjs data/slates/current.json",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt"

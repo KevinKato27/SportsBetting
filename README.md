@@ -13,6 +13,11 @@ The production website is published by GitHub Pages at `https://kevinkato27.gith
 - `data/history/edge_lab_full_history.json` is the imported historical datastore.
 - `data/imports/sports_betting_backtest_tracker_v0_45.xlsx` remains the reconciliation/export source during migration.
 - `data/slates/YYYY-MM-DD.json` holds daily facts so future updates change data/config instead of creating a new site.
+- `data/slates/current.json` is the dashboard pointer generated from the newest validated daily snapshot.
+
+## Automatic updates
+
+The GitHub Pages workflow refreshes schedule and result facts at 7:17 AM, 11:17 AM, 4:17 PM, and 11:17 PM America/New_York time. Each run records the exact endpoint, provider, and verification time, validates the payload, commits the dated snapshot, and deploys the current site. A failed source is labeled `source_error`; the updater never invents a game count. Betting inputs remain unavailable until authenticated providers are configured.
 
 ## Local development
 
