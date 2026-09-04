@@ -23,7 +23,7 @@ The production website is published by GitHub Pages at `https://kevinkato27.gith
 
 ## Automatic updates
 
-The GitHub Pages workflow refreshes schedule and result facts at 7:17 AM, 11:17 AM, 4:17 PM, and 11:17 PM America/New_York time. Each run records the exact endpoint, provider, and verification time, validates the payload, syncs the tracker workbook, commits both artifacts, and deploys the current site. A failed source is labeled `source_error`; the updater never invents a game count. Betting inputs remain unavailable until authenticated providers are configured.
+The GitHub Pages workflow refreshes schedule and result facts at 7:17 AM, 11:17 AM, 4:17 PM, and 11:17 PM America/New_York time. Each run records the exact endpoint, provider, and verification time, validates the payload, syncs the tracker workbook, commits both artifacts, and deploys the current site. The game-level feed includes teams, scores, status, venue, broadcasts, and announced MLB probable pitchers. A failed source is labeled `source_error`; the updater never invents a game count. Betting inputs remain unavailable until authenticated providers are configured.
 
 Soccer coverage is intentionally limited to the Premier League, La Liga, Bundesliga, Serie A, Ligue 1, UEFA Champions League, and UEFA Europa League. MLS and the Saudi Pro League are excluded.
 

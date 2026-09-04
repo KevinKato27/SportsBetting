@@ -10,7 +10,7 @@ function assert(condition, message) {
   if (!condition) throw new Error(`Slate validation failed: ${message}`);
 }
 
-assert(slate.schemaVersion === '1.0', 'unsupported schemaVersion');
+assert(slate.schemaVersion === '1.1', 'unsupported schemaVersion');
 assert(isoDate.test(slate.date), 'date must be YYYY-MM-DD');
 assert(slate.timezone === 'America/New_York', 'unexpected timezone');
 assert(!Number.isNaN(Date.parse(slate.lastVerified)), 'lastVerified must be ISO-8601');
@@ -25,11 +25,20 @@ for (const league of slate.leagues) {
   assert(typeof league.endpoint === 'string' && league.endpoint.startsWith('https://'), `${league.league} endpoint missing`);
   if (league.status === 'source_error') {
     assert(league.games === null, `${league.league} source errors must not claim a game count`);
+    assert(Array.isArray(league.events) && league.events.length === 0, `${league.league} source errors must not contain events`);
   } else {
     assert(Number.isInteger(league.games) && league.games >= 0, `${league.league} games must be a non-negative integer`);
     assert(league.completed + league.live + league.scheduled === league.games, `${league.league} state totals do not match games`);
     assert((league.status === 'active') === (league.games > 0), `${league.league} status disagrees with game count`);
     if (league.games > 0) assert(!Number.isNaN(Date.parse(league.earliestStartIso)), `${league.league} earliest start is invalid`);
+    assert(Array.isArray(league.events) && league.events.length === league.games, `${league.league} event detail count must match games`);
+    for (const event of league.events) {
+      assert(typeof event.id === 'string' && event.id.length > 0, `${league.league} event id missing`);
+      assert(!Number.isNaN(Date.parse(event.date)), `${event.id} date is invalid`);
+      assert(typeof event.name === 'string' && event.name.length > 0, `${event.id} name missing`);
+      assert(Array.isArray(event.competitors) && event.competitors.length >= 2, `${event.id} competitors missing`);
+      assert(typeof event.source === 'string' && event.source.startsWith('https://'), `${event.id} source missing`);
+    }
   }
 }
 

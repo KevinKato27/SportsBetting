@@ -84,16 +84,44 @@ function summarizedLeague({ sport, league, provider, source, endpoint, events })
     source,
     endpoint,
     sourceVerifiedAt: now.toISOString(),
+    events: exactDateEvents.sort((a, b) => a.date.localeCompare(b.date)),
   };
 }
 
 async function mlb() {
-  const endpoint = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${date}`;
+  const endpoint = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${date}&hydrate=probablePitcher,team,venue`;
   const payload = await fetchJson(endpoint);
   const games = (payload.dates ?? []).flatMap((day) => day.games ?? []).map((game) => ({
+    id: `mlb-${game.gamePk}`,
     date: game.gameDate,
     completed: Boolean(game.status?.abstractGameState === 'Final'),
-    state: game.status?.abstractGameState === 'Live' ? 'in' : 'pre',
+    state: game.status?.abstractGameState === 'Final' ? 'post' : game.status?.abstractGameState === 'Live' ? 'in' : 'pre',
+    status: game.status?.detailedState ?? game.status?.abstractGameState ?? 'Scheduled',
+    name: `${game.teams?.away?.team?.name ?? 'Away'} at ${game.teams?.home?.team?.name ?? 'Home'}`,
+    shortName: `${game.teams?.away?.team?.abbreviation ?? 'AWAY'} @ ${game.teams?.home?.team?.abbreviation ?? 'HOME'}`,
+    competitors: [
+      {
+        side: 'away',
+        name: game.teams?.away?.team?.name ?? 'Away',
+        abbreviation: game.teams?.away?.team?.abbreviation ?? null,
+        score: game.teams?.away?.score ?? null,
+        record: game.teams?.away?.leagueRecord ? `${game.teams.away.leagueRecord.wins}-${game.teams.away.leagueRecord.losses}` : null,
+      },
+      {
+        side: 'home',
+        name: game.teams?.home?.team?.name ?? 'Home',
+        abbreviation: game.teams?.home?.team?.abbreviation ?? null,
+        score: game.teams?.home?.score ?? null,
+        record: game.teams?.home?.leagueRecord ? `${game.teams.home.leagueRecord.wins}-${game.teams.home.leagueRecord.losses}` : null,
+      },
+    ],
+    venue: game.venue?.name ?? null,
+    probablePitchers: {
+      away: game.teams?.away?.probablePitcher?.fullName ?? null,
+      home: game.teams?.home?.probablePitcher?.fullName ?? null,
+    },
+    broadcasts: [],
+    source: `https://www.mlb.com/gameday/${game.gamePk}`,
   }));
   return summarizedLeague({
     sport: 'Baseball',
@@ -130,11 +158,30 @@ function espnSource(definition) {
 async function espn(definition) {
   const endpoint = `https://site.api.espn.com/apis/site/v2/sports/${definition.apiSport}/${definition.slug}/scoreboard?dates=${compactDate}&limit=200`;
   const payload = await fetchJson(endpoint);
-  const events = (payload.events ?? []).map((event) => ({
-    date: event.date,
-    completed: Boolean(event.status?.type?.completed),
-    state: event.status?.type?.state,
-  }));
+  const events = (payload.events ?? []).map((event) => {
+    const competition = event.competitions?.[0] ?? {};
+    const competitors = (competition.competitors ?? []).map((competitor) => ({
+      side: competitor.homeAway ?? null,
+      name: competitor.team?.displayName ?? competitor.team?.name ?? 'Unknown team',
+      abbreviation: competitor.team?.abbreviation ?? null,
+      score: competitor.score ?? null,
+      record: competitor.records?.[0]?.summary ?? null,
+    }));
+    return {
+      id: `${definition.slug}-${event.id}`,
+      date: event.date,
+      completed: Boolean(event.status?.type?.completed),
+      state: event.status?.type?.state,
+      status: event.status?.type?.shortDetail ?? event.status?.type?.detail ?? 'Scheduled',
+      name: event.name ?? event.shortName ?? definition.league,
+      shortName: event.shortName ?? event.name ?? definition.league,
+      competitors,
+      venue: competition.venue?.fullName ?? null,
+      probablePitchers: null,
+      broadcasts: (competition.broadcasts ?? []).flatMap((broadcast) => broadcast.names ?? []),
+      source: event.links?.find((link) => link.rel?.includes('summary'))?.href ?? espnSource(definition),
+    };
+  });
   return summarizedLeague({
     sport: definition.sport,
     league: definition.league,
@@ -160,6 +207,7 @@ function sourceError(sport, league, provider, source, endpoint, error) {
     source,
     endpoint,
     sourceVerifiedAt: null,
+    events: [],
     error: error instanceof Error ? error.message : String(error),
   };
 }
@@ -184,7 +232,7 @@ const leagues = settled.map((result, index) => result.status === 'fulfilled'
 const errors = leagues.filter((league) => league.status === 'source_error').map((league) => `${league.league}: ${league.error}`);
 const activeGames = leagues.reduce((sum, league) => sum + (league.games ?? 0), 0);
 const slate = {
-  schemaVersion: '1.0',
+  schemaVersion: '1.1',
   date,
   timezone: TIMEZONE,
   lastVerified: now.toISOString(),

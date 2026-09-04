@@ -20,10 +20,14 @@ import {
   LineChart,
   ListChecks,
   LockKeyhole,
+  MapPin,
   Menu,
+  Radio,
+  Search,
   ShieldCheck,
   Target,
   TrendingUp,
+  Tv,
   WalletCards,
   X,
 } from 'lucide-react';
@@ -38,6 +42,23 @@ import discoveryPolicy from '@/config/candidate-discovery-policy.v0.2.json';
 import promptStack from '@/config/prompt-stack.v4.2.json';
 
 type Row = Record<string, string>;
+type SlateEvent = {
+  id: string;
+  date: string;
+  completed: boolean;
+  state: string;
+  status: string;
+  name: string;
+  shortName: string;
+  competitors: { side: string | null; name: string; abbreviation: string | null; score: string | number | null; record: string | null }[];
+  venue: string | null;
+  probablePitchers: { away: string | null; home: string | null } | null;
+  broadcasts: string[];
+  source: string;
+  sport: string;
+  league: string;
+  provider: string;
+};
 
 const metrics = [
   { name: 'Opportunity', raw: 92, confidence: 80, weight: 14, values: 'Leadoff role shown in reference', note: 'Reference input only; today’s lineup is unavailable.', source: 'User-supplied dashboard mockup' },
@@ -165,6 +186,10 @@ function verifiedLabel(value: string) {
   return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short', timeZone: slate.timezone }).format(new Date(value));
 }
 
+function gameTime(value: string) {
+  return new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZone: slate.timezone }).format(new Date(value));
+}
+
 function gradeClass(grade: number | null) {
   if (grade === null) return '';
   if (grade >= 86) return 'grade-a';
@@ -182,6 +207,71 @@ function Panel({ title, icon: Icon, action, children, className = '' }: { title:
       </div>
       <div className="panel-body">{children}</div>
     </section>
+  );
+}
+
+function SlateExplorer() {
+  const [sport, setSport] = useState('All');
+  const [gameState, setGameState] = useState('All');
+  const [query, setQuery] = useState('');
+  const sports = ['All', ...Array.from(new Set(slate.leagues.map((league) => league.sport)))];
+  const allEvents = slate.leagues.flatMap((league) => (league.events as Omit<SlateEvent, 'sport' | 'league' | 'provider'>[]).map((event) => ({
+    ...event,
+    sport: league.sport,
+    league: league.league,
+    provider: league.provider,
+  }))) as SlateEvent[];
+  const stateMatches = (event: SlateEvent) => gameState === 'All'
+    || (gameState === 'Live' && event.state === 'in')
+    || (gameState === 'Upcoming' && event.state === 'pre')
+    || (gameState === 'Final' && event.state === 'post');
+  const normalizedQuery = query.trim().toLowerCase();
+  const filtered = allEvents.filter((event) => (
+    (sport === 'All' || event.sport === sport)
+    && stateMatches(event)
+    && (!normalizedQuery || `${event.name} ${event.shortName} ${event.league} ${event.venue ?? ''}`.toLowerCase().includes(normalizedQuery))
+  ));
+
+  return (
+    <Panel title="Live slate explorer" icon={Radio} action={<span className="tag">{filtered.length} OF {allEvents.length} GAMES</span>} className="slate-explorer-panel">
+      <div className="slate-controls">
+        <div className="filter-chips" aria-label="Filter by sport">
+          {sports.map((item) => <button type="button" className={sport === item ? 'active' : ''} onClick={() => setSport(item)} key={item}>{item}</button>)}
+        </div>
+        <label className="slate-search"><Search size={15} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search team, league, or venue" aria-label="Search slate" /></label>
+        <div className="state-filters" aria-label="Filter by game status">
+          {['All', 'Live', 'Upcoming', 'Final'].map((item) => <button type="button" className={gameState === item ? 'active' : ''} onClick={() => setGameState(item)} key={item}>{item}</button>)}
+        </div>
+      </div>
+      {filtered.length ? (
+        <Accordion className="game-accordion">
+          {filtered.map((event) => {
+            const away = event.competitors.find((team) => team.side === 'away') ?? event.competitors[0];
+            const home = event.competitors.find((team) => team.side === 'home') ?? event.competitors[1];
+            return (
+              <AccordionItem value={event.id} className="game-card" key={event.id}>
+                <AccordionTrigger className="game-trigger">
+                  <div className="game-meta"><span>{event.league}</span><b className={`game-state ${event.state}`}>{event.state === 'in' ? 'LIVE' : event.state === 'post' ? 'FINAL' : gameTime(event.date)}</b></div>
+                  <div className="team-lines">
+                    {[away, home].map((team) => <div key={`${event.id}-${team.side}`}><span>{team.abbreviation ?? team.name}</span><strong>{team.name}</strong><small>{team.record ?? 'record unavailable'}</small><b>{team.score ?? '—'}</b></div>)}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="game-detail">
+                  <div className="game-facts">
+                    <span><Clock3 size={14} /><b>{event.status}</b></span>
+                    <span><MapPin size={14} />{event.venue ?? 'Venue unavailable'}</span>
+                    <span><Tv size={14} />{event.broadcasts.length ? event.broadcasts.join(' · ') : 'Broadcast unavailable'}</span>
+                  </div>
+                  {event.probablePitchers && <div className="probable-pitchers"><div><span>{away.abbreviation ?? 'AWAY'} PROBABLE</span><strong>{event.probablePitchers.away ?? 'Not announced'}</strong></div><div><span>{home.abbreviation ?? 'HOME'} PROBABLE</span><strong>{event.probablePitchers.home ?? 'Not announced'}</strong></div></div>}
+                  <div className="game-source"><span>Real schedule/result data · {event.provider}</span><a href={event.source} target="_blank" rel="noreferrer">Open source <ChevronRight size={14} /></a></div>
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+      ) : <div className="slate-empty"><Search size={24} /><strong>No games match these filters.</strong><button type="button" onClick={() => { setSport('All'); setGameState('All'); setQuery(''); }}>Clear filters</button></div>}
+      <p className="slate-freshness">Snapshot verified {verifiedLabel(slate.lastVerified)}. The scheduled GitHub workflow refreshes this feed four times daily.</p>
+    </Panel>
   );
 }
 
@@ -385,6 +475,7 @@ export default function OverlayDashboard() {
             <div className="status-card"><span>LATEST BANKROLL</span><strong>${number(stats.latest['Ending Bankroll']).toFixed(2)}</strong><small>historical snapshot · {stats.latest.Date}</small></div>
             <div className="status-card"><span>PROMO STATUS</span><strong>—</strong><small>not supplied · no assumption</small></div>
           </div>
+          <SlateExplorer />
           <div className="today-layout">
             <aside className="candidate-rail">
               <div className="rail-head"><div><span className="eyebrow">RESEARCH QUEUE</span><strong>{candidates.length} surfaced items</strong></div><button>Grade ↓</button></div>
