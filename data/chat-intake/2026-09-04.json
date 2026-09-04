@@ -60,20 +60,21 @@
       "sport": "Baseball",
       "league": "MLB",
       "title": "ATL–PHI SGPx core",
-      "status": "INCOMPLETE_RESEARCH_BUILD",
-      "stake": null,
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
       "sportsbook": "DraftKings",
       "promo": "30% MLB SGPx",
-      "displayedCombinedPrice": null,
+      "displayedCombinedPrice": "+323",
       "origin": "INDEPENDENT",
       "verificationStatus": "NEEDS_RECHECK",
       "sourceLabel": "Sports Research Watch",
       "sourceTurnTime": "2026-09-04T21:32:54Z",
-      "auditSummary": "The chat selected a two-leg same-game core but was still searching for one outside leg. This is not a complete slip.",
-      "placementEvidence": "No placement confirmation; the build was explicitly incomplete.",
+      "auditSummary": "The chat retained the ATL–PHI contact core and added Hunter Goodman 2+ total bases after his third-place lineup spot cleared the stated gate.",
+      "placementEvidence": "The user said “Done” immediately after the specific instruction to place this three-leg SGPx, and the chat marked it placed.",
       "legs": [
         { "entity": "Ozzie Albies", "event": "Atlanta Braves at Philadelphia Phillies", "market": "Hits", "threshold": "1+", "side": "Over", "displayedPrice": "-229", "status": "CHAT_REPORTED" },
-        { "entity": "Lane Thomas", "event": "Atlanta Braves at Philadelphia Phillies", "market": "Hits", "threshold": "1+", "side": "Over", "displayedPrice": "-161", "status": "CHAT_REPORTED" }
+        { "entity": "Lane Thomas", "event": "Atlanta Braves at Philadelphia Phillies", "market": "Hits", "threshold": "1+", "side": "Over", "displayedPrice": "-161", "status": "CHAT_REPORTED" },
+        { "entity": "Hunter Goodman", "event": "St. Louis Cardinals at Colorado Rockies", "market": "Total bases", "threshold": "2+", "side": "Over", "displayedPrice": null, "status": "CHAT_REPORTED" }
       ],
       "sources": []
     },

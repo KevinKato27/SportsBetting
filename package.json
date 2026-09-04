@@ -15,6 +15,7 @@
     "validate:config": "node scripts/validate-config.mjs",
     "validate:intake": "node scripts/validate-chat-intake.mjs",
     "validate:morning": "node scripts/validate-morning-scan.mjs",
+    "validate:board": "node scripts/validate-research-board.mjs",
     "validate:data": "node scripts/validate-slate.mjs data/slates/current.json",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",

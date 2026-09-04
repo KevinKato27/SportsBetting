@@ -42,6 +42,8 @@ jobs:
         run: pnpm validate:intake
       - name: Validate morning slate scan
         run: pnpm validate:morning
+      - name: Validate today's research board
+        run: pnpm validate:board
       - name: Sync tracker workbook
         if: github.event_name != 'push'
         run: pnpm sync:workbook
@@ -50,7 +52,7 @@ jobs:
         run: |
           git config user.name "OVERLAY Data Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/slates data/chat-intake data/morning-scan data/imports/sports_betting_backtest_tracker_v0_45.xlsx
+          git add data/slates data/chat-intake data/morning-scan data/research-board data/imports/sports_betting_backtest_tracker_v0_45.xlsx
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh daily slate"
             git push

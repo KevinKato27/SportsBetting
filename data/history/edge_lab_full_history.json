@@ -11950,6 +11950,21 @@
       "P/L": "",
       "Promo / Special": "50% CFB Boost",
       "Execution Note": "PLACED_USER_CONFIRMED. Component prices were captured; the chat estimated the raw parlay near +256, but no exact combined sportsbook price was preserved."
+    },
+    {
+      "Date": "2026-09-04",
+      "Ticket ID": "S04-T03",
+      "Origin": "INDEPENDENT",
+      "Description": "Ozzie Albies 1+ hit + Lane Thomas 1+ hit + Hunter Goodman 2+ total bases",
+      "Stake": "1",
+      "Odds (American)": "323",
+      "Boosted?": "Y",
+      "Legs": "3",
+      "Result": "",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "30% MLB SGPx Boost",
+      "Execution Note": "PLACED_USER_CONFIRMED. Raw +323 was shown before the 30% profit boost; the chat estimated an effective price near +420."
     }
   ],
   "Paper Portfolio": [
@@ -18973,14 +18988,14 @@
     {
       "Date": "2026-09-04",
       "Starting Bankroll": "21.79",
-      "Risked": "2",
+      "Risked": "3",
       "Payout": "",
       "P/L": "",
-      "Ending Bankroll": "19.79",
-      "Tickets": "2",
+      "Ending Bankroll": "18.79",
+      "Tickets": "3",
       "Wins": "",
       "Ticket Win Rate": "",
-      "Notes": "OPEN: Soccer 30% boost and CFB 50% boost are PLACED_USER_CONFIRMED. MLB HR and SGPx ideas remain pending and are not included as real tickets."
+      "Notes": "OPEN: Soccer 30% boost, CFB 50% boost, and MLB 30% SGPx are PLACED_USER_CONFIRMED. Yordan Alvarez HR +216 remains a final-check candidate and is not included as a real ticket."
     }
   ],
   "Source Evaluation": [

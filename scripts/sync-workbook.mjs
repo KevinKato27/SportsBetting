@@ -6,6 +6,7 @@ const slatePath = process.argv[2] ?? 'data/slates/current.json';
 const slate = JSON.parse(await readFile(slatePath, 'utf8'));
 const chatIntake = JSON.parse(await readFile('data/chat-intake/current.json', 'utf8'));
 const morningScan = JSON.parse(await readFile('data/morning-scan/current.json', 'utf8'));
+const researchBoard = JSON.parse(await readFile('data/research-board/current.json', 'utf8'));
 const shortVerifiedAt = `${slate.lastVerified.slice(0, 10)} ${slate.lastVerified.slice(11, 16)}Z`;
 
 if (!Array.isArray(slate.leagues) || slate.leagues.length !== 13) {
@@ -178,5 +179,37 @@ const updatedMorningWorksheetXml = morningWorksheetXml
   .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, morningSheetData);
 files[morningWorksheetPath] = strToU8(updatedMorningWorksheetXml);
 
+const boardWorksheetPath = worksheetPathFor('Today Board');
+const boardWorksheetXml = strFromU8(files[boardWorksheetPath]);
+const boardStyleAt = (reference, fallback) => boardWorksheetXml.match(new RegExp(`<x:c[^>]*r="${reference}"[^>]*s="(\\d+)"`))?.[1] ?? fallback;
+const boardStyles = {
+  title: boardStyleAt('A1', '0'),
+  note: boardStyleAt('A2', '0'),
+  header: 'ABCDEFGHIJK'.split('').map((column) => boardStyleAt(`${column}4`, '0')),
+  real: 'ABCDEFGHIJK'.split('').map((column) => boardStyleAt(`${column}5`, '0')),
+  final: 'ABCDEFGHIJK'.split('').map((column) => boardStyleAt(`${column}8`, '0')),
+  paper: 'ABCDEFGHIJK'.split('').map((column) => boardStyleAt(`${column}9`, '0')),
+};
+const boardHeaders = ['Bucket', 'ID', 'Sport', 'Entity / Ticket', 'Event / Promo', 'Market / Legs', 'Price', 'Chat Grade', 'Leg Grade /100', 'Confidence /100', 'Status / Research Read'];
+const boardColumns = 'ABCDEFGHIJK'.split('');
+const boardRows = [
+  row(1, 30, [stringCell('A1', boardStyles.title, 'TODAY BOARD')]),
+  row(2, 22, [stringCell('A2', boardStyles.note, `Daily real, final-check, and paper research — ${researchBoard.date}`)]),
+  row(4, 32, boardHeaders.map((value, index) => stringCell(`${boardColumns[index]}4`, boardStyles.header[index], value))),
+];
+let boardRowNumber = 5;
+const appendBoardRow = (styles, values) => {
+  boardRows.push(row(boardRowNumber, 42, values.map((value, index) => stringCell(`${boardColumns[index]}${boardRowNumber}`, styles[index], value))));
+  boardRowNumber += 1;
+};
+for (const item of researchBoard.realCard) appendBoardRow(boardStyles.real, ['REAL', item.id, item.sport, item.title, item.promo, item.legs.join(' | '), item.price, item.chatGrade ?? '', item.legGrade ?? '', item.confidence ?? '', `${item.status} — ${item.summary}`]);
+for (const item of researchBoard.activeCandidates) appendBoardRow(boardStyles.final, ['FINAL CHECK', item.id, item.sport, item.entity, item.event, item.market, item.price, item.chatGrade ?? '', item.legGrade ?? '', item.confidence ?? '', `${item.status} — ${item.rationale}`]);
+for (const item of researchBoard.paperCandidates) appendBoardRow(boardStyles.paper, ['PAPER', item.id, item.sport, item.entity, item.event, item.market, item.price, item.chatGrade ?? '', item.legGrade ?? '', item.confidence ?? '', `${item.experiment} — ${item.rationale}`]);
+const boardLastRow = boardRowNumber - 1;
+const updatedBoardWorksheetXml = boardWorksheetXml
+  .replace(/<x:dimension ref="[^"]+"\s*\/>/, `<x:dimension ref="A1:K${boardLastRow}" />`)
+  .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, `<x:sheetData>${boardRows.join('')}</x:sheetData>`);
+files[boardWorksheetPath] = strToU8(updatedBoardWorksheetXml);
+
 await writeFile(workbookPath, zipSync(files, { level: 6 }));
-console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues, ${chatIntake.slips.length} chat slips, ${morningScan.games.length} morning games).`);
+console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues, ${chatIntake.slips.length} chat slips, ${morningScan.games.length} morning games, ${boardLastRow - 4} board rows).`);

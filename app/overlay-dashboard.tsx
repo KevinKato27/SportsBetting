@@ -38,6 +38,7 @@ import history from '@/data/history/edge_lab_full_history.json';
 import slate from '@/data/slates/current.json';
 import chatIntake from '@/data/chat-intake/current.json';
 import morningScan from '@/data/morning-scan/current.json';
+import researchBoard from '@/data/research-board/current.json';
 import models from '@/config/scoring/market-models.v0.1.json';
 import sportsbooks from '@/config/sportsbooks.v0.1.json';
 import discoveryPolicy from '@/config/candidate-discovery-policy.v0.2.json';
@@ -176,16 +177,6 @@ function SlipWorkspace() {
   );
 }
 
-const candidates = slate.leagues.map((league) => ({
-    entity: league.status === 'active' ? `${league.league} full-slate audit` : league.league,
-    market: league.status === 'active' ? 'Daily discovery queue' : league.status === 'no_slate' ? 'No slate today' : 'Source unavailable',
-    matchup: league.status === 'source_error' ? `${league.provider} failed · no facts inferred` : `${league.games} games · ${league.provider}`,
-    grade: null,
-    confidence: null,
-    status: league.status === 'active' ? 'NEEDS DATA' : league.status === 'no_slate' ? 'NO SLATE' : 'SOURCE ERROR',
-    tone: league.status === 'active' ? 'amber' : league.status === 'no_slate' ? 'muted' : 'red',
-  }));
-
 function number(value: unknown) {
   const n = Number(value);
   return Number.isFinite(n) ? n : 0;
@@ -228,6 +219,83 @@ function Panel({ title, icon: Icon, action, children, className = '' }: { title:
       </div>
       <div className="panel-body">{children}</div>
     </section>
+  );
+}
+
+type BoardReal = (typeof researchBoard.realCard)[number];
+type BoardCandidate = (typeof researchBoard.activeCandidates)[number] | (typeof researchBoard.paperCandidates)[number];
+
+function ScoringDisclosure({ item }: { item: BoardReal | BoardCandidate }) {
+  return (
+    <div className="board-scores" aria-label="Recorded grade and confidence">
+      <div><span>CHAT GRADE</span><strong>{item.chatGrade ?? '—'}</strong><small>{item.chatGrade ? 'explicitly assigned' : 'not assigned'}</small></div>
+      <div><span>LEG GRADE</span><strong>{item.legGrade ?? '—'}</strong><small>/100 not calculated</small></div>
+      <div><span>CONFIDENCE</span><strong>{item.confidence ?? '—'}</strong><small>/100 not calculated</small></div>
+    </div>
+  );
+}
+
+function RealBoardCard({ ticket }: { ticket: BoardReal }) {
+  return (
+    <Accordion className="board-accordion">
+      <AccordionItem value={ticket.id} className="board-card real-board-card">
+        <AccordionTrigger className="board-trigger">
+          <div className="board-main"><span className="eyebrow">{ticket.sport} · {ticket.origin}</span><strong>{ticket.title}</strong><small>{ticket.promo} · ${ticket.stake.toFixed(2)} risk</small></div>
+          <div className="board-price"><strong>{ticket.price}</strong><span>PLACED</span></div>
+        </AccordionTrigger>
+        <AccordionContent className="board-detail">
+          <ScoringDisclosure item={ticket} />
+          <div className="board-legs">{ticket.legs.map((leg, index) => <div key={`${ticket.id}-${leg}`}><b>{index + 1}</b><span>{leg}</span></div>)}</div>
+          <p><b>Why it qualified:</b> {ticket.summary}</p>
+          <p className="board-provenance"><ShieldCheck size={13} /> Placement is user-confirmed in the research chat. Result remains pending.</p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+
+function CandidateBoardCard({ item, paper = false }: { item: BoardCandidate; paper?: boolean }) {
+  const blockers = 'blockers' in item ? item.blockers : [];
+  const experiment = 'experiment' in item ? item.experiment : null;
+  return (
+    <Accordion className="board-accordion">
+      <AccordionItem value={item.id} className={`board-card ${paper ? 'paper-board-card' : 'active-board-card'}`}>
+        <AccordionTrigger className="board-trigger">
+          <div className="board-main"><span className="eyebrow">{item.sport} · {item.origin}</span><strong>{item.entity} — {item.market}</strong><small>{item.event}</small></div>
+          <div className="board-price"><strong>{item.price}</strong><span>{paper ? 'PAPER' : 'FINAL CHECK'}</span></div>
+          <div className={`board-letter ${item.chatGrade ? 'has-grade' : ''}`}><b>{item.chatGrade ?? '—'}</b><small>chat grade</small></div>
+        </AccordionTrigger>
+        <AccordionContent className="board-detail">
+          <ScoringDisclosure item={item} />
+          <p><b>Research read:</b> {item.rationale}</p>
+          {experiment && <p><b>Paper purpose:</b> {experiment}</p>}
+          {blockers.length > 0 && <div className="board-checks">{blockers.map((blocker) => <span key={blocker}><CircleAlert size={12} />{blocker}</span>)}</div>}
+          <p className="board-provenance"><BookOpenCheck size={13} /> Exact public source URLs were not preserved in the chat export; this card reports the decision without inventing citations.</p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}
+
+function TodayBoard({ compact = false }: { compact?: boolean }) {
+  const realItems = compact ? researchBoard.realCard.slice(0, 3) : researchBoard.realCard;
+  const paperItems = compact ? researchBoard.paperCandidates.slice(0, 3) : researchBoard.paperCandidates;
+  return (
+    <div className="today-board">
+      <section className="board-section">
+        <div className="board-section-head"><div><span className="eyebrow">NORMAL SLATE</span><strong>Placed today</strong></div><span className="tag">{researchBoard.realCard.length} TICKETS</span></div>
+        <div className="board-stack">{realItems.map((ticket) => <RealBoardCard key={ticket.id} ticket={ticket} />)}</div>
+      </section>
+      <section className="board-section">
+        <div className="board-section-head"><div><span className="eyebrow">NOT PLACED</span><strong>Final checks</strong></div><span className="tag tag-demo">{researchBoard.activeCandidates.length} ACTIVE</span></div>
+        <div className="board-stack">{researchBoard.activeCandidates.map((item) => <CandidateBoardCard key={item.id} item={item} />)}</div>
+      </section>
+      <section className="board-section paper-board-section">
+        <div className="board-section-head"><div><span className="eyebrow">PAPER TRADE</span><strong>Today’s challengers</strong></div><span className="tag tag-paper">{researchBoard.paperCandidates.length} PAPER</span></div>
+        <div className="board-stack">{paperItems.map((item) => <CandidateBoardCard key={item.id} item={item} paper />)}</div>
+        {compact && researchBoard.paperCandidates.length > paperItems.length && <p className="board-more">Open Today’s Board to see all {researchBoard.paperCandidates.length} paper candidates.</p>}
+      </section>
+    </div>
   );
 }
 
@@ -513,41 +581,31 @@ export default function OverlayDashboard() {
         <TabsContent value="today">
           <div className="page-heading">
             <div><span className="kicker">{dateLabel(slate.date)}</span><h1>Today’s research desk</h1><p>Slate first. Analysis before market. Price before portfolio.</p></div>
-            <div className="gate-pill"><LockKeyhole size={15} /><span><b>PRELIMINARY</b> · required gates open</span></div>
+            <div className="gate-pill"><ListChecks size={15} /><span><b>LIVE BOARD</b> · {researchBoard.realCard.length} placed · {researchBoard.activeCandidates.length} final check</span></div>
           </div>
           <div className="truth-strip" aria-label="Data freshness and provenance">
             <span><i className="truth-dot live" /><b>SCHEDULE {slate.dataAvailability.schedules.toUpperCase()}</b> named source endpoints</span>
             <span><i className="truth-dot historical" /><b>HISTORY</b> through {historyThrough}</span>
             <span><i className="truth-dot reference" /><b>MORNING SCAN</b> prospective roles before supplied cards</span>
-            <span><i className="truth-dot unavailable" /><b>UNAVAILABLE</b> odds · lineups · weather · promos</span>
+            <span><i className="truth-dot unavailable" /><b>NO LIVE FEED</b> prices and lineup facts are chat snapshots</span>
             <span><i className="truth-dot reference" /><b>DISCOVERY RULE</b> search the full slate beyond supplied cards</span>
           </div>
           <Tabs defaultValue="overview" className="today-sections">
-            <TabsList className="page-subnav" aria-label="Today sections"><TabsTrigger value="overview">Overview</TabsTrigger><TabsTrigger value="candidates">Candidates</TabsTrigger><TabsTrigger value="morning">Morning scan</TabsTrigger><TabsTrigger value="sources">Sources</TabsTrigger></TabsList>
+            <TabsList className="page-subnav" aria-label="Today sections"><TabsTrigger value="overview">Overview</TabsTrigger><TabsTrigger value="candidates">Today’s Board</TabsTrigger><TabsTrigger value="morning">Morning scan</TabsTrigger><TabsTrigger value="sources">Sources</TabsTrigger></TabsList>
             <TabsContent value="overview" className="today-section-content">
               <div className="status-grid">
                 <div className="status-card accent"><span>ACTIVE SLATE</span><strong>{activeGames}</strong><small>{activeLeagues.length ? `${activeLeagues.length} active competition${activeLeagues.length === 1 ? '' : 's'}` : 'no active leagues found'}</small></div>
                 <div className="status-card"><span>EARLIEST START</span><strong>{earliestLeague?.earliestStart?.replace(/ E[DS]T$/, '') ?? '—'}</strong><small>{earliestLeague ? `${earliestLeague.league} · source verified` : 'no scheduled start'}</small></div>
-                <div className="status-card"><span>CHAT INTAKE</span><strong>{chatIntake.slips.length}</strong><small>today · all require a recheck</small></div>
-                <div className="status-card"><span>LATEST BANKROLL</span><strong>${number(stats.latest['Ending Bankroll']).toFixed(2)}</strong><small>historical snapshot · {stats.latest.Date}</small></div>
+                <div className="status-card"><span>PLACED TODAY</span><strong>{researchBoard.realCard.length}</strong><small>${researchBoard.realCard.reduce((sum, item) => sum + item.stake, 0).toFixed(2)} recorded risk</small></div>
+                <div className="status-card"><span>PAPER TODAY</span><strong>{researchBoard.paperCandidates.length}</strong><small>challengers · no bankroll risk</small></div>
               </div>
+              <Panel title="Today’s action board" icon={ListChecks} action={<span className="tag">UPDATED {verifiedLabel(researchBoard.lastUpdated)}</span>}><TodayBoard compact /></Panel>
               <SlateExplorer />
             </TabsContent>
             <TabsContent value="candidates" className="today-section-content">
-              <div className="candidate-page-grid">
-                <section className="candidate-list-section">
-                  <div className="rail-head"><div><span className="eyebrow">RESEARCH QUEUE</span><strong>{candidates.length} surfaced items</strong></div><span className="tag">UNVERIFIED</span></div>
-                  <div className="candidate-grid">{candidates.map((candidate) => (
-                    <button className="candidate-card" key={candidate.entity} onClick={() => candidate.grade && setTab('today')}>
-                      <i className={`signal-dot ${candidate.tone}`} />
-                      <div><strong>{candidate.entity}</strong><span>{candidate.market}</span><small>{candidate.matchup}</small></div>
-                      {candidate.grade ? <div className="mini-score"><b className={gradeClass(candidate.grade)}>{candidate.grade}</b><small>{candidate.confidence} conf.</small></div> : <div className="mini-score pending">—</div>}
-                      <span className="card-tag">{candidate.status}</span><ChevronRight className="candidate-arrow" size={16} />
-                    </button>
-                  ))}</div>
-                </section>
-                <Panel title="Independent discovery sequence" icon={ShieldCheck}><DiscoveryProcess /></Panel>
-              </div>
+              <div className="board-disclosure"><CircleCheck size={16} /><p><b>This page mirrors today’s actual decisions.</b> Placed tickets, unresolved finalists, and paper candidates are separate. A dash means the research chat did not calculate that score.</p></div>
+              <TodayBoard />
+              <Panel title="Independent discovery sequence" icon={ShieldCheck}><DiscoveryProcess /></Panel>
             </TabsContent>
             <TabsContent value="morning" className="today-section-content"><Panel title="Prospective lineups and independent shortlist" icon={Clock3}><MorningScan /></Panel></TabsContent>
             <TabsContent value="sources" className="today-section-content">
