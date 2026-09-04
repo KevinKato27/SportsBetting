@@ -18,6 +18,7 @@ import {
   History as HistoryIcon,
   LayoutDashboard,
   LineChart,
+  ListChecks,
   LockKeyhole,
   Menu,
   ShieldCheck,
@@ -32,6 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import history from '@/data/history/edge_lab_full_history.json';
 import slate from '@/data/slates/current.json';
 import models from '@/config/scoring/market-models.v0.1.json';
+import sportsbooks from '@/config/sportsbooks.v0.1.json';
 
 type Row = Record<string, string>;
 
@@ -62,6 +64,7 @@ const marketAlternatives = [
 
 const nav = [
   { value: 'today', label: 'Today', icon: LayoutDashboard },
+  { value: 'slips', label: 'Slips', icon: ListChecks },
   { value: 'real', label: 'Real Card', icon: WalletCards },
   { value: 'history', label: 'Bet History', icon: HistoryIcon },
   { value: 'paper', label: 'Paper Lab', icon: FlaskConical },
@@ -69,6 +72,58 @@ const nav = [
   { value: 'learning', label: 'Learning', icon: Beaker },
   { value: 'config', label: 'Config', icon: Database },
 ];
+
+function SlipWorkspace() {
+  return (
+    <Tabs defaultValue={sportsbooks.slips[0].id} className="sport-slip-tabs">
+      <TabsList className="sport-tab-list" aria-label="Sport slips">
+        {sportsbooks.slips.map((slip) => <TabsTrigger key={slip.id} value={slip.id}>{slip.label}</TabsTrigger>)}
+      </TabsList>
+      {sportsbooks.slips.map((slip) => {
+        const leagues = slate.leagues.filter((league) => league.sport === slip.sport);
+        const active = leagues.filter((league) => league.status === 'active');
+        const games = active.reduce((sum, league) => sum + (league.games ?? 0), 0);
+        return (
+          <TabsContent key={slip.id} value={slip.id} className="sport-slip-content">
+            <div className="slip-status-grid">
+              <div><span>PRIMARY BOOK</span><strong>{sportsbooks.primarySportsbook}</strong><small>preferred pricing source</small></div>
+              <div><span>ACTIVE GAMES</span><strong>{games}</strong><small>{active.length} active competition{active.length === 1 ? '' : 's'}</small></div>
+              <div><span>VERIFIED LINES</span><strong>0</strong><small>DraftKings feed not connected</small></div>
+              <div><span>SLIP GATE</span><strong>WAIT</strong><small>no price or market inferred</small></div>
+            </div>
+            <div className="slip-layout">
+              <Panel title={`${slip.label} slate`} icon={Clock3}>
+                <div className="slip-leagues">
+                  {leagues.map((league) => (
+                    <a href={league.source} target="_blank" rel="noreferrer" key={league.league}>
+                      <span><i className={league.status === 'active' ? 'signal-dot green' : league.status === 'source_error' ? 'signal-dot red' : 'signal-dot muted'} />{league.league}</span>
+                      <strong>{league.games ?? '—'} game{league.games === 1 ? '' : 's'}</strong>
+                      <small>{league.status === 'source_error' ? 'source unavailable' : league.earliestStart ?? 'no slate today'}</small>
+                    </a>
+                  ))}
+                </div>
+              </Panel>
+              <Panel title="Research markets" icon={Target}>
+                <div className="slip-markets">
+                  {slip.markets.map((market) => <span key={market}><i />{market}</span>)}
+                </div>
+                <p className="slip-note">These are research queues, not recommendations. Available DraftKings markets must be verified each day.</p>
+              </Panel>
+            </div>
+            <Panel title={`${sportsbooks.primarySportsbook} slip builder`} icon={ListChecks} action={<span className="tag tag-demo">NO LIVE ODDS</span>}>
+              <div className="slip-builder-head"><span>Candidate</span><span>Market</span><span>DK price</span><span>Grade</span><span>Confidence</span><span>Status</span></div>
+              <div className="slip-empty">
+                <LockKeyhole size={26} />
+                <strong>No verified DraftKings lines loaded.</strong>
+                <p>Load the exact market, threshold and price before GPT scores a leg. Schedule detection alone never creates a pick.</p>
+              </div>
+            </Panel>
+          </TabsContent>
+        );
+      })}
+    </Tabs>
+  );
+}
 
 const candidates = [
   { entity: 'Jackson Chourio reference', market: '2+ Total Bases', matchup: 'Supplied mockup · not today’s wager', grade: referenceLegGrade, confidence: referenceLegConfidence, status: 'REFERENCE', tone: 'blue' },
@@ -330,6 +385,16 @@ export default function OverlayDashboard() {
             </aside>
             <div className="candidate-stage" id="featured-leg"><LegCard /></div>
           </div>
+        </TabsContent>
+
+        <TabsContent value="slips">
+          <div className="page-heading"><div><span className="kicker">TODAY’S SPORT WORKSPACES</span><h1>Slip research</h1><p>One queue per sport. DraftKings is the primary book; every price stays gated until verified.</p></div><div className="gate-pill"><LockKeyhole size={15} /><span><b>DRAFTKINGS</b> · primary sportsbook</span></div></div>
+          <div className="truth-strip" aria-label="Slip data status">
+            <span><i className="truth-dot live" /><b>SCHEDULES</b> source verified</span>
+            <span><i className="truth-dot unavailable" /><b>DRAFTKINGS ODDS</b> not connected</span>
+            <span><i className="truth-dot unavailable" /><b>SLIPS</b> no automatic picks</span>
+          </div>
+          <SlipWorkspace />
         </TabsContent>
 
         <TabsContent value="real">

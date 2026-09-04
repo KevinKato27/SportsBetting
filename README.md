@@ -11,6 +11,7 @@ The production website is published by GitHub Pages at `https://kevinkato27.gith
 - `config/master-prompt/Master_Sports_Betting_Prompt_v4_2026-09-03.txt` is the preserved constitution.
 - `config/scoring/market-models.v0.1.json` contains versioned prospective scoring models.
 - `config/sports-scope.v0.2.json` defines the approved soccer competitions and blocks unsourced soccer grades.
+- `config/sportsbooks.v0.1.json` sets DraftKings as the primary book and defines each sport's slip research markets.
 - `data/history/edge_lab_full_history.json` is the imported historical datastore.
 - `data/imports/sports_betting_backtest_tracker_v0_45.xlsx` remains the reconciliation/export source and receives the same current slate in its `Daily Slate` worksheet.
 - `data/slates/YYYY-MM-DD.json` holds daily facts so future updates change data/config instead of creating a new site.

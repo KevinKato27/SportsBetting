@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "primarySportsbook": "DraftKings",
+  "lineStatus": "unavailable_until_verified",
+  "rules": [
+    "Never infer a DraftKings line, price, promotion, or market availability.",
+    "Record the exact market, threshold, American odds, sportsbook and verification time.",
+    "Re-grade a leg whenever its threshold or price changes.",
+    "No candidate may enter the Real Card until every sport-specific gate is complete."
+  ],
+  "slips": [
+    { "id": "baseball", "sport": "Baseball", "label": "Baseball", "markets": ["Pitcher outs", "Pitcher strikeouts", "Hitter bases", "H+R+RBI", "NRFI / game lines"] },
+    { "id": "football", "sport": "Football", "label": "Football", "markets": ["Spread", "Moneyline", "Game total", "Team total", "Player props"] },
+    { "id": "basketball", "sport": "Basketball", "label": "Basketball", "markets": ["Spread", "Moneyline", "Game total", "Player points", "Rebounds / assists / combos"] },
+    { "id": "hockey", "sport": "Hockey", "label": "Hockey", "markets": ["Moneyline", "Puck line", "Game total", "Team total", "Player shots"] },
+    { "id": "soccer", "sport": "Soccer", "label": "Soccer", "markets": ["3-way moneyline / draw no bet", "Asian handicap", "Match total", "Both teams to score", "Player shots / shots on target"] }
+  ]
+}
