@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "timezone": "America/New_York",
   "status": "PENDING_NEXT_MORNING_RUN",
   "generatedAt": null,
@@ -9,5 +9,5 @@
   "games": [],
   "candidates": [],
   "sources": [],
-  "notes": "The morning prospective-lineup workflow starts on the first automation run of the next local day. No retrospective lineup projections were invented for this already-active slate."
+  "notes": "The Sep. 5 schedule and confirmed chat placements are loaded. The formal morning scan remains pending until the scheduled source-blind lineup and role pass can preserve exact public URLs; no lineup objects were inferred from chat summaries."
 }
