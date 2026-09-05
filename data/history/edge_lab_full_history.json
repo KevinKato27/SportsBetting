@@ -10791,14 +10791,14 @@
       "Implied Prob": "0.5495495495495496",
       "Decision": "BET",
       "Placed?": "Y",
-      "Result": "Pending",
-      "Win": "",
-      "Actual Value": "",
+      "Result": "Loss",
+      "Win": "N",
+      "Actual Value": "48",
       "Stake Attributed": "1",
       "Ticket IDs": "S05-T04",
-      "Loss Classification": "",
-      "Market Conversion / Missed Opportunity Note": "Independently qualified rushing-volume leg selected before parlay construction.",
-      "Notes": "User confirmed the three-leg CFB parlay was placed."
+      "Loss Classification": "Role/workload miscalculation + selection/construction error",
+      "Market Conversion / Missed Opportunity Note": "The team rushing script was correct, but a three-way backfield split invalidated the individual 80-yard workload assumption. Rocco Becht 220+ passing was a qualified alternative and finished with 271 yards.",
+      "Notes": "Hansen finished with 48 rushing yards on 11 carries. The selection process did not verify expected carry concentration before using the leg in the parlay."
     },
     {
       "Date": "2026-09-05",
@@ -12179,11 +12179,11 @@
       "Odds (American)": "",
       "Boosted?": "Y",
       "Legs": "3",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "50% CFB Week 1 parlay boost",
-      "Execution Note": "PLACED_USER_CONFIRMED from “All 3 placed.” Individual lines were -122, -148 and -141; exact combined and boosted prices remain unavailable."
+      "Execution Note": "PLACED_USER_CONFIRMED from “All 3 placed.” Hansen lost with 48 rushing yards on 11 carries against 80+. Classified as role/workload miscalculation and selection/construction error; exact combined and boosted prices remain unavailable."
     }
   ],
   "Paper Portfolio": [

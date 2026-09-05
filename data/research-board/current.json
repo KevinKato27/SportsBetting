@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-05",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-05T19:09:00Z",
+  "lastUpdated": "2026-09-05T23:05:00Z",
   "sourceLabel": "Continue MLB Betting Session",
-  "notes": "Today’s board includes four user-confirmed $1 DraftKings tickets plus the latest independently audited MLB single and SGPx candidates. MLB remains on lineup hold. Chat-assigned grades and confidence appear only as quoted research labels; OVERLAY does not infer missing /100 values.",
+  "notes": "Today’s board includes four user-confirmed $1 DraftKings tickets; the CFB parlay is settled as a loss. The MLB SGPx cleared its lineup gate but is not recorded as placed, while Randy remains on lineup hold. Chat-assigned grades and confidence appear only as quoted research labels.",
   "realCard": [
     {
       "id": "S05-T01",
@@ -76,10 +76,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "Three independently qualified volume propositions chosen after the CFB board was frozen.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Carson Hansen finished with 48 rushing yards on 11 carries against an 80+ threshold. The chat classified the miss as a role/workload miscalculation and selection/construction error.",
       "legs": ["Carson Hansen 80+ rushing yards (-122)", "Kamari Moulton 70+ rushing yards (-148)", "Dakorien Moore 50+ receiving yards (-141)"]
     }
   ],
@@ -140,8 +140,8 @@
       "chatGrade": "85 grade · 91 confidence",
       "legGrade": null,
       "confidence": null,
-      "status": "PRELIMINARY_LINEUP_CHECK",
-      "rationale": "Qualified outside leg against Kikuchi that avoids duplicating the proposed Randy single; lineup remains pending.",
+      "status": "LINEUP_CONFIRMED",
+      "rationale": "Qualified outside leg against Kikuchi that avoids duplicating the proposed Randy single; the latest lineup audit reported Reynolds confirmed batting third.",
       "experiment": "Batter-boost finalist · SGPx leg"
     },
     {
@@ -195,14 +195,29 @@
       "entity": "Burleson + Goodman + Reynolds",
       "event": "STL-COL plus LAA-PIT",
       "market": "3-leg SGPx",
-      "price": "+373 raw",
+      "price": "+363 raw",
       "origin": "INDEPENDENT",
       "chatGrade": "STRUCTURE APPROVED",
       "legGrade": null,
       "confidence": null,
-      "status": "PARTIAL_LINEUP_CONFIRMED",
-      "rationale": "Clean three-leg structure cleared the +300 floor without filler. Burleson and Goodman are reported confirmed batting third; hold for Reynolds confirmation, a +300-or-better price recheck and the intended 50% SGP/SGPx boost.",
+      "status": "READY_FOR_USER_PLACEMENT",
+      "rationale": "All three hitters are reported confirmed batting third and the current screenshot showed SGPx at +363 raw. The screenshot had the wrong 30% reward selected; placement still requires the 50% MLB SGP/SGPx boost and explicit user confirmation.",
       "experiment": "Burleson 2+ TB · Goodman 2+ HRR · Reynolds 2+ HRR"
+    },
+    {
+      "id": "S05-A09",
+      "sport": "CFB",
+      "entity": "Florida Atlantic at Florida",
+      "event": "Florida Atlantic at Florida",
+      "market": "Under 59.5 total points",
+      "price": "Current price unavailable · target around -110 to -115",
+      "origin": "INDEPENDENT",
+      "chatGrade": "84 / A- grade · 83 confidence",
+      "legGrade": null,
+      "confidence": null,
+      "status": "AWAITING_PRICE_CONFIRMATION",
+      "rationale": "Late-window 30% CFB boost candidate. The play remains conditional on DraftKings still offering 59.5 around the cited range; no placement confirmation exists.",
+      "experiment": "Late-window game-total boost candidate"
     }
   ],
   "paperCandidates": [
