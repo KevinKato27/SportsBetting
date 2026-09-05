@@ -2,7 +2,7 @@
   "schemaVersion": "0.1",
   "date": "2026-09-04",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-04T22:57:10Z",
+  "lastUpdated": "2026-09-05T00:38:00Z",
   "sourceLabel": "Sports Research Watch",
   "notes": "Structured from the day's research decisions. Letter grades appear only where the chat explicitly assigned them; no /100 grade or confidence score is inferred.",
   "realCard": [
@@ -64,9 +64,9 @@
       "chatGrade": "A",
       "legGrade": null,
       "confidence": null,
-      "status": "FINAL_CHECK",
-      "rationale": "Top HR-boost candidate from source and independent matchup convergence.",
-      "blockers": ["Final pregame recheck", "Confirm current DraftKings price", "Confirm lineup and weather"],
+      "status": "READY_FOR_DK_CONFIRMATION",
+      "rationale": "Top HR-boost candidate. The placement check confirmed Yordan batting second at DH against Merrill Kelly and reported the roof expected closed.",
+      "blockers": ["Confirm current DraftKings price", "Confirm the 50% HR promo is attached"],
       "sources": []
     }
   ],

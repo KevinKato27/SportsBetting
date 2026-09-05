@@ -92,9 +92,9 @@
       "origin": "INDEPENDENT",
       "verificationStatus": "NEEDS_RECHECK",
       "sourceLabel": "Sports Research Watch",
-      "sourceTurnTime": "2026-09-04T18:35:53Z",
-      "auditSummary": "The chat named Yordan Alvarez as the current leader but explicitly required a final lineup, matchup, weather, and price check.",
-      "placementEvidence": "No placement confirmation; the chat instructed the user to hold.",
+      "sourceTurnTime": "2026-09-05T00:38:00Z",
+      "auditSummary": "The placement check confirmed Yordan batting second at DH against Merrill Kelly and reported the roof expected closed. Exact current DraftKings price and promo attachment still require user confirmation.",
+      "placementEvidence": "No placement confirmation; this remains outside the Real Card.",
       "legs": [
         { "entity": "Yordan Alvarez", "event": "Arizona Diamondbacks at Houston Astros", "market": "Home run", "threshold": "1+", "side": "Over", "displayedPrice": "+216", "status": "CHAT_REPORTED" }
       ],
