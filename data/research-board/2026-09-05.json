@@ -2,7 +2,7 @@
   "schemaVersion": "0.1",
   "date": "2026-09-05",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-05T17:05:00Z",
+  "lastUpdated": "2026-09-05T19:09:00Z",
   "sourceLabel": "Continue MLB Betting Session",
   "notes": "Today’s board includes four user-confirmed $1 DraftKings tickets plus the latest independently audited MLB single and SGPx candidates. MLB remains on lineup hold. Chat-assigned grades and confidence appear only as quoted research labels; OVERLAY does not infer missing /100 values.",
   "realCard": [
@@ -110,8 +110,8 @@
       "chatGrade": "87 grade · 90 confidence",
       "legGrade": null,
       "confidence": null,
-      "status": "PRELIMINARY_LINEUP_CHECK",
-      "rationale": "Strong contact-quality profile at Coors and the preferred Burleson expression; official lineup remains pending.",
+      "status": "LINEUP_CONFIRMED",
+      "rationale": "Strong contact-quality profile at Coors and the preferred Burleson expression; the latest chat audit reported him confirmed batting third.",
       "experiment": "Batter-boost finalist · SGPx leg"
     },
     {
@@ -125,8 +125,8 @@
       "chatGrade": "86 grade · 88 confidence",
       "legGrade": null,
       "confidence": null,
-      "status": "PRELIMINARY_LINEUP_CHECK",
-      "rationale": "Multi-path Coors expression survives the audit, with strikeout risk retained as the main failure mode.",
+      "status": "LINEUP_CONFIRMED",
+      "rationale": "Multi-path Coors expression survives the audit, with strikeout risk retained as the main failure mode; the latest chat audit reported him confirmed batting third.",
       "experiment": "Batter-boost finalist · SGPx leg"
     },
     {
@@ -200,8 +200,8 @@
       "chatGrade": "STRUCTURE APPROVED",
       "legGrade": null,
       "confidence": null,
-      "status": "PRELIMINARY_LINEUP_CHECK",
-      "rationale": "Clean three-leg structure cleared the +300 floor without filler. Hold for official lineups and select the intended 50% SGP/SGPx boost before any placement.",
+      "status": "PARTIAL_LINEUP_CONFIRMED",
+      "rationale": "Clean three-leg structure cleared the +300 floor without filler. Burleson and Goodman are reported confirmed batting third; hold for Reynolds confirmation, a +300-or-better price recheck and the intended 50% SGP/SGPx boost.",
       "experiment": "Burleson 2+ TB · Goodman 2+ HRR · Reynolds 2+ HRR"
     }
   ],
