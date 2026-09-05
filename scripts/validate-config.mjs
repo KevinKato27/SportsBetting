@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 
 const policyPath = 'config/candidate-discovery-policy.v0.2.json';
-const stackPath = 'config/prompt-stack.v4.4.json';
+const stackPath = 'config/prompt-stack.v5.1.json';
 const evalPath = 'config/evals/candidate-discovery.v0.1.json';
 const policy = JSON.parse(fs.readFileSync(policyPath, 'utf8'));
 const stack = JSON.parse(fs.readFileSync(stackPath, 'utf8'));
@@ -22,8 +22,8 @@ requireRule(policy.presentation.singleRankedList === true && policy.presentation
 requireRule(policy.outputContract.includes('slateCoverage') && policy.outputContract.includes('independentCandidates'), 'Output must expose slate coverage and independently discovered candidates.');
 requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'find-stronger-unlisted-candidate'), 'Discovery eval must test an unlisted stronger candidate.');
 requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'allow-empty-shortlist'), 'Discovery eval must allow an honest empty shortlist.');
-requireRule(stack.orderedFiles.length === 3, 'Prompt stack must contain the constitution, discovery addendum, and Paper Lab production-gate addendum.');
-requireRule(stack.version === '4.4', 'Prompt stack must use the current v4.4 package.');
+requireRule(stack.orderedFiles.length === 1, 'Prompt stack must contain only the consolidated v5.1 constitution.');
+requireRule(stack.version === '5.1', 'Prompt stack must use the current v5.1 package.');
 
 for (const file of stack.orderedFiles) {
   requireRule(fs.existsSync(file), `Prompt stack file is missing: ${file}`);
@@ -31,27 +31,21 @@ for (const file of stack.orderedFiles) {
 
 const masterPrompt = fs.readFileSync(stack.orderedFiles[0], 'utf8');
 for (const requiredSection of [
-  '59. SOURCE-BLIND INDEPENDENT AUDIT',
-  '60. EXTERNAL-SOURCE FIREWALL',
-  '62. STANDALONE QUALIFICATION AND FROZEN RANKINGS',
-  '63. CAUSAL / CORRELATION REASONING',
-  '64. BROAD THESIS VS NARROW MARKET',
-  '65. SOURCE-VS-SYSTEM CHALLENGER TRACKING',
-  '67. EXECUTION RECEIPT',
+  'Supersedes: v5.0, v4.1, and all prior master prompts',
+  '3A. SOURCE-BLIND AUDIT / EXTERNAL-SOURCE FIREWALL',
+  '17. PAPER / SHADOW LAB — BROAD R&D SANDBOX',
+  '19. PAPER → SHADOW → MAIN-CARD PROMOTION',
+  '37C. EVIDENCE CLUSTERS / DE-DUPLICATION',
+  "37D. COUNTER-CASE / DEVIL'S-ADVOCATE GATE",
+  '37E. GLOBAL SLATE RANKING / COMPLEXITY BUDGET',
+  '37F. SELECTION REGRET / PORTFOLIO-GATE AUDIT',
+  '37G. REAL MONEY = PRODUCTION; PAPER = R&D',
+  '37H. SETUP QUALITY, PROBABILITY, VALUE, CONFIDENCE, AND OVERLAY GRADE',
+  '37I. SIX-QUESTION PRE-BET DECISION CORE',
+  '37K. BOOSTED-PARLAY LEVERAGE RULE',
+  '38. OVERLAY WEBSITE — PRIMARY OPERATING SURFACE',
 ]) {
   requireRule(masterPrompt.includes(requiredSection), `Master prompt is missing required rule: ${requiredSection}`);
-}
-
-const paperLabAddendum = fs.readFileSync(stack.orderedFiles[2], 'utf8');
-for (const requiredRule of [
-  'EXT-ORIGINAL',
-  'SYSTEM-CHALLENGER',
-  'SOURCE-vs-SYSTEM',
-  'PAPER -> SHADOW / PROMISING -> MAIN-CARD ELIGIBLE',
-  'REAL-MONEY PRODUCTION GATE',
-  'separate Outcome Confidence and Bet Value measures',
-]) {
-  requireRule(paperLabAddendum.includes(requiredRule), `Paper Lab addendum is missing required rule: ${requiredRule}`);
 }
 
 if (failures.length) {

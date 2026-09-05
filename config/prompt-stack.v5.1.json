@@ -1,0 +1,8 @@
+{
+  "version": "5.1",
+  "effectiveDate": "2026-09-05",
+  "orderedFiles": [
+    "config/master-prompt/Master_Sports_Betting_Prompt_v5.1_2026-09-05.txt"
+  ],
+  "policy": "Master Prompt v5.1 is the single canonical research constitution and supersedes v5.0, v4.1, and all earlier prompt packages. It preserves source-blind full-slate discovery and Paper Lab production controls while replacing the literal standalone-bet test with independent qualification, separating setup quality, outcome probability, price/value, confidence, and Overall Grade, and requiring the six-question pre-bet decision core."
+}
