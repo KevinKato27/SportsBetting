@@ -11930,11 +11930,11 @@
       "Odds (American)": "736",
       "Boosted?": "Y",
       "Legs": "3",
-      "Result": "",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "30% Soccer Parlay Boost",
-      "Execution Note": "PLACED_USER_CONFIRMED. Raw +736 shown in the research chat. Exact boosted settlement price remains uncaptured."
+      "Execution Note": "FINAL from user-provided DraftKings screenshot. Como ML won 4-1; Liverpool O2.5 team goals lost with 2; Real Madrid O2.5 team goals lost with 0. Exact boosted settlement price remains uncaptured."
     },
     {
       "Date": "2026-09-04",
@@ -11942,14 +11942,14 @@
       "Origin": "INDEPENDENT",
       "Description": "Miami -24.5 (-108) + Fresno State +22.5 (-118)",
       "Stake": "1",
-      "Odds (American)": "",
+      "Odds (American)": "384",
       "Boosted?": "Y",
       "Legs": "2",
-      "Result": "",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "50% CFB Boost",
-      "Execution Note": "PLACED_USER_CONFIRMED. Component prices were captured; the chat estimated the raw parlay near +256, but no exact combined sportsbook price was preserved."
+      "Execution Note": "FINAL from user-provided DraftKings screenshot. Raw +235; boosted +384. Miami -24.5 won 45-6; Fresno State +22.5 lost 39-0."
     },
     {
       "Date": "2026-09-04",
@@ -11957,14 +11957,29 @@
       "Origin": "INDEPENDENT",
       "Description": "Ozzie Albies 1+ hit + Lane Thomas 1+ hit + Hunter Goodman 2+ total bases",
       "Stake": "1",
-      "Odds (American)": "323",
+      "Odds (American)": "416",
       "Boosted?": "Y",
       "Legs": "3",
-      "Result": "",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "30% MLB SGPx Boost",
-      "Execution Note": "PLACED_USER_CONFIRMED. Raw +323 was shown before the 30% profit boost; the chat estimated an effective price near +420."
+      "Execution Note": "FINAL from user-provided DraftKings screenshot. Raw +319; boosted +416. Ozzie Albies 1+ hit won; Lane Thomas 1+ hit and Hunter Goodman 2+ total bases lost."
+    },
+    {
+      "Date": "2026-09-04",
+      "Ticket ID": "S04-T04",
+      "Origin": "HYBRID",
+      "Description": "Yordan Alvarez 1+ home run",
+      "Stake": "1",
+      "Odds (American)": "323",
+      "Boosted?": "Y",
+      "Legs": "1",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
+      "Promo / Special": "50% MLB Home Run Boost",
+      "Execution Note": "FINAL from user-provided DraftKings screenshot. Raw +215; boosted +323. Yordan Alvarez did not homer."
     }
   ],
   "Paper Portfolio": [
@@ -18988,14 +19003,14 @@
     {
       "Date": "2026-09-04",
       "Starting Bankroll": "21.79",
-      "Risked": "3",
-      "Payout": "",
-      "P/L": "",
-      "Ending Bankroll": "18.79",
-      "Tickets": "3",
-      "Wins": "",
-      "Ticket Win Rate": "",
-      "Notes": "OPEN: Soccer 30% boost, CFB 50% boost, and MLB 30% SGPx are PLACED_USER_CONFIRMED. Yordan Alvarez HR +216 remains a final-check candidate and is not included as a real ticket."
+      "Risked": "4",
+      "Payout": "0",
+      "P/L": "-4",
+      "Ending Bankroll": "17.79",
+      "Tickets": "4",
+      "Wins": "0",
+      "Ticket Win Rate": "0",
+      "Notes": "FINAL: 0-4 tickets and 3-9 individual legs. Soccer lost when Liverpool stopped at 2 team goals and Real Madrid scored 0; Como ML won. CFB lost when Fresno State +22.5 fell 39-0; Miami -24.5 won 45-6. MLB SGPx lost when Lane Thomas 1+ hit and Hunter Goodman 2+ total bases missed; Ozzie Albies 1+ hit won. Yordan Alvarez HR lost. User-provided DraftKings screenshots show $4 risked, $0 returned, and bankroll $21.79 -> $17.79. Postmortem: weak-leg contamination, shared matchup exposure mistaken for causal correlation, fragile player props chosen over broader expressions, and aggressive promo-driven thresholds. Immediate controls: Standalone YES before any parlay; label pair relationships; compare broad markets first; show safe/base/aggressive thresholds; max one HR satellite that ranks first on independent value; require an explicit cover path for large CFB underdogs."
     }
   ],
   "Source Evaluation": [

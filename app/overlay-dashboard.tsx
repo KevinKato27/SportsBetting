@@ -223,7 +223,22 @@ function Panel({ title, icon: Icon, action, children, className = '' }: { title:
 }
 
 type BoardReal = (typeof researchBoard.realCard)[number];
-type BoardCandidate = (typeof researchBoard.activeCandidates)[number] | (typeof researchBoard.paperCandidates)[number];
+type BoardCandidate = {
+  id: string;
+  sport: string;
+  entity: string;
+  event: string;
+  market: string;
+  price: string;
+  origin: string;
+  chatGrade: string | null;
+  legGrade: null;
+  confidence: null;
+  status: string;
+  rationale: string;
+  blockers?: string[];
+  experiment?: string;
+};
 
 function ScoringDisclosure({ item }: { item: BoardReal | BoardCandidate }) {
   return (
@@ -241,13 +256,14 @@ function RealBoardCard({ ticket }: { ticket: BoardReal }) {
       <AccordionItem value={ticket.id} className="board-card real-board-card">
         <AccordionTrigger className="board-trigger">
           <div className="board-main"><span className="eyebrow">{ticket.sport} · {ticket.origin}</span><strong>{ticket.title}</strong><small>{ticket.promo} · ${ticket.stake.toFixed(2)} risk</small></div>
-          <div className="board-price"><strong>{ticket.price}</strong><span>PLACED</span></div>
+          <div className="board-price"><strong>{ticket.price}</strong><span>{ticket.result ?? 'PLACED'}</span></div>
         </AccordionTrigger>
         <AccordionContent className="board-detail">
           <ScoringDisclosure item={ticket} />
           <div className="board-legs">{ticket.legs.map((leg, index) => <div key={`${ticket.id}-${leg}`}><b>{index + 1}</b><span>{leg}</span></div>)}</div>
           <p><b>Why it qualified:</b> {ticket.summary}</p>
-          <p className="board-provenance"><ShieldCheck size={13} /> Placement is user-confirmed in the research chat. Result remains pending.</p>
+          {ticket.settlement && <p><b>Settlement:</b> {ticket.settlement}</p>}
+          <p className="board-provenance"><ShieldCheck size={13} /> Placement and settlement are confirmed by the user-provided DraftKings screenshots.</p>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
@@ -255,8 +271,8 @@ function RealBoardCard({ ticket }: { ticket: BoardReal }) {
 }
 
 function CandidateBoardCard({ item, paper = false }: { item: BoardCandidate; paper?: boolean }) {
-  const blockers = 'blockers' in item ? item.blockers : [];
-  const experiment = 'experiment' in item ? item.experiment : null;
+  const blockers = item.blockers ?? [];
+  const experiment = item.experiment ?? null;
   return (
     <Accordion className="board-accordion">
       <AccordionItem value={item.id} className={`board-card ${paper ? 'paper-board-card' : 'active-board-card'}`}>
@@ -279,6 +295,7 @@ function CandidateBoardCard({ item, paper = false }: { item: BoardCandidate; pap
 
 function TodayBoard({ compact = false }: { compact?: boolean }) {
   const realItems = compact ? researchBoard.realCard.slice(0, 3) : researchBoard.realCard;
+  const activeItems = researchBoard.activeCandidates as BoardCandidate[];
   const paperItems = compact ? researchBoard.paperCandidates.slice(0, 3) : researchBoard.paperCandidates;
   return (
     <div className="today-board">
@@ -287,8 +304,8 @@ function TodayBoard({ compact = false }: { compact?: boolean }) {
         <div className="board-stack">{realItems.map((ticket) => <RealBoardCard key={ticket.id} ticket={ticket} />)}</div>
       </section>
       <section className="board-section">
-        <div className="board-section-head"><div><span className="eyebrow">NOT PLACED</span><strong>Final checks</strong></div><span className="tag tag-demo">{researchBoard.activeCandidates.length} ACTIVE</span></div>
-        <div className="board-stack">{researchBoard.activeCandidates.map((item) => <CandidateBoardCard key={item.id} item={item} />)}</div>
+        <div className="board-section-head"><div><span className="eyebrow">NOT PLACED</span><strong>Final checks</strong></div><span className="tag tag-demo">{activeItems.length} ACTIVE</span></div>
+        <div className="board-stack">{activeItems.map((item) => <CandidateBoardCard key={item.id} item={item} />)}</div>
       </section>
       <section className="board-section paper-board-section">
         <div className="board-section-head"><div><span className="eyebrow">PAPER TRADE</span><strong>Today’s challengers</strong></div><span className="tag tag-paper">{researchBoard.paperCandidates.length} PAPER</span></div>
@@ -689,7 +706,7 @@ export default function OverlayDashboard() {
         <TabsContent value="config">
           <div className="page-heading"><div><span className="kicker">STRATEGIC SOURCE OF TRUTH</span><h1>Versioned configuration</h1><p>Daily changes belong in data and config. The product stays one persistent site.</p></div><div className="gate-pill"><Bot size={15} /><span><b>GPT ONLY</b> · no alternate model path</span></div></div>
           <div className="config-grid">
-            <Panel title="Core constitution" icon={BookOpenCheck}><div className="config-card"><span>MASTER PROMPT</span><strong>v4.0 · 2026-09-03</strong><p>All 58 sections are preserved verbatim in the repository. Website behavior extends the strategy without replacing it.</p><div className="principles"><span>ANALYSIS FIRST</span><span>EDGE FIRST</span><span>PRICE FIRST</span><span>PROMO LAST</span></div></div></Panel>
+            <Panel title="Core constitution" icon={BookOpenCheck}><div className="config-card"><span>MASTER PROMPT</span><strong>v4.1 · 2026-09-04</strong><p>The original 58 sections remain binding, with sections 59–68 adding the source firewall, standalone gate, causal audit, market-expression challenge, and execution receipt.</p><div className="principles"><span>ANALYSIS FIRST</span><span>STANDALONE FIRST</span><span>PRICE FIRST</span><span>PROMO LAST</span></div></div></Panel>
             <Panel title="Candidate discovery policy" icon={ShieldCheck}><div className="config-card"><span>PROMPT STACK</span><strong>v{promptStack.version} · source-blind audit first</strong><p>Every chat loads the preserved constitution plus the discovery contract. GPT freezes independent standalone rankings across the {discoveryPolicy.discovery.scope.replaceAll('_', ' ')} before reviewing supplied cards or constructing parlays.</p><div className="principles"><span>SEARCH THE WHOLE SLATE</span><span>FREEZE STANDALONE RANKS</span><span>SOURCES TEACH</span><span>SYSTEM DECIDES</span></div></div></Panel>
             <Panel title="Operational datastore" icon={Database}><div className="config-card"><span>IMPORTED HISTORY</span><strong>v0.45 reconciled</strong><p>{(history['Candidate Log'] as Row[]).length} candidates · {(history['Ticket Log'] as Row[]).length} tickets · {(history['Paper Portfolio'] as Row[]).length} paper observations · {(history['Experiment Registry'] as Row[]).length} experiments.</p><div className="data-health"><CircleCheck size={16} /> JSON and workbook retained for audit and export compatibility</div></div></Panel>
           </div>

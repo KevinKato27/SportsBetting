@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-04",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-05T00:38:00Z",
+  "lastUpdated": "2026-09-05T04:38:00Z",
   "sourceLabel": "Sports Research Watch",
-  "notes": "Structured from the day's research decisions. Letter grades appear only where the chat explicitly assigned them; no /100 grade or confidence score is inferred.",
+  "notes": "Structured from the day's research decisions and settled from user-provided DraftKings screenshots. Letter grades appear only where the chat explicitly assigned them; no /100 grade or confidence score is inferred.",
   "realCard": [
     {
       "id": "S04-T01",
@@ -19,6 +19,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "Three separate match theses were independently reviewed before promo packaging.",
+      "result": "LOSS",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Como ML won 4-1; Liverpool scored 2 and Real Madrid scored 0, so both over 2.5 team-goal legs lost.",
       "legs": ["Como ML -155", "Liverpool over 2.5 team goals +142", "Real Madrid over 2.5 team goals +110"]
     },
     {
@@ -27,13 +31,17 @@
       "title": "Two-leg CFB boost",
       "status": "PLACED_USER_CONFIRMED",
       "stake": 1,
-      "price": "~+256 chat estimate",
+      "price": "+384 boosted",
       "promo": "50% CFB Boost",
       "origin": "INDEPENDENT",
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
       "summary": "Miami was the preferred favorite and Fresno State the preferred large underdog after the independent comparison.",
+      "result": "LOSS",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Miami -24.5 won 45-6; Fresno State +22.5 lost 39-0.",
       "legs": ["Miami -24.5 (-108)", "Fresno State +22.5 (-118)"]
     },
     {
@@ -42,34 +50,40 @@
       "title": "MLB 2+1 SGPx",
       "status": "PLACED_USER_CONFIRMED",
       "stake": 1,
-      "price": "+323 raw",
+      "price": "+416 boosted",
       "promo": "30% MLB SGPx Boost",
       "origin": "INDEPENDENT",
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
       "summary": "Two ATL–PHI contact legs plus the strongest independent outside damage leg after Goodman was confirmed batting third.",
+      "result": "LOSS",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Ozzie Albies 1+ hit won; Lane Thomas 1+ hit and Hunter Goodman 2+ total bases lost.",
       "legs": ["Ozzie Albies 1+ hit", "Lane Thomas 1+ hit", "Hunter Goodman 2+ total bases"]
-    }
-  ],
-  "activeCandidates": [
+    },
     {
-      "id": "S04-C01",
+      "id": "S04-T04",
       "sport": "MLB",
-      "entity": "Yordan Alvarez",
-      "event": "Arizona at Houston",
-      "market": "Home run",
-      "price": "+216",
+      "title": "Yordan Alvarez home-run boost",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+323 boosted",
+      "promo": "50% MLB Home Run Boost",
       "origin": "HYBRID",
       "chatGrade": "A",
       "legGrade": null,
       "confidence": null,
-      "status": "READY_FOR_DK_CONFIRMATION",
-      "rationale": "Top HR-boost candidate. The placement check confirmed Yordan batting second at DH against Merrill Kelly and reported the roof expected closed.",
-      "blockers": ["Confirm current DraftKings price", "Confirm the 50% HR promo is attached"],
-      "sources": []
+      "summary": "The pregame lineup and roof checks cleared before the boosted home-run wager was placed.",
+      "result": "LOSS",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Yordan Alvarez did not homer.",
+      "legs": ["Yordan Alvarez 1+ home run"]
     }
   ],
+  "activeCandidates": [],
   "paperCandidates": [
     {
       "id": "S04-P01",
