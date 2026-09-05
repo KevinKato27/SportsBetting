@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 
 const policyPath = 'config/candidate-discovery-policy.v0.2.json';
-const stackPath = 'config/prompt-stack.v4.2.json';
+const stackPath = 'config/prompt-stack.v4.3.json';
 const evalPath = 'config/evals/candidate-discovery.v0.1.json';
 const policy = JSON.parse(fs.readFileSync(policyPath, 'utf8'));
 const stack = JSON.parse(fs.readFileSync(stackPath, 'utf8'));
@@ -23,9 +23,23 @@ requireRule(policy.outputContract.includes('slateCoverage') && policy.outputCont
 requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'find-stronger-unlisted-candidate'), 'Discovery eval must test an unlisted stronger candidate.');
 requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'allow-empty-shortlist'), 'Discovery eval must allow an honest empty shortlist.');
 requireRule(stack.orderedFiles.length === 2, 'Prompt stack must contain the constitution and candidate-discovery addendum.');
+requireRule(stack.version === '4.3', 'Prompt stack must use the current v4.3 package.');
 
 for (const file of stack.orderedFiles) {
   requireRule(fs.existsSync(file), `Prompt stack file is missing: ${file}`);
+}
+
+const masterPrompt = fs.readFileSync(stack.orderedFiles[0], 'utf8');
+for (const requiredSection of [
+  '59. SOURCE-BLIND INDEPENDENT AUDIT',
+  '60. EXTERNAL-SOURCE FIREWALL',
+  '62. STANDALONE QUALIFICATION AND FROZEN RANKINGS',
+  '63. CAUSAL / CORRELATION REASONING',
+  '64. BROAD THESIS VS NARROW MARKET',
+  '65. SOURCE-VS-SYSTEM CHALLENGER TRACKING',
+  '67. EXECUTION RECEIPT',
+]) {
+  requireRule(masterPrompt.includes(requiredSection), `Master prompt is missing required rule: ${requiredSection}`);
 }
 
 if (failures.length) {

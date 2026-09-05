@@ -1,0 +1,9 @@
+{
+  "version": "4.3",
+  "effectiveDate": "2026-09-04",
+  "orderedFiles": [
+    "config/master-prompt/Master_Sports_Betting_Prompt_v4.1_2026-09-04.txt",
+    "config/master-prompt/Independent_Candidate_Discovery_Addendum_v4.2_2026-09-04.txt"
+  ],
+  "policy": "Both files are required for every OVERLAY research chat. Master prompt v4.1 preserves the original constitution while adding the source-blind audit, external-source firewall, standalone qualification, frozen rankings, causal construction, broad-market comparison, challenger tracking, and execution receipt. The v4.2 addendum remains the concise candidate-discovery operating contract."
+}
