@@ -1,0 +1,10 @@
+{
+  "version": "4.4",
+  "effectiveDate": "2026-09-05",
+  "orderedFiles": [
+    "config/master-prompt/Master_Sports_Betting_Prompt_v4.1_2026-09-04.txt",
+    "config/master-prompt/Independent_Candidate_Discovery_Addendum_v4.2_2026-09-04.txt",
+    "config/master-prompt/Paper_Lab_Production_Gate_Addendum_v4.4_2026-09-05.txt"
+  ],
+  "policy": "All three files are required for every OVERLAY research chat. The package preserves the v4 constitution, enforces source-blind independent discovery and standalone ranking, and separates broad prospective Paper Lab research from evidence-backed real-money production."
+}

@@ -42,7 +42,7 @@ import researchBoard from '@/data/research-board/current.json';
 import models from '@/config/scoring/market-models.v0.1.json';
 import sportsbooks from '@/config/sportsbooks.v0.1.json';
 import discoveryPolicy from '@/config/candidate-discovery-policy.v0.2.json';
-import promptStack from '@/config/prompt-stack.v4.3.json';
+import promptStack from '@/config/prompt-stack.v4.4.json';
 
 type Row = Record<string, string>;
 type SlateEvent = {
@@ -671,7 +671,7 @@ export default function OverlayDashboard() {
         </TabsContent>
 
         <TabsContent value="paper">
-          <div className="page-heading"><div><span className="kicker">BROAD R&amp;D SANDBOX</span><h1>Paper Lab</h1><p>Replication, challenger, and innovation tests use the same grader as Real.</p></div><div className="gate-pill paper"><FlaskConical size={15} /><span><b>{(history['Paper Portfolio'] as Row[]).length} ROWS</b> · preserved</span></div></div>
+          <div className="page-heading"><div><span className="kicker">PROSPECTIVE EXPERIMENT ENGINE</span><h1>Paper Lab</h1><p>Unproven ideas, exact external originals, feature tests, construction tests, and system challengers stay here until repeated evidence supports promotion.</p></div><div className="gate-pill paper"><FlaskConical size={15} /><span><b>{(history['Paper Portfolio'] as Row[]).length} ROWS</b> · preserved</span></div></div>
           <div className="experiment-grid">
             {experimentRows.slice(0, 6).map((row) => <article className="experiment-card" key={row['Experiment ID']}><div><span className="tag tag-paper">{row['Experiment ID']}</span><span className="exp-status">{row['Current Status']}</span></div><h3>{row.Hypothesis}</h3><p>{row['Test Design']}</p><footer><span>Minimum N <b>{row['Minimum Sample']}</b></span><span>{row['Main Metric']}</span></footer></article>)}
           </div>
@@ -707,7 +707,7 @@ export default function OverlayDashboard() {
           <div className="page-heading"><div><span className="kicker">STRATEGIC SOURCE OF TRUTH</span><h1>Versioned configuration</h1><p>Daily changes belong in data and config. The product stays one persistent site.</p></div><div className="gate-pill"><Bot size={15} /><span><b>GPT ONLY</b> · no alternate model path</span></div></div>
           <div className="config-grid">
             <Panel title="Core constitution" icon={BookOpenCheck}><div className="config-card"><span>MASTER PROMPT</span><strong>v4.1 · 2026-09-04</strong><p>The original 58 sections remain binding, with sections 59–68 adding the source firewall, standalone gate, causal audit, market-expression challenge, and execution receipt.</p><div className="principles"><span>ANALYSIS FIRST</span><span>STANDALONE FIRST</span><span>PRICE FIRST</span><span>PROMO LAST</span></div></div></Panel>
-            <Panel title="Candidate discovery policy" icon={ShieldCheck}><div className="config-card"><span>PROMPT STACK</span><strong>v{promptStack.version} · source-blind audit first</strong><p>Every chat loads the preserved constitution plus the discovery contract. GPT freezes independent standalone rankings across the {discoveryPolicy.discovery.scope.replaceAll('_', ' ')} before reviewing supplied cards or constructing parlays.</p><div className="principles"><span>SEARCH THE WHOLE SLATE</span><span>FREEZE STANDALONE RANKS</span><span>SOURCES TEACH</span><span>SYSTEM DECIDES</span></div></div></Panel>
+            <Panel title="Candidate discovery policy" icon={ShieldCheck}><div className="config-card"><span>PROMPT STACK</span><strong>v{promptStack.version} · source-blind audit first</strong><p>Every chat loads the constitution, discovery contract, and Paper Lab production gate. GPT freezes independent standalone rankings across the {discoveryPolicy.discovery.scope.replaceAll('_', ' ')} before reviewing supplied cards or constructing parlays.</p><div className="principles"><span>SEARCH THE WHOLE SLATE</span><span>PAPER TESTS UNCERTAINTY</span><span>REAL REQUIRES PROOF</span><span>SYSTEM DECIDES</span></div></div></Panel>
             <Panel title="Operational datastore" icon={Database}><div className="config-card"><span>IMPORTED HISTORY</span><strong>v0.45 reconciled</strong><p>{(history['Candidate Log'] as Row[]).length} candidates · {(history['Ticket Log'] as Row[]).length} tickets · {(history['Paper Portfolio'] as Row[]).length} paper observations · {(history['Experiment Registry'] as Row[]).length} experiments.</p><div className="data-health"><CircleCheck size={16} /> JSON and workbook retained for audit and export compatibility</div></div></Panel>
           </div>
           <Panel title="Market-specific scoring models" icon={Target} action={<span className="tag">{models.version}</span>}>

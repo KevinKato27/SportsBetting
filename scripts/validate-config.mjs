@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 
 const policyPath = 'config/candidate-discovery-policy.v0.2.json';
-const stackPath = 'config/prompt-stack.v4.3.json';
+const stackPath = 'config/prompt-stack.v4.4.json';
 const evalPath = 'config/evals/candidate-discovery.v0.1.json';
 const policy = JSON.parse(fs.readFileSync(policyPath, 'utf8'));
 const stack = JSON.parse(fs.readFileSync(stackPath, 'utf8'));
@@ -22,8 +22,8 @@ requireRule(policy.presentation.singleRankedList === true && policy.presentation
 requireRule(policy.outputContract.includes('slateCoverage') && policy.outputContract.includes('independentCandidates'), 'Output must expose slate coverage and independently discovered candidates.');
 requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'find-stronger-unlisted-candidate'), 'Discovery eval must test an unlisted stronger candidate.');
 requireRule(discoveryEval.cases.some((testCase) => testCase.id === 'allow-empty-shortlist'), 'Discovery eval must allow an honest empty shortlist.');
-requireRule(stack.orderedFiles.length === 2, 'Prompt stack must contain the constitution and candidate-discovery addendum.');
-requireRule(stack.version === '4.3', 'Prompt stack must use the current v4.3 package.');
+requireRule(stack.orderedFiles.length === 3, 'Prompt stack must contain the constitution, discovery addendum, and Paper Lab production-gate addendum.');
+requireRule(stack.version === '4.4', 'Prompt stack must use the current v4.4 package.');
 
 for (const file of stack.orderedFiles) {
   requireRule(fs.existsSync(file), `Prompt stack file is missing: ${file}`);
@@ -40,6 +40,18 @@ for (const requiredSection of [
   '67. EXECUTION RECEIPT',
 ]) {
   requireRule(masterPrompt.includes(requiredSection), `Master prompt is missing required rule: ${requiredSection}`);
+}
+
+const paperLabAddendum = fs.readFileSync(stack.orderedFiles[2], 'utf8');
+for (const requiredRule of [
+  'EXT-ORIGINAL',
+  'SYSTEM-CHALLENGER',
+  'SOURCE-vs-SYSTEM',
+  'PAPER -> SHADOW / PROMISING -> MAIN-CARD ELIGIBLE',
+  'REAL-MONEY PRODUCTION GATE',
+  'separate Outcome Confidence and Bet Value measures',
+]) {
+  requireRule(paperLabAddendum.includes(requiredRule), `Paper Lab addendum is missing required rule: ${requiredRule}`);
 }
 
 if (failures.length) {

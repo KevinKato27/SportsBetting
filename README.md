@@ -10,7 +10,8 @@ The production website is published by GitHub Pages at `https://kevinkato27.gith
 
 - `config/master-prompt/Master_Sports_Betting_Prompt_v4.1_2026-09-04.txt` is the current constitution. It preserves the v4 rules and adds source-blind audit, standalone qualification, frozen rankings, causal construction, broad-market comparison, and source-learning controls.
 - `config/master-prompt/Independent_Candidate_Discovery_Addendum_v4.2_2026-09-04.txt` requires every research chat to search the full eligible slate instead of defaulting to supplied-card names.
-- `config/prompt-stack.v4.3.json` defines the two-file prompt package that must be loaded together.
+- `config/master-prompt/Paper_Lab_Production_Gate_Addendum_v4.4_2026-09-05.txt` makes exact external originals, feature tests, construction tests, and system challengers prospective Paper Lab objects while reserving real money for previously supported edge families.
+- `config/prompt-stack.v4.4.json` defines the three-file prompt package that must be loaded together.
 - `config/candidate-discovery-policy.v0.2.json` makes independent-first discovery, candidate-origin labels, and slate-coverage reporting machine-checkable.
 - `config/evals/candidate-discovery.v0.1.json` tests that the model can surface a stronger unlisted candidate, recognize genuine overlap, and return no pick when appropriate.
 - `config/scoring/market-models.v0.1.json` contains versioned prospective scoring models.
