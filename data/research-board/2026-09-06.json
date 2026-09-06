@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-06",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-06T13:46:48Z",
+  "lastUpdated": "2026-09-06T15:47:50Z",
   "sourceLabel": "Soccer Parlays Strategy + source-blind Sep. 6 morning scan",
-  "notes": "Today’s Real Card contains only the three Sep. 6 tickets explicitly confirmed as placed. The research queue was built from the independent full-slate scan before chat intake. All MLB prices and lines remain unverified and cannot be promoted to bets.",
+  "notes": "Today’s Real Card contains only the four Sep. 6 tickets explicitly confirmed as placed. The research queue was built from the independent full-slate scan before chat intake. Unpriced MLB candidates remain prospective and cannot be promoted to bets.",
   "realCard": [
     {
       "id": "S06-T01",
@@ -62,6 +62,25 @@
       "pnl": null,
       "settlement": null,
       "legs": ["Levante at Málaga under 2.5 goals (-120)", "Marseille moneyline (-110)", "AC Milan at Juventus under 2.5 goals (-145)"]
+    },
+    {
+      "id": "S06-T04",
+      "sport": "MLB",
+      "title": "Brady Singer hits-allowed single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+104",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "Direct pitcher-contact fade selected over a workload-sensitive outs under and a bullpen-dependent Brewers team-hits market. The final thesis excludes the withdrawn lineup-handedness claim.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": ["Brady Singer over 5.5 hits allowed (+104)"]
     }
   ],
   "activeCandidates": [

@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-06",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-06T13:46:48Z",
+  "ingestedAt": "2026-09-06T15:47:50Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Public-safe structured summaries only. The user explicitly confirmed all three soccer tickets as placed. Exact raw and boosted prices are preserved from the submitted DraftKings slips and chat; the underlying analytical citations were not exported as public URLs, so verification remains partial. No bankroll or account data is published.",
+  "notes": "Public-safe structured summaries only. The user explicitly confirmed three soccer tickets and one MLB pitcher-prop single as placed. Exact displayed prices are preserved from the submitted DraftKings slips and chat; the underlying analytical citations were not exported as public URLs, so verification remains partial. No bankroll or account data is published.",
   "slips": [
     {
       "id": "2026-09-06-soccer-arsenal-chelsea-01",
@@ -87,6 +87,32 @@
         { "entity": "Levante at Málaga", "event": "Levante at Málaga", "market": "Total goals", "threshold": "Under 2.5", "side": "Under", "displayedPrice": "-120", "status": "CHAT_REPORTED" },
         { "entity": "Marseille", "event": "Paris FC at Marseille", "market": "Moneyline", "threshold": null, "side": "Marseille", "displayedPrice": "-110", "status": "CHAT_REPORTED" },
         { "entity": "AC Milan at Juventus", "event": "AC Milan at Juventus", "market": "Total goals", "threshold": "Under 2.5", "side": "Under", "displayedPrice": "-145", "status": "CHAT_REPORTED" }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-06-mlb-singer-hits-01",
+      "date": "2026-09-06",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Brady Singer hits-allowed single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": null,
+      "displayedCombinedPrice": "+104",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "Soccer Parlays Strategy",
+      "sourceTurnTime": "2026-09-06T15:40:23Z",
+      "auditSummary": "The chat preferred a direct Singer hits-allowed over to an outs under or Brewers team-hits market because it isolated the independently identified contact-allowed thesis. An earlier lineup-handedness claim was explicitly withdrawn before placement.",
+      "placementEvidence": "The user said “Placed” immediately after the exact instruction to place Brady Singer over 5.5 hits allowed at +104 for $1.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        { "entity": "Brady Singer", "event": "Milwaukee Brewers at Cincinnati Reds", "market": "Hits allowed", "threshold": "Over 5.5", "side": "Over", "displayedPrice": "+104", "status": "CHAT_REPORTED" }
       ],
       "sources": []
     }
