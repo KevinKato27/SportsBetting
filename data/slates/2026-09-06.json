@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-06",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-06T14:10:48.235Z",
+  "lastVerified": "2026-09-06T14:47:02.377Z",
   "gate": "PRELIMINARY",
   "activeGames": 33,
   "leagues": [
@@ -19,7 +19,7 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-06",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-06&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": [
         {
           "id": "mlb-824469",
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "88-55"
             },
             {
               "side": "home",
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
-              "score": null,
+              "score": 0,
               "record": "68-74"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-09-06T17:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Atlanta Braves at Philadelphia Phillies",
           "shortName": "ATL @ PHI",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": null,
+              "score": 0,
               "record": "84-58"
             },
             {
               "side": "home",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": null,
+              "score": 0,
               "record": "80-62"
             }
           ],
@@ -154,7 +154,7 @@
           "date": "2026-09-06T17:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Detroit Tigers at Cleveland Guardians",
           "shortName": "DET @ CLE",
           "competitors": [
@@ -162,14 +162,14 @@
               "side": "away",
               "name": "Detroit Tigers",
               "abbreviation": "DET",
-              "score": null,
+              "score": 0,
               "record": "65-77"
             },
             {
               "side": "home",
               "name": "Cleveland Guardians",
               "abbreviation": "CLE",
-              "score": null,
+              "score": 0,
               "record": "72-71"
             }
           ],
@@ -186,7 +186,7 @@
           "date": "2026-09-06T17:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "San Francisco Giants at New York Mets",
           "shortName": "SF @ NYM",
           "competitors": [
@@ -250,7 +250,7 @@
           "date": "2026-09-06T18:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Arizona Diamondbacks at Houston Astros",
           "shortName": "AZ @ HOU",
           "competitors": [
@@ -282,7 +282,7 @@
           "date": "2026-09-06T18:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Toronto Blue Jays at Kansas City Royals",
           "shortName": "TOR @ KC",
           "competitors": [
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": [
         {
           "id": "college-football-401858437",
@@ -626,7 +626,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": []
     },
     {
@@ -642,7 +642,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": []
     },
     {
@@ -658,7 +658,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": []
     },
     {
@@ -674,7 +674,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": []
     },
     {
@@ -690,14 +690,14 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": [
         {
           "id": "eng.1-401879291",
           "date": "2026-09-06T13:00Z",
           "completed": false,
           "state": "in",
-          "status": "51'",
+          "status": "87'",
           "name": "Manchester United at Everton",
           "shortName": "MAN @ EVE",
           "competitors": [
@@ -705,7 +705,7 @@
               "side": "home",
               "name": "Everton",
               "abbreviation": "EVE",
-              "score": "0",
+              "score": "1",
               "record": "1-1-0"
             },
             {
@@ -764,21 +764,21 @@
       "status": "active",
       "games": 4,
       "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "live": 1,
+      "scheduled": 3,
       "earliestStart": "10:15 AM EDT",
       "earliestStartIso": "2026-09-06T14:15Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": [
         {
           "id": "esp.1-401882888",
           "date": "2026-09-06T14:15Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "28'",
           "name": "Barcelona at Valencia",
           "shortName": "BAR @ VAL",
           "competitors": [
@@ -793,7 +793,7 @@
               "side": "away",
               "name": "Barcelona",
               "abbreviation": "BAR",
-              "score": "0",
+              "score": "2",
               "record": "3-0-0"
             }
           ],
@@ -803,7 +803,7 @@
             "ESPN Deportes",
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882888/barcelona-valencia"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260906"
         },
         {
           "id": "esp.1-401882896",
@@ -916,14 +916,14 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": [
         {
           "id": "ger.1-401884803",
           "date": "2026-09-06T13:30Z",
           "completed": false,
           "state": "in",
-          "status": "41'",
+          "status": "58'",
           "name": "Mainz at Hamburg SV",
           "shortName": "M05 @ HSV",
           "competitors": [
@@ -938,7 +938,7 @@
               "side": "away",
               "name": "Mainz",
               "abbreviation": "M05",
-              "score": "1",
+              "score": "3",
               "record": "0-1-0"
             }
           ],
@@ -995,14 +995,14 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": [
         {
           "id": "ita.1-401874768",
           "date": "2026-09-06T13:00Z",
           "completed": false,
           "state": "in",
-          "status": "47'",
+          "status": "83'",
           "name": "Venezia at Frosinone",
           "shortName": "VEN @ FRO",
           "competitors": [
@@ -1017,7 +1017,7 @@
               "side": "away",
               "name": "Venezia",
               "abbreviation": "VEN",
-              "score": "0",
+              "score": "2",
               "record": "0-0-2"
             }
           ],
@@ -1033,7 +1033,7 @@
           "date": "2026-09-06T13:00Z",
           "completed": false,
           "state": "in",
-          "status": "50'",
+          "status": "86'",
           "name": "Monza at Parma",
           "shortName": "MON @ PAR",
           "competitors": [
@@ -1041,7 +1041,7 @@
               "side": "home",
               "name": "Parma",
               "abbreviation": "PAR",
-              "score": "0",
+              "score": "1",
               "record": "0-0-2"
             },
             {
@@ -1136,14 +1136,14 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": [
         {
           "id": "fra.1-401876467",
           "date": "2026-09-06T13:00Z",
           "completed": false,
           "state": "in",
-          "status": "48'",
+          "status": "85'",
           "name": "Strasbourg at Troyes",
           "shortName": "STR @ TRY",
           "competitors": [
@@ -1158,7 +1158,7 @@
               "side": "away",
               "name": "Strasbourg",
               "abbreviation": "STR",
-              "score": "2",
+              "score": "3",
               "record": "1-0-1"
             }
           ],
@@ -1240,7 +1240,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": []
     },
     {
@@ -1256,7 +1256,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T14:10:48.235Z",
+      "sourceVerifiedAt": "2026-09-06T14:47:02.377Z",
       "events": []
     }
   ],
