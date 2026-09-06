@@ -207,8 +207,9 @@ for (const item of researchBoard.activeCandidates) appendBoardRow(boardStyles.fi
 for (const item of researchBoard.paperCandidates) appendBoardRow(boardStyles.paper, ['PAPER', item.id, item.sport, item.entity, item.event, item.market, item.price, item.chatGrade ?? '', item.legGrade ?? '', item.confidence ?? '', `${item.experiment} — ${item.rationale}`]);
 const boardLastRow = boardRowNumber - 1;
 const updatedBoardWorksheetXml = boardWorksheetXml
+  .replace(/<x:mergeCells[\s\S]*?<\/x:mergeCells>/, '')
   .replace(/<x:dimension ref="[^"]+"\s*\/>/, `<x:dimension ref="A1:K${boardLastRow}" />`)
-  .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, `<x:sheetData>${boardRows.join('')}</x:sheetData>`);
+  .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, `<x:sheetData>${boardRows.join('')}</x:sheetData><x:mergeCells count="2"><x:mergeCell ref="A1:K1" /><x:mergeCell ref="A2:K2" /></x:mergeCells>`);
 files[boardWorksheetPath] = strToU8(updatedBoardWorksheetXml);
 
 await writeFile(workbookPath, zipSync(files, { level: 6 }));

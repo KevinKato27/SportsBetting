@@ -12184,6 +12184,51 @@
       "P/L": "-1",
       "Promo / Special": "50% CFB Week 1 parlay boost",
       "Execution Note": "PLACED_USER_CONFIRMED from “All 3 placed.” Hansen lost with 48 rushing yards on 11 carries against 80+. Classified as role/workload miscalculation and selection/construction error; exact combined and boosted prices remain unavailable."
+    },
+    {
+      "Date": "2026-09-06",
+      "Ticket ID": "S06-T01",
+      "Origin": "INDEPENDENT",
+      "Description": "Arsenal moneyline + Chelsea at Arsenal over 1.5 total goals",
+      "Stake": "1",
+      "Odds (American)": "133",
+      "Boosted?": "Y",
+      "Legs": "2",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "30% Arsenal vs Chelsea boost",
+      "Execution Note": "PLACED_USER_CONFIRMED from “Placed.” DraftKings showed +102 raw and +133 boosted; settlement pending."
+    },
+    {
+      "Date": "2026-09-06",
+      "Ticket ID": "S06-T02",
+      "Origin": "INDEPENDENT",
+      "Description": "Stade Rennais moneyline + FC Augsburg at Eintracht Frankfurt under 3.5 total goals + AC Milan at Juventus under 2.5 total goals",
+      "Stake": "1",
+      "Odds (American)": "638",
+      "Boosted?": "Y",
+      "Legs": "3",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "30% soccer parlay boost",
+      "Execution Note": "PLACED_USER_CONFIRMED from “all 3 placed.” DraftKings showed +490 raw and +638 boosted; settlement pending."
+    },
+    {
+      "Date": "2026-09-06",
+      "Ticket ID": "S06-T03",
+      "Origin": "INDEPENDENT",
+      "Description": "Levante at Málaga under 2.5 total goals + Marseille moneyline + AC Milan at Juventus under 2.5 total goals",
+      "Stake": "1",
+      "Odds (American)": "639",
+      "Boosted?": "Y",
+      "Legs": "3",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "30% soccer parlay boost",
+      "Execution Note": "PLACED_USER_CONFIRMED from “all 3 placed.” DraftKings showed +491 raw and +639 boosted; settlement pending."
     }
   ],
   "Paper Portfolio": [

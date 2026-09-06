@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-06",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-06T07:54:12.570Z",
+  "lastVerified": "2026-09-06T13:47:48.434Z",
   "gate": "PRELIMINARY",
   "activeGames": 33,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-06",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-06&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": [
         {
           "id": "mlb-824469",
           "date": "2026-09-06T16:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Milwaukee Brewers at Cincinnati Reds",
           "shortName": "MIL @ CIN",
           "competitors": [
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": [
         {
           "id": "college-football-401858437",
@@ -626,7 +626,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": []
     },
     {
@@ -642,7 +642,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": []
     },
     {
@@ -658,7 +658,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": []
     },
     {
@@ -674,7 +674,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": []
     },
     {
@@ -683,21 +683,21 @@
       "status": "active",
       "games": 2,
       "completed": 0,
-      "live": 0,
-      "scheduled": 2,
+      "live": 1,
+      "scheduled": 1,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-09-06T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": [
         {
           "id": "eng.1-401879291",
           "date": "2026-09-06T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "45'+2'",
           "name": "Manchester United at Everton",
           "shortName": "MAN @ EVE",
           "competitors": [
@@ -722,7 +722,7 @@
             "USA Net",
             "Tele"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879291/manchester-united-everton"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260906"
         },
         {
           "id": "eng.1-401879292",
@@ -771,7 +771,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": [
         {
           "id": "esp.1-401882888",
@@ -909,21 +909,21 @@
       "status": "active",
       "games": 2,
       "completed": 0,
-      "live": 0,
-      "scheduled": 2,
+      "live": 1,
+      "scheduled": 1,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-09-06T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": [
         {
           "id": "ger.1-401884803",
           "date": "2026-09-06T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "18'",
           "name": "Mainz at Hamburg SV",
           "shortName": "M05 @ HSV",
           "competitors": [
@@ -947,7 +947,7 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884803/mainz-hamburg-sv"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260906"
         },
         {
           "id": "ger.1-401884805",
@@ -988,21 +988,21 @@
       "status": "active",
       "games": 4,
       "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "live": 2,
+      "scheduled": 2,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-09-06T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": [
         {
           "id": "ita.1-401874768",
           "date": "2026-09-06T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "45'",
           "name": "Venezia at Frosinone",
           "shortName": "VEN @ FRO",
           "competitors": [
@@ -1010,7 +1010,7 @@
               "side": "home",
               "name": "Frosinone",
               "abbreviation": "FRO",
-              "score": "0",
+              "score": "2",
               "record": "1-0-1"
             },
             {
@@ -1026,14 +1026,14 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874768/venezia-frosinone"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260906"
         },
         {
           "id": "ita.1-401874987",
           "date": "2026-09-06T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "45'+2'",
           "name": "Monza at Parma",
           "shortName": "MON @ PAR",
           "competitors": [
@@ -1048,7 +1048,7 @@
               "side": "away",
               "name": "Monza",
               "abbreviation": "MON",
-              "score": "0",
+              "score": "1",
               "record": "0-0-2"
             }
           ],
@@ -1057,7 +1057,7 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874987/monza-parma"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260906"
         },
         {
           "id": "ita.1-401874751",
@@ -1129,21 +1129,21 @@
       "status": "active",
       "games": 3,
       "completed": 0,
-      "live": 0,
-      "scheduled": 3,
+      "live": 1,
+      "scheduled": 2,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-09-06T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": [
         {
           "id": "fra.1-401876467",
           "date": "2026-09-06T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "45'+2'",
           "name": "Strasbourg at Troyes",
           "shortName": "STR @ TRY",
           "competitors": [
@@ -1151,21 +1151,21 @@
               "side": "home",
               "name": "Troyes",
               "abbreviation": "TRY",
-              "score": "0",
+              "score": "1",
               "record": "1-1-0"
             },
             {
               "side": "away",
               "name": "Strasbourg",
               "abbreviation": "STR",
-              "score": "0",
+              "score": "2",
               "record": "1-0-1"
             }
           ],
           "venue": "Stade de l'Aube",
           "probablePitchers": null,
           "broadcasts": [],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876467/strasbourg-troyes"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260906"
         },
         {
           "id": "fra.1-401876475",
@@ -1240,7 +1240,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": []
     },
     {
@@ -1256,7 +1256,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260906",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260906&limit=200",
-      "sourceVerifiedAt": "2026-09-06T07:54:12.570Z",
+      "sourceVerifiedAt": "2026-09-06T13:47:48.434Z",
       "events": []
     }
   ],
