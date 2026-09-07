@@ -10847,6 +10847,54 @@
       "Loss Classification": "",
       "Market Conversion / Missed Opportunity Note": "Independently qualified receiving-volume leg selected before parlay construction.",
       "Notes": "User confirmed the three-leg CFB parlay was placed."
+    },
+    {
+      "Date": "2026-09-06",
+      "Candidate ID": "S06-R05",
+      "Source Bucket": "INDEPENDENT",
+      "Source / Research Set": "Source-blind MLB audit + threshold curve",
+      "Sport": "MLB",
+      "Game": "DET @ CLE",
+      "Entity": "Gavin Williams",
+      "Market Family": "Strikeouts",
+      "Bet / Proposition": "9+ strikeouts",
+      "Line": "9",
+      "Odds (American)": "111",
+      "Implied Prob": "0.47393364928909953",
+      "Decision": "BET",
+      "Placed?": "Y",
+      "Result": "Win",
+      "Win": "1",
+      "Actual Value": "11",
+      "Stake Attributed": "1",
+      "Ticket IDs": "S06-T05",
+      "Loss Classification": "",
+      "Market Conversion / Missed Opportunity Note": "The 9+ threshold at plus money balanced the strong strikeout thesis against the more expensive 8+ and aggressive 10+ alternatives.",
+      "Notes": "User-submitted settlement showed 11 strikeouts."
+    },
+    {
+      "Date": "2026-09-07",
+      "Candidate ID": "S07-R01",
+      "Source Bucket": "INDEPENDENT",
+      "Source / Research Set": "Source-blind MLB Early Win audit + exact price comparison",
+      "Sport": "MLB",
+      "Game": "WSH @ SD",
+      "Entity": "San Diego Padres",
+      "Market Family": "Moneyline",
+      "Bet / Proposition": "Padres ML with Early Win",
+      "Line": "",
+      "Odds (American)": "-192",
+      "Implied Prob": "0.6575342465753424",
+      "Decision": "BET",
+      "Placed?": "Y",
+      "Result": "Pending",
+      "Win": "",
+      "Actual Value": "",
+      "Stake Attributed": "1",
+      "Ticket IDs": "S07-T01",
+      "Loss Classification": "",
+      "Market Conversion / Missed Opportunity Note": "Selected for the probability of establishing a two-run lead after comparing Boston, San Diego and Philadelphia at exact DraftKings prices.",
+      "Notes": "User confirmed placement with “Done.”"
     }
   ],
   "Ticket Log": [
@@ -12194,11 +12242,11 @@
       "Odds (American)": "133",
       "Boosted?": "Y",
       "Legs": "2",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "2.33",
+      "P/L": "1.33",
       "Promo / Special": "30% Arsenal vs Chelsea boost",
-      "Execution Note": "PLACED_USER_CONFIRMED from “Placed.” DraftKings showed +102 raw and +133 boosted; settlement pending."
+      "Execution Note": "FINAL from user-submitted DraftKings results. Arsenal won 2-1; both Arsenal ML and over 1.5 goals cleared."
     },
     {
       "Date": "2026-09-06",
@@ -12209,11 +12257,11 @@
       "Odds (American)": "638",
       "Boosted?": "Y",
       "Legs": "3",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "30% soccer parlay boost",
-      "Execution Note": "PLACED_USER_CONFIRMED from “all 3 placed.” DraftKings showed +490 raw and +638 boosted; settlement pending."
+      "Execution Note": "FINAL from user-submitted DraftKings results. Rennes ML and Juventus/Milan under 2.5 won; Frankfurt/Augsburg under 3.5 lost in a 4-1 match."
     },
     {
       "Date": "2026-09-06",
@@ -12224,11 +12272,11 @@
       "Odds (American)": "639",
       "Boosted?": "Y",
       "Legs": "3",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "30% soccer parlay boost",
-      "Execution Note": "PLACED_USER_CONFIRMED from “all 3 placed.” DraftKings showed +491 raw and +639 boosted; settlement pending."
+      "Execution Note": "FINAL from user-submitted DraftKings results. Málaga/Levante under 2.5 and Juventus/Milan under 2.5 won; Marseille ML lost."
     },
     {
       "Date": "2026-09-06",
@@ -12239,11 +12287,41 @@
       "Odds (American)": "104",
       "Boosted?": "N",
       "Legs": "1",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
+      "Promo / Special": "",
+      "Execution Note": "FINAL from user-submitted DraftKings results. Singer allowed fewer than 6 hits, although he allowed 6 runs and 6 walks in 5 innings; logged as a market-expression miss."
+    },
+    {
+      "Date": "2026-09-06",
+      "Ticket ID": "S06-T05",
+      "Origin": "INDEPENDENT",
+      "Description": "Gavin Williams 9+ strikeouts",
+      "Stake": "1",
+      "Odds (American)": "111",
+      "Boosted?": "N",
+      "Legs": "1",
+      "Result": "Win",
+      "Payout": "2.11",
+      "P/L": "1.11",
+      "Promo / Special": "",
+      "Execution Note": "FINAL from user-submitted DraftKings results. Williams recorded 11 strikeouts; the selected 9+ threshold at +111 cleared."
+    },
+    {
+      "Date": "2026-09-07",
+      "Ticket ID": "S07-T01",
+      "Origin": "INDEPENDENT",
+      "Description": "San Diego Padres moneyline",
+      "Stake": "1",
+      "Odds (American)": "-192",
+      "Boosted?": "N",
+      "Legs": "1",
       "Result": "Pending",
       "Payout": "",
       "P/L": "",
-      "Promo / Special": "",
-      "Execution Note": "PLACED_USER_CONFIRMED from “Placed” immediately after the exact $1 instruction. DraftKings price +104; settlement pending."
+      "Promo / Special": "MLB Early Win (lead by 2 runs)",
+      "Execution Note": "PLACED_USER_CONFIRMED from “Done” immediately after the direct $1 placement instruction. Settlement pending."
     }
   ],
   "Paper Portfolio": [
@@ -19275,6 +19353,18 @@
       "Wins": "0",
       "Ticket Win Rate": "0",
       "Notes": "FINAL: 0-4 tickets and 3-9 individual legs. Soccer lost when Liverpool stopped at 2 team goals and Real Madrid scored 0; Como ML won. CFB lost when Fresno State +22.5 fell 39-0; Miami -24.5 won 45-6. MLB SGPx lost when Lane Thomas 1+ hit and Hunter Goodman 2+ total bases missed; Ozzie Albies 1+ hit won. Yordan Alvarez HR lost. User-provided DraftKings screenshots show $4 risked, $0 returned, and bankroll $21.79 -> $17.79. Postmortem: weak-leg contamination, shared matchup exposure mistaken for causal correlation, fragile player props chosen over broader expressions, and aggressive promo-driven thresholds. Immediate controls: Standalone YES before any parlay; label pair relationships; compare broad markets first; show safe/base/aggressive thresholds; max one HR satellite that ranks first on independent value; require an explicit cover path for large CFB underdogs."
+    },
+    {
+      "Date": "2026-09-06",
+      "Starting Bankroll": "31.69",
+      "Risked": "5",
+      "Payout": "4.44",
+      "P/L": "-0.56",
+      "Ending Bankroll": "31.13",
+      "Tickets": "5",
+      "Wins": "2",
+      "Ticket Win Rate": "0.4",
+      "Notes": "FINAL from user-submitted DraftKings results: 2-3 tickets, $5 risked, $4.44 returned, -$0.56 net. Arsenal ML + over 1.5 and Gavin Williams 9+ Ks won. Singer hits allowed lost through market expression despite a correct broad fade; both three-leg soccer parlays went 2-for-3, exposing weak-leg contamination."
     }
   ],
   "Source Evaluation": [

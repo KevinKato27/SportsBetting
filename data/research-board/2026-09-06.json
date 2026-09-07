@@ -4,7 +4,7 @@
   "timezone": "America/New_York",
   "lastUpdated": "2026-09-06T15:47:50Z",
   "sourceLabel": "Soccer Parlays Strategy + source-blind Sep. 6 morning scan",
-  "notes": "Today’s Real Card contains only the four Sep. 6 tickets explicitly confirmed as placed. The research queue was built from the independent full-slate scan before chat intake. Unpriced MLB candidates remain prospective and cannot be promoted to bets.",
+  "notes": "Archived Sep. 6 board reconciled from user-submitted DraftKings results: five placed tickets, two wins, three losses, and -$0.56 net.",
   "realCard": [
     {
       "id": "S06-T01",
@@ -19,11 +19,14 @@
       "legGrade": null,
       "confidence": null,
       "summary": "Probability-first team/game construction selected over a narrower Saka shots-on-target version.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
-      "legs": ["Arsenal moneyline", "Over 1.5 total goals"]
+      "result": "Win",
+      "payout": 2.33,
+      "pnl": 1.33,
+      "settlement": "User-submitted DraftKings result.",
+      "legs": [
+        "Arsenal moneyline",
+        "Over 1.5 total goals"
+      ]
     },
     {
       "id": "S06-T02",
@@ -38,11 +41,15 @@
       "legGrade": null,
       "confidence": null,
       "summary": "Three screened propositions cleared the promotion requirements without a filler leg.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
-      "legs": ["Stade Rennais moneyline (-115)", "FC Augsburg at Eintracht Frankfurt under 3.5 goals (-120)", "AC Milan at Juventus under 2.5 goals (-145)"]
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "User-submitted DraftKings result.",
+      "legs": [
+        "Stade Rennais moneyline (-115)",
+        "FC Augsburg at Eintracht Frankfurt under 3.5 goals (-120)",
+        "AC Milan at Juventus under 2.5 goals (-145)"
+      ]
     },
     {
       "id": "S06-T03",
@@ -57,11 +64,15 @@
       "legGrade": null,
       "confidence": null,
       "summary": "A low-total matchup and home moneyline join one intentional repeated core under.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
-      "legs": ["Levante at Málaga under 2.5 goals (-120)", "Marseille moneyline (-110)", "AC Milan at Juventus under 2.5 goals (-145)"]
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "User-submitted DraftKings result.",
+      "legs": [
+        "Levante at Málaga under 2.5 goals (-120)",
+        "Marseille moneyline (-110)",
+        "AC Milan at Juventus under 2.5 goals (-145)"
+      ]
     },
     {
       "id": "S06-T04",
@@ -76,11 +87,34 @@
       "legGrade": null,
       "confidence": null,
       "summary": "Direct pitcher-contact fade selected over a workload-sensitive outs under and a bullpen-dependent Brewers team-hits market. The final thesis excludes the withdrawn lineup-handedness claim.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
-      "legs": ["Brady Singer over 5.5 hits allowed (+104)"]
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "User-submitted DraftKings result.",
+      "legs": [
+        "Brady Singer over 5.5 hits allowed (+104)"
+      ]
+    },
+    {
+      "id": "S06-T05",
+      "sport": "MLB",
+      "title": "Gavin Williams strikeout single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+111",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The 9+ threshold at plus money balanced the high-strikeout thesis against safer and more aggressive ladder prices.",
+      "result": "Win",
+      "payout": 2.11,
+      "pnl": 1.11,
+      "settlement": "User-submitted DraftKings result: 11 strikeouts.",
+      "legs": [
+        "Gavin Williams 9+ strikeouts (+111)"
+      ]
     }
   ],
   "activeCandidates": [

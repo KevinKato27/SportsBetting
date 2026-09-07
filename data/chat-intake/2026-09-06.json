@@ -5,7 +5,7 @@
   "ingestedAt": "2026-09-06T15:47:50Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Public-safe structured summaries only. The user explicitly confirmed three soccer tickets and one MLB pitcher-prop single as placed. Exact displayed prices are preserved from the submitted DraftKings slips and chat; the underlying analytical citations were not exported as public URLs, so verification remains partial. No bankroll or account data is published.",
+  "notes": "Public-safe structured summaries only. Five Sep. 6 tickets are reconciled from the user-submitted DraftKings results: two wins, three losses, $5 risked, $4.44 returned, and -$0.56 net.",
   "slips": [
     {
       "id": "2026-09-06-soccer-arsenal-chelsea-01",
@@ -24,13 +24,29 @@
       "sourceTurnTime": "2026-09-06T13:12:01Z",
       "auditSummary": "The chat selected the lowest-variance construction that cleared the promo minimum and preferred a team/game expression over an added player-specific shot requirement.",
       "placementEvidence": "The user said “Placed” immediately after the exact $1 placement instruction and displayed ticket review.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Win",
+      "payout": 2.33,
+      "pnl": 1.33,
+      "settlementEvidence": "User-submitted DraftKings results reviewed in project chat on 2026-09-07.",
       "legs": [
-        { "entity": "Arsenal", "event": "Chelsea at Arsenal", "market": "Moneyline", "threshold": null, "side": "Arsenal", "displayedPrice": null, "status": "CHAT_REPORTED" },
-        { "entity": "Chelsea at Arsenal", "event": "Chelsea at Arsenal", "market": "Total goals", "threshold": "Over 1.5", "side": "Over", "displayedPrice": null, "status": "CHAT_REPORTED" }
+        {
+          "entity": "Arsenal",
+          "event": "Chelsea at Arsenal",
+          "market": "Moneyline",
+          "threshold": null,
+          "side": "Arsenal",
+          "displayedPrice": null,
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Chelsea at Arsenal",
+          "event": "Chelsea at Arsenal",
+          "market": "Total goals",
+          "threshold": "Over 1.5",
+          "side": "Over",
+          "displayedPrice": null,
+          "status": "CHAT_REPORTED"
+        }
       ],
       "sources": []
     },
@@ -51,14 +67,38 @@
       "sourceTurnTime": "2026-09-06T13:18:33Z",
       "auditSummary": "Three independently screened propositions cleared the three-leg and +300 promo requirements without adding a filler leg.",
       "placementEvidence": "The user said “all 3 placed” after the three exact soccer ticket instructions.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "User-submitted DraftKings results reviewed in project chat on 2026-09-07.",
       "legs": [
-        { "entity": "Stade Rennais", "event": "Stade Rennais at Angers", "market": "Moneyline", "threshold": null, "side": "Stade Rennais", "displayedPrice": "-115", "status": "CHAT_REPORTED" },
-        { "entity": "FC Augsburg at Eintracht Frankfurt", "event": "FC Augsburg at Eintracht Frankfurt", "market": "Total goals", "threshold": "Under 3.5", "side": "Under", "displayedPrice": "-120", "status": "CHAT_REPORTED" },
-        { "entity": "AC Milan at Juventus", "event": "AC Milan at Juventus", "market": "Total goals", "threshold": "Under 2.5", "side": "Under", "displayedPrice": "-145", "status": "CHAT_REPORTED" }
+        {
+          "entity": "Stade Rennais",
+          "event": "Stade Rennais at Angers",
+          "market": "Moneyline",
+          "threshold": null,
+          "side": "Stade Rennais",
+          "displayedPrice": "-115",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "FC Augsburg at Eintracht Frankfurt",
+          "event": "FC Augsburg at Eintracht Frankfurt",
+          "market": "Total goals",
+          "threshold": "Under 3.5",
+          "side": "Under",
+          "displayedPrice": "-120",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "AC Milan at Juventus",
+          "event": "AC Milan at Juventus",
+          "market": "Total goals",
+          "threshold": "Under 2.5",
+          "side": "Under",
+          "displayedPrice": "-145",
+          "status": "CHAT_REPORTED"
+        }
       ],
       "sources": []
     },
@@ -79,14 +119,38 @@
       "sourceTurnTime": "2026-09-06T13:18:33Z",
       "auditSummary": "The construction used a low-total matchup, a home moneyline, and one intentional repeated core under instead of forcing a weaker unique leg.",
       "placementEvidence": "The user said “all 3 placed” after the three exact soccer ticket instructions.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "User-submitted DraftKings results reviewed in project chat on 2026-09-07.",
       "legs": [
-        { "entity": "Levante at Málaga", "event": "Levante at Málaga", "market": "Total goals", "threshold": "Under 2.5", "side": "Under", "displayedPrice": "-120", "status": "CHAT_REPORTED" },
-        { "entity": "Marseille", "event": "Paris FC at Marseille", "market": "Moneyline", "threshold": null, "side": "Marseille", "displayedPrice": "-110", "status": "CHAT_REPORTED" },
-        { "entity": "AC Milan at Juventus", "event": "AC Milan at Juventus", "market": "Total goals", "threshold": "Under 2.5", "side": "Under", "displayedPrice": "-145", "status": "CHAT_REPORTED" }
+        {
+          "entity": "Levante at Málaga",
+          "event": "Levante at Málaga",
+          "market": "Total goals",
+          "threshold": "Under 2.5",
+          "side": "Under",
+          "displayedPrice": "-120",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Marseille",
+          "event": "Paris FC at Marseille",
+          "market": "Moneyline",
+          "threshold": null,
+          "side": "Marseille",
+          "displayedPrice": "-110",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "AC Milan at Juventus",
+          "event": "AC Milan at Juventus",
+          "market": "Total goals",
+          "threshold": "Under 2.5",
+          "side": "Under",
+          "displayedPrice": "-145",
+          "status": "CHAT_REPORTED"
+        }
       ],
       "sources": []
     },
@@ -107,12 +171,54 @@
       "sourceTurnTime": "2026-09-06T15:40:23Z",
       "auditSummary": "The chat preferred a direct Singer hits-allowed over to an outs under or Brewers team-hits market because it isolated the independently identified contact-allowed thesis. An earlier lineup-handedness claim was explicitly withdrawn before placement.",
       "placementEvidence": "The user said “Placed” immediately after the exact instruction to place Brady Singer over 5.5 hits allowed at +104 for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "User-submitted DraftKings results reviewed in project chat on 2026-09-07.",
       "legs": [
-        { "entity": "Brady Singer", "event": "Milwaukee Brewers at Cincinnati Reds", "market": "Hits allowed", "threshold": "Over 5.5", "side": "Over", "displayedPrice": "+104", "status": "CHAT_REPORTED" }
+        {
+          "entity": "Brady Singer",
+          "event": "Milwaukee Brewers at Cincinnati Reds",
+          "market": "Hits allowed",
+          "threshold": "Over 5.5",
+          "side": "Over",
+          "displayedPrice": "+104",
+          "status": "CHAT_REPORTED"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-06-mlb-williams-k-01",
+      "date": "2026-09-06",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Gavin Williams strikeout single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": null,
+      "displayedCombinedPrice": "+111",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "VERIFIED",
+      "sourceLabel": "Soccer Parlays Strategy",
+      "sourceTurnTime": "2026-09-06T17:14:39Z",
+      "auditSummary": "Threshold-curve comparison selected 9+ strikeouts at plus money.",
+      "placementEvidence": "The user said “Ok Williams placed” after the exact 9+ strikeouts at +111 instruction.",
+      "result": "Win",
+      "payout": 2.11,
+      "pnl": 1.11,
+      "settlementEvidence": "User-submitted DraftKings results: Williams recorded 11 strikeouts.",
+      "legs": [
+        {
+          "entity": "Gavin Williams",
+          "event": "Detroit Tigers at Cleveland Guardians",
+          "market": "Strikeouts",
+          "threshold": "9+",
+          "side": "Over",
+          "displayedPrice": "+111",
+          "status": "VERIFIED"
+        }
       ],
       "sources": []
     }

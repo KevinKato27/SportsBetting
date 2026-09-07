@@ -132,7 +132,7 @@ function SlipWorkspace() {
                       </AccordionTrigger>
                       <AccordionContent className="intake-detail">
                         <div className="intake-warning"><CircleAlert size={15} /><span>Chat-reported research only. Recheck the event, market, price, lineup and source evidence before using it.</span></div>
-                        <div className="intake-legs">{item.legs.map((leg, index) => <div key={`${item.id}-${index}`}><b>{index + 1}</b><span><strong>{leg.entity}</strong><small>{leg.event}</small></span><span>{leg.market}{leg.threshold ? ` · ${leg.threshold}` : ''}</span><strong>{leg.displayedPrice ?? '—'}</strong></div>)}</div>
+                        <div className="intake-legs">{item.legs.map((leg, index) => <div key={`${item.id}-${index}`}><b>{index + 1}</b><span><strong>{leg.entity}</strong><small>{leg.event}</small></span><span>{leg.market}{leg.threshold ? ` · ${String(leg.threshold)}` : ''}</span><strong>{leg.displayedPrice ?? '—'}</strong></div>)}</div>
                         <div className="intake-notes"><p><b>Audit note:</b> {item.auditSummary}</p><p><b>Placement evidence:</b> {item.placementEvidence}</p><p><b>Public source URLs:</b> {item.sources.length ? item.sources.join(' · ') : 'None preserved in the chat export; independent source check required.'}</p></div>
                       </AccordionContent>
                     </AccordionItem>
@@ -296,7 +296,7 @@ function CandidateBoardCard({ item, paper = false }: { item: BoardCandidate; pap
 function TodayBoard({ compact = false }: { compact?: boolean }) {
   const realItems = compact ? researchBoard.realCard.slice(0, 3) : researchBoard.realCard;
   const activeItems = researchBoard.activeCandidates as BoardCandidate[];
-  const paperItems = compact ? researchBoard.paperCandidates.slice(0, 3) : researchBoard.paperCandidates;
+  const paperItems = (compact ? researchBoard.paperCandidates.slice(0, 3) : researchBoard.paperCandidates) as BoardCandidate[];
   return (
     <div className="today-board">
       <section className="board-section">
