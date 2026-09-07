@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-07",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-07T16:57:24.278Z",
+  "lastUpdated": "2026-09-07T18:07:44.507Z",
   "sourceLabel": "Source-blind Sep. 7 morning scan + Soccer Parlays Strategy",
-  "notes": "Today’s Real Card contains only the Sep. 7 ticket explicitly confirmed as placed. The independent slate scan preceded chat intake. All unpriced ideas remain prospective and have no invented grade or confidence.",
+  "notes": "Today’s Real Card contains only five Sep. 7 tickets explicitly confirmed as placed. Prospective candidates remain separate. No grade, confidence, result, payout, or uncaptured boosted price is inferred.",
   "realCard": [
     {
       "id": "S07-T01",
@@ -25,6 +25,95 @@
       "settlement": null,
       "legs": [
         "San Diego Padres moneyline (-192)"
+      ]
+    },
+    {
+      "id": "S07-T02",
+      "sport": "MLB",
+      "title": "Cubs hitters and Cease strikeouts SGPx",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+302 raw · 30% boost applied",
+      "promo": "30% MLB SGPx profit boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "Low-threshold Cubs hitter pair plus a separately qualified Cease strikeout leg. Cease over 7.5 was explicitly labeled the risk leg before placement.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Seiya Suzuki 1+ hit (-213)",
+        "Alex Bregman 1+ hit (-207)",
+        "Dylan Cease over 7.5 strikeouts (-103)"
+      ]
+    },
+    {
+      "id": "S07-T03",
+      "sport": "CFB",
+      "title": "SMU spread single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-115 raw · 50% boost applied",
+      "promo": "50% SMU–FSU profit boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "SMU -2.5 was selected below the key field-goal number after comparing the moneyline, reduced spreads, passing markets and the total.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "SMU -2.5 (-115)"
+      ]
+    },
+    {
+      "id": "S07-T04",
+      "sport": "CFB",
+      "title": "SMU–FSU four-leg stepped-up SGP",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+650 raw · +780 boosted",
+      "promo": "20% CFB stepped-up boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "Four independently defended legs were retained; a fifth leg was rejected because the additional boost did not justify another failure point.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "SMU -1.5 (-135)",
+        "Samuel Singleton 58+ rushing + receiving yards (-123)",
+        "Ashton Daniels 204+ passing yards (-117)",
+        "Kevin Jennings 2+ passing touchdowns (-163)"
+      ]
+    },
+    {
+      "id": "S07-T05",
+      "sport": "MLB",
+      "title": "Chase Burns strikeout single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-116",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "Over 4.5 at -116 was selected over the equivalent 5+ ladder at -118 after workload-management risk was explicitly reviewed.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Chase Burns over 4.5 strikeouts (-116)"
       ]
     }
   ],

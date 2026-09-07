@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-07",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-07T16:57:24.278Z",
+  "ingestedAt": "2026-09-07T18:07:44.507Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Public-safe structured summary only. The user replied “Done” immediately after a direct instruction to place the $1 Padres moneyline at -192 under the MLB Early Win promotion. Unpriced SGPx research remains research and is not logged as placed. No bankroll or account data is published.",
+  "notes": "Public-safe structured summaries only. Five Sep. 7 tickets are explicitly placement-confirmed: Padres Early Win, MLB SGPx, SMU spread, four-leg SMU–FSU SGP, and Chase Burns strikeouts. Only captured DraftKings prices are recorded; no projected boosted price is presented as final.",
   "slips": [
     {
       "id": "2026-09-07-mlb-padres-early-win-01",
@@ -36,6 +36,187 @@
           "threshold": null,
           "side": "San Diego Padres",
           "displayedPrice": "-192",
+          "status": "CHAT_REPORTED"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-07-mlb-cubs-cease-sgpx-01",
+      "date": "2026-09-07",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Cubs hitters and Cease strikeouts SGPx",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "30% MLB SGPx profit boost",
+      "displayedCombinedPrice": "+302 raw",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "Soccer Parlays Strategy",
+      "sourceTurnTime": "2026-09-07T17:08:39Z",
+      "auditSummary": "The exact construction used two confirmed top-three Cubs hitters against left-handed Robert Gasser and a separately researched Dylan Cease strikeout leg. The user asked for a final certainty check; the response identified Cease over 7.5 as the weakest leg and still recommended the unchanged ticket.",
+      "placementEvidence": "The user said “Placed” immediately after the exact +302 raw, 30%-boosted SGPx placement instruction.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "Seiya Suzuki",
+          "event": "Chicago Cubs at Milwaukee Brewers",
+          "market": "Hits",
+          "threshold": "1+",
+          "side": "Over",
+          "displayedPrice": "-213",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Alex Bregman",
+          "event": "Chicago Cubs at Milwaukee Brewers",
+          "market": "Hits",
+          "threshold": "1+",
+          "side": "Over",
+          "displayedPrice": "-207",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Dylan Cease",
+          "event": "Toronto Blue Jays at Athletics",
+          "market": "Strikeouts",
+          "threshold": "Over 7.5",
+          "side": "Over",
+          "displayedPrice": "-103",
+          "status": "CHAT_REPORTED"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-07-cfb-smu-spread-01",
+      "date": "2026-09-07",
+      "sport": "Football",
+      "league": "NCAAF",
+      "title": "SMU spread single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "50% SMU–FSU profit boost",
+      "displayedCombinedPrice": "-115 raw",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "Soccer Parlays Strategy",
+      "sourceTurnTime": "2026-09-07T17:14:01Z",
+      "auditSummary": "The independent game audit compared SMU moneyline, reduced spreads, passing markets and the total. SMU -2.5 was selected below the key field-goal number after the exact price was supplied.",
+      "placementEvidence": "The user said “Placed” immediately after the direct $1 instruction for SMU -2.5 at -115 with the 50% boost.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "SMU Mustangs",
+          "event": "SMU Mustangs at Florida State Seminoles",
+          "market": "Point spread",
+          "threshold": "-2.5",
+          "side": "SMU",
+          "displayedPrice": "-115",
+          "status": "CHAT_REPORTED"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-07-cfb-smu-fsu-sgp-01",
+      "date": "2026-09-07",
+      "sport": "Football",
+      "league": "NCAAF",
+      "title": "SMU–FSU four-leg stepped-up SGP",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "20% CFB stepped-up boost",
+      "displayedCombinedPrice": "+650 raw; +780 boosted",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "Soccer Parlays Strategy",
+      "sourceTurnTime": "2026-09-07T17:44:58Z",
+      "auditSummary": "The four-leg version was chosen over a fifth-leg version because each included proposition had a distinct mechanism and the extra boost did not justify another failure point.",
+      "placementEvidence": "The user said “Placed” after reviewing the exact four-leg slip with the 20% boost attached.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "SMU Mustangs",
+          "event": "SMU Mustangs at Florida State Seminoles",
+          "market": "Point spread",
+          "threshold": "-1.5",
+          "side": "SMU",
+          "displayedPrice": "-135",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Samuel Singleton",
+          "event": "SMU Mustangs at Florida State Seminoles",
+          "market": "Rushing + receiving yards",
+          "threshold": "58+",
+          "side": "Over",
+          "displayedPrice": "-123",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Ashton Daniels",
+          "event": "SMU Mustangs at Florida State Seminoles",
+          "market": "Passing yards",
+          "threshold": "204+",
+          "side": "Over",
+          "displayedPrice": "-117",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Kevin Jennings",
+          "event": "SMU Mustangs at Florida State Seminoles",
+          "market": "Passing touchdowns",
+          "threshold": "2+",
+          "side": "Over",
+          "displayedPrice": "-163",
+          "status": "CHAT_REPORTED"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-07-mlb-burns-strikeouts-01",
+      "date": "2026-09-07",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Chase Burns strikeout single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": null,
+      "displayedCombinedPrice": "-116",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "Soccer Parlays Strategy",
+      "sourceTurnTime": "2026-09-07T17:55:58Z",
+      "auditSummary": "The full-slate review left Burns as the only additional single. Over 4.5 at -116 was selected instead of the equivalent 5+ ladder at -118, with workload risk explicitly retained.",
+      "placementEvidence": "The user said “Okay placed” immediately after the direct $1 instruction for Chase Burns over 4.5 strikeouts at -116.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "Chase Burns",
+          "event": "Cincinnati Reds at Los Angeles Dodgers",
+          "market": "Strikeouts",
+          "threshold": "Over 4.5",
+          "side": "Over",
+          "displayedPrice": "-116",
           "status": "CHAT_REPORTED"
         }
       ],
