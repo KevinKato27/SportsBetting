@@ -12480,6 +12480,36 @@
       "Execution Note": "PLACED_USER_CONFIRMED from “Okay placed” immediately after the exact $1 instruction."
     },
     {
+      "Date": "2026-09-08",
+      "Ticket ID": "S08-T01",
+      "Origin": "BOTH",
+      "Description": "Michael Wacha over 17.5 outs",
+      "Stake": "1",
+      "Odds (American)": "-129",
+      "Boosted?": "N",
+      "Legs": "1",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "",
+      "Execution Note": "PLACED_USER_CONFIRMED from “Okay done” immediately after the final $1 placement instruction. Settlement pending."
+    },
+    {
+      "Date": "2026-09-08",
+      "Ticket ID": "S08-T02",
+      "Origin": "BOTH",
+      "Description": "Jackson Chourio 1+ hit + Milwaukee Brewers moneyline + AJ Smith-Shawver under 14.5 outs",
+      "Stake": "1",
+      "Odds (American)": "303",
+      "Boosted?": "Y",
+      "Legs": "3",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "50% MLB SGPx profit boost",
+      "Execution Note": "PLACED_USER_CONFIRMED by chronological DraftKings screenshots: $29.82 available on the unstaked +303 SGPx screen and $28.82 on the subsequent Wacha screen, matching a $1 placement. Exact boosted price not captured."
+    },
+    {
       "Date": "2026-09-09",
       "Ticket ID": "S09-T01",
       "Origin": "BOTH",
@@ -12492,7 +12522,22 @@
       "Payout": "",
       "P/L": "",
       "Promo / Special": "Superstar Receivers flash odds boost",
-      "Execution Note": "ADVANCE-DATED PLACED_USER_CONFIRMED from “Ok placed.” DraftKings showed New England at Seattle on Wednesday at 8:20 PM, -120 raw and +150 boosted. Keep outside the Sep. 7 Real Card."
+      "Execution Note": "ADVANCE-DATED PLACED_USER_CONFIRMED from “Ok placed.” DraftKings showed New England at Seattle on Wednesday at 8:20 PM, -120 raw and +150 boosted. Keep outside the Sep. 8 Real Card."
+    },
+    {
+      "Date": "2026-09-09",
+      "Ticket ID": "S09-T02",
+      "Origin": "BOTH",
+      "Description": "A.J. Brown 5+ first-quarter receiving yards",
+      "Stake": "1",
+      "Odds (American)": "100",
+      "Boosted?": "Y",
+      "Legs": "1",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "A.J. Brown Super Boost",
+      "Execution Note": "ADVANCE-DATED PLACED_USER_CONFIRMED from “Before that I’m placing this.” DraftKings showed 5+ first-quarter receiving yards, -175 crossed out to +100, $1 stake and New England at Seattle on Wednesday at 8:20 PM. Keep outside the Sep. 8 Real Card."
     }
   ],
   "Paper Portfolio": [

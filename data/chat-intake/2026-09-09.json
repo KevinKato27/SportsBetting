@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-09",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-08T00:12:19.791Z",
+  "ingestedAt": "2026-09-08T23:12:00Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Public-safe structured summary of one advance-dated NFL ticket confirmed on Sep. 7. It belongs in Bet History until Sep. 9 and must not appear on the Sep. 7 Real Card.",
+  "notes": "Public-safe structured summary of two advance-dated NFL tickets confirmed before Sep. 9. They belong in Bet History until Sep. 9 and must not appear on the Sep. 8 Real Card.",
   "slips": [
     {
       "id": "2026-09-09-nfl-patriots-seahawks-receivers-01",
@@ -48,6 +48,30 @@
           "status": "SCREENSHOT_VERIFIED"
         }
       ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-09-nfl-aj-brown-first-quarter-01",
+      "date": "2026-09-09",
+      "sport": "Football",
+      "league": "NFL",
+      "title": "A.J. Brown first-quarter receiving-yards super boost",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "A.J. Brown Super Boost",
+      "displayedCombinedPrice": "-175 raw; +100 boosted",
+      "origin": "BOTH",
+      "verificationStatus": "VERIFIED",
+      "sourceLabel": "MLB Final Gate",
+      "sourceTurnTime": "2026-09-08T22:56:32Z",
+      "auditSummary": "The supplied DraftKings super boost was reviewed separately from the MLB card. The screenshot shows the exact 5+ first-quarter threshold, boosted +100 price, $1 stake and Wednesday matchup.",
+      "placementEvidence": "The user said “Before that I’m placing this” and supplied the exact $1 DraftKings bet-slip screen.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [{"entity":"A.J. Brown","event":"New England Patriots at Seattle Seahawks","market":"First-quarter receiving yards","threshold":"5+","side":"Over","displayedPrice":"+100 boosted","status":"SCREENSHOT_VERIFIED"}],
       "sources": []
     }
   ]
