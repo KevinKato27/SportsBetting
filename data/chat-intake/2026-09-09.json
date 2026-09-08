@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.1",
+  "date": "2026-09-09",
+  "timezone": "America/New_York",
+  "ingestedAt": "2026-09-08T00:12:19.791Z",
+  "sourceType": "user-authorized-project-chat-summary",
+  "publicExport": true,
+  "notes": "Public-safe structured summary of one advance-dated NFL ticket confirmed on Sep. 7. It belongs in Bet History until Sep. 9 and must not appear on the Sep. 7 Real Card.",
+  "slips": [
+    {
+      "id": "2026-09-09-nfl-patriots-seahawks-receivers-01",
+      "date": "2026-09-09",
+      "sport": "Football",
+      "league": "NFL",
+      "title": "A.J. Brown and Jaxon Smith-Njigba receiving-yards flash parlay",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "Superstar Receivers flash odds boost",
+      "displayedCombinedPrice": "-120 raw; +150 boosted",
+      "origin": "BOTH",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "Soccer Parlays Strategy",
+      "sourceTurnTime": "2026-09-08T00:12:16Z",
+      "auditSummary": "The supplied DraftKings flash market was independently reviewed before placement. The review weighed both receiving thresholds against expected volume and matchup risk, and recommended the ticket only at the boosted +150 price.",
+      "placementEvidence": "The user said “Ok placed” immediately after the direct instruction to place this exact two-player ticket for $1 at boosted +150.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "A.J. Brown",
+          "event": "New England Patriots at Seattle Seahawks",
+          "market": "Receiving yards",
+          "threshold": "50+",
+          "side": "Over",
+          "displayedPrice": null,
+          "status": "SCREENSHOT_VERIFIED"
+        },
+        {
+          "entity": "Jaxon Smith-Njigba",
+          "event": "New England Patriots at Seattle Seahawks",
+          "market": "Receiving yards",
+          "threshold": "50+",
+          "side": "Over",
+          "displayedPrice": null,
+          "status": "SCREENSHOT_VERIFIED"
+        }
+      ],
+      "sources": []
+    }
+  ]
+}
