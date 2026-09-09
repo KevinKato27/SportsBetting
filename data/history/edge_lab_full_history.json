@@ -12488,11 +12488,11 @@
       "Odds (American)": "-129",
       "Boosted?": "N",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "1.7751937984",
+      "P/L": "0.7751937984",
       "Promo / Special": "",
-      "Execution Note": "PLACED_USER_CONFIRMED from “Okay done” immediately after the final $1 placement instruction. Settlement pending."
+      "Execution Note": "PLACED_USER_CONFIRMED from the user immediately after the final $1 instruction. Official MLB boxscore: Wacha recorded 18 outs (6.0 IP), clearing over 17.5. Payout is calculated from the captured -129 price."
     },
     {
       "Date": "2026-09-08",
@@ -12503,11 +12503,11 @@
       "Odds (American)": "303",
       "Boosted?": "Y",
       "Legs": "3",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "5.545",
+      "P/L": "4.545",
       "Promo / Special": "50% MLB SGPx profit boost",
-      "Execution Note": "PLACED_USER_CONFIRMED by chronological DraftKings screenshots: $29.82 available on the unstaked +303 SGPx screen and $28.82 on the subsequent Wacha screen, matching a $1 placement. Exact boosted price not captured."
+      "Execution Note": "PLACED_USER_CONFIRMED by chronological DraftKings screenshots. Official MLB boxscores: Chourio went 4-for-5, Milwaukee won 4-3, and Smith-Shawver recorded 10 outs, so all three legs won. Payout is calculated from captured +303 raw odds and the captured 50% profit boost."
     },
     {
       "Date": "2026-09-08",
@@ -12518,11 +12518,11 @@
       "Odds (American)": "313",
       "Boosted?": "Y",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "50% home-run profit boost",
-      "Execution Note": "PLACED_USER_CONFIRMED by the user's correction that three tickets were placed today. Teoscar +313 was the sole remaining exact recommendation beyond the two already logged; $1 stake and 50% boost came from the final placement instruction."
+      "Execution Note": "PLACED_USER_CONFIRMED by the user correction that three tickets were placed. Official MLB boxscore: Teoscar Hernández went 3-for-3 with a triple and 0 home runs, so the home-run ticket lost."
     },
     {
       "Date": "2026-09-09",
@@ -12553,6 +12553,66 @@
       "P/L": "",
       "Promo / Special": "A.J. Brown Super Boost",
       "Execution Note": "ADVANCE-DATED PLACED_USER_CONFIRMED from “Before that I’m placing this.” DraftKings showed 5+ first-quarter receiving yards, -175 crossed out to +100, $1 stake and New England at Seattle on Wednesday at 8:20 PM. Keep outside the Sep. 8 Real Card."
+    },
+    {
+      "Date": "2026-09-09",
+      "Ticket ID": "S09-T03",
+      "Origin": "BOTH",
+      "Description": "Alexander Isak 2+ shots on target",
+      "Stake": "1",
+      "Odds (American)": "135",
+      "Boosted?": "N",
+      "Legs": "1",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
+      "Promo / Special": "",
+      "Execution Note": "PLACED_USER_CONFIRMED when the user said all three named bets were placed. Settled from the Sep. 9 StatMuse match table: Isak recorded 0 shots on target in Liverpool's 2-1 win."
+    },
+    {
+      "Date": "2026-09-09",
+      "Ticket ID": "S09-T04",
+      "Origin": "BOTH",
+      "Description": "Liverpool moneyline",
+      "Stake": "1",
+      "Odds (American)": "-130",
+      "Boosted?": "Y",
+      "Legs": "1",
+      "Result": "Win",
+      "Payout": "1.7692307692",
+      "P/L": "0.7692307692",
+      "Promo / Special": "DrawBreaker",
+      "Execution Note": "PLACED_USER_CONFIRMED when the user said all three named bets were placed. ESPN records Liverpool 2-1 Atlético Madrid at full time; the moneyline won without needing the draw protection."
+    },
+    {
+      "Date": "2026-09-09",
+      "Ticket ID": "S09-T05",
+      "Origin": "BOTH",
+      "Description": "Either A.J. Brown or Jaxon Smith-Njigba to score a touchdown",
+      "Stake": "1",
+      "Odds (American)": "100",
+      "Boosted?": "Y",
+      "Legs": "1",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "McAfee Super Boost",
+      "Execution Note": "PLACED_USER_CONFIRMED as the third named bet in the user's three-bet placement confirmation. A later DraftKings balance check corrected the stake from the initial $2 recommendation to $1."
+    },
+    {
+      "Date": "2026-09-09",
+      "Ticket ID": "S09-T06",
+      "Origin": "BOTH",
+      "Description": "Rhamondre Stevenson 4+ receptions",
+      "Stake": "1",
+      "Odds (American)": "116",
+      "Boosted?": "Y",
+      "Legs": "1",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "50% NFL single boost",
+      "Execution Note": "PLACED_USER_CONFIRMED from “Placed” immediately after the exact $1 instruction. +116 is the captured raw price; the 50% boost was applied, but the exact displayed boosted price was not captured."
     }
   ],
   "Paper Portfolio": [

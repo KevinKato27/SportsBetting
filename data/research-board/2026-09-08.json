@@ -4,26 +4,226 @@
   "timezone": "America/New_York",
   "lastUpdated": "2026-09-09T02:08:00Z",
   "sourceLabel": "Source-blind Sep. 8 late initial scan + MLB Final Gate",
-  "notes": "Today's Real Card contains three placement-confirmed $1 wagers: Wacha over 17.5 outs, the +303 MLB SGPx, and Teoscar Hernández HR +313 with the 50% boost. All numeric grades and confidence values remain null because a complete reproducible scoring record was not available.",
-  "realCard": [{
-    "id":"S08-T01","sport":"MLB","title":"Michael Wacha outs single","status":"PLACED_USER_CONFIRMED","stake":1,"price":"-129","promo":"No promo recorded","origin":"BOTH","chatGrade":null,"legGrade":null,"confidence":null,"summary":"Official 2026 workload profile and exact-market review supported six completed innings, with heat, park and Arizona lineup risk explicitly retained.","result":null,"payout":null,"pnl":null,"settlement":null,"legs":["Michael Wacha over 17.5 outs (-129)"]
-  },{
-    "id":"S08-T02","sport":"MLB","title":"Chourio, Brewers and Smith-Shawver SGPx","status":"PLACED_USER_CONFIRMED","stake":1,"price":"+303 raw · 50% boost instructed","promo":"50% MLB SGPx profit boost","origin":"BOTH","chatGrade":null,"legGrade":null,"confidence":null,"summary":"Three independently reviewed legs cleared the exact construction gate. Placement is corroborated by the chronological DraftKings balance decrease from $29.82 to $28.82.","result":null,"payout":null,"pnl":null,"settlement":null,"legs":["Jackson Chourio 1+ hit (-319)","Milwaukee Brewers moneyline (-205)","AJ Smith-Shawver under 14.5 outs (+120)"]
-  },{
-    "id":"S08-T03","sport":"MLB","title":"Teoscar Hernández home-run boost","status":"PLACED_USER_CONFIRMED","stake":1,"price":"+313 raw · 50% boost applied","promo":"50% home-run profit boost","origin":"BOTH","chatGrade":null,"legGrade":null,"confidence":null,"summary":"Final matchup, lineup-role, weather, park and exact-price gate supported the $1 satellite wager; the user later confirmed that three tickets were placed today.","result":null,"payout":null,"pnl":null,"settlement":null,"legs":["Teoscar Hernández 1+ home run (+313 raw)"]
-  }],
+  "notes": "Sep. 8 Real Card is fully settled from official MLB boxscores: Wacha outs won, the +303 MLB SGPx won, and Teoscar Hernández HR lost. Numeric grades and confidence remain null because no complete reproducible scoring record was available.",
+  "realCard": [
+    {
+      "id": "S08-T01",
+      "sport": "MLB",
+      "title": "Michael Wacha outs single",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-129",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "Official 2026 workload profile and exact-market review supported six completed innings, with heat, park and Arizona lineup risk explicitly retained.",
+      "result": "Win",
+      "payout": 1.7751937984,
+      "pnl": 0.7751937984,
+      "settlement": "Official MLB boxscore: Wacha recorded 18 outs (6.0 IP).",
+      "legs": [
+        "Michael Wacha over 17.5 outs (-129)"
+      ]
+    },
+    {
+      "id": "S08-T02",
+      "sport": "MLB",
+      "title": "Chourio, Brewers and Smith-Shawver SGPx",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+303 raw · 50% boost instructed",
+      "promo": "50% MLB SGPx profit boost",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "Three independently reviewed legs cleared the exact construction gate. Placement is corroborated by the chronological DraftKings balance decrease from $29.82 to $28.82.",
+      "result": "Win",
+      "payout": 5.545,
+      "pnl": 4.545,
+      "settlement": "Official MLB boxscores: Chourio had four hits, Milwaukee won 4-3, and Smith-Shawver recorded 10 outs.",
+      "legs": [
+        "Jackson Chourio 1+ hit (-319)",
+        "Milwaukee Brewers moneyline (-205)",
+        "AJ Smith-Shawver under 14.5 outs (+120)"
+      ]
+    },
+    {
+      "id": "S08-T03",
+      "sport": "MLB",
+      "title": "Teoscar Hernández home-run boost",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+313 raw · 50% boost applied",
+      "promo": "50% home-run profit boost",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "Final matchup, lineup-role, weather, park and exact-price gate supported the $1 satellite wager; the user later confirmed that three tickets were placed today.",
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Official MLB boxscore: Teoscar Hernández recorded 0 home runs.",
+      "legs": [
+        "Teoscar Hernández 1+ home run (+313 raw)"
+      ]
+    }
+  ],
   "activeCandidates": [
-    {"id":"S08-A01","sport":"MLB","entity":"Jacob Misiorowski","event":"Chicago Cubs at Milwaukee Brewers","market":"Pitcher strikeouts · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"Official 2026 line: 227 K in 155.0 IP, 13.18 K/9, 1.97 ERA and 0.79 WHIP.","experiment":"Pitcher strikeouts"},
-    {"id":"S08-A02","sport":"MLB","entity":"Tarik Skubal","event":"Cincinnati Reds at Los Angeles Dodgers","market":"Pitcher strikeouts / outs · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"Official 2026 line: 159 K in 132.1 IP, 10.81 K/9, 2.86 ERA and 0.98 WHIP.","experiment":"Pitcher strikeouts / outs"},
-    {"id":"S08-A03","sport":"MLB","entity":"David Peterson","event":"Chicago Cubs at Milwaukee Brewers","market":"Opponent team offense / pitcher fade · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"Official 2026 line: 5.39 ERA, 1.56 WHIP and 10.06 H/9; broad Milwaukee markets should be checked before naming a hitter.","experiment":"Opponent team offense / pitcher fade"},
-    {"id":"S08-A04","sport":"MLB","entity":"Jack Perkins","event":"Toronto Blue Jays at Athletics","market":"Opponent team offense / pitcher fade · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"Official 2026 line: 6.50 ERA, 1.54 WHIP and 9.52 H/9; compare broad Toronto markets first.","experiment":"Opponent team offense / pitcher fade"},
-    {"id":"S08-A05","sport":"MLB","entity":"Nick Lodolo","event":"Cincinnati Reds at Los Angeles Dodgers","market":"Opponent team offense / pitcher fade · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"Official 2026 line: 5.08 ERA, 1.52 WHIP, 9.95 H/9 and 1.69 HR/9; compare broad Dodgers markets first.","experiment":"Opponent team offense / pitcher fade"},
-    {"id":"S08-A06","sport":"MLB","entity":"Riley Cornelio","event":"Washington Nationals at San Diego Padres","market":"Opponent team offense / pitcher fade · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"MLB lists Cornelio as probable despite zero prior starts; 5.96 ERA, 1.81 WHIP and 8.34 BB/9 require a workload warning.","experiment":"Opponent team offense / pitcher fade"}
+    {
+      "id": "S08-A01",
+      "sport": "MLB",
+      "entity": "Jacob Misiorowski",
+      "event": "Chicago Cubs at Milwaukee Brewers",
+      "market": "Pitcher strikeouts · exact line pending",
+      "price": "DraftKings price unavailable",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PRICE_CHECK",
+      "rationale": "Official 2026 line: 227 K in 155.0 IP, 13.18 K/9, 1.97 ERA and 0.79 WHIP.",
+      "experiment": "Pitcher strikeouts"
+    },
+    {
+      "id": "S08-A02",
+      "sport": "MLB",
+      "entity": "Tarik Skubal",
+      "event": "Cincinnati Reds at Los Angeles Dodgers",
+      "market": "Pitcher strikeouts / outs · exact line pending",
+      "price": "DraftKings price unavailable",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PRICE_CHECK",
+      "rationale": "Official 2026 line: 159 K in 132.1 IP, 10.81 K/9, 2.86 ERA and 0.98 WHIP.",
+      "experiment": "Pitcher strikeouts / outs"
+    },
+    {
+      "id": "S08-A03",
+      "sport": "MLB",
+      "entity": "David Peterson",
+      "event": "Chicago Cubs at Milwaukee Brewers",
+      "market": "Opponent team offense / pitcher fade · exact line pending",
+      "price": "DraftKings price unavailable",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PRICE_CHECK",
+      "rationale": "Official 2026 line: 5.39 ERA, 1.56 WHIP and 10.06 H/9; broad Milwaukee markets should be checked before naming a hitter.",
+      "experiment": "Opponent team offense / pitcher fade"
+    },
+    {
+      "id": "S08-A04",
+      "sport": "MLB",
+      "entity": "Jack Perkins",
+      "event": "Toronto Blue Jays at Athletics",
+      "market": "Opponent team offense / pitcher fade · exact line pending",
+      "price": "DraftKings price unavailable",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PRICE_CHECK",
+      "rationale": "Official 2026 line: 6.50 ERA, 1.54 WHIP and 9.52 H/9; compare broad Toronto markets first.",
+      "experiment": "Opponent team offense / pitcher fade"
+    },
+    {
+      "id": "S08-A05",
+      "sport": "MLB",
+      "entity": "Nick Lodolo",
+      "event": "Cincinnati Reds at Los Angeles Dodgers",
+      "market": "Opponent team offense / pitcher fade · exact line pending",
+      "price": "DraftKings price unavailable",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PRICE_CHECK",
+      "rationale": "Official 2026 line: 5.08 ERA, 1.52 WHIP, 9.95 H/9 and 1.69 HR/9; compare broad Dodgers markets first.",
+      "experiment": "Opponent team offense / pitcher fade"
+    },
+    {
+      "id": "S08-A06",
+      "sport": "MLB",
+      "entity": "Riley Cornelio",
+      "event": "Washington Nationals at San Diego Padres",
+      "market": "Opponent team offense / pitcher fade · exact line pending",
+      "price": "DraftKings price unavailable",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PRICE_CHECK",
+      "rationale": "MLB lists Cornelio as probable despite zero prior starts; 5.96 ERA, 1.81 WHIP and 8.34 BB/9 require a workload warning.",
+      "experiment": "Opponent team offense / pitcher fade"
+    }
   ],
   "paperCandidates": [
-    {"id":"S08-P01","sport":"MLB","entity":"Riley Greene","event":"Detroit slate","market":"Home run","price":"+425 supplied","origin":"SUPPLIED","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PAPER","rationale":"Added from supplied research for paper tracking; exact event and complete source metrics require structured backfill.","experiment":"Home run"},
-    {"id":"S08-P02","sport":"MLB","entity":"Eduardo Valencia","event":"Detroit slate","market":"Home run","price":"Price unavailable","origin":"SUPPLIED","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PAPER","rationale":"Added from supplied research; exact price was not present in the public-safe chat summary.","experiment":"Home run"},
-    {"id":"S08-P03","sport":"MLB","entity":"Spencer Torkelson","event":"Detroit slate","market":"Home run","price":"Price unavailable","origin":"SUPPLIED","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PAPER","rationale":"Added from supplied research; exact price was not present in the public-safe chat summary.","experiment":"Home run"},
-    {"id":"S08-P04","sport":"MLB","entity":"Tristan Peters","event":"MLB slate","market":"2+ total bases","price":"+167 supplied","origin":"SUPPLIED","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PAPER","rationale":"Existing paper observation received a supplied pitch-type matchup update; retained as one row rather than duplicated.","experiment":"Total bases"}
+    {
+      "id": "S08-P01",
+      "sport": "MLB",
+      "entity": "Riley Greene",
+      "event": "Detroit slate",
+      "market": "Home run",
+      "price": "+425 supplied",
+      "origin": "SUPPLIED",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PAPER",
+      "rationale": "Added from supplied research for paper tracking; exact event and complete source metrics require structured backfill.",
+      "experiment": "Home run"
+    },
+    {
+      "id": "S08-P02",
+      "sport": "MLB",
+      "entity": "Eduardo Valencia",
+      "event": "Detroit slate",
+      "market": "Home run",
+      "price": "Price unavailable",
+      "origin": "SUPPLIED",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PAPER",
+      "rationale": "Added from supplied research; exact price was not present in the public-safe chat summary.",
+      "experiment": "Home run"
+    },
+    {
+      "id": "S08-P03",
+      "sport": "MLB",
+      "entity": "Spencer Torkelson",
+      "event": "Detroit slate",
+      "market": "Home run",
+      "price": "Price unavailable",
+      "origin": "SUPPLIED",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PAPER",
+      "rationale": "Added from supplied research; exact price was not present in the public-safe chat summary.",
+      "experiment": "Home run"
+    },
+    {
+      "id": "S08-P04",
+      "sport": "MLB",
+      "entity": "Tristan Peters",
+      "event": "MLB slate",
+      "market": "2+ total bases",
+      "price": "+167 supplied",
+      "origin": "SUPPLIED",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "PROSPECTIVE_PAPER",
+      "rationale": "Existing paper observation received a supplied pitch-type matchup update; retained as one row rather than duplicated.",
+      "experiment": "Total bases"
+    }
   ]
 }

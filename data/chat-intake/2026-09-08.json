@@ -5,7 +5,7 @@
   "ingestedAt": "2026-09-09T02:08:00Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Public-safe summary after an independent slate scan. Three Sep. 8 wagers are placement-confirmed: the Wacha outs single, the three-leg MLB SGPx, and Teoscar Hernández HR at +313 with the 50% boost. No grade, confidence, result or uncaptured boosted price is inferred.",
+  "notes": "Public-safe summary after an independent slate scan. All three Sep. 8 placement-confirmed wagers are settled from official MLB boxscores: Wacha outs won, the three-leg MLB SGPx won, and Teoscar Hernández HR lost. No grade or confidence is inferred.",
   "slips": [
     {
       "id": "2026-09-08-mlb-wacha-outs-01",
@@ -24,12 +24,24 @@
       "sourceTurnTime": "2026-09-08T23:03:24Z",
       "auditSummary": "The independently discovered workload candidate was checked against exact price, Arizona's confirmed lineup, recent six-inning clearance, heat and park changes. The final recommendation retained the bet while explicitly documenting early-hook risk.",
       "placementEvidence": "The user said “Okay done” immediately after the final instruction to place Michael Wacha over 17.5 outs at -129 for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
-      "legs": [{"entity":"Michael Wacha","event":"Arizona Diamondbacks at Kansas City Royals","market":"Pitcher outs","threshold":"Over 17.5","side":"Over","displayedPrice":"-129","status":"CHAT_REPORTED"}],
-      "sources": ["https://www.mlb.com/gameday/824063","https://statsapi.mlb.com/api/v1/people/608379/stats?stats=season&group=pitching&season=2026"]
+      "result": "Win",
+      "payout": 1.7751937984,
+      "pnl": 0.7751937984,
+      "settlementEvidence": "Official MLB boxscore: Michael Wacha recorded 18 outs (6.0 IP), clearing over 17.5. Payout is calculated from the captured -129 price.",
+      "legs": [
+        {
+          "entity": "Michael Wacha",
+          "event": "Arizona Diamondbacks at Kansas City Royals",
+          "market": "Pitcher outs",
+          "threshold": "Over 17.5",
+          "side": "Over",
+          "displayedPrice": "-129",
+          "status": "CHAT_REPORTED"
+        }
+      ],
+      "sources": [
+        "https://statsapi.mlb.com/api/v1/game/824063/boxscore"
+      ]
     },
     {
       "id": "2026-09-08-mlb-sgpx-01",
@@ -48,16 +60,43 @@
       "sourceTurnTime": "2026-09-08T22:56:32Z",
       "auditSummary": "The exact three-leg build was reviewed against the minimum qualifying structure and each leg's market-specific thesis. The pre-placement screenshot showed $29.82 available; the next DraftKings screenshot showed $28.82, a one-dollar decrease matching the instructed stake, and the chat treated both SGPx and Wacha as production exposure.",
       "placementEvidence": "Chronological DraftKings screenshots show the balance changing from $29.82 on the unstaked SGPx screen to $28.82 on the subsequent Wacha screen, corroborating a $1 placement.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Win",
+      "payout": 5.545,
+      "pnl": 4.545,
+      "settlementEvidence": "Official MLB boxscores: Jackson Chourio went 4-for-5, Milwaukee won 4-3, and AJ Smith-Shawver recorded 10 outs. Payout is calculated from captured +303 raw odds and the captured 50% profit boost.",
       "legs": [
-        {"entity":"Jackson Chourio","event":"Chicago Cubs at Milwaukee Brewers","market":"Hits","threshold":"1+","side":"Over","displayedPrice":"-319","status":"CHAT_REPORTED"},
-        {"entity":"Milwaukee Brewers","event":"Chicago Cubs at Milwaukee Brewers","market":"Moneyline","threshold":null,"side":"Milwaukee Brewers","displayedPrice":"-205","status":"CHAT_REPORTED"},
-        {"entity":"AJ Smith-Shawver","event":"Tampa Bay Rays at Atlanta Braves","market":"Pitcher outs","threshold":"Under 14.5","side":"Under","displayedPrice":"+120","status":"CHAT_REPORTED"}
+        {
+          "entity": "Jackson Chourio",
+          "event": "Chicago Cubs at Milwaukee Brewers",
+          "market": "Hits",
+          "threshold": "1+",
+          "side": "Over",
+          "displayedPrice": "-319",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "Milwaukee Brewers",
+          "event": "Chicago Cubs at Milwaukee Brewers",
+          "market": "Moneyline",
+          "threshold": null,
+          "side": "Milwaukee Brewers",
+          "displayedPrice": "-205",
+          "status": "CHAT_REPORTED"
+        },
+        {
+          "entity": "AJ Smith-Shawver",
+          "event": "Tampa Bay Rays at Atlanta Braves",
+          "market": "Pitcher outs",
+          "threshold": "Under 14.5",
+          "side": "Under",
+          "displayedPrice": "+120",
+          "status": "CHAT_REPORTED"
+        }
       ],
-      "sources": []
+      "sources": [
+        "https://statsapi.mlb.com/api/v1/game/823738/boxscore",
+        "https://statsapi.mlb.com/api/v1/game/824875/boxscore"
+      ]
     },
     {
       "id": "2026-09-08-mlb-teoscar-hr-01",
@@ -76,12 +115,24 @@
       "sourceTurnTime": "2026-09-09T02:07:28Z",
       "auditSummary": "Final recommendation followed an independent matchup shortlist and a price, lineup-role, weather and park check. The user later confirmed that three tickets were placed today; this was the only remaining recommended ticket beyond the two already logged.",
       "placementEvidence": "The user corrected the dashboard by stating that three tickets were placed today. With two already confirmed and Teoscar the sole remaining exact recommendation, this confirms the $1 Teoscar ticket.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
-      "legs": [{"entity":"Teoscar Hernández","event":"Cincinnati Reds at Los Angeles Dodgers","market":"Home run","threshold":"1+","side":"Over","displayedPrice":"+313","status":"SCREENSHOT_VERIFIED"}],
-      "sources": ["https://www.mlb.com/gameday/823901"]
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "Official MLB boxscore: Teoscar Hernández went 3-for-3 with a triple and 0 home runs.",
+      "legs": [
+        {
+          "entity": "Teoscar Hernández",
+          "event": "Cincinnati Reds at Los Angeles Dodgers",
+          "market": "Home run",
+          "threshold": "1+",
+          "side": "Over",
+          "displayedPrice": "+313",
+          "status": "SCREENSHOT_VERIFIED"
+        }
+      ],
+      "sources": [
+        "https://statsapi.mlb.com/api/v1/game/823901/boxscore"
+      ]
     }
   ]
 }
