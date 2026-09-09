@@ -2,7 +2,7 @@
   "schemaVersion": "0.1",
   "date": "2026-09-08",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-08T23:12:00Z",
+  "lastUpdated": "2026-09-09T02:08:00Z",
   "sourceLabel": "Source-blind Sep. 8 late initial scan + MLB Final Gate",
   "notes": "Today's Real Card contains two placement-confirmed $1 wagers: the +303 SGPx corroborated by the chronological DraftKings balance change and Wacha over 17.5 outs confirmed by “Okay done.” All numeric grades and confidence values remain null because a complete reproducible scoring record was not available.",
   "realCard": [{
@@ -17,7 +17,7 @@
     {"id":"S08-A04","sport":"MLB","entity":"Jack Perkins","event":"Toronto Blue Jays at Athletics","market":"Opponent team offense / pitcher fade · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"Official 2026 line: 6.50 ERA, 1.54 WHIP and 9.52 H/9; compare broad Toronto markets first.","experiment":"Opponent team offense / pitcher fade"},
     {"id":"S08-A05","sport":"MLB","entity":"Nick Lodolo","event":"Cincinnati Reds at Los Angeles Dodgers","market":"Opponent team offense / pitcher fade · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"Official 2026 line: 5.08 ERA, 1.52 WHIP, 9.95 H/9 and 1.69 HR/9; compare broad Dodgers markets first.","experiment":"Opponent team offense / pitcher fade"},
     {"id":"S08-A06","sport":"MLB","entity":"Riley Cornelio","event":"Washington Nationals at San Diego Padres","market":"Opponent team offense / pitcher fade · exact line pending","price":"DraftKings price unavailable","origin":"INDEPENDENT","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PRICE_CHECK","rationale":"MLB lists Cornelio as probable despite zero prior starts; 5.96 ERA, 1.81 WHIP and 8.34 BB/9 require a workload warning.","experiment":"Opponent team offense / pitcher fade"},
-    {"id":"S08-A08","sport":"MLB","entity":"Teoscar Hernández","event":"Cincinnati Reds at Los Angeles Dodgers","market":"Home run · final lineup/price gate","price":"Earlier chat price +327","origin":"BOTH","chatGrade":null,"legGrade":null,"confidence":null,"status":"HOLD_FOR_RECHECK","rationale":"Chat research ranked Teoscar first for cash probability against Lodolo, but explicitly deferred action until final lineup, weather and price confirmation.","experiment":"Home run boost"}
+    {"id":"S08-A08","sport":"MLB","entity":"Teoscar Hernández","event":"Cincinnati Reds at Los Angeles Dodgers","market":"1+ home run","price":"+313 raw · 50% boost recommended","origin":"BOTH","chatGrade":null,"legGrade":null,"confidence":null,"status":"RECOMMENDED_NOT_CONFIRMED","rationale":"Final matchup, confirmed batting role, weather, park and exact-price gate produced a $1 recommendation, but the user has not confirmed placement.","experiment":"Home run boost"}
   ],
   "paperCandidates": [
     {"id":"S08-P01","sport":"MLB","entity":"Riley Greene","event":"Detroit slate","market":"Home run","price":"+425 supplied","origin":"SUPPLIED","chatGrade":null,"legGrade":null,"confidence":null,"status":"PROSPECTIVE_PAPER","rationale":"Added from supplied research for paper tracking; exact event and complete source metrics require structured backfill.","experiment":"Home run"},
