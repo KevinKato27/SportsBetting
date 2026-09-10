@@ -12533,11 +12533,11 @@
       "Odds (American)": "150",
       "Boosted?": "Y",
       "Legs": "2",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "Superstar Receivers flash odds boost",
-      "Execution Note": "ADVANCE-DATED PLACED_USER_CONFIRMED from “Ok placed.” DraftKings showed New England at Seattle on Wednesday at 8:20 PM, -120 raw and +150 boosted. Keep outside the Sep. 8 Real Card."
+      "Execution Note": "FINAL: DraftKings settled the boosted +150 parlay as a loss. ESPN confirms Smith-Njigba cleared 50+ with 122 yards, so the other receiving-yards leg was the miss."
     },
     {
       "Date": "2026-09-09",
@@ -12548,11 +12548,11 @@
       "Odds (American)": "100",
       "Boosted?": "Y",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "2",
+      "P/L": "1",
       "Promo / Special": "A.J. Brown Super Boost",
-      "Execution Note": "ADVANCE-DATED PLACED_USER_CONFIRMED from “Before that I’m placing this.” DraftKings showed 5+ first-quarter receiving yards, -175 crossed out to +100, $1 stake and New England at Seattle on Wednesday at 8:20 PM. Keep outside the Sep. 8 Real Card."
+      "Execution Note": "FINAL: DraftKings shows the $1 A.J. Brown 5+ first-quarter receiving-yards boost paid $2.00."
     },
     {
       "Date": "2026-09-09",
@@ -12593,11 +12593,11 @@
       "Odds (American)": "100",
       "Boosted?": "Y",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "2",
+      "P/L": "1",
       "Promo / Special": "McAfee Super Boost",
-      "Execution Note": "PLACED_USER_CONFIRMED as the third named bet in the user's three-bet placement confirmation. A later DraftKings balance check corrected the stake from the initial $2 recommendation to $1."
+      "Execution Note": "FINAL: DraftKings shows the $1 either-player touchdown boost paid $2.00; Smith-Njigba scored."
     },
     {
       "Date": "2026-09-09",
@@ -12608,11 +12608,11 @@
       "Odds (American)": "174",
       "Boosted?": "Y",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "2.74",
+      "P/L": "1.74",
       "Promo / Special": "50% NFL single boost",
-      "Execution Note": "PLACED_USER_CONFIRMED from “Placed” immediately after the exact $1 instruction. DraftKings later verified +116 raw, +174 boosted and a $1 stake."
+      "Execution Note": "FINAL: DraftKings shows the $1 Stevenson 4+ receptions boost won and paid $2.74."
     },
     {
       "Date": "2026-09-09",
@@ -12623,11 +12623,26 @@
       "Odds (American)": "-134",
       "Boosted?": "N",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "",
-      "Execution Note": "PLACED_USER_CONFIRMED when the user explicitly said “I placed Sugano.” A later DraftKings screenshot verified over 5.5 hits allowed at -134 for $1."
+      "Execution Note": "FINAL: DraftKings settled Sugano over 5.5 hits allowed as a loss. MLB records four hits allowed in six innings. Broad pitcher-fade thesis did not map cleanly to hits allowed."
+    },
+    {
+      "Date": "2026-09-09",
+      "Ticket ID": "S09-T08",
+      "Origin": "INDEPENDENT",
+      "Description": "New England-Seattle game total over 26.5 (execution error)",
+      "Stake": "1",
+      "Odds (American)": "-138",
+      "Boosted?": "N",
+      "Legs": "1",
+      "Result": "Cashed Out",
+      "Payout": "1.09",
+      "P/L": "0.09",
+      "Promo / Special": "50% live boost shown; not applied after cashout",
+      "Execution Note": "FINAL: The independent live recommendation was under 27.5 at -121, but the user accidentally placed over 26.5. DraftKings shows a $1.09 cashout. The 13-10 final would have won the recommendation and lost the placed over if held. Track as execution error, not model win."
     }
   ],
   "Paper Portfolio": [
@@ -19671,6 +19686,18 @@
       "Wins": "2",
       "Ticket Win Rate": "0.4",
       "Notes": "FINAL from user-submitted DraftKings results: 2-3 tickets, $5 risked, $4.44 returned, -$0.56 net. Arsenal ML + over 1.5 and Gavin Williams 9+ Ks won. Singer hits allowed lost through market expression despite a correct broad fade; both three-leg soccer parlays went 2-for-3, exposing weak-leg contamination."
+    },
+    {
+      "Date": "2026-09-09",
+      "Starting Bankroll": "36.14",
+      "Risked": "8",
+      "Payout": "9.59",
+      "P/L": "1.59",
+      "Ending Bankroll": "37.73",
+      "Tickets": "8",
+      "Wins": "4",
+      "Ticket Win Rate": "0.5714285714285714",
+      "Notes": "FINAL: The seven-ticket main slate went 4-3, returning $8.50 on $7 risked (+$1.50). Wins: Liverpool ML, A.J. Brown 5+ first-quarter receiving yards, either Brown or Smith-Njigba TD, and Stevenson 4+ receptions. Losses: Isak 2+ shots on target, the Brown/Smith-Njigba 50+ receiving parlay, and Sugano over 5.5 hits allowed. A separate accidental live over 26.5 was cashed out for +$0.09; it is an execution error, not a model win. Full day: $8 risked, $9.59 returned, +$1.59; bankroll $36.14 to $37.73. Postmortem: preserve the independent under read, require a final side-and-threshold readback before submitting live bets, and distinguish correct broad theses from losing market expressions."
     }
   ],
   "Source Evaluation": [
