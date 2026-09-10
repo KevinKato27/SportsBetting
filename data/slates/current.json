@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-10",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-10T08:07:34.853Z",
+  "lastVerified": "2026-09-10T14:59:08.504Z",
   "gate": "PRELIMINARY",
   "activeGames": 13,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-10",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-10&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": [
         {
           "id": "mlb-824872",
           "date": "2026-09-10T16:15:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Tampa Bay Rays at Atlanta Braves",
           "shortName": "TB @ ATL",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "87-58"
             },
             {
               "side": "home",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": null,
+              "score": 0,
               "record": "85-61"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-09-10T17:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Houston Astros at Philadelphia Phillies",
           "shortName": "HOU @ PHI",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Houston Astros",
               "abbreviation": "HOU",
-              "score": null,
+              "score": 0,
               "record": "74-72"
             },
             {
               "side": "home",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": null,
+              "score": 0,
               "record": "82-64"
             }
           ],
@@ -196,7 +196,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": [
         {
           "id": "college-football-401858213",
@@ -244,7 +244,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": [
         {
           "id": "nfl-401872657",
@@ -292,7 +292,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -308,7 +308,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -324,7 +324,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -340,7 +340,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -356,7 +356,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -372,7 +372,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -388,7 +388,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -404,7 +404,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     },
     {
@@ -420,7 +420,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": [
         {
           "id": "uefa.champions-401915444",
@@ -625,7 +625,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T08:07:34.853Z",
+      "sourceVerifiedAt": "2026-09-10T14:59:08.504Z",
       "events": []
     }
   ],
