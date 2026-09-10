@@ -12579,10 +12579,10 @@
       "Boosted?": "Y",
       "Legs": "1",
       "Result": "Win",
-      "Payout": "1.7692307692",
-      "P/L": "0.7692307692",
+      "Payout": "1.76",
+      "P/L": "0.76",
       "Promo / Special": "DrawBreaker",
-      "Execution Note": "PLACED_USER_CONFIRMED when the user said all three named bets were placed. ESPN records Liverpool 2-1 Atlético Madrid at full time; the moneyline won without needing the draw protection."
+      "Execution Note": "PLACED_USER_CONFIRMED when the user said all three named bets were placed. DraftKings shows $1.76 paid on the $1 wager, and ESPN records Liverpool 2-1 Atlético Madrid at full time."
     },
     {
       "Date": "2026-09-09",
@@ -12605,14 +12605,29 @@
       "Origin": "BOTH",
       "Description": "Rhamondre Stevenson 4+ receptions",
       "Stake": "1",
-      "Odds (American)": "116",
+      "Odds (American)": "174",
       "Boosted?": "Y",
       "Legs": "1",
       "Result": "Pending",
       "Payout": "",
       "P/L": "",
       "Promo / Special": "50% NFL single boost",
-      "Execution Note": "PLACED_USER_CONFIRMED from “Placed” immediately after the exact $1 instruction. +116 is the captured raw price; the 50% boost was applied, but the exact displayed boosted price was not captured."
+      "Execution Note": "PLACED_USER_CONFIRMED from “Placed” immediately after the exact $1 instruction. DraftKings later verified +116 raw, +174 boosted and a $1 stake."
+    },
+    {
+      "Date": "2026-09-09",
+      "Ticket ID": "S09-T07",
+      "Origin": "INDEPENDENT",
+      "Description": "Tomoyuki Sugano over 5.5 hits allowed",
+      "Stake": "1",
+      "Odds (American)": "-134",
+      "Boosted?": "N",
+      "Legs": "1",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "",
+      "Execution Note": "PLACED_USER_CONFIRMED when the user explicitly said “I placed Sugano.” A later DraftKings screenshot verified over 5.5 hits allowed at -134 for $1."
     }
   ],
   "Paper Portfolio": [
