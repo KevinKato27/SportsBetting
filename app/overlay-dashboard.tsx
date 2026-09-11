@@ -74,7 +74,7 @@ const metrics = [
   { name: 'Market Expression', raw: 74, confidence: 60, weight: 10, values: '2+ TB selected in reference', note: 'Alternates remain ungraded without current prices.', source: 'User-supplied dashboard mockup' },
   { name: 'Threshold / Price', raw: 80, confidence: 70, weight: 10, values: 'Reference price −102 · not live', note: 'A live price is required before any real decision.', source: 'User-supplied dashboard mockup' },
   { name: 'Source Agreement', raw: 70, confidence: 60, weight: 6, values: 'Reference score · no live consensus', note: 'No agreement claim is made beyond the supplied design.', source: 'User-supplied dashboard mockup' },
-  { name: 'Portfolio Fit', raw: 78, confidence: 70, weight: 10, values: 'Reference score · today risk $0', note: 'Today’s Real Card has no approved exposure.', source: 'User-supplied dashboard mockup + imported ticket log' },
+  { name: 'Portfolio Fit', raw: 78, confidence: 70, weight: 10, values: 'Reference score · current exposure tracked separately', note: 'This reference score does not describe today’s live Real Card.', source: 'User-supplied dashboard mockup' },
   { name: 'Player Rate', raw: 64, confidence: 50, weight: 2, values: '7 of 50 · 14% in reference', note: 'Experimental; never overrides matchup or price.', source: 'User-supplied dashboard mockup' },
 ];
 
@@ -117,7 +117,7 @@ function SlipWorkspace() {
             <div className="slip-status-grid">
               <div><span>PRIMARY BOOK</span><strong>{sportsbooks.primarySportsbook}</strong><small>preferred pricing source</small></div>
               <div><span>ACTIVE GAMES</span><strong>{games}</strong><small>{active.length} active competition{active.length === 1 ? '' : 's'}</small></div>
-              <div><span>VERIFIED LINES</span><strong>0</strong><small>DraftKings feed not connected</small></div>
+              <div><span>LIVE ODDS FEED</span><strong>OFF</strong><small>chat-confirmed prices remain individually labeled</small></div>
               <div><span>CHAT INTAKE</span><strong>{suppliedSlips.length}</strong><small>structured items · recheck required</small></div>
               <div><span>SLIP GATE</span><strong>WAIT</strong><small>no price or market inferred</small></div>
             </div>
