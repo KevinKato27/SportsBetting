@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-10",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-10T23:18:52.343Z",
-  "sourceLabel": "Source-blind Sep. 10 late initial scan + White Sox MLB Gate",
-  "notes": "Four Sep. 10 $1 singles are recorded on the Real Card. Three have direct user placement confirmations in the retained chat extract; McCaffrey is transparently marked partially verified because the chat repeatedly records it as already placed but the earlier confirmation line was not preserved. Numeric grades and confidence remain null because no complete reproducible scoring record was captured.",
+  "lastUpdated": "2026-09-11T07:10:09.629Z",
+  "sourceLabel": "Source-blind Sep. 10 late initial scan + White Sox MLB Gate + final settlement",
+  "notes": "FINAL Sep. 10: five $1 tickets finished 2-3, returning $3.76 on $5 risked (-$1.24); bankroll $37.73 to $36.49. McCaffrey first-quarter reception and Yankees first-five team total won. Miami team-total under, Jones outs under and the live NFL SGP lost. Numeric grades and confidence remain null because no complete reproducible scoring record was captured.",
   "realCard": [
     {
       "id": "S10-T01",
@@ -19,10 +19,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The project chat records this exact $1 ticket as already placed and includes it in bankroll accounting; the original confirmation line is not visible in the retained extract, so receipt verification remains open.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Win",
+      "payout": 2,
+      "pnl": 1,
+      "settlement": "DraftKings paid $2.00 on the $1 +100 Super Boost, fully verifying the previously uncertain placement.",
       "legs": [
         "Christian McCaffrey 1+ first-quarter reception (+100)"
       ]
@@ -40,10 +40,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The source-blind slate review surfaced Miami team markets. The user immediately confirmed the exact under 60.5 at +125 for $1.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Miami scored 77 points. The assumption that blowout rotation would suppress scoring failed; the backups sustained elite scoring efficiency.",
       "legs": [
         "Miami team total under 60.5 (+125)"
       ]
@@ -61,10 +61,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "Jones was independently surfaced before supplied-card review. The user confirmed this workload-sensitive outs under as part of “Both placed.”",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Jones completed seven innings (21 outs) with eight strikeouts. The workload prior was stale after his recent leash expansion.",
       "legs": [
         "Jared Jones under 15.5 pitching outs (-146)"
       ]
@@ -82,12 +82,34 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The independent review preferred a broad Yankees first-five team market to a single-hitter expression against Ryan Feltner. The user confirmed it as part of “Both placed.”",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Win",
+      "payout": 1.76,
+      "pnl": 0.76,
+      "settlement": "DraftKings paid $1.76. New York scored four runs through five innings, validating the broad opponent-pitcher fade expression.",
       "legs": [
         "Yankees first-five team total over 2.5 (-130)"
+      ]
+    },
+    {
+      "id": "S10-T05",
+      "sport": "NFL",
+      "title": "McCaffrey receptions and Kyren rushing-yards live SGP",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+194 raw · +291 boosted",
+      "promo": "50% Rams–49ers parlay boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The live state was re-audited, both thresholds were bought down and each leg independently qualified before the user confirmed the exact $1 two-leg construction.",
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "McCaffrey cleared 5+ receptions, but Kyren Williams finished with 41 rushing yards and missed 50+.",
+      "legs": [
+        "Christian McCaffrey 5+ live receptions",
+        "Kyren Williams 50+ live rushing yards"
       ]
     }
   ],
@@ -103,8 +125,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROMOTED_REAL_CARD",
-      "rationale": "Jones was independently surfaced from official starter and workload data. After the exact DraftKings market was captured, the workload thesis was expressed as under 15.5 pitching outs and the user confirmed placement.",
+      "status": "SETTLED_REAL_CARD_LOSS",
+      "rationale": "Jones threw seven innings and recorded 21 outs, defeating the under 15.5. Postmortem: his recent six-inning workload should have triggered a regime reset instead of relying on older short-start history.",
       "experiment": "Pitcher strikeouts / outs"
     },
     {
@@ -118,8 +140,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "ROLE_GATE_REQUIRED",
-      "rationale": "MLB lists Smith as the probable starter, but his official 2026 line shows zero starts and only 16.0 innings despite a 12.94 K/9. Treat this as a role-verification case, not a projection. Confirm opener/bulk plan, pitch count, market, threshold and price.",
+      "status": "SETTLED_ROLE_OBSERVATION",
+      "rationale": "Hagen Smith worked two innings in relief with three strikeouts. The pregame role gate was appropriate; zero-start season history correctly prevented treating him as a normal starter projection.",
       "experiment": "Starter role / strikeouts / outs"
     },
     {
@@ -133,8 +155,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "ACTIVE_ROLE_AND_PRICE_REVIEW",
-      "rationale": "The independent scan identified the international opener as a role-sensitive market. McCaffrey 6+ receptions at +140 and Kyren Williams 60+ rushing yards at +115 remain unplaced candidates; their +380 two-leg construction still requires the final inactive and role check.",
+      "status": "SETTLED_ROLE_OBSERVATION",
+      "rationale": "The live SGP lost on Kyren 50+ rushing while McCaffrey 5+ receptions cleared. Treat receiving volume and rushing workload as separate role mechanisms.",
       "experiment": "Full-game total / team totals / first-half markets"
     },
     {
@@ -148,8 +170,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROMOTED_REAL_CARD",
-      "rationale": "The independent scan retained Miami team markets without inventing a threshold. After DraftKings supplied the exact team total and price, the under 60.5 at +125 was reviewed and the user confirmed placement.",
+      "status": "SETTLED_REAL_CARD_LOSS",
+      "rationale": "Miami scored 77. Rotation occurred but did not suppress scoring, so future FBS/FCS mismatch unders must explicitly model second-unit quality, possession count and backup tempo.",
       "experiment": "Team total / first-half spread"
     },
     {
@@ -163,8 +185,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROMOTED_REAL_CARD",
-      "rationale": "Official season data showed Ryan Feltner at a 5.82 ERA with 10.13 H/9. The independent review preferred the broad Yankees first-five team total to a single hitter, and the user confirmed placement.",
+      "status": "SETTLED_REAL_CARD_WIN",
+      "rationale": "The Yankees scored four runs through five innings. The broad team-total expression captured the Feltner fade without requiring one hitter to deliver.",
       "experiment": "Opponent pitcher fade / team-market expression"
     },
     {
@@ -178,8 +200,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "FINAL_INACTIVE_CHECK",
-      "rationale": "This is a separate full-game receptions candidate from the placed first-quarter boost. It remains unplaced pending the final inactive and role check.",
+      "status": "SETTLED_MARKET_OBSERVATION",
+      "rationale": "McCaffrey cleared the live 5+ receptions threshold. Lower-threshold participation markets were more robust than touchdown-style conversion bets in this game.",
       "experiment": "NFL alternate-threshold role market"
     },
     {
@@ -193,8 +215,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "FINAL_INACTIVE_CHECK",
-      "rationale": "The rushing alternate independently qualified in the project review but remains unplaced pending the final inactive and role check.",
+      "status": "SETTLED_REAL_CARD_LOSS",
+      "rationale": "Kyren finished with 41 rushing yards while Blake Corum took 10 carries for 54. Early-season carry-share uncertainty was understated.",
       "experiment": "NFL alternate-threshold role market"
     }
   ],
@@ -210,8 +232,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROSPECTIVE_PAPER",
-      "rationale": "Retained as the first-half control for the placed full-team-total under. It was explicitly assigned to paper rather than the Real Card.",
+      "status": "SETTLED_LOSS",
+      "rationale": "Miami scored 49 first-half points, so under 38.5 lost. The same failed scoring-suppression mechanism affected both this arm and the full team-total under.",
       "experiment": "CFB market-expression comparison"
     },
     {
@@ -225,8 +247,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROSPECTIVE_PAPER",
-      "rationale": "Retained as a hitter-specific control against the broader Yankees first-five team-total expression.",
+      "status": "SETTLED_WIN",
+      "rationale": "Luis García Jr. recorded four total bases on a home run, so 2+ total bases won.",
       "experiment": "Hitter versus team-market expression"
     },
     {
@@ -240,8 +262,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROSPECTIVE_PAPER",
-      "rationale": "Retained as a total-bases control within the Ryan Feltner fade cluster.",
+      "status": "SETTLED_LOSS",
+      "rationale": "Ben Rice recorded one total base, so 2+ total bases lost.",
       "experiment": "Hitter versus team-market expression"
     },
     {
@@ -255,8 +277,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROSPECTIVE_PAPER",
-      "rationale": "Retained as a high-variance home-run satellite in the same correlated cluster; it does not count as an independent sample from the total-bases arm.",
+      "status": "SETTLED_LOSS",
+      "rationale": "Ben Rice did not homer. This remains the same correlated hitter cluster as his total-bases arm, not a separate independent sample.",
       "experiment": "HR satellite / cluster-aware tracking"
     },
     {
@@ -270,8 +292,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROSPECTIVE_PAPER",
-      "rationale": "Downgraded to paper while the workload-sensitive under 15.5 outs became the real-card expression.",
+      "status": "SETTLED_WIN",
+      "rationale": "Jared Jones struck out eight, so 7+ strikeouts won while the real outs-under lost. The pitcher-quality read was better expressed through strikeouts than the stale workload prior.",
       "experiment": "Pitcher strikeouts versus outs"
     },
     {
@@ -285,8 +307,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PRICE_REJECTED",
-      "rationale": "The strikeout profile was credible, but the captured -138 price was rejected for the Real Card and retained as a paper price-sensitivity observation.",
+      "status": "SETTLED_WIN_PRICE_REJECTED",
+      "rationale": "Jacob deGrom struck out 12, so the 7+ threshold cleared. The real card still rejected the -138 price; outcome and price decision remain separate fields.",
       "experiment": "Price sensitivity"
     }
   ]

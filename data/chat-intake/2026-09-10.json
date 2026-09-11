@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-10",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-10T23:18:52.343Z",
+  "ingestedAt": "2026-09-11T07:10:09.629Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Public-safe structured summary of four Sep. 10 tickets recorded on the project card. Three have direct user placement confirmations in the retained chat extract. The McCaffrey ticket is included because the project chat repeatedly records it as already placed and the bankroll accounting includes it, but it remains partially verified until a receipt or the original confirmation line is captured. No uncaptured grade, confidence or result is inferred.",
+  "notes": "Public-safe final Sep. 10 intake: five user-confirmed $1 tickets settled 2-3, returning $3.76 on $5 risked (-$1.24). DraftKings result screenshots control exact stake, price, payout and settlement. Official ESPN and MLB results support the game and player-stat outcomes. No uncaptured grade or confidence is inferred.",
   "slips": [
     {
       "id": "2026-09-10-nfl-mccaffrey-first-quarter-reception-01",
@@ -19,15 +19,15 @@
       "promo": "Super Boost",
       "displayedCombinedPrice": "+100",
       "origin": "BOTH",
-      "verificationStatus": "PARTIALLY_VERIFIED",
+      "verificationStatus": "VERIFIED",
       "sourceLabel": "White Sox MLB Gate",
       "sourceTurnTime": "2026-09-10T23:18:52.343Z",
       "auditSummary": "The supplied first-quarter reception boost was reviewed as a role-and-script proposition before the project chat recorded it on the placed card. No numeric grade or confidence was captured.",
-      "placementEvidence": "The project chat repeatedly records this exact $1 ticket as already placed and the bankroll accounting includes the $1 commitment. The earlier user-confirmation line was not present in the public-safe thread extract, so verification remains partial until a receipt is captured.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "placementEvidence": "The DraftKings settled ticket verifies that the $1 McCaffrey 1+ first-quarter reception Super Boost was placed at +100.",
+      "result": "Win",
+      "payout": 2,
+      "pnl": 1,
+      "settlementEvidence": "DraftKings settled the $1 first-quarter reception Super Boost at +100 as a win and paid $2.00. The receipt also resolves the earlier placement uncertainty.",
       "legs": [
         {
           "entity": "Christian McCaffrey",
@@ -36,7 +36,7 @@
           "threshold": "1+",
           "side": "Over",
           "displayedPrice": "+100",
-          "status": "PENDING"
+          "status": "SETTLED_WIN"
         }
       ],
       "sources": [
@@ -60,10 +60,10 @@
       "sourceTurnTime": "2026-09-10T23:18:52.343Z",
       "auditSummary": "The source-blind full-slate review surfaced Miami team markets, then the exact DraftKings team-total threshold and price were reviewed before placement. No numeric grade or confidence was captured.",
       "placementEvidence": "The user replied “Placed” immediately after the direct instruction to place Miami team total under 60.5 at +125 for $1.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "DraftKings settled Miami team total under 60.5 at +125 as a loss. ESPN records Miami scoring 77 points in a 77-7 final.",
       "legs": [
         {
           "entity": "Miami Hurricanes",
@@ -72,7 +72,7 @@
           "threshold": "Under 60.5",
           "side": "Under",
           "displayedPrice": "+125",
-          "status": "PENDING"
+          "status": "SETTLED_LOSS"
         }
       ],
       "sources": [
@@ -96,10 +96,10 @@
       "sourceTurnTime": "2026-09-10T23:18:52.343Z",
       "auditSummary": "Jones was independently surfaced by the source-blind slate scan. The project review selected the workload-sensitive outs under after the exact DraftKings threshold and price were available. No numeric grade or confidence was captured.",
       "placementEvidence": "The user replied “Both placed” immediately after the direct instructions for this ticket and the Yankees first-five team-total ticket.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "DraftKings settled Jared Jones under 15.5 pitching outs at -146 as a loss. MLB records Jones throwing seven innings, or 21 outs, with eight strikeouts.",
       "legs": [
         {
           "entity": "Jared Jones",
@@ -108,7 +108,7 @@
           "threshold": "Under 15.5",
           "side": "Under",
           "displayedPrice": "-146",
-          "status": "PENDING"
+          "status": "SETTLED_LOSS"
         }
       ],
       "sources": [
@@ -132,10 +132,10 @@
       "sourceTurnTime": "2026-09-10T23:18:52.343Z",
       "auditSummary": "The independent review identified Ryan Feltner as a broad opponent-offense fade and preferred the Yankees first-five team total to a single-hitter market after the exact DraftKings line and price were captured. No numeric grade or confidence was captured.",
       "placementEvidence": "The user replied “Both placed” immediately after the direct instructions for this ticket and the Jared Jones pitching-outs ticket.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "Win",
+      "payout": 1.76,
+      "pnl": 0.76,
+      "settlementEvidence": "DraftKings settled Yankees first-five team total over 2.5 at -130 as a win and paid $1.76. MLB records New York scoring four runs through five innings.",
       "legs": [
         {
           "entity": "New York Yankees",
@@ -144,11 +144,56 @@
           "threshold": "Over 2.5",
           "side": "Over",
           "displayedPrice": "-130",
-          "status": "PENDING"
+          "status": "SETTLED_WIN"
         }
       ],
       "sources": [
         "https://www.mlb.com/gameday/823499"
+      ]
+    },
+    {
+      "id": "2026-09-10-nfl-mccaffrey-kyren-live-sgp-01",
+      "date": "2026-09-10",
+      "sport": "Football",
+      "league": "NFL",
+      "title": "McCaffrey receptions and Kyren rushing-yards live SGP",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "50% Rams–49ers parlay boost",
+      "displayedCombinedPrice": "+194 raw; +291 boosted",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "VERIFIED",
+      "sourceLabel": "White Sox MLB Gate",
+      "sourceTurnTime": "2026-09-11T00:45:00Z",
+      "auditSummary": "After the game began, both legs were re-audited from the live state and bought down from the pregame thresholds. Each leg was treated as independently qualified before construction. No numeric grade or confidence was captured.",
+      "placementEvidence": "The user replied “Ok done” immediately after the direct instruction to place the exact two-leg live SGP for $1 with the 50% boost. The settled DraftKings receipt verifies +194 raw and +291 boosted.",
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "DraftKings settled the boosted two-leg SGP as a loss. McCaffrey cleared 5+ receptions; Kyren Williams failed 50+ rushing yards with 41.",
+      "legs": [
+        {
+          "entity": "Christian McCaffrey",
+          "event": "San Francisco 49ers at Los Angeles Rams",
+          "market": "Live receptions",
+          "threshold": "5+",
+          "side": "Over",
+          "displayedPrice": null,
+          "status": "SETTLED_WIN"
+        },
+        {
+          "entity": "Kyren Williams",
+          "event": "San Francisco 49ers at Los Angeles Rams",
+          "market": "Live rushing yards",
+          "threshold": "50+",
+          "side": "Over",
+          "displayedPrice": null,
+          "status": "SETTLED_LOSS"
+        }
+      ],
+      "sources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872657/49ers-rams"
       ]
     }
   ]

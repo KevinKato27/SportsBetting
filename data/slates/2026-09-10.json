@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-10",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-10T23:21:08.973Z",
+  "lastVerified": "2026-09-11T13:30:19.360Z",
   "gate": "PRELIMINARY",
   "activeGames": 13,
   "leagues": [
@@ -11,15 +11,15 @@
       "league": "MLB",
       "status": "active",
       "games": 5,
-      "completed": 3,
-      "live": 1,
-      "scheduled": 1,
+      "completed": 5,
+      "live": 0,
+      "scheduled": 0,
       "earliestStart": "12:15 PM EDT",
       "earliestStartIso": "2026-09-10T16:15:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-10",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-10&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": [
         {
           "id": "mlb-824872",
@@ -120,9 +120,9 @@
         {
           "id": "mlb-823499",
           "date": "2026-09-10T23:05:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "In Progress",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Colorado Rockies at New York Yankees",
           "shortName": "COL @ NYY",
           "competitors": [
@@ -130,15 +130,15 @@
               "side": "away",
               "name": "Colorado Rockies",
               "abbreviation": "COL",
-              "score": 0,
-              "record": "55-90"
+              "score": 3,
+              "record": "55-91"
             },
             {
               "side": "home",
               "name": "New York Yankees",
               "abbreviation": "NYY",
-              "score": 0,
-              "record": "83-62"
+              "score": 10,
+              "record": "84-62"
             }
           ],
           "venue": "Yankee Stadium",
@@ -152,9 +152,9 @@
         {
           "id": "mlb-824550",
           "date": "2026-09-10T23:40:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Pittsburgh Pirates at Chicago White Sox",
           "shortName": "PIT @ CWS",
           "competitors": [
@@ -162,15 +162,15 @@
               "side": "away",
               "name": "Pittsburgh Pirates",
               "abbreviation": "PIT",
-              "score": 0,
-              "record": "73-73"
+              "score": 2,
+              "record": "74-73"
             },
             {
               "side": "home",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
               "score": 0,
-              "record": "75-70"
+              "record": "75-71"
             }
           ],
           "venue": "Rate Field",
@@ -188,22 +188,22 @@
       "league": "CFB",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "8:00 PM EDT",
       "earliestStartIso": "2026-09-11T00:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": [
         {
           "id": "college-football-401858213",
           "date": "2026-09-11T00:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "9/10 - 8:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Florida A&M Rattlers at Miami Hurricanes",
           "shortName": "FAMU @ MIA",
           "competitors": [
@@ -211,15 +211,15 @@
               "side": "home",
               "name": "Miami Hurricanes",
               "abbreviation": "MIA",
-              "score": "0",
-              "record": "1-0"
+              "score": "77",
+              "record": "2-0"
             },
             {
               "side": "away",
               "name": "Florida A&M Rattlers",
               "abbreviation": "FAMU",
-              "score": "0",
-              "record": "1-1"
+              "score": "7",
+              "record": "1-2"
             }
           ],
           "venue": "Hard Rock Stadium",
@@ -236,22 +236,22 @@
       "league": "NFL",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "8:35 PM EDT",
       "earliestStartIso": "2026-09-11T00:35Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": [
         {
           "id": "nfl-401872657",
           "date": "2026-09-11T00:35Z",
-          "completed": false,
-          "state": "pre",
-          "status": "9/10 - 8:35 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "San Francisco 49ers at Los Angeles Rams",
           "shortName": "SF VS LAR",
           "competitors": [
@@ -259,15 +259,15 @@
               "side": "home",
               "name": "Los Angeles Rams",
               "abbreviation": "LAR",
-              "score": "0",
-              "record": "0-0"
+              "score": "7",
+              "record": "0-1"
             },
             {
               "side": "away",
               "name": "San Francisco 49ers",
               "abbreviation": "SF",
-              "score": "0",
-              "record": "0-0"
+              "score": "27",
+              "record": "1-0"
             }
           ],
           "venue": "Melbourne Cricket Ground",
@@ -292,7 +292,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -308,7 +308,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -324,7 +324,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -340,7 +340,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -356,7 +356,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -372,7 +372,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -388,7 +388,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -404,7 +404,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     },
     {
@@ -420,7 +420,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": [
         {
           "id": "uefa.champions-401915444",
@@ -446,7 +446,7 @@
               "record": "0-1-0"
             }
           ],
-          "venue": "Ulker Stadyumu",
+          "venue": "Şükrü Saracoğlu Stadium",
           "probablePitchers": null,
           "broadcasts": [
             "CBSSN",
@@ -625,7 +625,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260910",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260910&limit=200",
-      "sourceVerifiedAt": "2026-09-10T23:21:08.973Z",
+      "sourceVerifiedAt": "2026-09-11T13:30:19.360Z",
       "events": []
     }
   ],
