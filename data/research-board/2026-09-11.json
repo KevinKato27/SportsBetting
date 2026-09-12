@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T00:48:04.871Z",
+  "lastUpdated": "2026-09-12T01:49:30.694Z",
   "sourceLabel": "Source-blind Sep. 11 morning scan + Sports Research Watch + Bet Slate Watch",
-  "notes": "The twelve-family source-blind morning shortlist was frozen before supplied research. Five $1 singles are placement-confirmed: Jamal Roberts first-half rushing, Cade Cavalli strikeouts, Ronald Acuña Jr. total bases, Chris Bassitt earned runs allowed, and Matthew Liberatore earned runs allowed. The later three were selected only after independent re-audit and market-expression comparison; no missing grade or confidence is inferred.",
+  "notes": "The twelve-family source-blind morning shortlist was frozen before supplied research. Six $1 DraftKings singles are placement-confirmed. MacKenzie Gore over 1.5 walks at -152 was independently discovered through a full late-slate market-expression audit and confirmed by the user. Cade Cavalli 7+ strikeouts is settled as a win from the official final box score; all unverified grades and confidence remain null.",
   "realCard": [
     {
       "id": "S11-T01",
@@ -40,10 +40,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "Cavalli ranked first in the independent MLB strikeout audit before external cards were reviewed. The exact ladder favored retaining the seventh-strikeout cushion, and the user confirmed the $1 placement.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Win",
+      "payout": 1.67,
+      "pnl": 0.67,
+      "settlement": "MLB official final box score: Cade Cavalli recorded 9 strikeouts in 6.0 innings, clearing 7+.",
       "legs": [
         "Cade Cavalli 7+ strikeouts (-150)"
       ]
@@ -110,6 +110,27 @@
       "legs": [
         "Matthew Liberatore over 2.5 earned runs allowed (+124)"
       ]
+    },
+    {
+      "id": "S11-T06",
+      "sport": "MLB",
+      "title": "MacKenzie Gore over 1.5 walks",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-152",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "A full late-slate audit expanded the Gore fade across outs, hits, earned runs and walks. Over 1.5 walks at -152 ranked as the cleanest current-command expression, and the user immediately confirmed the $1 placement.",
+      "result": "Pending",
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "MacKenzie Gore over 1.5 walks (-152)"
+      ]
     }
   ],
   "activeCandidates": [
@@ -139,8 +160,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PLACED_REAL_CARD_PENDING",
-      "rationale": "Official 2026 line shows 30 starts, 158.2 innings, 10.49 K/9 and a 3.12 ERA. The exact ladder was reviewed, 7+ at -150 was selected over 8+, and the user confirmed placement. Result remains pending.",
+      "status": "SETTLED_WIN",
+      "rationale": "Official MLB final box score: Cavalli recorded 9 strikeouts in 6.0 innings, clearing the placed 7+ threshold. The $1 ticket at -150 returns $1.67.",
       "experiment": "Pitcher strikeouts / outs"
     },
     {

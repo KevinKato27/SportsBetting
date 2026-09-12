@@ -12743,11 +12743,11 @@
       "Odds (American)": "-150",
       "Boosted?": "N",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "1.67",
+      "P/L": "0.67",
       "Promo / Special": "",
-      "Execution Note": "PENDING: The user replied “Placed Cade” immediately after the exact instruction for Cade Cavalli 7+ strikeouts at -150 for $1."
+      "Execution Note": "FINAL: MLB official box score records Cade Cavalli with 9 strikeouts in 6.0 innings, clearing 7+ at -150. The $1 ticket returns $1.67."
     },
     {
       "Date": "2026-09-11",
@@ -12793,6 +12793,21 @@
       "P/L": "",
       "Promo / Special": "",
       "Execution Note": "PENDING: The user replied “Done” immediately after the direct instruction to place Matthew Liberatore over 2.5 earned runs at +124 for $1."
+    },
+    {
+      "Date": "2026-09-11",
+      "Ticket ID": "S11-T06",
+      "Origin": "INDEPENDENT",
+      "Description": "MacKenzie Gore over 1.5 walks",
+      "Stake": "1",
+      "Odds (American)": "-152",
+      "Boosted?": "N",
+      "Legs": "1",
+      "Result": "Pending",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "",
+      "Execution Note": "PENDING: The user replied “Placed” immediately after the exact $1 instruction for MacKenzie Gore over 1.5 walks at -152."
     }
   ],
   "Paper Portfolio": [

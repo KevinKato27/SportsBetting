@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-12T00:48:04.871Z",
+  "ingestedAt": "2026-09-12T01:49:30.694Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Five Sep. 11 placement-confirmed DraftKings singles are captured from explicit user placement responses immediately after exact instructions. Each has a $1 stake. Displayed thresholds and prices are preserved; grades and confidence remain null when absent.",
+  "notes": "Six Sep. 11 placement-confirmed DraftKings singles are captured from explicit user responses immediately after exact instructions. Each has a $1 stake. Cavalli 7+ strikeouts is settled as a win from the official MLB final box score; other results remain pending unless separately verified.",
   "slips": [
     {
       "id": "2026-09-11-cfb-jamal-roberts-first-half-rushing-01",
@@ -60,10 +60,10 @@
       "sourceTurnTime": "2026-09-11T16:14:05.527Z",
       "auditSummary": "Cavalli was the top independently discovered MLB strikeout setup before the external-card batches. The exact DraftKings ladder was then compared and the seven-strikeout milestone was preferred to the higher eight-strikeout threshold. No numeric grade or confidence was captured.",
       "placementEvidence": "The user replied “Placed Cade” immediately after the direct instruction to place Cade Cavalli 7+ strikeouts at -150 for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "WIN",
+      "payout": 1.67,
+      "pnl": 0.67,
+      "settlementEvidence": "MLB official final box score at https://www.mlb.com/gameday/822684 records 9 strikeouts in 6.0 innings.",
       "legs": [
         {
           "entity": "Cade Cavalli",
@@ -72,7 +72,7 @@
           "threshold": "7+",
           "side": "Over",
           "displayedPrice": "-150",
-          "status": "PENDING"
+          "status": "WON"
         }
       ],
       "sources": [
@@ -185,6 +185,42 @@
       ],
       "sources": [
         "https://www.mlb.com/gameday/823012"
+      ]
+    },
+    {
+      "id": "2026-09-11-mlb-mackenzie-gore-walks-01",
+      "date": "2026-09-11",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "MacKenzie Gore over 1.5 walks",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": null,
+      "displayedCombinedPrice": "-152",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "VERIFIED",
+      "sourceLabel": "Bet Slate Watch",
+      "sourceTurnTime": "2026-09-12T01:18:42.602Z",
+      "auditSummary": "The independent late-slate scan expanded the Gore fade across outs, hits, earned runs and walks. Over 1.5 walks at -152 was selected as the cleanest current-command expression; no numeric grade or confidence was captured.",
+      "placementEvidence": "The user replied “Placed” immediately after the direct instruction to place MacKenzie Gore over 1.5 walks at -152 for $1.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "MacKenzie Gore",
+          "event": "Texas Rangers at Arizona Diamondbacks",
+          "market": "Pitcher walks allowed",
+          "threshold": "1.5",
+          "side": "Over",
+          "displayedPrice": "-152",
+          "status": "PENDING"
+        }
+      ],
+      "sources": [
+        "https://www.mlb.com/gameday/825036"
       ]
     }
   ]
