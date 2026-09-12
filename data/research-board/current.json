@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-12",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T16:26:09.806Z",
-  "sourceLabel": "Source-blind Sep. 12 morning scan + CFB Late Refresh",
-  "notes": "Seven $1 DraftKings tickets are placement-confirmed from the Sep. 12 chat: four soccer singles, two CFB singles and one three-leg CFB promotional totals package. Results, payouts, grades and confidence remain null until separately verified.",
+  "lastUpdated": "2026-09-12T19:28:42.417Z",
+  "sourceLabel": "Source-blind Sep. 12 morning scan + CFB Late Refresh + Sports betting handoff update",
+  "notes": "Thirteen $1 DraftKings tickets are placement-confirmed. Five are settled from user-supplied sportsbook/game evidence: Guirassy won; Isak, Schick, Athletic Bilbao first-half ML and Oregon first-half team total lost. The settled subset is 1–4 for -$3.4118. All other results, payouts, grades and confidence remain null.",
   "realCard": [
     {
       "id": "S12-T01",
@@ -19,10 +19,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The independent soccer pass qualified Guirassy’s confirmed starting role and recent shot-on-target volume. The user confirmed this and the Isak single as placed.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Win",
+      "payout": 1.5882,
+      "pnl": 0.5882,
+      "settlement": "DraftKings settlement supplied by the user: Guirassy recorded at least 2 shots on target and the ticket won.",
       "legs": [
         "Serhou Guirassy 2+ shots on target (-170)"
       ]
@@ -40,10 +40,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The independent soccer pass preferred Isak’s 2+ shots-on-target threshold at plus money. The user confirmed this and the Guirassy single as placed.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "DraftKings settlement supplied by the user: Isak recorded 1 shot on target, below the 2+ threshold.",
       "legs": [
         "Alexander Isak 2+ shots on target (+110)"
       ]
@@ -61,39 +61,16 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The independent review preferred Schick’s player-volume market over heavily priced Leverkusen team totals. The user immediately confirmed placement.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "DraftKings settlement supplied by the user controls accounting: Schick recorded 1 shot on target, below the 2+ threshold.",
       "legs": [
         "Patrik Schick 2+ shots on target (+115)"
       ]
     },
     {
       "id": "S12-T04",
-      "sport": "NCAAF",
-      "title": "McAfee Tailgate Overs",
-      "status": "PLACED_USER_CONFIRMED",
-      "stake": 1,
-      "price": "+400 boosted",
-      "promo": "McAfee Tailgate Overs boost",
-      "origin": "INDEPENDENT",
-      "chatGrade": null,
-      "legGrade": null,
-      "confidence": null,
-      "summary": "The independent audit treated the fixed three-leg package as one correlated promo ticket and cleared it only at the displayed +400 boosted price. The user explicitly confirmed it as placed.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
-      "legs": [
-        "Mississippi State at Minnesota over 50.5",
-        "Tennessee at Georgia Tech over 50.5",
-        "Arizona State at Texas A&M over 45.5"
-      ]
-    },
-    {
-      "id": "S12-T05",
       "sport": "NCAAF",
       "title": "Nate Sheppard 24+ rushing attempts",
       "status": "PLACED_USER_CONFIRMED",
@@ -104,13 +81,36 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "summary": "The independent role audit selected rushing attempts over rushing yards to express expected workload directly. The user confirmed placement with the 50% CFB Saturday boost; the final boosted price was not captured.",
+      "summary": "The independent role audit selected rushing attempts over rushing yards to express expected workload directly. The final boosted display price was not captured.",
       "result": null,
       "payout": null,
       "pnl": null,
       "settlement": null,
       "legs": [
         "Nate Sheppard 24+ rushing attempts (-123 before boost)"
+      ]
+    },
+    {
+      "id": "S12-T05",
+      "sport": "NCAAF",
+      "title": "McAfee Tailgate Overs",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+400 boosted",
+      "promo": "McAfee Tailgate Overs fixed proposition",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent audit treated this as one fixed sportsbook proposition, not three independent selections. The user explicitly confirmed it as placed.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Mississippi State at Minnesota over 50.5",
+        "Tennessee at Georgia Tech over 50.5",
+        "Arizona State at Texas A&M over 45.5"
       ]
     },
     {
@@ -126,10 +126,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The independent lineup and early-game review preferred Athletic’s first-half moneyline to expensive team totals and player-shot ladders. The user immediately confirmed placement.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "DraftKings settlement supplied by the user: Athletic Club and Elche were 0–0 at halftime, so the first-half moneyline lost.",
       "legs": [
         "Athletic Bilbao first-half moneyline (-125)"
       ]
@@ -146,13 +146,141 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "summary": "The source-blind morning scan first identified Oregon–Oklahoma State for first-half and team-total comparison. A later independent price gate selected over 21.5 at +100, and the user replied that it was placed before asking about the separate live boost.",
+      "summary": "The source-blind morning scan identified the game for first-half/team-total comparison. A later price gate selected over 21.5 at +100, and the user confirmed placement.",
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "Verified game state reported in the chat: Oregon scored 17 first-half points, below the over 21.5 threshold. Classified as a matchup/mechanism failure.",
+      "legs": [
+        "Oregon Ducks first-half team total over 21.5 (+100)"
+      ]
+    },
+    {
+      "id": "S12-T08",
+      "sport": "MLB",
+      "title": "Zac Thornton over 4.5 hits allowed",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-158",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The frozen system decision was Thornton over 5.5 hits at a plus price. The user’s DraftKings execution used the lower 4.5 threshold at -158; system decision and user execution remain separate.",
       "result": null,
       "payout": null,
       "pnl": null,
       "settlement": null,
       "legs": [
-        "Oregon Ducks first-half team total over 21.5 (+100)"
+        "Zac Thornton over 4.5 hits allowed (-158)"
+      ]
+    },
+    {
+      "id": "S12-T09",
+      "sport": "NCAAF",
+      "title": "Michigan live spread -4.5",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-114 before boost",
+      "promo": "50% live CFB boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The live state was requalified independently before execution. The user confirmed Michigan -4.5 at -114 with the 50% live CFB boost; the exact final boosted display price was not captured.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Michigan -4.5 live spread (-114 before boost)"
+      ]
+    },
+    {
+      "id": "S12-T10",
+      "sport": "MLB",
+      "title": "Kyle Bradish over 2.5 walks allowed",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+145",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "A live-before-first-pitch requalification selected the higher 2.5-walk threshold at plus money over the hits market. The user confirmed this and Ureña as placed.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Kyle Bradish over 2.5 walks allowed (+145)"
+      ]
+    },
+    {
+      "id": "S12-T11",
+      "sport": "MLB",
+      "title": "Walbert Ureña over 16.5 pitching outs",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-115",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent workload audit preferred the improved 16.5-outs threshold over the earlier 17.5 line and alternate strikeout markets. The user confirmed this and Bradish as placed.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Walbert Ureña over 16.5 pitching outs (-115)"
+      ]
+    },
+    {
+      "id": "S12-T12",
+      "sport": "NCAAF",
+      "title": "Arizona +7.5 / Kentucky +10.5 / UConn +12.5 parlay",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+435 raw / +652 effective",
+      "promo": "50% CFB Mystery Parlay Boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The 3:30 CFB audit qualified each spread before packaging. The user confirmed the exact three-leg, $1, 50%-boosted construction after a final confidence check.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Arizona +7.5 at BYU",
+        "Kentucky +10.5 vs Alabama",
+        "UConn +12.5 vs Maryland"
+      ]
+    },
+    {
+      "id": "S12-T13",
+      "sport": "NCAAF",
+      "title": "Keelon Russell 50+ rushing yards",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-107",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The player-board audit preferred a lower 50+ threshold at a better price than the previously evaluated 53+ line. The user immediately confirmed placement.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Keelon Russell 50+ rushing yards (-107)"
       ]
     }
   ],
@@ -288,8 +416,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PLACED_USER_CONFIRMED",
-      "rationale": "The source-blind morning scan independently flagged this game for first-half and team-total comparison. The exact DraftKings line was later selected at +100, and the user replied that it was placed before asking about the separate live boost.",
+      "status": "SETTLED_LOSS",
+      "rationale": "Oregon scored 17 first-half points, below over 21.5. The first-half offense was outgained 350–101, so the chat classified this as a matchup/mechanism failure rather than threshold variance.",
       "experiment": "CFB first-half team total"
     },
     {
@@ -357,14 +485,14 @@
       "sport": "MLB",
       "entity": "Zac Thornton",
       "event": "New York Mets at New York Yankees",
-      "market": "Over 5.5 hits allowed",
-      "price": "+124 DraftKings",
+      "market": "System: over 5.5 hits allowed; user execution: over 4.5",
+      "price": "+110 system / -158 user",
       "origin": "SUPPLIED",
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "QUALIFIED_RECHECK",
-      "rationale": "Supplied market tree identifies right-handed contact vulnerability. Confirm Yankees lineup and compare hits with outs and Judge-specific markets.",
+      "status": "USER_EXECUTION_MODIFIED",
+      "rationale": "The system froze over 5.5 hits allowed at +110. The user’s placed ticket used over 4.5 at -158. Preserve both states; do not retroactively treat them as the same decision.",
       "experiment": "Contact-risk market expression"
     },
     {
@@ -372,14 +500,14 @@
       "sport": "MLB",
       "entity": "Walbert Ureña",
       "event": "Los Angeles Angels at Washington Nationals",
-      "market": "Over 17.5 pitching outs",
-      "price": "-106 DraftKings",
+      "market": "Over 16.5 pitching outs",
+      "price": "-115 DraftKings",
       "origin": "BOTH",
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "QUALIFIED_RECHECK",
-      "rationale": "The independent screen flagged Ureña for market-family review; the supplied workload expression is preferred over his walk over after recent command improvement. Confirm lineup and pitch-count expectations.",
+      "status": "PLACED_USER_CONFIRMED",
+      "rationale": "The later market offered a lower 16.5-outs threshold at -115. The independent workload audit requalified the new line, and the user confirmed placement.",
       "experiment": "Workload market expression"
     },
     {
@@ -447,14 +575,14 @@
       "sport": "MLB",
       "entity": "Kyle Bradish",
       "event": "Baltimore Orioles at Toronto Blue Jays",
-      "market": "Over 1.5 walks allowed",
-      "price": "-151 DraftKings",
+      "market": "Over 2.5 walks allowed",
+      "price": "+145 DraftKings",
       "origin": "SUPPLIED",
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "QUALIFIED_RECHECK",
-      "rationale": "Lower-threshold command-risk alternative to the hits arm. Treat both Bradish markets as one correlated thesis until one expression is selected.",
+      "status": "PLACED_USER_CONFIRMED",
+      "rationale": "A live-before-first-pitch requalification selected 3+ walks at +145 over the hits market. The user confirmed placement.",
       "experiment": "Command-risk market expression"
     },
     {
