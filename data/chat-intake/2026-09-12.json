@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-12",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-12T19:28:42.417Z",
+  "ingestedAt": "2026-09-12T21:35:57.495Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Thirteen Sep. 12 DraftKings tickets are placement-confirmed. Five have verified outcomes from user-supplied sportsbook/game evidence: 1 win and 4 losses for -$3.4118 on $5 settled risk. Unsupported results and exact uncaptured boosted prices remain null.",
+  "notes": "Fourteen Sep. 12 DraftKings tickets are placement-confirmed. Five have verified outcomes from user-supplied sportsbook/game evidence: 1 win and 4 losses for -$3.4118 on $5 settled risk. Unsupported results and exact uncaptured boosted prices remain null.",
   "slips": [
     {
       "id": "2026-09-12-s12-t01",
@@ -480,6 +480,40 @@
           "threshold": "50+",
           "side": "Over",
           "displayedPrice": "-107",
+          "status": "PLACED_USER_CONFIRMED"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "id": "2026-09-12-s12-t14",
+      "date": "2026-09-12",
+      "sport": "Football",
+      "league": "NCAAF",
+      "title": "Ryan Wingo 60+ receiving yards",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": "50% OSU–Texas profit boost",
+      "displayedCombinedPrice": "+120 before boost",
+      "origin": "INDEPENDENT",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "Sports betting handoff update",
+      "sourceTurnTime": "2026-09-12T21:32:42.233Z",
+      "auditSummary": "The independent evening audit preferred Wingo's 60+ receiving-yards threshold over the supplied Jeremiah Smith markets. The displayed +120 price qualified before the dedicated boost.",
+      "placementEvidence": "The user said “Placed it” immediately after the exact Wingo 60+ receiving-yards instruction.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "Ryan Wingo",
+          "event": "Ohio State Buckeyes at Texas Longhorns",
+          "market": "Receiving yards",
+          "threshold": "60+",
+          "side": "Over",
+          "displayedPrice": "+120 before boost",
           "status": "PLACED_USER_CONFIRMED"
         }
       ],

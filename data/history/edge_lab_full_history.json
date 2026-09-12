@@ -13003,6 +13003,21 @@
       "P/L": "",
       "Promo / Special": "",
       "Execution Note": "PLACED_USER_CONFIRMED: The player-board audit preferred a lower 50+ threshold at a better price than the previously evaluated 53+ line. The user immediately confirmed placement."
+    },
+    {
+      "Date": "2026-09-12",
+      "Ticket ID": "S12-T14",
+      "Origin": "INDEPENDENT",
+      "Description": "Ryan Wingo 60+ receiving yards - Ryan Wingo 60+ receiving yards (+120 before boost)",
+      "Stake": "1",
+      "Odds (American)": "+120 before boost",
+      "Boosted?": "Y",
+      "Legs": "1",
+      "Result": "",
+      "Payout": "",
+      "P/L": "",
+      "Promo / Special": "50% OSU-Texas profit boost",
+      "Execution Note": "PLACED_USER_CONFIRMED: The independent evening audit preferred Wingo's 60+ receiving-yards threshold over the supplied Jeremiah Smith markets. The displayed +120 price qualified before the promo, and the user explicitly confirmed placement."
     }
   ],
   "Paper Portfolio": [

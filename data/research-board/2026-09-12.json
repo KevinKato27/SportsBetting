@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-12",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T20:40:45.218Z",
+  "lastUpdated": "2026-09-12T21:35:57.495Z",
   "sourceLabel": "Source-blind Sep. 12 morning scan + CFB Late Refresh + Sports betting handoff update",
-  "notes": "Thirteen $1 DraftKings tickets are placement-confirmed. Five are settled from user-supplied sportsbook/game evidence: Guirassy won; Isak, Schick, Athletic Bilbao first-half ML and Oregon first-half team total lost. The settled subset is 1–4 for -$3.4118. Ryan Wingo 60+ receiving yards at +120 is independently qualified but remains outside Real Card until the user confirms placement. All other results, payouts, grades and confidence remain null.",
+  "notes": "Fourteen $1 DraftKings tickets are placement-confirmed. Five are settled from user-supplied sportsbook/game evidence: Guirassy won; Isak, Schick, Athletic Bilbao first-half ML and Oregon first-half team total lost. The settled subset is 1–4 for -$3.4118. Ryan Wingo 60+ receiving yards at +120 is now placement-confirmed with the dedicated 50% OSU–Texas boost. All other results, payouts, grades and confidence remain null.",
   "realCard": [
     {
       "id": "S12-T01",
@@ -281,6 +281,27 @@
       "settlement": null,
       "legs": [
         "Keelon Russell 50+ rushing yards (-107)"
+      ]
+    },
+    {
+      "id": "S12-T14",
+      "sport": "NCAAF",
+      "title": "Ryan Wingo 60+ receiving yards",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+120 before boost",
+      "promo": "50% OSU–Texas profit boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent evening audit preferred Wingo's 60+ receiving-yards threshold over the supplied Jeremiah Smith markets. The displayed +120 price qualified before the promo, and the user explicitly confirmed placement.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Ryan Wingo 60+ receiving yards (+120 before boost)"
       ]
     }
   ],
@@ -626,9 +647,54 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "QUALIFIED_AWAITING_PLACEMENT",
-      "rationale": "The independent evening audit preferred Wingo's 60+ receiving-yards threshold over the supplied Jeremiah Smith markets. The displayed +120 price qualified before the dedicated 50% OSU–Texas boost, but the chat does not contain user placement confirmation.",
+      "status": "PLACED_USER_CONFIRMED",
+      "rationale": "The independent evening audit preferred Wingo's 60+ receiving-yards threshold over the supplied Jeremiah Smith markets. The displayed +120 price qualified before the dedicated 50% OSU–Texas boost, and the user later confirmed placement.",
       "experiment": "Independent evening player-prop discovery"
+    },
+    {
+      "id": "S12-A24",
+      "sport": "NCAAF",
+      "entity": "Dilin Jones",
+      "event": "Louisiana Tech Bulldogs at LSU Tigers",
+      "market": "80+ rushing yards",
+      "price": "-118 DraftKings",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "QUALIFIED_BUILD_HOLD",
+      "rationale": "The evening player audit identified Jones as LSU's current RB1 and selected the lower 80+ threshold to reduce blowout-rotation risk. It is a proposed Stepped Up leg, not a placed ticket.",
+      "experiment": "CFB current-role and rotation-risk screen"
+    },
+    {
+      "id": "S12-A25",
+      "sport": "NCAAF",
+      "entity": "Kamari Moulton",
+      "event": "Iowa State Cyclones at Iowa Hawkeyes",
+      "market": "19+ rushing attempts",
+      "price": "-125 DraftKings",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "QUALIFIED_BUILD_HOLD",
+      "rationale": "The evening audit preferred the attempts market over rushing yards because it expresses the expected lead workload without requiring a specific yards-per-carry result. It is not placement-confirmed.",
+      "experiment": "CFB workload market expression"
+    },
+    {
+      "id": "S12-A26",
+      "sport": "NCAAF",
+      "entity": "Oregon State Beavers",
+      "event": "Oregon State Beavers at Texas Tech Red Raiders",
+      "market": "Over 9.5 team points",
+      "price": "-250 DraftKings",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "QUALIFIED_BUILD_HOLD",
+      "rationale": "The evening audit selected the lower 9.5 team-total threshold instead of the more aggressive 13.5 line to reduce weather and passing-volume sensitivity. It is not placement-confirmed.",
+      "experiment": "CFB robust-threshold market expression"
     }
   ],
   "paperCandidates": [
