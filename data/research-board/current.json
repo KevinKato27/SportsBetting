@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T02:49:23.704Z",
+  "lastUpdated": "2026-09-12T03:50:35.022Z",
   "sourceLabel": "Source-blind Sep. 11 morning scan + Sports Research Watch + Bet Slate Watch",
-  "notes": "The source-blind morning shortlist was frozen before supplied research. Six $1 DraftKings singles are placement-confirmed. Cade Cavalli 7+ strikeouts is a settled win and Chris Bassitt over 2.5 earned runs is a settled loss from official MLB final box scores. Acuña, Liberatore, Gore and Roberts remain pending until final evidence is complete; unverified grades and confidence remain null.",
+  "notes": "The source-blind morning shortlist was frozen before supplied research. Six $1 DraftKings singles are placement-confirmed and fully settled from official MLB box scores and ESPN play-by-play: four wins, two losses, $7.75 returned on $6 risked, +$1.75 P/L. Unverified grades and confidence remain null.",
   "realCard": [
     {
       "id": "S11-T01",
@@ -19,10 +19,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The independent role audit rejected the 87+ full-game threshold and selected 40+ first-half rushing yards to reduce late-game script and rotation uncertainty. The user immediately confirmed the exact $1 placement.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Win",
+      "payout": 2.2,
+      "pnl": 1.2,
+      "settlement": "ESPN official play-by-play: Jamal Roberts recorded 88 first-half rushing yards, clearing 40+.",
       "legs": [
         "Jamal Roberts 40+ first-half rushing yards (+120 boosted)"
       ]
@@ -61,10 +61,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The supplied historical-matchup lead was corrected and independently re-audited. The exact DraftKings price cleared the conservative threshold, and the user immediately confirmed the $1 placement.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Win",
+      "payout": 2.22,
+      "pnl": 1.22,
+      "settlement": "MLB official final box score: Ronald Acuña Jr. recorded 2 total bases (one double), clearing 2+.",
       "legs": [
         "Ronald Acuña Jr. 2+ total bases (+122)"
       ]
@@ -103,10 +103,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The expanded-market audit compared Liberatore earned runs, hits and outs with Miguel Vargas hitter expressions. The broader pitcher fade at +124 ranked first, and the user replied “Done” immediately after the exact placement instruction.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "MLB official box score: Matthew Liberatore allowed 2 earned runs in 4.1 innings, below the over 2.5 threshold.",
       "legs": [
         "Matthew Liberatore over 2.5 earned runs allowed (+124)"
       ]
@@ -124,10 +124,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "A full late-slate audit expanded the Gore fade across outs, hits, earned runs and walks. Over 1.5 walks at -152 ranked as the cleanest current-command expression, and the user immediately confirmed the $1 placement.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Win",
+      "payout": 1.66,
+      "pnl": 0.66,
+      "settlement": "MLB official box score: MacKenzie Gore issued 3 walks in 4.0 innings, clearing over 1.5.",
       "legs": [
         "MacKenzie Gore over 1.5 walks (-152)"
       ]

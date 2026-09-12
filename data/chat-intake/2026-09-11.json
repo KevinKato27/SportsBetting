@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-12T02:49:23.704Z",
+  "ingestedAt": "2026-09-12T03:50:35.022Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Six Sep. 11 placement-confirmed DraftKings singles are captured. Cavalli 7+ strikeouts is a settled win and Bassitt over 2.5 earned runs is a settled loss from official MLB final box scores; other results remain pending until final evidence is complete.",
+  "notes": "Six Sep. 11 placement-confirmed DraftKings singles are fully settled from official MLB box scores and ESPN play-by-play: 4-2, $7.75 returned on $6 risked, +$1.75 P/L.",
   "slips": [
     {
       "id": "2026-09-11-cfb-jamal-roberts-first-half-rushing-01",
@@ -24,10 +24,10 @@
       "sourceTurnTime": "2026-09-11T14:06:53.931Z",
       "auditSummary": "The source-blind Missouri–Kansas review identified Roberts’ enlarged backfield role, rejected the high full-game ladder and selected the lower first-half threshold to reduce second-half game-script and rotation uncertainty. No numeric grade or confidence was captured.",
       "placementEvidence": "The user replied “Placed” immediately after the direct instruction to place Jamal Roberts 40+ first-half rushing yards at +120 boosted for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "WIN",
+      "payout": 2.2,
+      "pnl": 1.2,
+      "settlementEvidence": "ESPN official play-by-play at https://www.espn.com/college-football/game/_/gameId/401856678/missouri-kansas records 88 Jamal Roberts rushing yards in the first half.",
       "legs": [
         {
           "entity": "Jamal Roberts",
@@ -36,7 +36,7 @@
           "threshold": "40+",
           "side": "Over",
           "displayedPrice": "+120 boosted",
-          "status": "PENDING"
+          "status": "WON"
         }
       ],
       "sources": [
@@ -96,10 +96,10 @@
       "sourceTurnTime": "2026-09-11T22:16:42.732Z",
       "auditSummary": "The supplied historical-matchup lead was corrected and independently re-audited. The exact DraftKings price cleared the conservative threshold, and the user immediately confirmed the $1 placement.",
       "placementEvidence": "The user replied “Placed” immediately after the direct instruction to place Ronald Acuña Jr. 2+ total bases at +122 for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "WIN",
+      "payout": 2.22,
+      "pnl": 1.22,
+      "settlementEvidence": "MLB official final box score at https://www.mlb.com/gameday/824873 records 2 total bases (one double) in five at-bats.",
       "legs": [
         {
           "entity": "Ronald Acuña Jr.",
@@ -108,7 +108,7 @@
           "threshold": "2+",
           "side": "Over",
           "displayedPrice": "+122",
-          "status": "PENDING"
+          "status": "WON"
         }
       ],
       "sources": [
@@ -168,10 +168,10 @@
       "sourceTurnTime": "2026-09-11T22:44:11.279Z",
       "auditSummary": "The expanded-market audit compared Liberatore earned runs, hits and outs with Miguel Vargas hitter expressions. The broader pitcher fade at +124 ranked first, and the user replied “Done” immediately after the exact placement instruction.",
       "placementEvidence": "The user replied “Done” immediately after the direct instruction to place Matthew Liberatore over 2.5 earned runs at +124 for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "LOSS",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "MLB official box score at https://www.mlb.com/gameday/823012 records 2 earned runs allowed in 4.1 innings.",
       "legs": [
         {
           "entity": "Matthew Liberatore",
@@ -180,7 +180,7 @@
           "threshold": "2.5",
           "side": "Over",
           "displayedPrice": "+124",
-          "status": "PENDING"
+          "status": "LOST"
         }
       ],
       "sources": [
@@ -204,10 +204,10 @@
       "sourceTurnTime": "2026-09-12T01:18:42.602Z",
       "auditSummary": "The independent late-slate scan expanded the Gore fade across outs, hits, earned runs and walks. Over 1.5 walks at -152 was selected as the cleanest current-command expression; no numeric grade or confidence was captured.",
       "placementEvidence": "The user replied “Placed” immediately after the direct instruction to place MacKenzie Gore over 1.5 walks at -152 for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "WIN",
+      "payout": 1.66,
+      "pnl": 0.66,
+      "settlementEvidence": "MLB official box score at https://www.mlb.com/gameday/825036 records 3 walks issued in 4.0 innings.",
       "legs": [
         {
           "entity": "MacKenzie Gore",
@@ -216,7 +216,7 @@
           "threshold": "1.5",
           "side": "Over",
           "displayedPrice": "-152",
-          "status": "PENDING"
+          "status": "WON"
         }
       ],
       "sources": [

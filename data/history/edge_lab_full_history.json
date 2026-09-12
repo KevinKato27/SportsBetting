@@ -12728,11 +12728,11 @@
       "Odds (American)": "120",
       "Boosted?": "Y",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "2.2",
+      "P/L": "1.2",
       "Promo / Special": "50% Missouri–Kansas boost",
-      "Execution Note": "PENDING: The user replied “Placed” immediately after the exact instruction for Jamal Roberts 40+ first-half rushing yards at +120 boosted for $1."
+      "Execution Note": "FINAL: ESPN official play-by-play records 88 Jamal Roberts rushing yards in the first half, clearing 40+ at +120 boosted. The $1 ticket returns $2.20."
     },
     {
       "Date": "2026-09-11",
@@ -12758,11 +12758,11 @@
       "Odds (American)": "122",
       "Boosted?": "N",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "2.22",
+      "P/L": "1.22",
       "Promo / Special": "",
-      "Execution Note": "PENDING: The user replied “Placed” immediately after the direct instruction to place Ronald Acuña Jr. 2+ total bases at +122 for $1."
+      "Execution Note": "FINAL: MLB official box score records Ronald Acuña Jr. with 2 total bases (one double), clearing 2+ at +122. The $1 ticket returns $2.22."
     },
     {
       "Date": "2026-09-11",
@@ -12788,11 +12788,11 @@
       "Odds (American)": "124",
       "Boosted?": "N",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Loss",
+      "Payout": "0",
+      "P/L": "-1",
       "Promo / Special": "",
-      "Execution Note": "PENDING: The user replied “Done” immediately after the direct instruction to place Matthew Liberatore over 2.5 earned runs at +124 for $1."
+      "Execution Note": "FINAL: MLB official box score records Matthew Liberatore with 2 earned runs allowed in 4.1 innings, so over 2.5 at +124 lost."
     },
     {
       "Date": "2026-09-11",
@@ -12803,11 +12803,11 @@
       "Odds (American)": "-152",
       "Boosted?": "N",
       "Legs": "1",
-      "Result": "Pending",
-      "Payout": "",
-      "P/L": "",
+      "Result": "Win",
+      "Payout": "1.66",
+      "P/L": "0.66",
       "Promo / Special": "",
-      "Execution Note": "PENDING: The user replied “Placed” immediately after the exact $1 instruction for MacKenzie Gore over 1.5 walks at -152."
+      "Execution Note": "FINAL: MLB official box score records MacKenzie Gore with 3 walks in 4.0 innings, clearing over 1.5 at -152. The $1 ticket returns $1.66."
     }
   ],
   "Paper Portfolio": [
@@ -20505,6 +20505,18 @@
       "Wins": "2",
       "Ticket Win Rate": "0.4",
       "Notes": "FINAL: 2-3 tickets, $5 risked, $3.76 returned, -$1.24; bankroll $37.73 to $36.49. CMC first-quarter reception and Yankees F5 team total won. Miami team-total under, Jones outs under and the live CMC/Kyren SGP lost. Postmortems: rotation did not suppress Miami scoring; Jones required a workload-regime reset; broad Yankees team expression succeeded; early-season Kyren carry-share uncertainty was understated. The verified paper subset showed the Jones strikeout arm winning while the outs under lost."
+    },
+    {
+      "Date": "2026-09-11",
+      "Starting Bankroll": "36.49",
+      "Risked": "6",
+      "Payout": "7.75",
+      "P/L": "1.75",
+      "Ending Bankroll": "38.24",
+      "Tickets": "6",
+      "Wins": "4",
+      "Ticket Win Rate": "0.6666666666666666",
+      "Notes": "FINAL: 4-2 tickets, $6 risked, $7.75 returned, +$1.75; bankroll $36.49 to $38.24. Wins: Roberts 40+ first-half rushing yards, Cavalli 7+ strikeouts, Acuña 2+ total bases and Gore over 1.5 walks. Losses: Bassitt and Liberatore over 2.5 earned runs. Postmortem: lower-threshold role protection and command-risk markets converted; both earned-run overs missed when the starters exited at exactly 2 earned runs, reinforcing the need to compare hits, outs and earned-run expressions before entry."
     }
   ],
   "Source Evaluation": [
