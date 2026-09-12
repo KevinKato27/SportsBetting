@@ -7,6 +7,7 @@ const slate = JSON.parse(await readFile(slatePath, 'utf8'));
 const chatIntake = JSON.parse(await readFile('data/chat-intake/current.json', 'utf8'));
 const morningScan = JSON.parse(await readFile('data/morning-scan/current.json', 'utf8'));
 const researchBoard = JSON.parse(await readFile('data/research-board/current.json', 'utf8'));
+const history = JSON.parse(await readFile('data/history/edge_lab_full_history.json', 'utf8'));
 const shortVerifiedAt = `${slate.lastVerified.slice(0, 10)} ${slate.lastVerified.slice(11, 16)}Z`;
 
 if (!Array.isArray(slate.leagues) || slate.leagues.length !== 13) {
@@ -212,5 +213,40 @@ const updatedBoardWorksheetXml = boardWorksheetXml
   .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, `<x:sheetData>${boardRows.join('')}</x:sheetData><x:mergeCells count="2"><x:mergeCell ref="A1:K1" /><x:mergeCell ref="A2:K2" /></x:mergeCells>`);
 files[boardWorksheetPath] = strToU8(updatedBoardWorksheetXml);
 
+const ticketWorksheetPath = worksheetPathFor('Ticket Log');
+const ticketWorksheetXml = strFromU8(files[ticketWorksheetPath]);
+const ticketStyleAt = (reference, fallback) => ticketWorksheetXml.match(new RegExp(`<x:c[^>]*r="${reference}"[^>]*s="(\\d+)"`))?.[1] ?? fallback;
+const ticketHeaders = ['Date', 'Ticket ID', 'Origin', 'Description', 'Stake', 'Odds (American)', 'Boosted?', 'Legs', 'Result', 'Payout', 'P/L', 'Promo / Special', 'Execution Note'];
+const ticketColumns = 'ABCDEFGHIJKLM'.split('');
+const ticketStyles = {
+  title: ticketStyleAt('A1', '0'),
+  note: ticketStyleAt('A2', '0'),
+  header: ticketColumns.map((column) => ticketStyleAt(`${column}4`, '0')),
+  body: ticketColumns.map((column) => ticketStyleAt(`${column}5`, '0')),
+};
+const ticketRows = [
+  row(1, 28, [stringCell('A1', ticketStyles.title, 'TICKET LOG')]),
+  row(2, 24, [stringCell('A2', ticketStyles.note, 'Placed tickets only. Pending results stay blank until separately verified.')]),
+  row(4, 30, ticketHeaders.map((value, index) => stringCell(`${ticketColumns[index]}4`, ticketStyles.header[index], value))),
+];
+const numericTicketColumns = new Set([4, 5, 7, 9, 10]);
+let ticketRowNumber = 5;
+for (const ticket of history['Ticket Log']) {
+  const values = ticketHeaders.map((header) => ticket[header] ?? '');
+  ticketRows.push(row(ticketRowNumber, 38, values.map((value, index) => {
+    const reference = `${ticketColumns[index]}${ticketRowNumber}`;
+    const numericValue = typeof value === 'number' ? value : Number(value);
+    return numericTicketColumns.has(index) && value !== '' && Number.isFinite(numericValue)
+      ? numberCell(reference, ticketStyles.body[index], numericValue)
+      : stringCell(reference, ticketStyles.body[index], value);
+  })));
+  ticketRowNumber += 1;
+}
+const ticketLastRow = ticketRowNumber - 1;
+const updatedTicketWorksheetXml = ticketWorksheetXml
+  .replace(/<x:dimension ref="[^"]+"\s*\/>/, `<x:dimension ref="A1:M${ticketLastRow}" />`)
+  .replace(/<x:sheetData>[\s\S]*?<\/x:sheetData>/, `<x:sheetData>${ticketRows.join('')}</x:sheetData>`);
+files[ticketWorksheetPath] = strToU8(updatedTicketWorksheetXml);
+
 await writeFile(workbookPath, zipSync(files, { level: 6 }));
-console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues, ${chatIntake.slips.length} chat slips, ${morningScan.games.length} morning games, ${boardLastRow - 4} board rows).`);
+console.log(`Synced ${workbookPath} from ${slate.date} (${slate.leagues.length} leagues, ${chatIntake.slips.length} chat slips, ${morningScan.games.length} morning games, ${boardLastRow - 4} board rows, ${history['Ticket Log'].length} tickets).`);

@@ -2,10 +2,160 @@
   "schemaVersion": "0.1",
   "date": "2026-09-12",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T15:25:38.878Z",
+  "lastUpdated": "2026-09-12T16:26:09.806Z",
   "sourceLabel": "Source-blind Sep. 12 morning scan + CFB Late Refresh",
-  "notes": "Today’s Real Card is empty until placement confirmation. The 12-candidate independent shortlist was frozen before chat review, then chat evidence refined the Oregon–Oklahoma State market to Oregon 1H team total over 21.5 at +100. Ten other provisional exact-market candidates and fourteen requested Paper hypotheses remain tracked. Supplied rows do not replace independent discovery; grades and confidence remain null.",
-  "realCard": [],
+  "notes": "Seven $1 DraftKings tickets are placement-confirmed from the Sep. 12 chat: four soccer singles, two CFB singles and one three-leg CFB promotional totals package. Results, payouts, grades and confidence remain null until separately verified.",
+  "realCard": [
+    {
+      "id": "S12-T01",
+      "sport": "Soccer",
+      "title": "Serhou Guirassy 2+ shots on target",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-170",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent soccer pass qualified Guirassy’s confirmed starting role and recent shot-on-target volume. The user confirmed this and the Isak single as placed.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Serhou Guirassy 2+ shots on target (-170)"
+      ]
+    },
+    {
+      "id": "S12-T02",
+      "sport": "Soccer",
+      "title": "Alexander Isak 2+ shots on target",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+110",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent soccer pass preferred Isak’s 2+ shots-on-target threshold at plus money. The user confirmed this and the Guirassy single as placed.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Alexander Isak 2+ shots on target (+110)"
+      ]
+    },
+    {
+      "id": "S12-T03",
+      "sport": "Soccer",
+      "title": "Patrik Schick 2+ shots on target",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+115",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent review preferred Schick’s player-volume market over heavily priced Leverkusen team totals. The user immediately confirmed placement.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Patrik Schick 2+ shots on target (+115)"
+      ]
+    },
+    {
+      "id": "S12-T04",
+      "sport": "NCAAF",
+      "title": "McAfee Tailgate Overs",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+400 boosted",
+      "promo": "McAfee Tailgate Overs boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent audit treated the fixed three-leg package as one correlated promo ticket and cleared it only at the displayed +400 boosted price. The user explicitly confirmed it as placed.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Mississippi State at Minnesota over 50.5",
+        "Tennessee at Georgia Tech over 50.5",
+        "Arizona State at Texas A&M over 45.5"
+      ]
+    },
+    {
+      "id": "S12-T05",
+      "sport": "NCAAF",
+      "title": "Nate Sheppard 24+ rushing attempts",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-123 before boost",
+      "promo": "50% CFB Saturday profit boost",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent role audit selected rushing attempts over rushing yards to express expected workload directly. The user confirmed placement with the 50% CFB Saturday boost; the final boosted price was not captured.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Nate Sheppard 24+ rushing attempts (-123 before boost)"
+      ]
+    },
+    {
+      "id": "S12-T06",
+      "sport": "Soccer",
+      "title": "Athletic Bilbao first-half moneyline",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "-125",
+      "promo": "No promo recorded",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The independent lineup and early-game review preferred Athletic’s first-half moneyline to expensive team totals and player-shot ladders. The user immediately confirmed placement.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Athletic Bilbao first-half moneyline (-125)"
+      ]
+    },
+    {
+      "id": "S12-T07",
+      "sport": "NCAAF",
+      "title": "Oregon Ducks first-half team total over 21.5",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+100",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The source-blind morning scan first identified Oregon–Oklahoma State for first-half and team-total comparison. A later independent price gate selected over 21.5 at +100, and the user replied that it was placed before asking about the separate live boost.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Oregon Ducks first-half team total over 21.5 (+100)"
+      ]
+    }
+  ],
   "activeCandidates": [
     {
       "id": "S12-A01",
@@ -138,8 +288,8 @@
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "RECOMMENDED_NOT_CONFIRMED",
-      "rationale": "The source-blind morning scan independently flagged this game for first-half and team-total comparison. A later chat review supplied the exact DraftKings line and recommended Oregon 1H team total over 21.5 at +100, citing Oregon’s offensive matchup and reduced second-half rotation exposure. No user placement confirmation was found, so this remains off the Real Card.",
+      "status": "PLACED_USER_CONFIRMED",
+      "rationale": "The source-blind morning scan independently flagged this game for first-half and team-total comparison. The exact DraftKings line was later selected at +100, and the user replied that it was placed before asking about the separate live boost.",
       "experiment": "CFB first-half team total"
     },
     {
