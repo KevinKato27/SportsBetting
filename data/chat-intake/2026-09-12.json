@@ -2,9 +2,36 @@
   "schemaVersion": "0.1",
   "date": "2026-09-12",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-12T14:33:00.630Z",
+  "ingestedAt": "2026-09-12T15:25:38.878Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "No Sep. 12 placement-confirmed ticket has been found. Updated chats supplied ten provisional market candidates and fourteen explicitly requested Paper hypotheses; these are stored on the research board/tracker, not the Real Card.",
-  "slips": []
+  "notes": "No Sep. 12 placement-confirmed ticket has been found. The latest chat supplied an exact DraftKings price and recommendation for an independently surfaced Oregon–Oklahoma State market; it remains a research candidate, not a Real Card ticket.",
+  "slips": [
+    {
+      "id": "CI-20260912-01",
+      "date": "2026-09-12",
+      "sport": "NCAAF",
+      "league": "CFB",
+      "title": "Oregon first-half team total candidate",
+      "status": "RECOMMENDED_NOT_CONFIRMED",
+      "sportsbook": "DraftKings",
+      "origin": "BOTH",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "sourceLabel": "CFB Late Refresh",
+      "sourceTurnTime": "2026-09-12T14:46:44Z",
+      "auditSummary": "The source-blind morning scan independently surfaced Oregon at Oklahoma State for first-half and team-total comparison. A later chat review selected the exact first-half team-total expression at the displayed DraftKings price. Placement was not confirmed.",
+      "placementEvidence": "None; keep off the Real Card until the user explicitly confirms placement.",
+      "legs": [
+        {
+          "entity": "Oregon Ducks",
+          "event": "Oregon Ducks at Oklahoma State Cowboys",
+          "market": "First-half team total",
+          "threshold": "21.5",
+          "side": "Over",
+          "displayedPrice": "+100",
+          "status": "RECOMMENDED_NOT_CONFIRMED"
+        }
+      ]
+    }
+  ]
 }

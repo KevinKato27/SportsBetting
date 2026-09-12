@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-12",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T14:33:00.630Z",
+  "lastUpdated": "2026-09-12T15:25:38.878Z",
   "sourceLabel": "Source-blind Sep. 12 morning scan + CFB Late Refresh",
-  "notes": "Today’s Real Card is empty until placement confirmation. The 12-candidate independent shortlist was frozen before chat review, then ten provisional exact-market candidates and fourteen requested Paper hypotheses were merged. Supplied rows do not replace independent discovery; grades and confidence remain null.",
+  "notes": "Today’s Real Card is empty until placement confirmation. The 12-candidate independent shortlist was frozen before chat review, then chat evidence refined the Oregon–Oklahoma State market to Oregon 1H team total over 21.5 at +100. Ten other provisional exact-market candidates and fourteen requested Paper hypotheses remain tracked. Supplied rows do not replace independent discovery; grades and confidence remain null.",
   "realCard": [],
   "activeCandidates": [
     {
@@ -132,15 +132,15 @@
       "sport": "NCAAF",
       "entity": "Oregon Ducks at Oklahoma State Cowboys",
       "event": "Oregon Ducks at Oklahoma State Cowboys",
-      "market": "CFB side / first-half / team-total comparison",
-      "price": "DraftKings price unavailable",
-      "origin": "INDEPENDENT",
+      "market": "Oregon 1H team total over 21.5",
+      "price": "+100 DraftKings",
+      "origin": "BOTH",
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PROSPECTIVE_ROLE_CHECK",
-      "rationale": "Official ESPN schedule records Oklahoma State Cowboys 0-1 versus Oregon Ducks 1-0. This is a game-market audit only; depth charts, recent workload, blowout continuity, injuries and exact DraftKings prices must be verified before any candidate is promoted.",
-      "experiment": "CFB side / first-half / team-total comparison"
+      "status": "RECOMMENDED_NOT_CONFIRMED",
+      "rationale": "The source-blind morning scan independently flagged this game for first-half and team-total comparison. A later chat review supplied the exact DraftKings line and recommended Oregon 1H team total over 21.5 at +100, citing Oregon’s offensive matchup and reduced second-half rotation exposure. No user placement confirmation was found, so this remains off the Real Card.",
+      "experiment": "CFB first-half team total"
     },
     {
       "id": "S12-A10",
