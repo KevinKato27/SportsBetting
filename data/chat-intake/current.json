@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-11T18:42:54.230Z",
+  "ingestedAt": "2026-09-12T00:48:04.871Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Two Sep. 11 placement-confirmed DraftKings tickets are captured from explicit user placement responses immediately after exact instructions. Each has a $1 stake; the stated thresholds and prices are preserved. Results and payouts remain pending; no numeric grade or confidence is inferred.",
+  "notes": "Five Sep. 11 placement-confirmed DraftKings singles are captured from explicit user placement responses immediately after exact instructions. Each has a $1 stake. Displayed thresholds and prices are preserved; grades and confidence remain null when absent.",
   "slips": [
     {
       "id": "2026-09-11-cfb-jamal-roberts-first-half-rushing-01",
@@ -77,6 +77,114 @@
       ],
       "sources": [
         "https://www.mlb.com/gameday/822684"
+      ]
+    },
+    {
+      "id": "2026-09-11-mlb-ronald-acuna-total-bases-01",
+      "date": "2026-09-11",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Ronald Acuña Jr. 2+ total bases",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": null,
+      "displayedCombinedPrice": "+122",
+      "origin": "BOTH",
+      "verificationStatus": "VERIFIED",
+      "sourceLabel": "Bet Slate Watch",
+      "sourceTurnTime": "2026-09-11T22:16:42.732Z",
+      "auditSummary": "The supplied historical-matchup lead was corrected and independently re-audited. The exact DraftKings price cleared the conservative threshold, and the user immediately confirmed the $1 placement.",
+      "placementEvidence": "The user replied “Placed” immediately after the direct instruction to place Ronald Acuña Jr. 2+ total bases at +122 for $1.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "Ronald Acuña Jr.",
+          "event": "Philadelphia Phillies at Atlanta Braves",
+          "market": "Total bases",
+          "threshold": "2+",
+          "side": "Over",
+          "displayedPrice": "+122",
+          "status": "PENDING"
+        }
+      ],
+      "sources": [
+        "https://www.mlb.com/gameday/824873"
+      ]
+    },
+    {
+      "id": "2026-09-11-mlb-chris-bassitt-earned-runs-01",
+      "date": "2026-09-11",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Chris Bassitt over 2.5 earned runs allowed",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": null,
+      "displayedCombinedPrice": "+103",
+      "origin": "BOTH",
+      "verificationStatus": "VERIFIED",
+      "sourceLabel": "Bet Slate Watch",
+      "sourceTurnTime": "2026-09-11T22:37:13.376Z",
+      "auditSummary": "The expanded-market audit preserved the Bassitt traffic/contact fade after under 16.5 outs failed its threshold gate. Over 2.5 earned runs at +103 was selected as the cleaner expression, and the user explicitly confirmed the $1 placement.",
+      "placementEvidence": "The user said “I placed the Bassitt one” after the exact instruction to place Chris Bassitt over 2.5 earned runs at +103 for $1.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "Chris Bassitt",
+          "event": "Baltimore Orioles at Toronto Blue Jays",
+          "market": "Pitcher earned runs allowed",
+          "threshold": "2.5",
+          "side": "Over",
+          "displayedPrice": "+103",
+          "status": "PENDING"
+        }
+      ],
+      "sources": [
+        "https://www.mlb.com/gameday/822767"
+      ]
+    },
+    {
+      "id": "2026-09-11-mlb-matthew-liberatore-earned-runs-01",
+      "date": "2026-09-11",
+      "sport": "Baseball",
+      "league": "MLB",
+      "title": "Matthew Liberatore over 2.5 earned runs allowed",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "sportsbook": "DraftKings",
+      "promo": null,
+      "displayedCombinedPrice": "+124",
+      "origin": "BOTH",
+      "verificationStatus": "VERIFIED",
+      "sourceLabel": "Bet Slate Watch",
+      "sourceTurnTime": "2026-09-11T22:44:11.279Z",
+      "auditSummary": "The expanded-market audit compared Liberatore earned runs, hits and outs with Miguel Vargas hitter expressions. The broader pitcher fade at +124 ranked first, and the user replied “Done” immediately after the exact placement instruction.",
+      "placementEvidence": "The user replied “Done” immediately after the direct instruction to place Matthew Liberatore over 2.5 earned runs at +124 for $1.",
+      "result": null,
+      "payout": null,
+      "pnl": null,
+      "settlementEvidence": null,
+      "legs": [
+        {
+          "entity": "Matthew Liberatore",
+          "event": "Chicago White Sox at St. Louis Cardinals",
+          "market": "Pitcher earned runs allowed",
+          "threshold": "2.5",
+          "side": "Over",
+          "displayedPrice": "+124",
+          "status": "PENDING"
+        }
+      ],
+      "sources": [
+        "https://www.mlb.com/gameday/823012"
       ]
     }
   ]

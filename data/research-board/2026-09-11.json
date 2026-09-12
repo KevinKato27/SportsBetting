@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-11T18:42:54.230Z",
-  "sourceLabel": "Source-blind Sep. 11 morning scan + Sports Research Watch + MLB CFB Initial Audit",
-  "notes": "The twelve-family source-blind morning shortlist was frozen before supplied research. Jamal Roberts first-half rushing and Cade Cavalli 7+ strikeouts are placement-confirmed for $1 each. Later source cards remain challengers only: exact DraftKings thresholds caused Bassitt under 16.5 outs and Louisville first-half -23.5 to fail the cash gate, while all missing grades and confidence remain null.",
+  "lastUpdated": "2026-09-12T00:48:04.871Z",
+  "sourceLabel": "Source-blind Sep. 11 morning scan + Sports Research Watch + Bet Slate Watch",
+  "notes": "The twelve-family source-blind morning shortlist was frozen before supplied research. Five $1 singles are placement-confirmed: Jamal Roberts first-half rushing, Cade Cavalli strikeouts, Ronald Acuña Jr. total bases, Chris Bassitt earned runs allowed, and Matthew Liberatore earned runs allowed. The later three were selected only after independent re-audit and market-expression comparison; no missing grade or confidence is inferred.",
   "realCard": [
     {
       "id": "S11-T01",
@@ -46,6 +46,69 @@
       "settlement": null,
       "legs": [
         "Cade Cavalli 7+ strikeouts (-150)"
+      ]
+    },
+    {
+      "id": "S11-T03",
+      "sport": "MLB",
+      "title": "Ronald Acuña Jr. 2+ total bases",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+122",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The supplied historical-matchup lead was corrected and independently re-audited. The exact DraftKings price cleared the conservative threshold, and the user immediately confirmed the $1 placement.",
+      "result": "Pending",
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Ronald Acuña Jr. 2+ total bases (+122)"
+      ]
+    },
+    {
+      "id": "S11-T04",
+      "sport": "MLB",
+      "title": "Chris Bassitt over 2.5 earned runs allowed",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+103",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The expanded-market audit preserved the Bassitt traffic/contact fade after under 16.5 outs failed its threshold gate. Over 2.5 earned runs at +103 was selected as the cleaner expression, and the user explicitly confirmed the $1 placement.",
+      "result": "Pending",
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Chris Bassitt over 2.5 earned runs allowed (+103)"
+      ]
+    },
+    {
+      "id": "S11-T05",
+      "sport": "MLB",
+      "title": "Matthew Liberatore over 2.5 earned runs allowed",
+      "status": "PLACED_USER_CONFIRMED",
+      "stake": 1,
+      "price": "+124",
+      "promo": "No promo recorded",
+      "origin": "BOTH",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "summary": "The expanded-market audit compared Liberatore earned runs, hits and outs with Miguel Vargas hitter expressions. The broader pitcher fade at +124 ranked first, and the user replied “Done” immediately after the exact placement instruction.",
+      "result": "Pending",
+      "payout": null,
+      "pnl": null,
+      "settlement": null,
+      "legs": [
+        "Matthew Liberatore over 2.5 earned runs allowed (+124)"
       ]
     }
   ],
@@ -371,13 +434,13 @@
       "entity": "Ronald Acuña Jr.",
       "event": "Philadelphia Phillies at Atlanta Braves",
       "market": "2+ total bases",
-      "price": "DraftKings price unavailable",
-      "origin": "SUPPLIED",
+      "price": "+122 DraftKings",
+      "origin": "BOTH",
       "chatGrade": null,
       "legGrade": null,
       "confidence": null,
-      "status": "PRICE_CHECK_CHALLENGER",
-      "rationale": "A supplied BvP graphic contained stale counts, but the corrected independent audit still found a strong historical matchup. Nola’s recent form prevents promotion without the exact DraftKings price and lineup check.",
+      "status": "PLACED_REAL_CARD_PENDING",
+      "rationale": "The supplied historical-matchup lead was corrected and independently re-audited. At the displayed +122 price, the total-bases expression cleared the conservative placement threshold; the user confirmed the $1 single. Result remains pending.",
       "experiment": "Corrected BvP total-bases challenger"
     },
     {
