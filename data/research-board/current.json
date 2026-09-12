@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-12",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T19:28:42.417Z",
+  "lastUpdated": "2026-09-12T20:40:45.218Z",
   "sourceLabel": "Source-blind Sep. 12 morning scan + CFB Late Refresh + Sports betting handoff update",
-  "notes": "Thirteen $1 DraftKings tickets are placement-confirmed. Five are settled from user-supplied sportsbook/game evidence: Guirassy won; Isak, Schick, Athletic Bilbao first-half ML and Oregon first-half team total lost. The settled subset is 1–4 for -$3.4118. All other results, payouts, grades and confidence remain null.",
+  "notes": "Thirteen $1 DraftKings tickets are placement-confirmed. Five are settled from user-supplied sportsbook/game evidence: Guirassy won; Isak, Schick, Athletic Bilbao first-half ML and Oregon first-half team total lost. The settled subset is 1–4 for -$3.4118. Ryan Wingo 60+ receiving yards at +120 is independently qualified but remains outside Real Card until the user confirms placement. All other results, payouts, grades and confidence remain null.",
   "realCard": [
     {
       "id": "S12-T01",
@@ -614,6 +614,21 @@
       "status": "HOLD_FOR_LINEUP",
       "rationale": "Supplied hitter challenger linked to Thornton’s right-handed vulnerability, but Judge’s recent return creates a workload/form-regime gate.",
       "experiment": "Hitter versus broad-pitcher expression"
+    },
+    {
+      "id": "S12-A23",
+      "sport": "NCAAF",
+      "entity": "Ryan Wingo",
+      "event": "Ohio State Buckeyes at Texas Longhorns",
+      "market": "60+ receiving yards",
+      "price": "+120 DraftKings",
+      "origin": "INDEPENDENT",
+      "chatGrade": null,
+      "legGrade": null,
+      "confidence": null,
+      "status": "QUALIFIED_AWAITING_PLACEMENT",
+      "rationale": "The independent evening audit preferred Wingo's 60+ receiving-yards threshold over the supplied Jeremiah Smith markets. The displayed +120 price qualified before the dedicated 50% OSU–Texas boost, but the chat does not contain user placement confirmation.",
+      "experiment": "Independent evening player-prop discovery"
     }
   ],
   "paperCandidates": [
