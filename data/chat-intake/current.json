@@ -2,10 +2,10 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "ingestedAt": "2026-09-12T01:49:30.694Z",
+  "ingestedAt": "2026-09-12T02:49:23.704Z",
   "sourceType": "user-authorized-project-chat-summary",
   "publicExport": true,
-  "notes": "Six Sep. 11 placement-confirmed DraftKings singles are captured from explicit user responses immediately after exact instructions. Each has a $1 stake. Cavalli 7+ strikeouts is settled as a win from the official MLB final box score; other results remain pending unless separately verified.",
+  "notes": "Six Sep. 11 placement-confirmed DraftKings singles are captured. Cavalli 7+ strikeouts is a settled win and Bassitt over 2.5 earned runs is a settled loss from official MLB final box scores; other results remain pending until final evidence is complete.",
   "slips": [
     {
       "id": "2026-09-11-cfb-jamal-roberts-first-half-rushing-01",
@@ -132,10 +132,10 @@
       "sourceTurnTime": "2026-09-11T22:37:13.376Z",
       "auditSummary": "The expanded-market audit preserved the Bassitt traffic/contact fade after under 16.5 outs failed its threshold gate. Over 2.5 earned runs at +103 was selected as the cleaner expression, and the user explicitly confirmed the $1 placement.",
       "placementEvidence": "The user said “I placed the Bassitt one” after the exact instruction to place Chris Bassitt over 2.5 earned runs at +103 for $1.",
-      "result": null,
-      "payout": null,
-      "pnl": null,
-      "settlementEvidence": null,
+      "result": "LOSS",
+      "payout": 0,
+      "pnl": -1,
+      "settlementEvidence": "MLB official final box score at https://www.mlb.com/gameday/822767 records 2 earned runs allowed in 5.0 innings.",
       "legs": [
         {
           "entity": "Chris Bassitt",
@@ -144,7 +144,7 @@
           "threshold": "2.5",
           "side": "Over",
           "displayedPrice": "+103",
-          "status": "PENDING"
+          "status": "LOST"
         }
       ],
       "sources": [

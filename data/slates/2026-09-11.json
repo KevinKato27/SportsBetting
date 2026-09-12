@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-12T01:49:30.694Z",
+  "lastVerified": "2026-09-12T02:49:23.704Z",
   "gate": "PRELIMINARY",
   "activeGames": 24,
   "leagues": [
@@ -11,15 +11,15 @@
       "league": "MLB",
       "status": "active",
       "games": 15,
-      "completed": 4,
-      "live": 11,
+      "completed": 9,
+      "live": 6,
       "scheduled": 0,
       "earliestStart": "2:20 PM EDT",
       "earliestStartIso": "2026-09-11T18:20:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-11",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-11&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": [
         {
           "id": "mlb-824631",
@@ -120,9 +120,9 @@
         {
           "id": "mlb-823498",
           "date": "2026-09-11T23:05:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "In Progress",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "New York Mets at New York Yankees",
           "shortName": "NYM @ NYY",
           "competitors": [
@@ -130,15 +130,15 @@
               "side": "away",
               "name": "New York Mets",
               "abbreviation": "NYM",
-              "score": 3,
-              "record": "68-78"
+              "score": 4,
+              "record": "68-79"
             },
             {
               "side": "home",
               "name": "New York Yankees",
               "abbreviation": "NYY",
               "score": 6,
-              "record": "84-62"
+              "record": "85-62"
             }
           ],
           "venue": "Yankee Stadium",
@@ -152,9 +152,9 @@
         {
           "id": "mlb-822767",
           "date": "2026-09-11T23:07:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "In Progress",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Baltimore Orioles at Toronto Blue Jays",
           "shortName": "BAL @ TOR",
           "competitors": [
@@ -163,14 +163,14 @@
               "name": "Baltimore Orioles",
               "abbreviation": "BAL",
               "score": 7,
-              "record": "71-76"
+              "record": "72-76"
             },
             {
               "side": "home",
               "name": "Toronto Blue Jays",
               "abbreviation": "TOR",
-              "score": 2,
-              "record": "73-74"
+              "score": 4,
+              "record": "73-75"
             }
           ],
           "venue": "Rogers Centre",
@@ -184,9 +184,9 @@
         {
           "id": "mlb-824711",
           "date": "2026-09-11T23:10:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "In Progress",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Kansas City Royals at Boston Red Sox",
           "shortName": "KC @ BOS",
           "competitors": [
@@ -195,14 +195,14 @@
               "name": "Kansas City Royals",
               "abbreviation": "KC",
               "score": 3,
-              "record": "65-82"
+              "record": "66-82"
             },
             {
               "side": "home",
               "name": "Boston Red Sox",
               "abbreviation": "BOS",
               "score": 2,
-              "record": "80-67"
+              "record": "80-68"
             }
           ],
           "venue": "Fenway Park",
@@ -248,9 +248,9 @@
         {
           "id": "mlb-823817",
           "date": "2026-09-11T23:10:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "In Progress",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Los Angeles Dodgers at Miami Marlins",
           "shortName": "LAD @ MIA",
           "competitors": [
@@ -259,14 +259,14 @@
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
               "score": 6,
-              "record": "89-57"
+              "record": "90-57"
             },
             {
               "side": "home",
               "name": "Miami Marlins",
               "abbreviation": "MIA",
               "score": 2,
-              "record": "72-75"
+              "record": "72-76"
             }
           ],
           "venue": "loanDepot park",
@@ -290,14 +290,14 @@
               "side": "away",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": 3,
+              "score": 4,
               "record": "82-65"
             },
             {
               "side": "home",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": 1,
+              "score": 3,
               "record": "86-61"
             }
           ],
@@ -312,9 +312,9 @@
         {
           "id": "mlb-823736",
           "date": "2026-09-11T23:45:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "In Progress",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Cincinnati Reds at Milwaukee Brewers",
           "shortName": "CIN @ MIL",
           "competitors": [
@@ -323,14 +323,14 @@
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
               "score": 0,
-              "record": "69-77"
+              "record": "69-78"
             },
             {
               "side": "home",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": 17,
-              "record": "91-56"
+              "score": 20,
+              "record": "92-56"
             }
           ],
           "venue": "American Family Field",
@@ -354,14 +354,14 @@
               "side": "away",
               "name": "Cleveland Guardians",
               "abbreviation": "CLE",
-              "score": 0,
+              "score": 5,
               "record": "74-73"
             },
             {
               "side": "home",
               "name": "Minnesota Twins",
               "abbreviation": "MIN",
-              "score": 1,
+              "score": 2,
               "record": "69-77"
             }
           ],
@@ -386,14 +386,14 @@
               "side": "away",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
-              "score": 1,
+              "score": 2,
               "record": "75-71"
             },
             {
               "side": "home",
               "name": "St. Louis Cardinals",
               "abbreviation": "STL",
-              "score": 1,
+              "score": 3,
               "record": "72-75"
             }
           ],
@@ -418,14 +418,14 @@
               "side": "away",
               "name": "Seattle Mariners",
               "abbreviation": "SEA",
-              "score": 0,
+              "score": 2,
               "record": "69-78"
             },
             {
               "side": "home",
               "name": "Athletics",
               "abbreviation": "ATH",
-              "score": 0,
+              "score": 4,
               "record": "59-88"
             }
           ],
@@ -474,7 +474,7 @@
           "date": "2026-09-12T02:15:00Z",
           "completed": false,
           "state": "in",
-          "status": "Warmup",
+          "status": "In Progress",
           "name": "San Diego Padres at San Francisco Giants",
           "shortName": "SD @ SF",
           "competitors": [
@@ -482,14 +482,14 @@
               "side": "away",
               "name": "San Diego Padres",
               "abbreviation": "SD",
-              "score": 0,
+              "score": 2,
               "record": "78-68"
             },
             {
               "side": "home",
               "name": "San Francisco Giants",
               "abbreviation": "SF",
-              "score": 0,
+              "score": 1,
               "record": "62-85"
             }
           ],
@@ -508,84 +508,22 @@
       "league": "CFB",
       "status": "active",
       "games": 5,
-      "completed": 0,
-      "live": 5,
+      "completed": 2,
+      "live": 3,
       "scheduled": 0,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-09-11T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": [
-        {
-          "id": "college-football-401858215",
-          "date": "2026-09-11T23:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "12:36 - 4th",
-          "name": "Villanova Wildcats at Louisville Cardinals",
-          "shortName": "VILL @ LOU",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Louisville Cardinals",
-              "abbreviation": "LOU",
-              "score": "52",
-              "record": "0-1"
-            },
-            {
-              "side": "away",
-              "name": "Villanova Wildcats",
-              "abbreviation": "VILL",
-              "score": "13",
-              "record": "1-1"
-            }
-          ],
-          "venue": "L&N Federal Credit Union Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ACC Network"
-          ],
-          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260911"
-        },
-        {
-          "id": "college-football-401858220",
-          "date": "2026-09-11T23:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "5:01 - 4th",
-          "name": "Norfolk State Spartans at Virginia Cavaliers",
-          "shortName": "NORF @ UVA",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Virginia Cavaliers",
-              "abbreviation": "UVA",
-              "score": "52",
-              "record": "1-0"
-            },
-            {
-              "side": "away",
-              "name": "Norfolk State Spartans",
-              "abbreviation": "NORF",
-              "score": "3",
-              "record": "1-1"
-            }
-          ],
-          "venue": "Scott Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ACCNX"
-          ],
-          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260911"
-        },
         {
           "id": "college-football-401858222",
           "date": "2026-09-11T23:00Z",
           "completed": false,
           "state": "in",
-          "status": "6:12 - 2nd",
+          "status": "3:54 - 3rd",
           "name": "Richmond Spiders at NC State Wolfpack",
           "shortName": "RICH @ NCSU",
           "competitors": [
@@ -593,7 +531,7 @@
               "side": "home",
               "name": "NC State Wolfpack",
               "abbreviation": "NCSU",
-              "score": "42",
+              "score": "63",
               "record": "0-1"
             },
             {
@@ -612,11 +550,73 @@
           "source": "https://www.espn.com/college-football/scoreboard/_/date/20260911"
         },
         {
+          "id": "college-football-401858215",
+          "date": "2026-09-11T23:00Z",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
+          "name": "Villanova Wildcats at Louisville Cardinals",
+          "shortName": "VILL @ LOU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Louisville Cardinals",
+              "abbreviation": "LOU",
+              "score": "59",
+              "record": "1-1"
+            },
+            {
+              "side": "away",
+              "name": "Villanova Wildcats",
+              "abbreviation": "VILL",
+              "score": "13",
+              "record": "1-2"
+            }
+          ],
+          "venue": "L&N Federal Credit Union Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ACC Network"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858215/villanova-louisville"
+        },
+        {
+          "id": "college-football-401858220",
+          "date": "2026-09-11T23:00Z",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
+          "name": "Norfolk State Spartans at Virginia Cavaliers",
+          "shortName": "NORF @ UVA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Virginia Cavaliers",
+              "abbreviation": "UVA",
+              "score": "59",
+              "record": "2-0"
+            },
+            {
+              "side": "away",
+              "name": "Norfolk State Spartans",
+              "abbreviation": "NORF",
+              "score": "3",
+              "record": "1-2"
+            }
+          ],
+          "venue": "Scott Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ACCNX"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858220/norfolk-st-virginia"
+        },
+        {
           "id": "college-football-401858214",
           "date": "2026-09-11T23:30Z",
           "completed": false,
           "state": "in",
-          "status": "12:47 - 3rd",
+          "status": "7:06 - 4th",
           "name": "Rutgers Scarlet Knights at Boston College Eagles",
           "shortName": "RUTG @ BC",
           "competitors": [
@@ -624,14 +624,14 @@
               "side": "home",
               "name": "Boston College Eagles",
               "abbreviation": "BC",
-              "score": "20",
+              "score": "28",
               "record": "0-1"
             },
             {
               "side": "away",
               "name": "Rutgers Scarlet Knights",
               "abbreviation": "RUTG",
-              "score": "7",
+              "score": "14",
               "record": "0-1"
             }
           ],
@@ -647,7 +647,7 @@
           "date": "2026-09-12T00:00Z",
           "completed": false,
           "state": "in",
-          "status": "Halftime",
+          "status": "7:01 - 3rd",
           "name": "Missouri Tigers at Kansas Jayhawks",
           "shortName": "MIZ @ KU",
           "competitors": [
@@ -662,7 +662,7 @@
               "side": "away",
               "name": "Missouri Tigers",
               "abbreviation": "MIZ",
-              "score": "14",
+              "score": "28",
               "record": "1-0"
             }
           ],
@@ -688,7 +688,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": []
     },
     {
@@ -704,7 +704,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": []
     },
     {
@@ -720,7 +720,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": []
     },
     {
@@ -736,7 +736,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": []
     },
     {
@@ -752,7 +752,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": []
     },
     {
@@ -768,7 +768,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": [
         {
           "id": "esp.1-401882878",
@@ -816,7 +816,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": [
         {
           "id": "ger.1-401884793",
@@ -864,7 +864,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": [
         {
           "id": "ita.1-401874759",
@@ -912,7 +912,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": [
         {
           "id": "fra.1-401876459",
@@ -958,7 +958,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": []
     },
     {
@@ -974,7 +974,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260911",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260911&limit=200",
-      "sourceVerifiedAt": "2026-09-12T01:49:30.694Z",
+      "sourceVerifiedAt": "2026-09-12T02:49:23.704Z",
       "events": []
     }
   ],

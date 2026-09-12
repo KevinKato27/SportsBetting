@@ -2,9 +2,9 @@
   "schemaVersion": "0.1",
   "date": "2026-09-11",
   "timezone": "America/New_York",
-  "lastUpdated": "2026-09-12T01:49:30.694Z",
+  "lastUpdated": "2026-09-12T02:49:23.704Z",
   "sourceLabel": "Source-blind Sep. 11 morning scan + Sports Research Watch + Bet Slate Watch",
-  "notes": "The twelve-family source-blind morning shortlist was frozen before supplied research. Six $1 DraftKings singles are placement-confirmed. MacKenzie Gore over 1.5 walks at -152 was independently discovered through a full late-slate market-expression audit and confirmed by the user. Cade Cavalli 7+ strikeouts is settled as a win from the official final box score; all unverified grades and confidence remain null.",
+  "notes": "The source-blind morning shortlist was frozen before supplied research. Six $1 DraftKings singles are placement-confirmed. Cade Cavalli 7+ strikeouts is a settled win and Chris Bassitt over 2.5 earned runs is a settled loss from official MLB final box scores. Acuña, Liberatore, Gore and Roberts remain pending until final evidence is complete; unverified grades and confidence remain null.",
   "realCard": [
     {
       "id": "S11-T01",
@@ -82,10 +82,10 @@
       "legGrade": null,
       "confidence": null,
       "summary": "The expanded-market audit preserved the Bassitt traffic/contact fade after under 16.5 outs failed its threshold gate. Over 2.5 earned runs at +103 was selected as the cleaner expression, and the user explicitly confirmed the $1 placement.",
-      "result": "Pending",
-      "payout": null,
-      "pnl": null,
-      "settlement": null,
+      "result": "Loss",
+      "payout": 0,
+      "pnl": -1,
+      "settlement": "MLB official final box score: Chris Bassitt allowed 2 earned runs in 5.0 innings, below the over 2.5 threshold.",
       "legs": [
         "Chris Bassitt over 2.5 earned runs allowed (+103)"
       ]
