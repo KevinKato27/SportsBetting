@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-13",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-13T14:54:54.455Z",
+  "lastVerified": "2026-09-13T18:12:23.984Z",
   "gate": "PRELIMINARY",
   "activeGames": 42,
   "leagues": [
@@ -12,21 +12,21 @@
       "status": "active",
       "games": 15,
       "completed": 0,
-      "live": 0,
-      "scheduled": 15,
+      "live": 11,
+      "scheduled": 4,
       "earliestStart": "12:10 PM EDT",
       "earliestStartIso": "2026-09-13T16:10:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-13",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-13&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": [
         {
           "id": "mlb-824225",
           "date": "2026-09-13T16:10:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "Colorado Rockies at Detroit Tigers",
           "shortName": "COL @ DET",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Colorado Rockies",
               "abbreviation": "COL",
-              "score": 0,
+              "score": 1,
               "record": "55-93"
             },
             {
               "side": "home",
               "name": "Detroit Tigers",
               "abbreviation": "DET",
-              "score": 0,
+              "score": 8,
               "record": "69-79"
             }
           ],
@@ -57,8 +57,8 @@
           "id": "mlb-822682",
           "date": "2026-09-13T17:35:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "Los Angeles Angels at Washington Nationals",
           "shortName": "LAA @ WSH",
           "competitors": [
@@ -66,21 +66,21 @@
               "side": "away",
               "name": "Los Angeles Angels",
               "abbreviation": "LAA",
-              "score": null,
+              "score": 0,
               "record": "56-92"
             },
             {
               "side": "home",
               "name": "Washington Nationals",
               "abbreviation": "WSH",
-              "score": null,
+              "score": 0,
               "record": "69-81"
             }
           ],
           "venue": "Nationals Park",
           "probablePitchers": {
             "away": "Grayson Rodriguez",
-            "home": "Jake Irvin"
+            "home": "Riley Cornelio"
           },
           "broadcasts": [],
           "source": "https://www.mlb.com/gameday/822682"
@@ -89,8 +89,8 @@
           "id": "mlb-824869",
           "date": "2026-09-13T17:35:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "Philadelphia Phillies at Atlanta Braves",
           "shortName": "PHI @ ATL",
           "competitors": [
@@ -98,14 +98,14 @@
               "side": "away",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": null,
+              "score": 2,
               "record": "82-67"
             },
             {
               "side": "home",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": null,
+              "score": 1,
               "record": "88-61"
             }
           ],
@@ -121,8 +121,8 @@
           "id": "mlb-823495",
           "date": "2026-09-13T17:35:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "New York Mets at New York Yankees",
           "shortName": "NYM @ NYY",
           "competitors": [
@@ -137,7 +137,7 @@
               "side": "home",
               "name": "New York Yankees",
               "abbreviation": "NYY",
-              "score": 0,
+              "score": 1,
               "record": "85-63"
             }
           ],
@@ -153,8 +153,8 @@
           "id": "mlb-822764",
           "date": "2026-09-13T17:37:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "Baltimore Orioles at Toronto Blue Jays",
           "shortName": "BAL @ TOR",
           "competitors": [
@@ -162,14 +162,14 @@
               "side": "away",
               "name": "Baltimore Orioles",
               "abbreviation": "BAL",
-              "score": null,
+              "score": 0,
               "record": "72-77"
             },
             {
               "side": "home",
               "name": "Toronto Blue Jays",
               "abbreviation": "TOR",
-              "score": null,
+              "score": 0,
               "record": "74-75"
             }
           ],
@@ -185,8 +185,8 @@
           "id": "mlb-822928",
           "date": "2026-09-13T17:40:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "Houston Astros at Tampa Bay Rays",
           "shortName": "HOU @ TB",
           "competitors": [
@@ -194,14 +194,14 @@
               "side": "away",
               "name": "Houston Astros",
               "abbreviation": "HOU",
-              "score": null,
+              "score": 0,
               "record": "75-74"
             },
             {
               "side": "home",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 3,
               "record": "89-59"
             }
           ],
@@ -217,8 +217,8 @@
           "id": "mlb-823815",
           "date": "2026-09-13T17:40:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "Los Angeles Dodgers at Miami Marlins",
           "shortName": "LAD @ MIA",
           "competitors": [
@@ -226,14 +226,14 @@
               "side": "away",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "90-58"
             },
             {
               "side": "home",
               "name": "Miami Marlins",
               "abbreviation": "MIA",
-              "score": null,
+              "score": 0,
               "record": "73-76"
             }
           ],
@@ -249,8 +249,8 @@
           "id": "mlb-823658",
           "date": "2026-09-13T18:10:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "Warmup",
           "name": "Cleveland Guardians at Minnesota Twins",
           "shortName": "CLE @ MIN",
           "competitors": [
@@ -258,21 +258,21 @@
               "side": "away",
               "name": "Cleveland Guardians",
               "abbreviation": "CLE",
-              "score": null,
+              "score": 0,
               "record": "75-74"
             },
             {
               "side": "home",
               "name": "Minnesota Twins",
               "abbreviation": "MIN",
-              "score": null,
+              "score": 0,
               "record": "70-78"
             }
           ],
           "venue": "Target Field",
           "probablePitchers": {
             "away": "Tanner Bibee",
-            "home": null
+            "home": "Joe Ryan"
           },
           "broadcasts": [],
           "source": "https://www.mlb.com/gameday/823658"
@@ -281,8 +281,8 @@
           "id": "mlb-823734",
           "date": "2026-09-13T18:10:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "In Progress",
           "name": "Cincinnati Reds at Milwaukee Brewers",
           "shortName": "CIN @ MIL",
           "competitors": [
@@ -290,14 +290,14 @@
               "side": "away",
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
-              "score": null,
+              "score": 0,
               "record": "69-79"
             },
             {
               "side": "home",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "93-56"
             }
           ],
@@ -313,8 +313,8 @@
           "id": "mlb-823008",
           "date": "2026-09-13T18:15:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Chicago White Sox at St. Louis Cardinals",
           "shortName": "CWS @ STL",
           "competitors": [
@@ -322,20 +322,20 @@
               "side": "away",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
-              "score": null,
+              "score": 0,
               "record": "76-72"
             },
             {
               "side": "home",
               "name": "St. Louis Cardinals",
               "abbreviation": "STL",
-              "score": null,
+              "score": 0,
               "record": "73-76"
             }
           ],
           "venue": "Busch Stadium",
           "probablePitchers": {
-            "away": null,
+            "away": "David Sandlin",
             "home": "Michael McGreevy"
           },
           "broadcasts": [],
@@ -345,8 +345,8 @@
           "id": "mlb-824628",
           "date": "2026-09-13T18:20:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Pittsburgh Pirates at Chicago Cubs",
           "shortName": "PIT @ CHC",
           "competitors": [
@@ -354,14 +354,14 @@
               "side": "away",
               "name": "Pittsburgh Pirates",
               "abbreviation": "PIT",
-              "score": null,
+              "score": 0,
               "record": "74-75"
             },
             {
               "side": "home",
               "name": "Chicago Cubs",
               "abbreviation": "CHC",
-              "score": null,
+              "score": 0,
               "record": "83-66"
             }
           ],
@@ -378,7 +378,7 @@
           "date": "2026-09-13T19:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Kansas City Royals at Boston Red Sox",
           "shortName": "KC @ BOS",
           "competitors": [
@@ -386,14 +386,14 @@
               "side": "away",
               "name": "Kansas City Royals",
               "abbreviation": "KC",
-              "score": null,
+              "score": 0,
               "record": "66-83"
             },
             {
               "side": "home",
               "name": "Boston Red Sox",
               "abbreviation": "BOS",
-              "score": null,
+              "score": 0,
               "record": "81-68"
             }
           ],
@@ -410,7 +410,7 @@
           "date": "2026-09-13T20:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Seattle Mariners at Athletics",
           "shortName": "SEA @ ATH",
           "competitors": [
@@ -418,14 +418,14 @@
               "side": "away",
               "name": "Seattle Mariners",
               "abbreviation": "SEA",
-              "score": null,
+              "score": 0,
               "record": "70-79"
             },
             {
               "side": "home",
               "name": "Athletics",
               "abbreviation": "ATH",
-              "score": null,
+              "score": 0,
               "record": "60-89"
             }
           ],
@@ -442,7 +442,7 @@
           "date": "2026-09-13T20:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Texas Rangers at Arizona Diamondbacks",
           "shortName": "TEX @ AZ",
           "competitors": [
@@ -450,14 +450,14 @@
               "side": "away",
               "name": "Texas Rangers",
               "abbreviation": "TEX",
-              "score": null,
+              "score": 0,
               "record": "73-76"
             },
             {
               "side": "home",
               "name": "Arizona Diamondbacks",
               "abbreviation": "AZ",
-              "score": null,
+              "score": 0,
               "record": "79-70"
             }
           ],
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": []
     },
     {
@@ -525,21 +525,21 @@
       "status": "active",
       "games": 13,
       "completed": 0,
-      "live": 0,
-      "scheduled": 13,
+      "live": 8,
+      "scheduled": 5,
       "earliestStart": "1:00 PM EDT",
       "earliestStartIso": "2026-09-13T17:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": [
         {
           "id": "nfl-401872925",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "3:11 - 2nd",
           "name": "Tampa Bay Buccaneers at Cincinnati Bengals",
           "shortName": "TB @ CIN",
           "competitors": [
@@ -547,14 +547,14 @@
               "side": "home",
               "name": "Cincinnati Bengals",
               "abbreviation": "CIN",
-              "score": "0",
+              "score": "21",
               "record": "0-0"
             },
             {
               "side": "away",
               "name": "Tampa Bay Buccaneers",
               "abbreviation": "TB",
-              "score": "0",
+              "score": "3",
               "record": "0-0"
             }
           ],
@@ -563,14 +563,14 @@
           "broadcasts": [
             "FOX"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872925/buccaneers-bengals"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872923",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "7:46 - 2nd",
           "name": "New Orleans Saints at Detroit Lions",
           "shortName": "NO @ DET",
           "competitors": [
@@ -578,7 +578,7 @@
               "side": "home",
               "name": "Detroit Lions",
               "abbreviation": "DET",
-              "score": "0",
+              "score": "7",
               "record": "0-0"
             },
             {
@@ -594,14 +594,14 @@
           "broadcasts": [
             "FOX"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872923/saints-lions"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872924",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "2:23 - 2nd",
           "name": "New York Jets at Tennessee Titans",
           "shortName": "NYJ @ TEN",
           "competitors": [
@@ -609,14 +609,14 @@
               "side": "home",
               "name": "Tennessee Titans",
               "abbreviation": "TEN",
-              "score": "0",
+              "score": "3",
               "record": "0-0"
             },
             {
               "side": "away",
               "name": "New York Jets",
               "abbreviation": "NYJ",
-              "score": "0",
+              "score": "10",
               "record": "0-0"
             }
           ],
@@ -625,14 +625,14 @@
           "broadcasts": [
             "CBS"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872924/jets-titans"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872659",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "6:54 - 2nd",
           "name": "Baltimore Ravens at Indianapolis Colts",
           "shortName": "BAL @ IND",
           "competitors": [
@@ -640,14 +640,14 @@
               "side": "home",
               "name": "Indianapolis Colts",
               "abbreviation": "IND",
-              "score": "0",
+              "score": "6",
               "record": "0-0"
             },
             {
               "side": "away",
               "name": "Baltimore Ravens",
               "abbreviation": "BAL",
-              "score": "0",
+              "score": "21",
               "record": "0-0"
             }
           ],
@@ -656,14 +656,14 @@
           "broadcasts": [
             "CBS"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872659/ravens-colts"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872658",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "7:37 - 2nd",
           "name": "Atlanta Falcons at Pittsburgh Steelers",
           "shortName": "ATL @ PIT",
           "competitors": [
@@ -671,14 +671,14 @@
               "side": "home",
               "name": "Pittsburgh Steelers",
               "abbreviation": "PIT",
-              "score": "0",
+              "score": "13",
               "record": "0-0"
             },
             {
               "side": "away",
               "name": "Atlanta Falcons",
               "abbreviation": "ATL",
-              "score": "0",
+              "score": "7",
               "record": "0-0"
             }
           ],
@@ -687,14 +687,14 @@
           "broadcasts": [
             "FOX"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872658/falcons-steelers"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872661",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "8:42 - 2nd",
           "name": "Chicago Bears at Carolina Panthers",
           "shortName": "CHI @ CAR",
           "competitors": [
@@ -702,14 +702,14 @@
               "side": "home",
               "name": "Carolina Panthers",
               "abbreviation": "CAR",
-              "score": "0",
+              "score": "21",
               "record": "0-0"
             },
             {
               "side": "away",
               "name": "Chicago Bears",
               "abbreviation": "CHI",
-              "score": "0",
+              "score": "21",
               "record": "0-0"
             }
           ],
@@ -718,14 +718,14 @@
           "broadcasts": [
             "FOX"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872661/bears-panthers"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872922",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "4:01 - 2nd",
           "name": "Cleveland Browns at Jacksonville Jaguars",
           "shortName": "CLE @ JAX",
           "competitors": [
@@ -733,7 +733,7 @@
               "side": "home",
               "name": "Jacksonville Jaguars",
               "abbreviation": "JAX",
-              "score": "0",
+              "score": "24",
               "record": "0-0"
             },
             {
@@ -749,14 +749,14 @@
           "broadcasts": [
             "CBS"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872922/browns-jaguars"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872660",
           "date": "2026-09-13T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/13 - 1:00 PM EDT",
+          "state": "in",
+          "status": "3:51 - 2nd",
           "name": "Buffalo Bills at Houston Texans",
           "shortName": "BUF @ HOU",
           "competitors": [
@@ -764,14 +764,14 @@
               "side": "home",
               "name": "Houston Texans",
               "abbreviation": "HOU",
-              "score": "0",
+              "score": "14",
               "record": "0-0"
             },
             {
               "side": "away",
               "name": "Buffalo Bills",
               "abbreviation": "BUF",
-              "score": "0",
+              "score": "17",
               "record": "0-0"
             }
           ],
@@ -780,7 +780,7 @@
           "broadcasts": [
             "CBS"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872660/bills-texans"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20260913"
         },
         {
           "id": "nfl-401872928",
@@ -952,7 +952,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": []
     },
     {
@@ -968,7 +968,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": []
     },
     {
@@ -984,7 +984,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": []
     },
     {
@@ -992,15 +992,15 @@
       "league": "EPL",
       "status": "active",
       "games": 2,
-      "completed": 1,
+      "completed": 2,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-09-13T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": [
         {
           "id": "eng.1-401879282",
@@ -1036,9 +1036,9 @@
         {
           "id": "eng.1-401879278",
           "date": "2026-09-13T15:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Manchester City at Manchester United",
           "shortName": "MNC @ MAN",
           "competitors": [
@@ -1047,14 +1047,14 @@
               "name": "Manchester United",
               "abbreviation": "MAN",
               "score": "0",
-              "record": "1-1-1"
+              "record": "1-1-2"
             },
             {
               "side": "away",
               "name": "Manchester City",
               "abbreviation": "MNC",
-              "score": "0",
-              "record": "3-0-0"
+              "score": "1",
+              "record": "4-0-0"
             }
           ],
           "venue": "Old Trafford",
@@ -1073,15 +1073,15 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 4,
-      "completed": 1,
+      "completed": 2,
       "live": 1,
-      "scheduled": 2,
+      "scheduled": 1,
       "earliestStart": "8:00 AM EDT",
       "earliestStartIso": "2026-09-13T12:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": [
         {
           "id": "esp.1-401882885",
@@ -1118,9 +1118,9 @@
         {
           "id": "esp.1-401882883",
           "date": "2026-09-13T14:15Z",
-          "completed": false,
-          "state": "in",
-          "status": "37'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Barcelona at Levante",
           "shortName": "BAR @ LEV",
           "competitors": [
@@ -1128,15 +1128,15 @@
               "side": "home",
               "name": "Levante",
               "abbreviation": "LEV",
-              "score": "0",
-              "record": "1-2-1"
+              "score": "2",
+              "record": "1-2-2"
             },
             {
               "side": "away",
               "name": "Barcelona",
               "abbreviation": "BAR",
-              "score": "2",
-              "record": "4-0-0"
+              "score": "4",
+              "record": "5-0-0"
             }
           ],
           "venue": "Estadi Ciutat de València",
@@ -1145,14 +1145,14 @@
             "ESPN Deportes",
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260913"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882883/barcelona-levante"
         },
         {
           "id": "esp.1-401882884",
           "date": "2026-09-13T16:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "79'",
           "name": "Deportivo at Getafe",
           "shortName": "DEP @ GET",
           "competitors": [
@@ -1160,14 +1160,14 @@
               "side": "home",
               "name": "Getafe",
               "abbreviation": "GET",
-              "score": "0",
+              "score": "1",
               "record": "1-1-2"
             },
             {
               "side": "away",
               "name": "Deportivo",
               "abbreviation": "DEP",
-              "score": "0",
+              "score": "1",
               "record": "2-2-0"
             }
           ],
@@ -1176,7 +1176,7 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882884/deportivo-getafe"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260913"
         },
         {
           "id": "esp.1-401882879",
@@ -1216,22 +1216,22 @@
       "league": "BUNDESLIGA",
       "status": "active",
       "games": 2,
-      "completed": 0,
-      "live": 1,
-      "scheduled": 1,
+      "completed": 2,
+      "live": 0,
+      "scheduled": 0,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-09-13T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": [
         {
           "id": "ger.1-401884798",
           "date": "2026-09-13T13:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "65'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Hamburg SV at RB Leipzig",
           "shortName": "HSV @ RBL",
           "competitors": [
@@ -1239,15 +1239,15 @@
               "side": "home",
               "name": "RB Leipzig",
               "abbreviation": "RBL",
-              "score": "2",
-              "record": "1-0-1"
+              "score": "5",
+              "record": "2-0-1"
             },
             {
               "side": "away",
               "name": "Hamburg SV",
               "abbreviation": "HSV",
               "score": "0",
-              "record": "0-0-2"
+              "record": "0-0-3"
             }
           ],
           "venue": "Red Bull Arena",
@@ -1255,14 +1255,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260913"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884798/hamburg-sv-rb-leipzig"
         },
         {
           "id": "ger.1-401884791",
           "date": "2026-09-13T15:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Bayern Munich at SV Elversberg",
           "shortName": "MUN @ ELV",
           "competitors": [
@@ -1270,15 +1270,15 @@
               "side": "home",
               "name": "SV Elversberg",
               "abbreviation": "ELV",
-              "score": "0",
-              "record": "2-0-0"
+              "score": "1",
+              "record": "2-0-1"
             },
             {
               "side": "away",
               "name": "Bayern Munich",
               "abbreviation": "MUN",
-              "score": "0",
-              "record": "1-1-0"
+              "score": "2",
+              "record": "2-1-0"
             }
           ],
           "venue": "URSAPHARM-Arena an der Kaiserlinde",
@@ -1295,22 +1295,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 3,
-      "completed": 0,
-      "live": 1,
-      "scheduled": 2,
+      "completed": 2,
+      "live": 0,
+      "scheduled": 1,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-09-13T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": [
         {
           "id": "ita.1-401874936",
           "date": "2026-09-13T13:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "90'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Monza at Lecce",
           "shortName": "MON @ LEC",
           "competitors": [
@@ -1319,14 +1319,14 @@
               "name": "Lecce",
               "abbreviation": "LEC",
               "score": "3",
-              "record": "1-0-2"
+              "record": "2-0-2"
             },
             {
               "side": "away",
               "name": "Monza",
               "abbreviation": "MON",
               "score": "2",
-              "record": "0-1-2"
+              "record": "0-1-3"
             }
           ],
           "venue": "Via Del Mare",
@@ -1335,14 +1335,14 @@
             "CBSSN",
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260913"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874936/monza-lecce"
         },
         {
           "id": "ita.1-401874792",
           "date": "2026-09-13T16:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Bologna at Napoli",
           "shortName": "BOL @ NAP",
           "competitors": [
@@ -1350,15 +1350,15 @@
               "side": "home",
               "name": "Napoli",
               "abbreviation": "NAP",
-              "score": "0",
-              "record": "1-0-2"
+              "score": "1",
+              "record": "2-0-2"
             },
             {
               "side": "away",
               "name": "Bologna",
               "abbreviation": "BOL",
               "score": "0",
-              "record": "0-1-2"
+              "record": "0-1-3"
             }
           ],
           "venue": "Stadio Diego Armando Maradona",
@@ -1406,22 +1406,22 @@
       "league": "LIGUE 1",
       "status": "active",
       "games": 3,
-      "completed": 0,
-      "live": 1,
-      "scheduled": 2,
+      "completed": 2,
+      "live": 0,
+      "scheduled": 1,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-09-13T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": [
         {
           "id": "fra.1-401876462",
           "date": "2026-09-13T13:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "90'+5'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Troyes at Lille",
           "shortName": "TRY @ LILL",
           "competitors": [
@@ -1430,27 +1430,27 @@
               "name": "Lille",
               "abbreviation": "LILL",
               "score": "2",
-              "record": "2-1-0"
+              "record": "3-1-0"
             },
             {
               "side": "away",
               "name": "Troyes",
               "abbreviation": "TRY",
               "score": "0",
-              "record": "1-1-1"
+              "record": "1-1-2"
             }
           ],
           "venue": "Decathlon Arena - Stade Pierre-Mauroy",
           "probablePitchers": null,
           "broadcasts": [],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260913"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401876462/troyes-lille"
         },
         {
           "id": "fra.1-401876463",
           "date": "2026-09-13T15:15Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Lens at Le Mans",
           "shortName": "RCL @ MNS",
           "competitors": [
@@ -1458,15 +1458,15 @@
               "side": "home",
               "name": "Le Mans",
               "abbreviation": "MNS",
-              "score": "0",
-              "record": "0-2-1"
+              "score": "2",
+              "record": "0-3-1"
             },
             {
               "side": "away",
               "name": "Lens",
               "abbreviation": "RCL",
-              "score": "0",
-              "record": "1-0-2"
+              "score": "2",
+              "record": "1-1-2"
             }
           ],
           "venue": "Stade Marie-Marvingt",
@@ -1518,7 +1518,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": []
     },
     {
@@ -1534,7 +1534,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260913",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260913&limit=200",
-      "sourceVerifiedAt": "2026-09-13T14:54:54.455Z",
+      "sourceVerifiedAt": "2026-09-13T18:12:23.984Z",
       "events": []
     }
   ],
