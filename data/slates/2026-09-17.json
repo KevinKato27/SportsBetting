@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-17",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-17T08:38:51.311Z",
+  "lastVerified": "2026-09-17T15:32:31.199Z",
   "gate": "PRELIMINARY",
   "activeGames": 27,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-17",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-17&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": [
         {
           "id": "mlb-823334",
           "date": "2026-09-17T16:35:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Milwaukee Brewers at Pittsburgh Pirates",
           "shortName": "MIL @ PIT",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "95-57"
             },
             {
               "side": "home",
               "name": "Pittsburgh Pirates",
               "abbreviation": "PIT",
-              "score": null,
+              "score": 0,
               "record": "75-77"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-09-17T16:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Los Angeles Dodgers at Cincinnati Reds",
           "shortName": "LAD @ CIN",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "92-60"
             },
             {
               "side": "home",
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
-              "score": null,
+              "score": 0,
               "record": "71-81"
             }
           ],
@@ -90,7 +90,7 @@
           "date": "2026-09-17T17:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Athletics at Tampa Bay Rays",
           "shortName": "ATH @ TB",
           "competitors": [
@@ -98,14 +98,14 @@
               "side": "away",
               "name": "Athletics",
               "abbreviation": "ATH",
-              "score": null,
+              "score": 0,
               "record": "61-91"
             },
             {
               "side": "home",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "92-59"
             }
           ],
@@ -324,7 +324,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": [
         {
           "id": "college-football-401858225",
@@ -372,7 +372,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": [
         {
           "id": "nfl-401872932",
@@ -420,7 +420,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": [
         {
           "id": "wnba-401857190",
@@ -606,7 +606,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": []
     },
     {
@@ -622,7 +622,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": []
     },
     {
@@ -638,7 +638,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": []
     },
     {
@@ -654,7 +654,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": [
         {
           "id": "esp.1-401882874",
@@ -735,7 +735,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": []
     },
     {
@@ -751,7 +751,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": []
     },
     {
@@ -767,7 +767,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": []
     },
     {
@@ -783,7 +783,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": []
     },
     {
@@ -799,7 +799,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260917",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260917&limit=200",
-      "sourceVerifiedAt": "2026-09-17T08:38:51.311Z",
+      "sourceVerifiedAt": "2026-09-17T15:32:31.199Z",
       "events": [
         {
           "id": "uefa.europa-401915584",
