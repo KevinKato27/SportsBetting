@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-18",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-18T18:28:27.521Z",
+  "lastVerified": "2026-09-18T22:34:20.141Z",
   "gate": "PRELIMINARY",
   "activeGames": 26,
   "leagues": [
@@ -12,21 +12,21 @@
       "status": "active",
       "games": 15,
       "completed": 0,
-      "live": 0,
-      "scheduled": 15,
+      "live": 2,
+      "scheduled": 13,
       "earliestStart": "6:40 PM EDT",
       "earliestStartIso": "2026-09-18T22:40:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-18",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-18&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "mlb-824463",
           "date": "2026-09-18T22:40:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Chicago Cubs at Cincinnati Reds",
           "shortName": "CHC @ CIN",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Chicago Cubs",
               "abbreviation": "CHC",
-              "score": null,
+              "score": 0,
               "record": "85-68"
             },
             {
               "side": "home",
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
-              "score": null,
+              "score": 0,
               "record": "71-82"
             }
           ],
@@ -57,8 +57,8 @@
           "id": "mlb-823331",
           "date": "2026-09-18T22:40:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Kansas City Royals at Pittsburgh Pirates",
           "shortName": "KC @ PIT",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Kansas City Royals",
               "abbreviation": "KC",
-              "score": null,
+              "score": 0,
               "record": "67-86"
             },
             {
               "side": "home",
               "name": "Pittsburgh Pirates",
               "abbreviation": "PIT",
-              "score": null,
+              "score": 0,
               "record": "76-77"
             }
           ],
@@ -90,7 +90,7 @@
           "date": "2026-09-18T23:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Milwaukee Brewers at Baltimore Orioles",
           "shortName": "MIL @ BAL",
           "competitors": [
@@ -98,14 +98,14 @@
               "side": "away",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "95-58"
             },
             {
               "side": "home",
               "name": "Baltimore Orioles",
               "abbreviation": "BAL",
-              "score": null,
+              "score": 0,
               "record": "75-78"
             }
           ],
@@ -122,7 +122,7 @@
           "date": "2026-09-18T23:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Athletics at Cleveland Guardians",
           "shortName": "ATH @ CLE",
           "competitors": [
@@ -130,14 +130,14 @@
               "side": "away",
               "name": "Athletics",
               "abbreviation": "ATH",
-              "score": null,
+              "score": 0,
               "record": "61-92"
             },
             {
               "side": "home",
               "name": "Cleveland Guardians",
               "abbreviation": "CLE",
-              "score": null,
+              "score": 0,
               "record": "78-75"
             }
           ],
@@ -154,7 +154,7 @@
           "date": "2026-09-18T23:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Boston Red Sox at Tampa Bay Rays",
           "shortName": "BOS @ TB",
           "competitors": [
@@ -162,14 +162,14 @@
               "side": "away",
               "name": "Boston Red Sox",
               "abbreviation": "BOS",
-              "score": null,
+              "score": 0,
               "record": "83-70"
             },
             {
               "side": "home",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "93-59"
             }
           ],
@@ -186,7 +186,7 @@
           "date": "2026-09-18T23:15:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Philadelphia Phillies at New York Mets",
           "shortName": "PHI @ NYM",
           "competitors": [
@@ -194,20 +194,20 @@
               "side": "away",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": null,
+              "score": 0,
               "record": "85-68"
             },
             {
               "side": "home",
               "name": "New York Mets",
               "abbreviation": "NYM",
-              "score": null,
+              "score": 0,
               "record": "69-84"
             }
           ],
           "venue": "Citi Field",
           "probablePitchers": {
-            "away": null,
+            "away": "Tim Mayza",
             "home": "Zac Thornton"
           },
           "broadcasts": [],
@@ -218,7 +218,7 @@
           "date": "2026-09-18T23:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Detroit Tigers at Chicago White Sox",
           "shortName": "DET @ CWS",
           "competitors": [
@@ -226,14 +226,14 @@
               "side": "away",
               "name": "Detroit Tigers",
               "abbreviation": "DET",
-              "score": null,
+              "score": 0,
               "record": "72-81"
             },
             {
               "side": "home",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
-              "score": null,
+              "score": 0,
               "record": "78-75"
             }
           ],
@@ -250,7 +250,7 @@
           "date": "2026-09-19T00:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Toronto Blue Jays at Texas Rangers",
           "shortName": "TOR @ TEX",
           "competitors": [
@@ -258,14 +258,14 @@
               "side": "away",
               "name": "Toronto Blue Jays",
               "abbreviation": "TOR",
-              "score": null,
+              "score": 0,
               "record": "76-77"
             },
             {
               "side": "home",
               "name": "Texas Rangers",
               "abbreviation": "TEX",
-              "score": null,
+              "score": 0,
               "record": "76-77"
             }
           ],
@@ -282,7 +282,7 @@
           "date": "2026-09-19T00:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Seattle Mariners at Colorado Rockies",
           "shortName": "SEA @ COL",
           "competitors": [
@@ -290,21 +290,21 @@
               "side": "away",
               "name": "Seattle Mariners",
               "abbreviation": "SEA",
-              "score": null,
+              "score": 0,
               "record": "71-82"
             },
             {
               "side": "home",
               "name": "Colorado Rockies",
               "abbreviation": "COL",
-              "score": null,
+              "score": 0,
               "record": "56-97"
             }
           ],
           "venue": "Coors Field",
           "probablePitchers": {
             "away": "Bryan Woo",
-            "home": null
+            "home": "Gabriel Hughes"
           },
           "broadcasts": [],
           "source": "https://www.mlb.com/gameday/824303"
@@ -314,7 +314,7 @@
           "date": "2026-09-19T00:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Atlanta Braves at Houston Astros",
           "shortName": "ATL @ HOU",
           "competitors": [
@@ -322,14 +322,14 @@
               "side": "away",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": null,
+              "score": 0,
               "record": "89-64"
             },
             {
               "side": "home",
               "name": "Houston Astros",
               "abbreviation": "HOU",
-              "score": null,
+              "score": 0,
               "record": "77-76"
             }
           ],
@@ -346,7 +346,7 @@
           "date": "2026-09-19T00:15:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Washington Nationals at St. Louis Cardinals",
           "shortName": "WSH @ STL",
           "competitors": [
@@ -354,14 +354,14 @@
               "side": "away",
               "name": "Washington Nationals",
               "abbreviation": "WSH",
-              "score": null,
+              "score": 0,
               "record": "71-82"
             },
             {
               "side": "home",
               "name": "St. Louis Cardinals",
               "abbreviation": "STL",
-              "score": null,
+              "score": 0,
               "record": "75-78"
             }
           ],
@@ -378,7 +378,7 @@
           "date": "2026-09-19T01:38:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Minnesota Twins at Los Angeles Angels",
           "shortName": "MIN @ LAA",
           "competitors": [
@@ -410,7 +410,7 @@
           "date": "2026-09-19T01:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Miami Marlins at San Diego Padres",
           "shortName": "MIA @ SD",
           "competitors": [
@@ -442,7 +442,7 @@
           "date": "2026-09-19T01:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "New York Yankees at Arizona Diamondbacks",
           "shortName": "NYY @ AZ",
           "competitors": [
@@ -474,7 +474,7 @@
           "date": "2026-09-19T02:15:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "San Francisco Giants at Los Angeles Dodgers",
           "shortName": "SF @ LAD",
           "competitors": [
@@ -482,14 +482,14 @@
               "side": "away",
               "name": "San Francisco Giants",
               "abbreviation": "SF",
-              "score": null,
+              "score": 0,
               "record": "64-89"
             },
             {
               "side": "home",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "93-60"
             }
           ],
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "college-football-401858226",
@@ -626,7 +626,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": []
     },
     {
@@ -642,7 +642,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "wnba-401857195",
@@ -756,7 +756,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": []
     },
     {
@@ -772,7 +772,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": []
     },
     {
@@ -780,22 +780,22 @@
       "league": "EPL",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "3:00 PM EDT",
       "earliestStartIso": "2026-09-18T19:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "eng.1-401879275",
           "date": "2026-09-18T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Chelsea at Brentford",
           "shortName": "CHE @ BRE",
           "competitors": [
@@ -803,15 +803,15 @@
               "side": "home",
               "name": "Brentford",
               "abbreviation": "BRE",
-              "score": "0",
-              "record": "1-3-0"
+              "score": "3",
+              "record": "2-3-0"
             },
             {
               "side": "away",
               "name": "Chelsea",
               "abbreviation": "CHE",
               "score": "0",
-              "record": "2-1-1"
+              "record": "2-1-2"
             }
           ],
           "venue": "Gtech Community Stadium",
@@ -828,22 +828,22 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "3:00 PM EDT",
       "earliestStartIso": "2026-09-18T19:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "esp.1-401882862",
           "date": "2026-09-18T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Elche at Espanyol",
           "shortName": "ELC @ ESP",
           "competitors": [
@@ -851,15 +851,15 @@
               "side": "home",
               "name": "Espanyol",
               "abbreviation": "ESP",
-              "score": "0",
-              "record": "2-1-3"
+              "score": "1",
+              "record": "2-1-4"
             },
             {
               "side": "away",
               "name": "Elche",
               "abbreviation": "ELC",
-              "score": "0",
-              "record": "0-2-4"
+              "score": "3",
+              "record": "1-2-4"
             }
           ],
           "venue": "RCDE Stadium",
@@ -877,22 +877,22 @@
       "league": "BUNDESLIGA",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "2:30 PM EDT",
       "earliestStartIso": "2026-09-18T18:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "ger.1-401884790",
           "date": "2026-09-18T18:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "1. FC Union Berlin at Bayern Munich",
           "shortName": "FCU @ MUN",
           "competitors": [
@@ -900,15 +900,15 @@
               "side": "home",
               "name": "Bayern Munich",
               "abbreviation": "MUN",
-              "score": "0",
-              "record": "2-1-0"
+              "score": "7",
+              "record": "3-1-0"
             },
             {
               "side": "away",
               "name": "1. FC Union Berlin",
               "abbreviation": "FCU",
               "score": "0",
-              "record": "0-1-2"
+              "record": "0-1-3"
             }
           ],
           "venue": "Allianz Arena",
@@ -925,22 +925,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "2:45 PM EDT",
       "earliestStartIso": "2026-09-18T18:45Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "ita.1-401874756",
           "date": "2026-09-18T18:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Sassuolo at Monza",
           "shortName": "SAS @ MON",
           "competitors": [
@@ -948,15 +948,15 @@
               "side": "home",
               "name": "Monza",
               "abbreviation": "MON",
-              "score": "0",
-              "record": "0-1-3"
+              "score": "2",
+              "record": "1-1-3"
             },
             {
               "side": "away",
               "name": "Sassuolo",
               "abbreviation": "SAS",
-              "score": "0",
-              "record": "2-1-1"
+              "score": "1",
+              "record": "2-1-2"
             }
           ],
           "venue": "U-Power Stadium",
@@ -973,22 +973,22 @@
       "league": "LIGUE 1",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "2:45 PM EDT",
       "earliestStartIso": "2026-09-18T18:45Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": [
         {
           "id": "fra.1-401876453",
           "date": "2026-09-18T18:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Lens at AS Monaco",
           "shortName": "RCL @ MON",
           "competitors": [
@@ -996,15 +996,15 @@
               "side": "home",
               "name": "AS Monaco",
               "abbreviation": "MON",
-              "score": "0",
-              "record": "3-1-0"
+              "score": "2",
+              "record": "4-1-0"
             },
             {
               "side": "away",
               "name": "Lens",
               "abbreviation": "RCL",
-              "score": "0",
-              "record": "1-1-2"
+              "score": "1",
+              "record": "1-1-3"
             }
           ],
           "venue": "Stade Louis II",
@@ -1027,7 +1027,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": []
     },
     {
@@ -1043,7 +1043,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T18:28:27.521Z",
+      "sourceVerifiedAt": "2026-09-18T22:34:20.141Z",
       "events": []
     }
   ],
