@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-18",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-18T08:14:30.192Z",
+  "lastVerified": "2026-09-18T14:59:26.170Z",
   "gate": "PRELIMINARY",
   "activeGames": 26,
   "leagues": [
@@ -19,7 +19,7 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-18",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-18&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "mlb-824463",
@@ -207,7 +207,7 @@
           ],
           "venue": "Citi Field",
           "probablePitchers": {
-            "away": null,
+            "away": "Andrew Painter",
             "home": "Zac Thornton"
           },
           "broadcasts": [],
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "college-football-401858226",
@@ -626,7 +626,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": []
     },
     {
@@ -642,7 +642,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "wnba-401857195",
@@ -756,7 +756,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": []
     },
     {
@@ -772,7 +772,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": []
     },
     {
@@ -788,7 +788,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "eng.1-401879275",
@@ -836,7 +836,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "esp.1-401882862",
@@ -885,7 +885,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "ger.1-401884790",
@@ -933,7 +933,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "ita.1-401874756",
@@ -981,7 +981,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": [
         {
           "id": "fra.1-401876453",
@@ -1027,7 +1027,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": []
     },
     {
@@ -1043,7 +1043,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260918",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260918&limit=200",
-      "sourceVerifiedAt": "2026-09-18T08:14:30.192Z",
+      "sourceVerifiedAt": "2026-09-18T14:59:26.170Z",
       "events": []
     }
   ],
