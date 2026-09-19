@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-19",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-19T14:24:49.333Z",
+  "lastVerified": "2026-09-19T18:00:57.176Z",
   "gate": "PRELIMINARY",
   "activeGames": 119,
   "leagues": [
@@ -12,21 +12,21 @@
       "status": "active",
       "games": 15,
       "completed": 0,
-      "live": 0,
-      "scheduled": 15,
+      "live": 1,
+      "scheduled": 14,
       "earliestStart": "2:10 PM EDT",
       "earliestStartIso": "2026-09-19T18:10:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-19",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-19&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "mlb-824545",
           "date": "2026-09-19T18:10:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Detroit Tigers at Chicago White Sox",
           "shortName": "DET @ CWS",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Detroit Tigers",
               "abbreviation": "DET",
-              "score": null,
+              "score": 0,
               "record": "73-81"
             },
             {
               "side": "home",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
-              "score": null,
+              "score": 0,
               "record": "78-76"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-09-19T20:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Milwaukee Brewers at Baltimore Orioles",
           "shortName": "MIL @ BAL",
           "competitors": [
@@ -90,7 +90,7 @@
           "date": "2026-09-19T20:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Boston Red Sox at Tampa Bay Rays",
           "shortName": "BOS @ TB",
           "competitors": [
@@ -98,20 +98,20 @@
               "side": "away",
               "name": "Boston Red Sox",
               "abbreviation": "BOS",
-              "score": null,
+              "score": 0,
               "record": "84-70"
             },
             {
               "side": "home",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "93-60"
             }
           ],
           "venue": "Tropicana Field",
           "probablePitchers": {
-            "away": null,
+            "away": "Brayan Bello",
             "home": "Freddy Peralta"
           },
           "broadcasts": [],
@@ -122,7 +122,7 @@
           "date": "2026-09-19T20:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Philadelphia Phillies at New York Mets",
           "shortName": "PHI @ NYM",
           "competitors": [
@@ -130,14 +130,14 @@
               "side": "away",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": null,
+              "score": 0,
               "record": "85-69"
             },
             {
               "side": "home",
               "name": "New York Mets",
               "abbreviation": "NYM",
-              "score": null,
+              "score": 0,
               "record": "70-84"
             }
           ],
@@ -463,7 +463,7 @@
           ],
           "venue": "UNIQLO Field at Dodger Stadium",
           "probablePitchers": {
-            "away": null,
+            "away": "Yunior Marte",
             "home": "Tarik Skubal"
           },
           "broadcasts": [],
@@ -509,21 +509,21 @@
       "status": "active",
       "games": 71,
       "completed": 0,
-      "live": 1,
-      "scheduled": 70,
+      "live": 14,
+      "scheduled": 57,
       "earliestStart": "11:30 AM EDT",
       "earliestStartIso": "2026-09-19T15:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "college-football-401869940",
           "date": "2026-09-19T15:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 11:30 AM EDT",
+          "state": "in",
+          "status": "13:19 - 4th",
           "name": "Coastal Carolina Chanticleers at Delaware Blue Hens",
           "shortName": "CCU @ DEL",
           "competitors": [
@@ -531,14 +531,14 @@
               "side": "home",
               "name": "Delaware Blue Hens",
               "abbreviation": "DEL",
-              "score": "0",
+              "score": "15",
               "record": "1-1"
             },
             {
               "side": "away",
               "name": "Coastal Carolina Chanticleers",
               "abbreviation": "CCU",
-              "score": "0",
+              "score": "14",
               "record": "1-1"
             }
           ],
@@ -547,14 +547,14 @@
           "broadcasts": [
             "CBSSN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401869940/coastal-delaware"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401856686",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "9:02 - 3rd",
           "name": "Georgia Bulldogs at Arkansas Razorbacks",
           "shortName": "UGA @ ARK",
           "competitors": [
@@ -562,14 +562,14 @@
               "side": "home",
               "name": "Arkansas Razorbacks",
               "abbreviation": "ARK",
-              "score": "0",
+              "score": "3",
               "record": "1-1"
             },
             {
               "side": "away",
               "name": "Georgia Bulldogs",
               "abbreviation": "UGA",
-              "score": "0",
+              "score": "24",
               "record": "2-0"
             }
           ],
@@ -578,14 +578,14 @@
           "broadcasts": [
             "ABC"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856686/georgia-arkansas"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401858454",
           "date": "2026-09-19T16:00Z",
           "completed": false,
           "state": "in",
-          "status": "15:00 - 1st",
+          "status": "Halftime",
           "name": "Kent State Golden Flashes at Ohio State Buckeyes",
           "shortName": "KENT @ OSU",
           "competitors": [
@@ -593,7 +593,7 @@
               "side": "home",
               "name": "Ohio State Buckeyes",
               "abbreviation": "OSU",
-              "score": "0",
+              "score": "35",
               "record": "1-1"
             },
             {
@@ -615,8 +615,8 @@
           "id": "college-football-401858456",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "Halftime",
           "name": "Buffalo Bulls at Penn State Nittany Lions",
           "shortName": "BUFF @ PSU",
           "competitors": [
@@ -624,14 +624,14 @@
               "side": "home",
               "name": "Penn State Nittany Lions",
               "abbreviation": "PSU",
-              "score": "0",
+              "score": "34",
               "record": "2-0"
             },
             {
               "side": "away",
               "name": "Buffalo Bulls",
               "abbreviation": "BUFF",
-              "score": "0",
+              "score": "6",
               "record": "1-1"
             }
           ],
@@ -640,14 +640,14 @@
           "broadcasts": [
             "BTN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858456/buffalo-penn-state"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401856792",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "11:38 - 3rd",
           "name": "Tulane Green Wave at Kansas State Wildcats",
           "shortName": "TULN @ KSU",
           "competitors": [
@@ -655,14 +655,14 @@
               "side": "home",
               "name": "Kansas State Wildcats",
               "abbreviation": "KSU",
-              "score": "0",
+              "score": "17",
               "record": "2-0"
             },
             {
               "side": "away",
               "name": "Tulane Green Wave",
               "abbreviation": "TULN",
-              "score": "0",
+              "score": "10",
               "record": "1-1"
             }
           ],
@@ -671,14 +671,14 @@
           "broadcasts": [
             "ESPN2"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856792/tulane-kansas-st"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401856798",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "Halftime",
           "name": "Bowling Green Falcons at Iowa State Cyclones",
           "shortName": "BGSU @ ISU",
           "competitors": [
@@ -686,14 +686,14 @@
               "side": "home",
               "name": "Iowa State Cyclones",
               "abbreviation": "ISU",
-              "score": "0",
+              "score": "35",
               "record": "1-1"
             },
             {
               "side": "away",
               "name": "Bowling Green Falcons",
               "abbreviation": "BGSU",
-              "score": "0",
+              "score": "7",
               "record": "0-2"
             }
           ],
@@ -702,14 +702,14 @@
           "broadcasts": [
             "ESPNU"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856798/bowling-green-iowa-state"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401856812",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "Halftime",
           "name": "Arizona State Sun Devils at Kansas Jayhawks",
           "shortName": "ASU VS KU",
           "competitors": [
@@ -717,14 +717,14 @@
               "side": "home",
               "name": "Kansas Jayhawks",
               "abbreviation": "KU",
-              "score": "0",
+              "score": "7",
               "record": "1-1"
             },
             {
               "side": "away",
               "name": "Arizona State Sun Devils",
               "abbreviation": "ASU",
-              "score": "0",
+              "score": "10",
               "record": "1-1"
             }
           ],
@@ -733,14 +733,14 @@
           "broadcasts": [
             "FS1"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856812/arizona-st-kansas"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401858228",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "10:52 - 3rd",
           "name": "Mercer Bears at Georgia Tech Yellow Jackets",
           "shortName": "MER @ GT",
           "competitors": [
@@ -748,14 +748,14 @@
               "side": "home",
               "name": "Georgia Tech Yellow Jackets",
               "abbreviation": "GT",
-              "score": "0",
+              "score": "24",
               "record": "0-2"
             },
             {
               "side": "away",
               "name": "Mercer Bears",
               "abbreviation": "MER",
-              "score": "0",
+              "score": "3",
               "record": "2-1"
             }
           ],
@@ -764,14 +764,14 @@
           "broadcasts": [
             "ACC Network"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858228/mercer-georgia-tech"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401858229",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "13:36 - 3rd",
           "name": "North Carolina Tar Heels at Clemson Tigers",
           "shortName": "UNC @ CLEM",
           "competitors": [
@@ -779,14 +779,14 @@
               "side": "home",
               "name": "Clemson Tigers",
               "abbreviation": "CLEM",
-              "score": "0",
+              "score": "6",
               "record": "1-1"
             },
             {
               "side": "away",
               "name": "North Carolina Tar Heels",
               "abbreviation": "UNC",
-              "score": "0",
+              "score": "17",
               "record": "2-0"
             }
           ],
@@ -796,14 +796,14 @@
             "ESPN",
             "Disney+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858229/north-carolina-clemson"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401858451",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "14:05 - 3rd",
           "name": "Akron Zips at Minnesota Golden Gophers",
           "shortName": "AKR @ MINN",
           "competitors": [
@@ -811,7 +811,7 @@
               "side": "home",
               "name": "Minnesota Golden Gophers",
               "abbreviation": "MINN",
-              "score": "0",
+              "score": "20",
               "record": "1-1"
             },
             {
@@ -827,14 +827,14 @@
           "broadcasts": [
             "BTN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858451/akron-minnesota"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401860889",
           "date": "2026-09-19T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:00 PM EDT",
+          "state": "in",
+          "status": "Halftime",
           "name": "North Texas Mean Green at Texas State Bobcats",
           "shortName": "UNT @ TXST",
           "competitors": [
@@ -842,14 +842,14 @@
               "side": "home",
               "name": "Texas State Bobcats",
               "abbreviation": "TXST",
-              "score": "0",
+              "score": "28",
               "record": "0-2"
             },
             {
               "side": "away",
               "name": "North Texas Mean Green",
               "abbreviation": "UNT",
-              "score": "0",
+              "score": "28",
               "record": "1-1"
             }
           ],
@@ -858,14 +858,14 @@
           "broadcasts": [
             "USA Net"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401860889/north-texas-texas-st"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401858460",
           "date": "2026-09-19T16:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:30 PM EDT",
+          "state": "in",
+          "status": "1:19 - 2nd",
           "name": "Eastern Michigan Eagles at Wisconsin Badgers",
           "shortName": "EMU @ WIS",
           "competitors": [
@@ -873,14 +873,14 @@
               "side": "home",
               "name": "Wisconsin Badgers",
               "abbreviation": "WIS",
-              "score": "0",
+              "score": "24",
               "record": "1-1"
             },
             {
               "side": "away",
               "name": "Eastern Michigan Eagles",
               "abbreviation": "EMU",
-              "score": "0",
+              "score": "7",
               "record": "1-2"
             }
           ],
@@ -889,14 +889,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858460/e-michigan-wisconsin"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401856695",
           "date": "2026-09-19T16:45Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 12:45 PM EDT",
+          "state": "in",
+          "status": "2:13 - 2nd",
           "name": "NC State Wolfpack at Vanderbilt Commodores",
           "shortName": "NCSU @ VAN",
           "competitors": [
@@ -911,7 +911,7 @@
               "side": "away",
               "name": "NC State Wolfpack",
               "abbreviation": "NCSU",
-              "score": "0",
+              "score": "17",
               "record": "1-1"
             }
           ],
@@ -920,14 +920,14 @@
           "broadcasts": [
             "SEC Network"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856695/nc-state-vanderbilt"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401864508",
           "date": "2026-09-19T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 1:00 PM EDT",
+          "state": "in",
+          "status": "4:20 - 2nd",
           "name": "Wyoming Cowboys at Central Michigan Chippewas",
           "shortName": "WYO @ CMU",
           "competitors": [
@@ -935,7 +935,7 @@
               "side": "home",
               "name": "Central Michigan Chippewas",
               "abbreviation": "CMU",
-              "score": "0",
+              "score": "10",
               "record": "1-1"
             },
             {
@@ -951,7 +951,7 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401864508/wyoming-c-michigan"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260919"
         },
         {
           "id": "college-football-401858227",
@@ -2735,7 +2735,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": []
     },
     {
@@ -2744,21 +2744,21 @@
       "status": "active",
       "games": 3,
       "completed": 0,
-      "live": 0,
-      "scheduled": 3,
+      "live": 1,
+      "scheduled": 2,
       "earliestStart": "1:00 PM EDT",
       "earliestStartIso": "2026-09-19T17:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "wnba-401857198",
           "date": "2026-09-19T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/19 - 1:00 PM EDT",
+          "state": "in",
+          "status": "Halftime",
           "name": "Phoenix Mercury at Dallas Wings",
           "shortName": "PHX @ DAL",
           "competitors": [
@@ -2766,14 +2766,14 @@
               "side": "home",
               "name": "Dallas Wings",
               "abbreviation": "DAL",
-              "score": "0",
+              "score": "56",
               "record": "25-16"
             },
             {
               "side": "away",
               "name": "Phoenix Mercury",
               "abbreviation": "PHX",
-              "score": "0",
+              "score": "49",
               "record": "15-26"
             }
           ],
@@ -2783,7 +2783,7 @@
             "CBS",
             "Paramount+"
           ],
-          "source": "https://www.espn.com/wnba/game/_/gameId/401857198/mercury-wings"
+          "source": "https://www.espn.com/wnba/scoreboard/_/date/20260919"
         },
         {
           "id": "wnba-401857199",
@@ -2862,7 +2862,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": []
     },
     {
@@ -2878,7 +2878,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "nhl-401881922",
@@ -3105,15 +3105,15 @@
       "league": "EPL",
       "status": "active",
       "games": 5,
-      "completed": 1,
-      "live": 3,
-      "scheduled": 1,
+      "completed": 4,
+      "live": 1,
+      "scheduled": 0,
       "earliestStart": "7:30 AM EDT",
       "earliestStartIso": "2026-09-19T11:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "eng.1-401879269",
@@ -3150,9 +3150,9 @@
         {
           "id": "eng.1-401879274",
           "date": "2026-09-19T14:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "24'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Arsenal at Brighton & Hove Albion",
           "shortName": "ARS @ BHA",
           "competitors": [
@@ -3160,15 +3160,15 @@
               "side": "home",
               "name": "Brighton & Hove Albion",
               "abbreviation": "BHA",
-              "score": "0",
-              "record": "2-1-1"
+              "score": "3",
+              "record": "3-1-1"
             },
             {
               "side": "away",
               "name": "Arsenal",
               "abbreviation": "ARS",
               "score": "0",
-              "record": "4-0-0"
+              "record": "4-0-1"
             }
           ],
           "venue": "American Express Stadium",
@@ -3177,14 +3177,14 @@
             "USA Net",
             "Tele"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879274/arsenal-brighton-hove-albion"
         },
         {
           "id": "eng.1-401878778",
           "date": "2026-09-19T14:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "24'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Ipswich Town at Everton",
           "shortName": "IPS @ EVE",
           "competitors": [
@@ -3193,14 +3193,14 @@
               "name": "Everton",
               "abbreviation": "EVE",
               "score": "1",
-              "record": "1-3-0"
+              "record": "2-3-0"
             },
             {
               "side": "away",
               "name": "Ipswich Town",
               "abbreviation": "IPS",
               "score": "0",
-              "record": "2-0-2"
+              "record": "2-0-3"
             }
           ],
           "venue": "Hill Dickinson Stadium",
@@ -3208,14 +3208,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401878778/ipswich-town-everton"
         },
         {
           "id": "eng.1-401879271",
           "date": "2026-09-19T14:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "24'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Hull City at Newcastle United",
           "shortName": "HUL @ NEW",
           "competitors": [
@@ -3224,14 +3224,14 @@
               "name": "Newcastle United",
               "abbreviation": "NEW",
               "score": "2",
-              "record": "1-2-1"
+              "record": "2-2-1"
             },
             {
               "side": "away",
               "name": "Hull City",
               "abbreviation": "HUL",
-              "score": "0",
-              "record": "2-2-0"
+              "score": "1",
+              "record": "2-2-1"
             }
           ],
           "venue": "St. James' Park",
@@ -3239,14 +3239,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879271/hull-city-newcastle-united"
         },
         {
           "id": "eng.1-401879270",
           "date": "2026-09-19T16:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "74'",
           "name": "Coventry City at Nottingham Forest",
           "shortName": "COV @ NFO",
           "competitors": [
@@ -3261,7 +3261,7 @@
               "side": "away",
               "name": "Coventry City",
               "abbreviation": "COV",
-              "score": "0",
+              "score": "1",
               "record": "0-0-4"
             }
           ],
@@ -3270,7 +3270,7 @@
           "broadcasts": [
             "NBC"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879270/coventry-city-nottingham-forest"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260919"
         }
       ]
     },
@@ -3279,15 +3279,15 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 4,
-      "completed": 1,
+      "completed": 2,
       "live": 1,
-      "scheduled": 2,
+      "scheduled": 1,
       "earliestStart": "8:00 AM EDT",
       "earliestStartIso": "2026-09-19T12:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "esp.1-401882860",
@@ -3324,9 +3324,9 @@
         {
           "id": "esp.1-401882866",
           "date": "2026-09-19T14:15Z",
-          "completed": false,
-          "state": "in",
-          "status": "9'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Alavés at Athletic Club",
           "shortName": "ALA @ ATH",
           "competitors": [
@@ -3335,14 +3335,14 @@
               "name": "Athletic Club",
               "abbreviation": "ATH",
               "score": "0",
-              "record": "2-1-2"
+              "record": "2-2-2"
             },
             {
               "side": "away",
               "name": "Alavés",
               "abbreviation": "ALA",
               "score": "0",
-              "record": "3-1-2"
+              "record": "3-2-2"
             }
           ],
           "venue": "San Mamés",
@@ -3351,14 +3351,14 @@
             "ESPN Deportes",
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882866/alaves-athletic-club"
         },
         {
           "id": "esp.1-401882864",
           "date": "2026-09-19T16:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "68'",
           "name": "Racing Santander at Celta Vigo",
           "shortName": "RAC @ CEL",
           "competitors": [
@@ -3366,7 +3366,7 @@
               "side": "home",
               "name": "Celta Vigo",
               "abbreviation": "CEL",
-              "score": "0",
+              "score": "2",
               "record": "0-4-2"
             },
             {
@@ -3383,7 +3383,7 @@
             "ESPN Deportes",
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882864/racing-santander-celta-vigo"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260919"
         },
         {
           "id": "esp.1-401882859",
@@ -3424,22 +3424,22 @@
       "league": "BUNDESLIGA",
       "status": "active",
       "games": 5,
-      "completed": 0,
-      "live": 4,
-      "scheduled": 1,
+      "completed": 4,
+      "live": 1,
+      "scheduled": 0,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-09-19T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "ger.1-401884786",
           "date": "2026-09-19T13:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "HT",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Mainz at Borussia Mönchengladbach",
           "shortName": "M05 @ BMG",
           "competitors": [
@@ -3447,15 +3447,15 @@
               "side": "home",
               "name": "Borussia Mönchengladbach",
               "abbreviation": "BMG",
-              "score": "1",
-              "record": "0-0-3"
+              "score": "3",
+              "record": "0-0-4"
             },
             {
               "side": "away",
               "name": "Mainz",
               "abbreviation": "M05",
-              "score": "2",
-              "record": "1-1-1"
+              "score": "4",
+              "record": "2-1-1"
             }
           ],
           "venue": "BORUSSIA-PARK",
@@ -3463,14 +3463,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884786/mainz-borussia-monchengladbach"
         },
         {
           "id": "ger.1-401884787",
           "date": "2026-09-19T13:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "HT",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "SC Freiburg at Eintracht Frankfurt",
           "shortName": "SCF @ SGE",
           "competitors": [
@@ -3479,14 +3479,14 @@
               "name": "Eintracht Frankfurt",
               "abbreviation": "SGE",
               "score": "2",
-              "record": "1-1-1"
+              "record": "1-2-1"
             },
             {
               "side": "away",
               "name": "SC Freiburg",
               "abbreviation": "SCF",
-              "score": "1",
-              "record": "3-0-0"
+              "score": "2",
+              "record": "3-1-0"
             }
           ],
           "venue": "Deutsche Bank Park",
@@ -3494,14 +3494,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884787/sc-freiburg-eintracht-frankfurt"
         },
         {
           "id": "ger.1-401884785",
           "date": "2026-09-19T13:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "HT",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "FC Cologne at Hamburg SV",
           "shortName": "KOE @ HSV",
           "competitors": [
@@ -3509,15 +3509,15 @@
               "side": "home",
               "name": "Hamburg SV",
               "abbreviation": "HSV",
-              "score": "1",
-              "record": "0-0-3"
+              "score": "2",
+              "record": "1-0-3"
             },
             {
               "side": "away",
               "name": "FC Cologne",
               "abbreviation": "KOE",
-              "score": "0",
-              "record": "1-1-1"
+              "score": "1",
+              "record": "1-1-2"
             }
           ],
           "venue": "Volksparkstadion",
@@ -3525,14 +3525,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884785/fc-cologne-hamburg-sv"
         },
         {
           "id": "ger.1-401884784",
           "date": "2026-09-19T13:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "HT",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "FC Augsburg at Werder Bremen",
           "shortName": "FCA @ SVW",
           "competitors": [
@@ -3540,15 +3540,15 @@
               "side": "home",
               "name": "Werder Bremen",
               "abbreviation": "SVW",
-              "score": "0",
-              "record": "1-1-1"
+              "score": "3",
+              "record": "2-1-1"
             },
             {
               "side": "away",
               "name": "FC Augsburg",
               "abbreviation": "FCA",
-              "score": "1",
-              "record": "2-1-0"
+              "score": "2",
+              "record": "2-1-1"
             }
           ],
           "venue": "Weserstadion",
@@ -3556,14 +3556,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884784/fc-augsburg-werder-bremen"
         },
         {
           "id": "ger.1-401884789",
           "date": "2026-09-19T16:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "72'",
           "name": "Borussia Dortmund at VfB Stuttgart",
           "shortName": "DOR @ VFB",
           "competitors": [
@@ -3578,7 +3578,7 @@
               "side": "away",
               "name": "Borussia Dortmund",
               "abbreviation": "DOR",
-              "score": "0",
+              "score": "1",
               "record": "3-0-0"
             }
           ],
@@ -3587,7 +3587,7 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884789/borussia-dortmund-vfb-stuttgart"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260919"
         }
       ]
     },
@@ -3596,22 +3596,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 4,
-      "completed": 0,
-      "live": 2,
-      "scheduled": 2,
+      "completed": 3,
+      "live": 0,
+      "scheduled": 1,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-09-19T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "ita.1-401874767",
           "date": "2026-09-19T13:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "64'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Torino at Bologna",
           "shortName": "TOR @ BOL",
           "competitors": [
@@ -3620,14 +3620,14 @@
               "name": "Bologna",
               "abbreviation": "BOL",
               "score": "1",
-              "record": "0-1-3"
+              "record": "0-2-3"
             },
             {
               "side": "away",
               "name": "Torino",
               "abbreviation": "TOR",
-              "score": "0",
-              "record": "1-0-3"
+              "score": "1",
+              "record": "1-1-3"
             }
           ],
           "venue": "Renato Dall'Ara",
@@ -3635,14 +3635,14 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874767/torino-bologna"
         },
         {
           "id": "ita.1-401874964",
           "date": "2026-09-19T13:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "65'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Cagliari at Udinese",
           "shortName": "CAG @ UDI",
           "competitors": [
@@ -3651,14 +3651,14 @@
               "name": "Udinese",
               "abbreviation": "UDI",
               "score": "0",
-              "record": "1-1-2"
+              "record": "1-1-3"
             },
             {
               "side": "away",
               "name": "Cagliari",
               "abbreviation": "CAG",
               "score": "1",
-              "record": "3-0-1"
+              "record": "4-0-1"
             }
           ],
           "venue": "Stadio Friuli",
@@ -3666,14 +3666,14 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260919"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874964/cagliari-udinese"
         },
         {
           "id": "ita.1-401874753",
           "date": "2026-09-19T16:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Internazionale at AS Roma",
           "shortName": "INT @ ROMA",
           "competitors": [
@@ -3681,15 +3681,15 @@
               "side": "home",
               "name": "AS Roma",
               "abbreviation": "ROMA",
-              "score": "0",
-              "record": "4-0-0"
+              "score": "2",
+              "record": "4-1-0"
             },
             {
               "side": "away",
               "name": "Internazionale",
               "abbreviation": "INT",
-              "score": "0",
-              "record": "4-0-0"
+              "score": "2",
+              "record": "4-1-0"
             }
           ],
           "venue": "Olimpico",
@@ -3737,22 +3737,22 @@
       "league": "LIGUE 1",
       "status": "active",
       "games": 5,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 5,
+      "scheduled": 4,
       "earliestStart": "11:15 AM EDT",
       "earliestStartIso": "2026-09-19T15:15Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": [
         {
           "id": "fra.1-401876451",
           "date": "2026-09-19T15:15Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Strasbourg at Paris FC",
           "shortName": "STR @ PAR",
           "competitors": [
@@ -3760,15 +3760,15 @@
               "side": "home",
               "name": "Paris FC",
               "abbreviation": "PAR",
-              "score": "0",
-              "record": "2-2-0"
+              "score": "2",
+              "record": "3-2-0"
             },
             {
               "side": "away",
               "name": "Strasbourg",
               "abbreviation": "STR",
-              "score": "0",
-              "record": "2-1-1"
+              "score": "1",
+              "record": "2-1-2"
             }
           ],
           "venue": "Stade Jean Bouin",
@@ -3911,7 +3911,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": []
     },
     {
@@ -3927,7 +3927,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260919",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260919&limit=200",
-      "sourceVerifiedAt": "2026-09-19T14:24:49.333Z",
+      "sourceVerifiedAt": "2026-09-19T18:00:57.176Z",
       "events": []
     }
   ],
