@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-23",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-23T15:27:09.558Z",
+  "lastVerified": "2026-09-23T22:57:10.027Z",
   "gate": "PRELIMINARY",
   "activeGames": 22,
   "leagues": [
@@ -11,22 +11,22 @@
       "league": "MLB",
       "status": "active",
       "games": 16,
-      "completed": 0,
-      "live": 0,
-      "scheduled": 16,
+      "completed": 3,
+      "live": 6,
+      "scheduled": 7,
       "earliestStart": "1:10 PM EDT",
       "earliestStartIso": "2026-09-23T17:10:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-23",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-23&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": [
         {
           "id": "mlb-824223",
           "date": "2026-09-23T17:10:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Washington Nationals at Detroit Tigers",
           "shortName": "WSH @ DET",
           "competitors": [
@@ -34,15 +34,15 @@
               "side": "away",
               "name": "Washington Nationals",
               "abbreviation": "WSH",
-              "score": 0,
-              "record": "74-84"
+              "score": 4,
+              "record": "75-84"
             },
             {
               "side": "home",
               "name": "Detroit Tigers",
               "abbreviation": "DET",
-              "score": 0,
-              "record": "74-84"
+              "score": 2,
+              "record": "74-85"
             }
           ],
           "venue": "Comerica Park",
@@ -56,9 +56,9 @@
         {
           "id": "mlb-824785",
           "date": "2026-09-23T17:35:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Toronto Blue Jays at Baltimore Orioles",
           "shortName": "TOR @ BAL",
           "competitors": [
@@ -66,15 +66,15 @@
               "side": "away",
               "name": "Toronto Blue Jays",
               "abbreviation": "TOR",
-              "score": 0,
-              "record": "77-80"
+              "score": 2,
+              "record": "77-81"
             },
             {
               "side": "home",
               "name": "Baltimore Orioles",
               "abbreviation": "BAL",
-              "score": 0,
-              "record": "76-81"
+              "score": 4,
+              "record": "77-81"
             }
           ],
           "venue": "Oriole Park at Camden Yards",
@@ -88,9 +88,9 @@
         {
           "id": "mlb-823168",
           "date": "2026-09-23T19:45:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Minnesota Twins at San Francisco Giants",
           "shortName": "MIN @ SF",
           "competitors": [
@@ -98,15 +98,15 @@
               "side": "away",
               "name": "Minnesota Twins",
               "abbreviation": "MIN",
-              "score": null,
-              "record": "74-84"
+              "score": 4,
+              "record": "75-84"
             },
             {
               "side": "home",
               "name": "San Francisco Giants",
               "abbreviation": "SF",
-              "score": null,
-              "record": "65-93"
+              "score": 2,
+              "record": "65-94"
             }
           ],
           "venue": "Oracle Park",
@@ -121,8 +121,8 @@
           "id": "mlb-824784",
           "date": "2026-09-23T22:35:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "In Progress",
           "name": "Toronto Blue Jays at Baltimore Orioles",
           "shortName": "TOR @ BAL",
           "competitors": [
@@ -130,21 +130,21 @@
               "side": "away",
               "name": "Toronto Blue Jays",
               "abbreviation": "TOR",
-              "score": null,
-              "record": "77-80"
+              "score": 0,
+              "record": "77-81"
             },
             {
               "side": "home",
               "name": "Baltimore Orioles",
               "abbreviation": "BAL",
-              "score": null,
-              "record": "76-81"
+              "score": 3,
+              "record": "77-81"
             }
           ],
           "venue": "Oriole Park at Camden Yards",
           "probablePitchers": {
-            "away": null,
-            "home": null
+            "away": "CJ Van Eyk",
+            "home": "Trey Gibson"
           },
           "broadcasts": [],
           "source": "https://www.mlb.com/gameday/824784"
@@ -153,8 +153,8 @@
           "id": "mlb-823327",
           "date": "2026-09-23T22:40:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "In Progress",
           "name": "St. Louis Cardinals at Pittsburgh Pirates",
           "shortName": "STL @ PIT",
           "competitors": [
@@ -162,14 +162,14 @@
               "side": "away",
               "name": "St. Louis Cardinals",
               "abbreviation": "STL",
-              "score": null,
+              "score": 0,
               "record": "76-81"
             },
             {
               "side": "home",
               "name": "Pittsburgh Pirates",
               "abbreviation": "PIT",
-              "score": null,
+              "score": 0,
               "record": "80-77"
             }
           ],
@@ -185,8 +185,8 @@
           "id": "mlb-823410",
           "date": "2026-09-23T22:40:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "In Progress",
           "name": "Milwaukee Brewers at Philadelphia Phillies",
           "shortName": "MIL @ PHI",
           "competitors": [
@@ -194,14 +194,14 @@
               "side": "away",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 1,
               "record": "98-59"
             },
             {
               "side": "home",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": null,
+              "score": 0,
               "record": "87-70"
             }
           ],
@@ -217,8 +217,8 @@
           "id": "mlb-823492",
           "date": "2026-09-23T23:05:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Tampa Bay Rays at New York Yankees",
           "shortName": "TB @ NYY",
           "competitors": [
@@ -226,20 +226,20 @@
               "side": "away",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "96-61"
             },
             {
               "side": "home",
               "name": "New York Yankees",
               "abbreviation": "NYY",
-              "score": null,
+              "score": 0,
               "record": "90-67"
             }
           ],
           "venue": "Yankee Stadium",
           "probablePitchers": {
-            "away": "Ian Seymour",
+            "away": "Mason Englert",
             "home": "Gerrit Cole"
           },
           "broadcasts": [],
@@ -249,8 +249,8 @@
           "id": "mlb-824710",
           "date": "2026-09-23T23:10:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Cleveland Guardians at Boston Red Sox",
           "shortName": "CLE @ BOS",
           "competitors": [
@@ -258,14 +258,14 @@
               "side": "away",
               "name": "Cleveland Guardians",
               "abbreviation": "CLE",
-              "score": null,
+              "score": 0,
               "record": "82-75"
             },
             {
               "side": "home",
               "name": "Boston Red Sox",
               "abbreviation": "BOS",
-              "score": null,
+              "score": 0,
               "record": "84-73"
             }
           ],
@@ -281,8 +281,8 @@
           "id": "mlb-824868",
           "date": "2026-09-23T23:15:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "Warmup",
           "name": "Cincinnati Reds at Atlanta Braves",
           "shortName": "CIN @ ATL",
           "competitors": [
@@ -290,14 +290,14 @@
               "side": "away",
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
-              "score": null,
+              "score": 0,
               "record": "73-84"
             },
             {
               "side": "home",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": null,
+              "score": 0,
               "record": "92-65"
             }
           ],
@@ -314,7 +314,7 @@
           "date": "2026-09-23T23:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Chicago White Sox at Kansas City Royals",
           "shortName": "CWS @ KC",
           "competitors": [
@@ -322,14 +322,14 @@
               "side": "away",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
-              "score": null,
+              "score": 0,
               "record": "81-76"
             },
             {
               "side": "home",
               "name": "Kansas City Royals",
               "abbreviation": "KC",
-              "score": null,
+              "score": 0,
               "record": "67-90"
             }
           ],
@@ -346,7 +346,7 @@
           "date": "2026-09-23T23:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Miami Marlins at Chicago Cubs",
           "shortName": "MIA @ CHC",
           "competitors": [
@@ -354,14 +354,14 @@
               "side": "away",
               "name": "Miami Marlins",
               "abbreviation": "MIA",
-              "score": null,
+              "score": 0,
               "record": "77-80"
             },
             {
               "side": "home",
               "name": "Chicago Cubs",
               "abbreviation": "CHC",
-              "score": null,
+              "score": 0,
               "record": "87-70"
             }
           ],
@@ -378,7 +378,7 @@
           "date": "2026-09-24T00:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "New York Mets at Texas Rangers",
           "shortName": "NYM @ TEX",
           "competitors": [
@@ -386,14 +386,14 @@
               "side": "away",
               "name": "New York Mets",
               "abbreviation": "NYM",
-              "score": null,
+              "score": 0,
               "record": "72-85"
             },
             {
               "side": "home",
               "name": "Texas Rangers",
               "abbreviation": "TEX",
-              "score": null,
+              "score": 0,
               "record": "78-79"
             }
           ],
@@ -410,7 +410,7 @@
           "date": "2026-09-24T00:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Arizona Diamondbacks at Colorado Rockies",
           "shortName": "AZ @ COL",
           "competitors": [
@@ -418,14 +418,14 @@
               "side": "away",
               "name": "Arizona Diamondbacks",
               "abbreviation": "AZ",
-              "score": null,
+              "score": 0,
               "record": "83-74"
             },
             {
               "side": "home",
               "name": "Colorado Rockies",
               "abbreviation": "COL",
-              "score": null,
+              "score": 0,
               "record": "57-100"
             }
           ],
@@ -442,7 +442,7 @@
           "date": "2026-09-24T01:40:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Los Angeles Angels at Athletics",
           "shortName": "LAA @ ATH",
           "competitors": [
@@ -450,14 +450,14 @@
               "side": "away",
               "name": "Los Angeles Angels",
               "abbreviation": "LAA",
-              "score": null,
+              "score": 0,
               "record": "60-97"
             },
             {
               "side": "home",
               "name": "Athletics",
               "abbreviation": "ATH",
-              "score": null,
+              "score": 0,
               "record": "62-95"
             }
           ],
@@ -474,7 +474,7 @@
           "date": "2026-09-24T02:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "San Diego Padres at Los Angeles Dodgers",
           "shortName": "SD @ LAD",
           "competitors": [
@@ -482,14 +482,14 @@
               "side": "away",
               "name": "San Diego Padres",
               "abbreviation": "SD",
-              "score": null,
+              "score": 0,
               "record": "87-70"
             },
             {
               "side": "home",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "97-60"
             }
           ],
@@ -506,7 +506,7 @@
           "date": "2026-09-24T02:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Houston Astros at Seattle Mariners",
           "shortName": "HOU @ SEA",
           "competitors": [
@@ -548,7 +548,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -564,7 +564,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -580,7 +580,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": [
         {
           "id": "wnba-401857213",
@@ -666,7 +666,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -682,7 +682,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": [
         {
           "id": "nhl-401879650",
@@ -771,6 +771,7 @@
           "venue": "American Airlines Center",
           "probablePitchers": null,
           "broadcasts": [
+            "ESPN+",
             "KSTC"
           ],
           "source": "https://www.espn.com/nhl/game/_/gameId/401886429/wild-stars"
@@ -802,6 +803,7 @@
           "venue": "Honda Center",
           "probablePitchers": null,
           "broadcasts": [
+            "ESPN+",
             "KCOP"
           ],
           "source": "https://www.espn.com/nhl/game/_/gameId/401879369/kings-ducks"
@@ -821,7 +823,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -837,7 +839,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -853,7 +855,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -869,7 +871,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -885,7 +887,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -901,7 +903,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     },
     {
@@ -917,7 +919,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260923",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260923&limit=200",
-      "sourceVerifiedAt": "2026-09-23T15:27:09.558Z",
+      "sourceVerifiedAt": "2026-09-23T22:57:10.027Z",
       "events": []
     }
   ],
