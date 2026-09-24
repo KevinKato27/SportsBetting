@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-24",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-24T08:26:31.816Z",
+  "lastVerified": "2026-09-24T15:49:07.335Z",
   "gate": "PRELIMINARY",
   "activeGames": 30,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-24",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-24&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": [
         {
           "id": "mlb-823326",
           "date": "2026-09-24T16:35:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "St. Louis Cardinals at Pittsburgh Pirates",
           "shortName": "STL @ PIT",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "St. Louis Cardinals",
               "abbreviation": "STL",
-              "score": null,
+              "score": 0,
               "record": "77-81"
             },
             {
               "side": "home",
               "name": "Pittsburgh Pirates",
               "abbreviation": "PIT",
-              "score": null,
+              "score": 0,
               "record": "80-78"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-09-24T18:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Chicago White Sox at Kansas City Royals",
           "shortName": "CWS @ KC",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
-              "score": null,
+              "score": 0,
               "record": "81-77"
             },
             {
               "side": "home",
               "name": "Kansas City Royals",
               "abbreviation": "KC",
-              "score": null,
+              "score": 0,
               "record": "68-90"
             }
           ],
@@ -90,7 +90,7 @@
           "date": "2026-09-24T18:20:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Miami Marlins at Chicago Cubs",
           "shortName": "MIA @ CHC",
           "competitors": [
@@ -122,7 +122,7 @@
           "date": "2026-09-24T18:35:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "New York Mets at Texas Rangers",
           "shortName": "NYM @ TEX",
           "competitors": [
@@ -154,7 +154,7 @@
           "date": "2026-09-24T19:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Arizona Diamondbacks at Colorado Rockies",
           "shortName": "AZ @ COL",
           "competitors": [
@@ -207,7 +207,7 @@
           ],
           "venue": "Citizens Bank Park",
           "probablePitchers": {
-            "away": "Bryse Wilson",
+            "away": null,
             "home": "Andrew Painter"
           },
           "broadcasts": [],
@@ -420,7 +420,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": [
         {
           "id": "college-football-401869941",
@@ -468,7 +468,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": [
         {
           "id": "nfl-401872948",
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": [
         {
           "id": "wnba-401857215",
@@ -698,7 +698,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     },
     {
@@ -714,7 +714,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": [
         {
           "id": "nhl-401879363",
@@ -1083,7 +1083,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     },
     {
@@ -1099,7 +1099,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     },
     {
@@ -1115,7 +1115,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     },
     {
@@ -1131,7 +1131,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     },
     {
@@ -1147,7 +1147,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     },
     {
@@ -1163,7 +1163,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     },
     {
@@ -1179,7 +1179,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260924",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260924&limit=200",
-      "sourceVerifiedAt": "2026-09-24T08:26:31.816Z",
+      "sourceVerifiedAt": "2026-09-24T15:49:07.335Z",
       "events": []
     }
   ],
