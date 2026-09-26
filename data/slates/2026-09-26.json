@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-26",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-26T14:58:17.577Z",
+  "lastVerified": "2026-09-26T18:36:40.032Z",
   "gate": "PRELIMINARY",
   "activeGames": 92,
   "leagues": [
@@ -12,21 +12,21 @@
       "status": "active",
       "games": 13,
       "completed": 0,
-      "live": 0,
-      "scheduled": 13,
+      "live": 2,
+      "scheduled": 11,
       "earliestStart": "12:35 PM EDT",
       "earliestStartIso": "2026-09-26T16:35:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-26",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-26&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": [
         {
           "id": "mlb-822678",
           "date": "2026-09-26T16:35:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "In Progress",
           "name": "New York Mets at Washington Nationals",
           "shortName": "NYM @ WSH",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "New York Mets",
               "abbreviation": "NYM",
-              "score": null,
+              "score": 4,
               "record": "73-87"
             },
             {
               "side": "home",
               "name": "Washington Nationals",
               "abbreviation": "WSH",
-              "score": null,
+              "score": 1,
               "record": "76-84"
             }
           ],
@@ -57,8 +57,8 @@
           "id": "mlb-824219",
           "date": "2026-09-26T17:10:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "state": "in",
+          "status": "In Progress",
           "name": "Pittsburgh Pirates at Detroit Tigers",
           "shortName": "PIT @ DET",
           "competitors": [
@@ -66,7 +66,7 @@
               "side": "away",
               "name": "Pittsburgh Pirates",
               "abbreviation": "PIT",
-              "score": 0,
+              "score": 1,
               "record": "81-79"
             },
             {
@@ -90,7 +90,7 @@
           "date": "2026-09-26T19:07:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Cincinnati Reds at Toronto Blue Jays",
           "shortName": "CIN @ TOR",
           "competitors": [
@@ -98,14 +98,14 @@
               "side": "away",
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
-              "score": null,
+              "score": 0,
               "record": "74-86"
             },
             {
               "side": "home",
               "name": "Toronto Blue Jays",
               "abbreviation": "TOR",
-              "score": null,
+              "score": 0,
               "record": "78-82"
             }
           ],
@@ -122,7 +122,7 @@
           "date": "2026-09-26T20:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Los Angeles Dodgers at San Francisco Giants",
           "shortName": "LAD @ SF",
           "competitors": [
@@ -130,14 +130,14 @@
               "side": "away",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "98-62"
             },
             {
               "side": "home",
               "name": "San Francisco Giants",
               "abbreviation": "SF",
-              "score": null,
+              "score": 0,
               "record": "65-95"
             }
           ],
@@ -154,7 +154,7 @@
           "date": "2026-09-26T20:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Texas Rangers at Minnesota Twins",
           "shortName": "TEX @ MIN",
           "competitors": [
@@ -162,14 +162,14 @@
               "side": "away",
               "name": "Texas Rangers",
               "abbreviation": "TEX",
-              "score": null,
+              "score": 0,
               "record": "79-81"
             },
             {
               "side": "home",
               "name": "Minnesota Twins",
               "abbreviation": "MIN",
-              "score": null,
+              "score": 0,
               "record": "76-84"
             }
           ],
@@ -186,7 +186,7 @@
           "date": "2026-09-26T20:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Atlanta Braves at Miami Marlins",
           "shortName": "ATL @ MIA",
           "competitors": [
@@ -194,14 +194,14 @@
               "side": "away",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": null,
+              "score": 0,
               "record": "93-67"
             },
             {
               "side": "home",
               "name": "Miami Marlins",
               "abbreviation": "MIA",
-              "score": null,
+              "score": 0,
               "record": "79-81"
             }
           ],
@@ -250,7 +250,7 @@
           "date": "2026-09-26T23:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Colorado Rockies at Chicago White Sox",
           "shortName": "COL @ CWS",
           "competitors": [
@@ -445,21 +445,21 @@
       "status": "active",
       "games": 65,
       "completed": 0,
-      "live": 0,
-      "scheduled": 65,
+      "live": 16,
+      "scheduled": 49,
       "earliestStart": "12:00 PM EDT",
       "earliestStartIso": "2026-09-26T16:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": [
         {
           "id": "college-football-401856704",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "4:21 - 3rd",
           "name": "Texas Longhorns at Tennessee Volunteers",
           "shortName": "TEX @ TENN",
           "competitors": [
@@ -467,14 +467,14 @@
               "side": "home",
               "name": "Tennessee Volunteers",
               "abbreviation": "TENN",
-              "score": "0",
+              "score": "10",
               "record": "3-0"
             },
             {
               "side": "away",
               "name": "Texas Longhorns",
               "abbreviation": "TEX",
-              "score": "0",
+              "score": "13",
               "record": "3-0"
             }
           ],
@@ -483,14 +483,14 @@
           "broadcasts": [
             "ABC"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856704/texas-tennessee"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401858465",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "6:59 - 3rd",
           "name": "Illinois Fighting Illini at Ohio State Buckeyes",
           "shortName": "ILL @ OSU",
           "competitors": [
@@ -498,14 +498,14 @@
               "side": "home",
               "name": "Ohio State Buckeyes",
               "abbreviation": "OSU",
-              "score": "0",
+              "score": "28",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "Illinois Fighting Illini",
               "abbreviation": "ILL",
-              "score": "0",
+              "score": "13",
               "record": "2-1"
             }
           ],
@@ -514,14 +514,14 @@
           "broadcasts": [
             "FOX"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858465/illinois-ohio-state"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401856805",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "1:27 - 3rd",
           "name": "Sam Houston Bearkats at Texas Tech Red Raiders",
           "shortName": "SHSU @ TTU",
           "competitors": [
@@ -529,14 +529,14 @@
               "side": "home",
               "name": "Texas Tech Red Raiders",
               "abbreviation": "TTU",
-              "score": "0",
+              "score": "35",
               "record": "3-0"
             },
             {
               "side": "away",
               "name": "Sam Houston Bearkats",
               "abbreviation": "SHSU",
-              "score": "0",
+              "score": "14",
               "record": "1-2"
             }
           ],
@@ -545,14 +545,14 @@
           "broadcasts": [
             "TNT"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856805/sam-houston-texas-tech"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401858243",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "4:58 - 3rd",
           "name": "Wake Forest Demon Deacons at Louisville Cardinals",
           "shortName": "WAKE @ LOU",
           "competitors": [
@@ -560,14 +560,14 @@
               "side": "home",
               "name": "Louisville Cardinals",
               "abbreviation": "LOU",
-              "score": "0",
+              "score": "24",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "Wake Forest Demon Deacons",
               "abbreviation": "WAKE",
-              "score": "0",
+              "score": "27",
               "record": "2-1"
             }
           ],
@@ -577,14 +577,14 @@
             "ESPN",
             "Disney+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858243/wake-forest-louisville"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401856813",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "4:29 - 3rd",
           "name": "Colorado Buffaloes at Baylor Bears",
           "shortName": "COLO @ BAY",
           "competitors": [
@@ -592,14 +592,14 @@
               "side": "home",
               "name": "Baylor Bears",
               "abbreviation": "BAY",
-              "score": "0",
+              "score": "13",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "Colorado Buffaloes",
               "abbreviation": "COLO",
-              "score": "0",
+              "score": "3",
               "record": "2-1"
             }
           ],
@@ -608,14 +608,14 @@
           "broadcasts": [
             "ESPN2"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856813/colorado-baylor"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401858236",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "End of 3rd",
           "name": "Bucknell Bison at Pittsburgh Panthers",
           "shortName": "BUCK @ PITT",
           "competitors": [
@@ -623,7 +623,7 @@
               "side": "home",
               "name": "Pittsburgh Panthers",
               "abbreviation": "PITT",
-              "score": "0",
+              "score": "42",
               "record": "3-0"
             },
             {
@@ -639,14 +639,14 @@
           "broadcasts": [
             "ACCNX"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858236/bucknell-pitt"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401858242",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "11:09 - 4th",
           "name": "Virginia Tech Hokies at Boston College Eagles",
           "shortName": "VT @ BC",
           "competitors": [
@@ -654,14 +654,14 @@
               "side": "home",
               "name": "Boston College Eagles",
               "abbreviation": "BC",
-              "score": "0",
+              "score": "14",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "Virginia Tech Hokies",
               "abbreviation": "VT",
-              "score": "0",
+              "score": "6",
               "record": "3-0"
             }
           ],
@@ -670,14 +670,14 @@
           "broadcasts": [
             "ACC Network"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858242/virginia-tech-boston-college"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401860893",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "15:00 - 3rd",
           "name": "San Diego State Aztecs at Toledo Rockets",
           "shortName": "SDSU @ TOL",
           "competitors": [
@@ -685,14 +685,14 @@
               "side": "home",
               "name": "Toledo Rockets",
               "abbreviation": "TOL",
-              "score": "0",
+              "score": "34",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "San Diego State Aztecs",
               "abbreviation": "SDSU",
-              "score": "0",
+              "score": "9",
               "record": "1-2"
             }
           ],
@@ -701,14 +701,14 @@
           "broadcasts": [
             "CBSSN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401860893/san-diego-st-toledo"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401860896",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "4:06 - 3rd",
           "name": "Colorado State Rams at UTSA Roadrunners",
           "shortName": "CSU @ UTSA",
           "competitors": [
@@ -716,14 +716,14 @@
               "side": "home",
               "name": "UTSA Roadrunners",
               "abbreviation": "UTSA",
-              "score": "0",
+              "score": "42",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "Colorado State Rams",
               "abbreviation": "CSU",
-              "score": "0",
+              "score": "35",
               "record": "2-1"
             }
           ],
@@ -732,14 +732,14 @@
           "broadcasts": [
             "ESPNU"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401860896/colorado-st-utsa"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401864512",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "11:23 - 4th",
           "name": "UNLV Rebels at Akron Zips",
           "shortName": "UNLV @ AKR",
           "competitors": [
@@ -747,14 +747,14 @@
               "side": "home",
               "name": "Akron Zips",
               "abbreviation": "AKR",
-              "score": "0",
+              "score": "10",
               "record": "1-2"
             },
             {
               "side": "away",
               "name": "UNLV Rebels",
               "abbreviation": "UNLV",
-              "score": "0",
+              "score": "31",
               "record": "1-2"
             }
           ],
@@ -763,14 +763,14 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401864512/unlv-akron"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401866425",
           "date": "2026-09-26T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:00 PM EDT",
+          "state": "in",
+          "status": "9:44 - 4th",
           "name": "Ball State Cardinals at Kent State Golden Flashes",
           "shortName": "BALL @ KENT",
           "competitors": [
@@ -778,14 +778,14 @@
               "side": "home",
               "name": "Kent State Golden Flashes",
               "abbreviation": "KENT",
-              "score": "0",
+              "score": "24",
               "record": "1-2"
             },
             {
               "side": "away",
               "name": "Ball State Cardinals",
               "abbreviation": "BALL",
-              "score": "0",
+              "score": "7",
               "record": "1-2"
             }
           ],
@@ -794,14 +794,14 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401866425/ball-state-kent-state"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401864576",
           "date": "2026-09-26T16:45Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 12:45 PM EDT",
+          "state": "in",
+          "status": "Halftime",
           "name": "South Alabama Jaguars at Kentucky Wildcats",
           "shortName": "USA @ UK",
           "competitors": [
@@ -809,14 +809,14 @@
               "side": "home",
               "name": "Kentucky Wildcats",
               "abbreviation": "UK",
-              "score": "0",
+              "score": "24",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "South Alabama Jaguars",
               "abbreviation": "USA",
-              "score": "0",
+              "score": "21",
               "record": "2-1"
             }
           ],
@@ -825,14 +825,14 @@
           "broadcasts": [
             "SEC Network"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401864576/south-alabama-kentucky"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401866427",
           "date": "2026-09-26T17:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 1:00 PM EDT",
+          "state": "in",
+          "status": "Halftime",
           "name": "Lindenwood Lions at Eastern Michigan Eagles",
           "shortName": "LIN @ EMU",
           "competitors": [
@@ -840,7 +840,7 @@
               "side": "home",
               "name": "Eastern Michigan Eagles",
               "abbreviation": "EMU",
-              "score": "0",
+              "score": "19",
               "record": "1-3"
             },
             {
@@ -856,14 +856,14 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401866427/lindenwood-e-michigan"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401858462",
           "date": "2026-09-26T17:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 1:30 PM EDT",
+          "state": "in",
+          "status": "6:48 - 2nd",
           "name": "UCLA Bruins at Maryland Terrapins",
           "shortName": "UCLA @ MD",
           "competitors": [
@@ -878,7 +878,7 @@
               "side": "away",
               "name": "UCLA Bruins",
               "abbreviation": "UCLA",
-              "score": "0",
+              "score": "14",
               "record": "3-0"
             }
           ],
@@ -887,14 +887,14 @@
           "broadcasts": [
             "BTN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858462/ucla-maryland"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401858467",
           "date": "2026-09-26T18:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 2:00 PM EDT",
+          "state": "in",
+          "status": "3:55 - 1st",
           "name": "Notre Dame Fighting Irish at Purdue Boilermakers",
           "shortName": "ND @ PUR",
           "competitors": [
@@ -909,7 +909,7 @@
               "side": "away",
               "name": "Notre Dame Fighting Irish",
               "abbreviation": "ND",
-              "score": "0",
+              "score": "7",
               "record": "3-0"
             }
           ],
@@ -918,14 +918,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858467/notre-dame-purdue"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401864511",
           "date": "2026-09-26T18:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/26 - 2:00 PM EDT",
+          "state": "in",
+          "status": "2:04 - 1st",
           "name": "Northern Illinois Huskies at Georgia State Panthers",
           "shortName": "NIU @ GAST",
           "competitors": [
@@ -933,7 +933,7 @@
               "side": "home",
               "name": "Georgia State Panthers",
               "abbreviation": "GAST",
-              "score": "0",
+              "score": "7",
               "record": "2-1"
             },
             {
@@ -949,7 +949,7 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401864511/n-illinois-georgia-st"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20260926"
         },
         {
           "id": "college-football-401858237",
@@ -2486,7 +2486,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -2502,7 +2502,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -2518,7 +2518,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -2534,7 +2534,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": [
         {
           "id": "nhl-401879457",
@@ -3000,7 +3000,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -3016,7 +3016,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -3032,7 +3032,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -3048,7 +3048,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -3064,7 +3064,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -3080,7 +3080,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     },
     {
@@ -3096,7 +3096,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260926",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260926&limit=200",
-      "sourceVerifiedAt": "2026-09-26T14:58:17.577Z",
+      "sourceVerifiedAt": "2026-09-26T18:36:40.032Z",
       "events": []
     }
   ],
