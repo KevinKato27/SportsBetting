@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-27",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-27T09:14:42.077Z",
+  "lastVerified": "2026-09-27T15:39:33.495Z",
   "gate": "PRELIMINARY",
   "activeGames": 33,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-27",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-27&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": [
         {
           "id": "mlb-822679",
           "date": "2026-09-27T17:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "New York Mets at Washington Nationals",
           "shortName": "NYM @ WSH",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "New York Mets",
               "abbreviation": "NYM",
-              "score": null,
+              "score": 0,
               "record": "74-87"
             },
             {
               "side": "home",
               "name": "Washington Nationals",
               "abbreviation": "WSH",
-              "score": null,
+              "score": 0,
               "record": "76-85"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-09-27T17:05:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Baltimore Orioles at New York Yankees",
           "shortName": "BAL @ NYY",
           "competitors": [
@@ -111,7 +111,7 @@
           ],
           "venue": "Tropicana Field",
           "probablePitchers": {
-            "away": null,
+            "away": "Shota Imanaga",
             "home": null
           },
           "broadcasts": [],
@@ -218,7 +218,7 @@
           "date": "2026-09-27T19:07:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Cincinnati Reds at Toronto Blue Jays",
           "shortName": "CIN @ TOR",
           "competitors": [
@@ -226,14 +226,14 @@
               "side": "away",
               "name": "Cincinnati Reds",
               "abbreviation": "CIN",
-              "score": null,
+              "score": 0,
               "record": "75-86"
             },
             {
               "side": "home",
               "name": "Toronto Blue Jays",
               "abbreviation": "TOR",
-              "score": null,
+              "score": 0,
               "record": "78-83"
             }
           ],
@@ -250,7 +250,7 @@
           "date": "2026-09-27T19:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Cleveland Guardians at Kansas City Royals",
           "shortName": "CLE @ KC",
           "competitors": [
@@ -282,7 +282,7 @@
           "date": "2026-09-27T19:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Pittsburgh Pirates at Detroit Tigers",
           "shortName": "PIT @ DET",
           "competitors": [
@@ -410,7 +410,7 @@
           "date": "2026-09-27T19:10:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Colorado Rockies at Chicago White Sox",
           "shortName": "COL @ CWS",
           "competitors": [
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -532,7 +532,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": [
         {
           "id": "nfl-401872953",
@@ -983,7 +983,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": [
         {
           "id": "wnba-401918014",
@@ -1125,7 +1125,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1141,7 +1141,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1157,7 +1157,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1173,7 +1173,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1189,7 +1189,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1205,7 +1205,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1221,7 +1221,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1237,7 +1237,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     },
     {
@@ -1253,7 +1253,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260927",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260927&limit=200",
-      "sourceVerifiedAt": "2026-09-27T09:14:42.077Z",
+      "sourceVerifiedAt": "2026-09-27T15:39:33.495Z",
       "events": []
     }
   ],
