@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "lastVerified": "2026-09-29T16:53:27.881Z",
+  "lastVerified": "2026-09-29T23:43:24.465Z",
   "gate": "PRELIMINARY",
   "activeGames": 11,
   "leagues": [
@@ -11,22 +11,22 @@
       "league": "MLB",
       "status": "active",
       "games": 4,
-      "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "completed": 1,
+      "live": 1,
+      "scheduled": 2,
       "earliestStart": "2:00 PM EDT",
       "earliestStartIso": "2026-09-29T18:00:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-09-29",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-29&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": [
         {
           "id": "mlb-849845",
           "date": "2026-09-29T18:00:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Pre-Game",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Philadelphia Phillies at Atlanta Braves",
           "shortName": "PHI @ ATL",
           "competitors": [
@@ -34,15 +34,15 @@
               "side": "away",
               "name": "Philadelphia Phillies",
               "abbreviation": "PHI",
-              "score": 0,
-              "record": "0-0"
+              "score": 3,
+              "record": "0-1"
             },
             {
               "side": "home",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": 0,
-              "record": "0-0"
+              "score": 5,
+              "record": "1-0"
             }
           ],
           "venue": "Truist Park",
@@ -57,8 +57,8 @@
           "id": "mlb-849849",
           "date": "2026-09-29T21:00:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "In Progress",
           "name": "Chicago White Sox at Houston Astros",
           "shortName": "CWS @ HOU",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Chicago White Sox",
               "abbreviation": "CWS",
-              "score": null,
+              "score": 6,
               "record": "0-0"
             },
             {
               "side": "home",
               "name": "Houston Astros",
               "abbreviation": "HOU",
-              "score": null,
+              "score": 2,
               "record": "0-0"
             }
           ],
@@ -90,7 +90,7 @@
           "date": "2026-09-30T00:00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Boston Red Sox at New York Yankees",
           "shortName": "BOS @ NYY",
           "competitors": [
@@ -98,14 +98,14 @@
               "side": "away",
               "name": "Boston Red Sox",
               "abbreviation": "BOS",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             },
             {
               "side": "home",
               "name": "New York Yankees",
               "abbreviation": "NYY",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             }
           ],
@@ -122,7 +122,7 @@
           "date": "2026-09-30T02:00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Chicago Cubs at San Diego Padres",
           "shortName": "CHC @ SD",
           "competitors": [
@@ -130,14 +130,14 @@
               "side": "away",
               "name": "Chicago Cubs",
               "abbreviation": "CHC",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             },
             {
               "side": "home",
               "name": "San Diego Padres",
               "abbreviation": "SD",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             }
           ],
@@ -164,7 +164,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -180,7 +180,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -189,21 +189,21 @@
       "status": "active",
       "games": 2,
       "completed": 0,
-      "live": 0,
-      "scheduled": 2,
+      "live": 1,
+      "scheduled": 1,
       "earliestStart": "6:30 PM EDT",
       "earliestStartIso": "2026-09-29T22:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": [
         {
           "id": "wnba-401918018",
           "date": "2026-09-29T22:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/29 - 6:30 PM EDT",
+          "state": "in",
+          "status": "10:00 - 3rd",
           "name": "Las Vegas Aces at Indiana Fever",
           "shortName": "LV @ IND",
           "competitors": [
@@ -211,14 +211,14 @@
               "side": "home",
               "name": "Indiana Fever",
               "abbreviation": "IND",
-              "score": "0",
+              "score": "48",
               "record": "28-16"
             },
             {
               "side": "away",
               "name": "Las Vegas Aces",
               "abbreviation": "LV",
-              "score": "0",
+              "score": "43",
               "record": "31-13"
             }
           ],
@@ -227,7 +227,7 @@
           "broadcasts": [
             "Prime Video"
           ],
-          "source": "https://www.espn.com/wnba/game/_/gameId/401918018/aces-fever"
+          "source": "https://www.espn.com/wnba/scoreboard/_/date/20260929"
         },
         {
           "id": "wnba-401918017",
@@ -276,7 +276,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -285,21 +285,21 @@
       "status": "active",
       "games": 5,
       "completed": 0,
-      "live": 0,
-      "scheduled": 5,
+      "live": 2,
+      "scheduled": 3,
       "earliestStart": "5:00 PM EDT",
       "earliestStartIso": "2026-09-29T21:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": [
         {
           "id": "nhl-401891773",
           "date": "2026-09-29T21:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/29 - 5:00 PM EDT",
+          "state": "in",
+          "status": "3:25 - 3rd",
           "name": "Florida Panthers at Carolina Hurricanes",
           "shortName": "FLA @ CAR",
           "competitors": [
@@ -323,14 +323,14 @@
           "broadcasts": [
             "ESPN"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401891773/panthers-hurricanes"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20260929"
         },
         {
           "id": "nhl-401891827",
           "date": "2026-09-29T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "9/29 - 7:00 PM EDT",
+          "state": "in",
+          "status": "8:18 - 1st",
           "name": "Montreal Canadiens at Toronto Maple Leafs",
           "shortName": "MTL @ TOR",
           "competitors": [
@@ -338,14 +338,14 @@
               "side": "home",
               "name": "Toronto Maple Leafs",
               "abbreviation": "TOR",
-              "score": "0",
+              "score": "1",
               "record": "0-0-0"
             },
             {
               "side": "away",
               "name": "Montreal Canadiens",
               "abbreviation": "MTL",
-              "score": "0",
+              "score": "1",
               "record": "0-0-0"
             }
           ],
@@ -354,7 +354,7 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401891827/canadiens-maple-leafs"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20260929"
         },
         {
           "id": "nhl-401891774",
@@ -464,7 +464,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -480,7 +480,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -496,7 +496,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -512,7 +512,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -528,7 +528,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -544,7 +544,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     },
     {
@@ -560,7 +560,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20260929",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260929&limit=200",
-      "sourceVerifiedAt": "2026-09-29T16:53:27.881Z",
+      "sourceVerifiedAt": "2026-09-29T23:43:24.465Z",
       "events": []
     }
   ],
