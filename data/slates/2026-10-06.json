@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-06",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-06T17:10:55.631Z",
+  "lastVerified": "2026-10-06T23:48:15.887Z",
   "gate": "PRELIMINARY",
   "activeGames": 16,
   "leagues": [
@@ -12,21 +12,21 @@
       "status": "active",
       "games": 2,
       "completed": 0,
-      "live": 0,
-      "scheduled": 2,
+      "live": 1,
+      "scheduled": 1,
       "earliestStart": "6:00 PM EDT",
       "earliestStartIso": "2026-10-06T22:00:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-06",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-06&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": [
         {
           "id": "mlb-849819",
           "date": "2026-10-06T22:00:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "In Progress",
           "name": "Los Angeles Dodgers at Atlanta Braves",
           "shortName": "LAD @ ATL",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 3,
               "record": "1-1"
             },
             {
               "side": "home",
               "name": "Atlanta Braves",
               "abbreviation": "ATL",
-              "score": null,
+              "score": 0,
               "record": "1-1"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-10-07T01:30:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Milwaukee Brewers at San Diego Padres",
           "shortName": "MIL @ SD",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "2-0"
             },
             {
               "side": "home",
               "name": "San Diego Padres",
               "abbreviation": "SD",
-              "score": null,
+              "score": 0,
               "record": "0-2"
             }
           ],
@@ -100,7 +100,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": [
         {
           "id": "college-football-401871090",
@@ -148,7 +148,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -164,7 +164,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -173,21 +173,21 @@
       "status": "active",
       "games": 4,
       "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "live": 1,
+      "scheduled": 3,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-10-06T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": [
         {
           "id": "nba-401901820",
           "date": "2026-10-06T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/6 - 7:00 PM EDT",
+          "state": "in",
+          "status": "8:30 - 2nd",
           "name": "Brooklyn Nets at Charlotte Hornets",
           "shortName": "BKN @ CHA",
           "competitors": [
@@ -195,14 +195,14 @@
               "side": "home",
               "name": "Charlotte Hornets",
               "abbreviation": "CHA",
-              "score": "0",
+              "score": "36",
               "record": "0-0"
             },
             {
               "side": "away",
               "name": "Brooklyn Nets",
               "abbreviation": "BKN",
-              "score": "0",
+              "score": "35",
               "record": "0-0"
             }
           ],
@@ -211,7 +211,7 @@
           "broadcasts": [
             "NBA TV"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401901820/nets-hornets"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261006"
         },
         {
           "id": "nba-401898389",
@@ -310,21 +310,21 @@
       "status": "active",
       "games": 9,
       "completed": 0,
-      "live": 0,
-      "scheduled": 9,
+      "live": 6,
+      "scheduled": 3,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-10-06T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": [
         {
           "id": "nhl-401891815",
           "date": "2026-10-06T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/6 - 7:00 PM EDT",
+          "state": "in",
+          "status": "5:10 - 1st",
           "name": "Carolina Hurricanes at Montreal Canadiens",
           "shortName": "CAR @ MTL",
           "competitors": [
@@ -332,14 +332,14 @@
               "side": "home",
               "name": "Montreal Canadiens",
               "abbreviation": "MTL",
-              "score": "0",
+              "score": "3",
               "record": "1-0-1"
             },
             {
               "side": "away",
               "name": "Carolina Hurricanes",
               "abbreviation": "CAR",
-              "score": "0",
+              "score": "2",
               "record": "1-1-1"
             }
           ],
@@ -349,14 +349,14 @@
             "ESPN+",
             "CARNHL"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401891815/hurricanes-canadiens"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261006"
         },
         {
           "id": "nhl-401892449",
           "date": "2026-10-06T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/6 - 7:00 PM EDT",
+          "state": "in",
+          "status": "End of 1st",
           "name": "Nashville Predators at Toronto Maple Leafs",
           "shortName": "NSH @ TOR",
           "competitors": [
@@ -371,7 +371,7 @@
               "side": "away",
               "name": "Nashville Predators",
               "abbreviation": "NSH",
-              "score": "0",
+              "score": "2",
               "record": "1-1-0"
             }
           ],
@@ -381,14 +381,14 @@
             "ESPN+",
             "Scripps Sports"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892449/predators-maple-leafs"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261006"
         },
         {
           "id": "nhl-401892450",
           "date": "2026-10-06T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/6 - 7:00 PM EDT",
+          "state": "in",
+          "status": "End of 1st",
           "name": "Ottawa Senators at Detroit Red Wings",
           "shortName": "OTT @ DET",
           "competitors": [
@@ -396,14 +396,14 @@
               "side": "home",
               "name": "Detroit Red Wings",
               "abbreviation": "DET",
-              "score": "0",
+              "score": "2",
               "record": "0-2-0"
             },
             {
               "side": "away",
               "name": "Ottawa Senators",
               "abbreviation": "OTT",
-              "score": "0",
+              "score": "1",
               "record": "2-0-0"
             }
           ],
@@ -413,14 +413,14 @@
             "ESPN+",
             "DSN"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892450/senators-red-wings"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261006"
         },
         {
           "id": "nhl-401892451",
           "date": "2026-10-06T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/6 - 7:00 PM EDT",
+          "state": "in",
+          "status": "3:14 - 1st",
           "name": "Utah Mammoth at New Jersey Devils",
           "shortName": "UTA @ NJ",
           "competitors": [
@@ -428,14 +428,14 @@
               "side": "home",
               "name": "New Jersey Devils",
               "abbreviation": "NJ",
-              "score": "0",
+              "score": "1",
               "record": "1-1-0"
             },
             {
               "side": "away",
               "name": "Utah Mammoth",
               "abbreviation": "UTA",
-              "score": "0",
+              "score": "1",
               "record": "2-1-0"
             }
           ],
@@ -446,14 +446,14 @@
             "MSGSN",
             "Utah 16"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892451/mammoth-devils"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261006"
         },
         {
           "id": "nhl-401892453",
           "date": "2026-10-06T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/6 - 7:00 PM EDT",
+          "state": "in",
+          "status": "End of 1st",
           "name": "Minnesota Wild at Buffalo Sabres",
           "shortName": "MIN @ BUF",
           "competitors": [
@@ -479,14 +479,14 @@
             "MSGB",
             "MINNHL"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892453/wild-sabres"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261006"
         },
         {
           "id": "nhl-401892452",
           "date": "2026-10-06T23:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/6 - 7:30 PM EDT",
+          "state": "in",
+          "status": "13:20 - 1st",
           "name": "New York Islanders at New York Rangers",
           "shortName": "NYI @ NYR",
           "competitors": [
@@ -510,7 +510,7 @@
           "broadcasts": [
             "ESPN"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892452/islanders-rangers"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261006"
         },
         {
           "id": "nhl-401891779",
@@ -548,10 +548,10 @@
         },
         {
           "id": "nhl-401892454",
-          "date": "2026-10-07T01:00Z",
+          "date": "2026-10-07T01:40Z",
           "completed": false,
           "state": "pre",
-          "status": "10/6 - 9:00 PM EDT",
+          "status": "10/6 - 9:40 PM EDT",
           "name": "Vegas Golden Knights at Seattle Kraken",
           "shortName": "VGK @ SEA",
           "competitors": [
@@ -628,7 +628,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -644,7 +644,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -660,7 +660,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -676,7 +676,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -692,7 +692,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -708,7 +708,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     },
     {
@@ -724,7 +724,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261006",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261006&limit=200",
-      "sourceVerifiedAt": "2026-10-06T17:10:55.631Z",
+      "sourceVerifiedAt": "2026-10-06T23:48:15.887Z",
       "events": []
     }
   ],
