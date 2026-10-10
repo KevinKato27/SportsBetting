@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-10",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-10T09:49:24.448Z",
+  "lastVerified": "2026-10-10T16:14:04.547Z",
   "gate": "PRELIMINARY",
   "activeGames": 92,
   "leagues": [
@@ -19,7 +19,7 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-10",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-10&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "mlb-849831",
@@ -61,21 +61,21 @@
       "status": "active",
       "games": 46,
       "completed": 0,
-      "live": 0,
-      "scheduled": 46,
+      "live": 8,
+      "scheduled": 38,
       "earliestStart": "12:00 PM EDT",
       "earliestStartIso": "2026-10-10T16:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "college-football-401858481",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "13:06 - 1st",
           "name": "Indiana Hoosiers at Nebraska Cornhuskers",
           "shortName": "IU @ NEB",
           "competitors": [
@@ -99,14 +99,14 @@
           "broadcasts": [
             "Fox"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858481/indiana-nebraska"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401856716",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "11:38 - 1st",
           "name": "Texas A&M Aggies at Missouri Tigers",
           "shortName": "TA&M @ MIZ",
           "competitors": [
@@ -130,14 +130,14 @@
           "broadcasts": [
             "ABC"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856716/texas-am-missouri"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401856824",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "10:08 - 1st",
           "name": "UCF Knights at Oklahoma State Cowboys",
           "shortName": "UCF @ OKST",
           "competitors": [
@@ -152,7 +152,7 @@
               "side": "away",
               "name": "UCF Knights",
               "abbreviation": "UCF",
-              "score": "0",
+              "score": "7",
               "record": "3-2"
             }
           ],
@@ -161,14 +161,14 @@
           "broadcasts": [
             "ESPN2"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856824/ucf-oklahoma-st"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401858256",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "11:19 - 1st",
           "name": "North Carolina Tar Heels at Pittsburgh Panthers",
           "shortName": "UNC @ PITT",
           "competitors": [
@@ -192,14 +192,14 @@
           "broadcasts": [
             "ESPN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858256/north-carolina-pitt"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401856823",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "9:48 - 1st",
           "name": "Arizona Wildcats at West Virginia Mountaineers",
           "shortName": "ARIZ @ WVU",
           "competitors": [
@@ -207,7 +207,7 @@
               "side": "home",
               "name": "West Virginia Mountaineers",
               "abbreviation": "WVU",
-              "score": "0",
+              "score": "3",
               "record": "3-2"
             },
             {
@@ -223,14 +223,14 @@
           "broadcasts": [
             "TNT"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401856823/arizona-west-virginia"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401858260",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "13:39 - 1st",
           "name": "Wake Forest Demon Deacons at NC State Wolfpack",
           "shortName": "WAKE @ NCSU",
           "competitors": [
@@ -254,14 +254,14 @@
           "broadcasts": [
             "CW"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401858260/wake-forest-nc-state"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401862795",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "8:19 - 1st",
           "name": "Tulane Green Wave at Army Black Knights",
           "shortName": "TULN @ ARMY",
           "competitors": [
@@ -285,14 +285,14 @@
           "broadcasts": [
             "CBSSN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401862795/tulane-army"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401866436",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/10 - 12:00 PM EDT",
+          "state": "in",
+          "status": "7:04 - 1st",
           "name": "Sacramento State Hornets at Bowling Green Falcons",
           "shortName": "SAC @ BGSU",
           "competitors": [
@@ -307,7 +307,7 @@
               "side": "away",
               "name": "Sacramento State Hornets",
               "abbreviation": "SAC",
-              "score": "0",
+              "score": "3",
               "record": "1-4"
             }
           ],
@@ -316,7 +316,7 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401866436/sacramento-st-bowling-green"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261010"
         },
         {
           "id": "college-football-401858482",
@@ -381,37 +381,6 @@
           "source": "https://www.espn.com/college-football/game/_/gameId/401856714/south-carolina-florida"
         },
         {
-          "id": "college-football-401869843",
-          "date": "2026-10-10T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/10 - 1:00 PM EDT",
-          "name": "Old Dominion Monarchs at App State Mountaineers",
-          "shortName": "ODU @ APP",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "App State Mountaineers",
-              "abbreviation": "APP",
-              "score": "0",
-              "record": "3-1"
-            },
-            {
-              "side": "away",
-              "name": "Old Dominion Monarchs",
-              "abbreviation": "ODU",
-              "score": "0",
-              "record": "1-4"
-            }
-          ],
-          "venue": "Kidd Brewer Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ESPN+"
-          ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401869843/old-dominion-app-state"
-        },
-        {
           "id": "college-football-401862797",
           "date": "2026-10-10T17:00Z",
           "completed": false,
@@ -441,6 +410,37 @@
             "ESPN+"
           ],
           "source": "https://www.espn.com/college-football/game/_/gameId/401862797/rice-east-carolina"
+        },
+        {
+          "id": "college-football-401869843",
+          "date": "2026-10-10T17:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/10 - 1:00 PM EDT",
+          "name": "Old Dominion Monarchs at App State Mountaineers",
+          "shortName": "ODU @ APP",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "App State Mountaineers",
+              "abbreviation": "APP",
+              "score": "0",
+              "record": "3-1"
+            },
+            {
+              "side": "away",
+              "name": "Old Dominion Monarchs",
+              "abbreviation": "ODU",
+              "score": "0",
+              "record": "1-4"
+            }
+          ],
+          "venue": "Kidd Brewer Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401869843/old-dominion-app-state"
         },
         {
           "id": "college-football-401866440",
@@ -1398,7 +1398,9 @@
           ],
           "venue": "Rice-Eccles Stadium",
           "probablePitchers": null,
-          "broadcasts": [],
+          "broadcasts": [
+            "ESPNEWS"
+          ],
           "source": "https://www.espn.com/college-football/game/_/gameId/401856827/kansas-utah"
         },
         {
@@ -1509,7 +1511,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": []
     },
     {
@@ -1525,7 +1527,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": []
     },
     {
@@ -1541,7 +1543,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "nba-401902645",
@@ -1767,7 +1769,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "nhl-401892469",
@@ -2233,22 +2235,22 @@
       "league": "EPL",
       "status": "active",
       "games": 6,
-      "completed": 0,
+      "completed": 5,
       "live": 0,
-      "scheduled": 6,
+      "scheduled": 1,
       "earliestStart": "7:30 AM EDT",
       "earliestStartIso": "2026-10-10T11:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "eng.1-401879268",
           "date": "2026-10-10T11:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Leeds United at Arsenal",
           "shortName": "LEE @ ARS",
           "competitors": [
@@ -2256,15 +2258,15 @@
               "side": "home",
               "name": "Arsenal",
               "abbreviation": "ARS",
-              "score": "0",
-              "record": "4-0-1"
+              "score": "2",
+              "record": "5-0-1"
             },
             {
               "side": "away",
               "name": "Leeds United",
               "abbreviation": "LEE",
-              "score": "0",
-              "record": "2-3-0"
+              "score": "1",
+              "record": "2-3-1"
             }
           ],
           "venue": "Emirates Stadium",
@@ -2278,9 +2280,9 @@
         {
           "id": "eng.1-401878776",
           "date": "2026-10-10T14:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Brentford at Aston Villa",
           "shortName": "BRE @ AVL",
           "competitors": [
@@ -2288,15 +2290,15 @@
               "side": "home",
               "name": "Aston Villa",
               "abbreviation": "AVL",
-              "score": "0",
-              "record": "1-1-3"
+              "score": "2",
+              "record": "1-2-3"
             },
             {
               "side": "away",
               "name": "Brentford",
               "abbreviation": "BRE",
-              "score": "0",
-              "record": "2-3-0"
+              "score": "2",
+              "record": "2-4-0"
             }
           ],
           "venue": "Villa Park",
@@ -2310,9 +2312,9 @@
         {
           "id": "eng.1-401878775",
           "date": "2026-10-10T14:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "AFC Bournemouth at Chelsea",
           "shortName": "BOU @ CHE",
           "competitors": [
@@ -2320,15 +2322,15 @@
               "side": "home",
               "name": "Chelsea",
               "abbreviation": "CHE",
-              "score": "0",
-              "record": "2-1-2"
+              "score": "5",
+              "record": "3-1-2"
             },
             {
               "side": "away",
               "name": "AFC Bournemouth",
               "abbreviation": "BOU",
-              "score": "0",
-              "record": "0-3-2"
+              "score": "1",
+              "record": "0-3-3"
             }
           ],
           "venue": "Stamford Bridge",
@@ -2341,9 +2343,9 @@
         {
           "id": "eng.1-401879265",
           "date": "2026-10-10T14:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Fulham at Ipswich Town",
           "shortName": "FUL @ IPS",
           "competitors": [
@@ -2351,15 +2353,15 @@
               "side": "home",
               "name": "Ipswich Town",
               "abbreviation": "IPS",
-              "score": "0",
-              "record": "2-0-3"
+              "score": "2",
+              "record": "3-0-3"
             },
             {
               "side": "away",
               "name": "Fulham",
               "abbreviation": "FUL",
-              "score": "0",
-              "record": "0-2-3"
+              "score": "1",
+              "record": "0-2-4"
             }
           ],
           "venue": "Portman Road",
@@ -2372,9 +2374,9 @@
         {
           "id": "eng.1-401878772",
           "date": "2026-10-10T14:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Brighton & Hove Albion at Sunderland",
           "shortName": "BHA @ SUN",
           "competitors": [
@@ -2383,14 +2385,14 @@
               "name": "Sunderland",
               "abbreviation": "SUN",
               "score": "0",
-              "record": "1-1-3"
+              "record": "1-1-4"
             },
             {
               "side": "away",
               "name": "Brighton & Hove Albion",
               "abbreviation": "BHA",
-              "score": "0",
-              "record": "3-1-1"
+              "score": "2",
+              "record": "4-1-1"
             }
           ],
           "venue": "Stadium of Light",
@@ -2439,22 +2441,22 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 4,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 4,
+      "scheduled": 3,
       "earliestStart": "8:00 AM EDT",
       "earliestStartIso": "2026-10-10T12:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "esp.1-401882849",
           "date": "2026-10-10T12:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "post",
+          "status": "ABN",
           "name": "Athletic Club at Rayo Vallecano",
           "shortName": "ATH @ RAY",
           "competitors": [
@@ -2484,9 +2486,9 @@
         {
           "id": "esp.1-401882856",
           "date": "2026-10-10T14:15Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Atlético Madrid at Alavés",
           "shortName": "ATM @ ALA",
           "competitors": [
@@ -2494,14 +2496,14 @@
               "side": "home",
               "name": "Alavés",
               "abbreviation": "ALA",
-              "score": "0",
+              "score": "1",
               "record": "3-2-2"
             },
             {
               "side": "away",
               "name": "Atlético Madrid",
               "abbreviation": "ATM",
-              "score": "0",
+              "score": "2",
               "record": "5-1-1"
             }
           ],
@@ -2584,22 +2586,22 @@
       "league": "BUNDESLIGA",
       "status": "active",
       "games": 6,
-      "completed": 0,
+      "completed": 5,
       "live": 0,
-      "scheduled": 6,
+      "scheduled": 1,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-10-10T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "ger.1-401884775",
           "date": "2026-10-10T13:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "SV Elversberg at 1. FC Union Berlin",
           "shortName": "ELV @ FCU",
           "competitors": [
@@ -2607,15 +2609,15 @@
               "side": "home",
               "name": "1. FC Union Berlin",
               "abbreviation": "FCU",
-              "score": "0",
-              "record": "0-1-3"
+              "score": "1",
+              "record": "1-1-3"
             },
             {
               "side": "away",
               "name": "SV Elversberg",
               "abbreviation": "ELV",
               "score": "0",
-              "record": "2-1-1"
+              "record": "2-1-2"
             }
           ],
           "venue": "Stadion An der Alten Försterei",
@@ -2628,9 +2630,9 @@
         {
           "id": "ger.1-401884777",
           "date": "2026-10-10T13:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Bayern Munich at FC Augsburg",
           "shortName": "MUN @ FCA",
           "competitors": [
@@ -2638,15 +2640,15 @@
               "side": "home",
               "name": "FC Augsburg",
               "abbreviation": "FCA",
-              "score": "0",
-              "record": "2-1-1"
+              "score": "2",
+              "record": "2-2-1"
             },
             {
               "side": "away",
               "name": "Bayern Munich",
               "abbreviation": "MUN",
-              "score": "0",
-              "record": "3-1-0"
+              "score": "2",
+              "record": "3-2-0"
             }
           ],
           "venue": "WWK Arena",
@@ -2659,9 +2661,9 @@
         {
           "id": "ger.1-401884776",
           "date": "2026-10-10T13:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Bayer Leverkusen at Mainz",
           "shortName": "B04 @ M05",
           "competitors": [
@@ -2669,15 +2671,15 @@
               "side": "home",
               "name": "Mainz",
               "abbreviation": "M05",
-              "score": "0",
-              "record": "2-1-1"
+              "score": "3",
+              "record": "2-1-2"
             },
             {
               "side": "away",
               "name": "Bayer Leverkusen",
               "abbreviation": "B04",
-              "score": "0",
-              "record": "2-1-1"
+              "score": "4",
+              "record": "3-1-1"
             }
           ],
           "venue": "MEWA ARENA",
@@ -2690,9 +2692,9 @@
         {
           "id": "ger.1-401884773",
           "date": "2026-10-10T13:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "VfB Stuttgart at SC Paderborn 07",
           "shortName": "VFB @ SCP",
           "competitors": [
@@ -2701,14 +2703,14 @@
               "name": "SC Paderborn 07",
               "abbreviation": "SCP",
               "score": "0",
-              "record": "1-1-2"
+              "record": "1-1-3"
             },
             {
               "side": "away",
               "name": "VfB Stuttgart",
               "abbreviation": "VFB",
-              "score": "0",
-              "record": "1-0-3"
+              "score": "2",
+              "record": "2-0-3"
             }
           ],
           "venue": "Home Deluxe Arena",
@@ -2721,9 +2723,9 @@
         {
           "id": "ger.1-401884779",
           "date": "2026-10-10T13:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Hamburg SV at TSG Hoffenheim",
           "shortName": "HSV @ TSG",
           "competitors": [
@@ -2731,15 +2733,15 @@
               "side": "home",
               "name": "TSG Hoffenheim",
               "abbreviation": "TSG",
-              "score": "0",
-              "record": "1-0-3"
+              "score": "2",
+              "record": "1-0-4"
             },
             {
               "side": "away",
               "name": "Hamburg SV",
               "abbreviation": "HSV",
-              "score": "0",
-              "record": "1-0-3"
+              "score": "3",
+              "record": "2-0-3"
             }
           ],
           "venue": "PreZero Arena",
@@ -2787,22 +2789,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 3,
-      "completed": 0,
-      "live": 0,
-      "scheduled": 3,
+      "completed": 1,
+      "live": 1,
+      "scheduled": 1,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-10-10T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "ita.1-401874947",
           "date": "2026-10-10T13:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Fiorentina at Genoa",
           "shortName": "FIO @ GEN",
           "competitors": [
@@ -2810,15 +2812,15 @@
               "side": "home",
               "name": "Genoa",
               "abbreviation": "GEN",
-              "score": "0",
-              "record": "0-1-4"
+              "score": "2",
+              "record": "1-1-4"
             },
             {
               "side": "away",
               "name": "Fiorentina",
               "abbreviation": "FIO",
-              "score": "0",
-              "record": "1-1-3"
+              "score": "1",
+              "record": "1-1-4"
             }
           ],
           "venue": "Stadio Luigi Ferraris",
@@ -2832,8 +2834,8 @@
           "id": "ita.1-401875021",
           "date": "2026-10-10T16:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "13'",
           "name": "Parma at Internazionale",
           "shortName": "PAR @ INT",
           "competitors": [
@@ -2857,7 +2859,7 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401875021/parma-internazionale"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261010"
         },
         {
           "id": "ita.1-401874754",
@@ -2898,21 +2900,21 @@
       "status": "active",
       "games": 5,
       "completed": 0,
-      "live": 0,
-      "scheduled": 5,
+      "live": 1,
+      "scheduled": 4,
       "earliestStart": "11:15 AM EDT",
       "earliestStartIso": "2026-10-10T15:15Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": [
         {
           "id": "fra.1-401876446",
           "date": "2026-10-10T15:15Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "HT",
           "name": "Le Havre AC at Lille",
           "shortName": "HAC @ LILL",
           "competitors": [
@@ -2920,7 +2922,7 @@
               "side": "home",
               "name": "Lille",
               "abbreviation": "LILL",
-              "score": "0",
+              "score": "1",
               "record": "3-1-1"
             },
             {
@@ -2936,7 +2938,7 @@
           "broadcasts": [
             "beIn Sports"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876446/le-havre-ac-lille"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261010"
         },
         {
           "id": "fra.1-401876444",
@@ -3071,7 +3073,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": []
     },
     {
@@ -3087,7 +3089,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261010",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261010&limit=200",
-      "sourceVerifiedAt": "2026-10-10T09:49:24.448Z",
+      "sourceVerifiedAt": "2026-10-10T16:14:04.547Z",
       "events": []
     }
   ],
