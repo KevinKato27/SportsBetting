@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-11",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-11T16:38:37.901Z",
+  "lastVerified": "2026-10-11T23:39:16.284Z",
   "gate": "PRELIMINARY",
   "activeGames": 38,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-11",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-11&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "mlb-849809",
           "date": "2026-10-12T00:00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Los Angeles Dodgers at Milwaukee Brewers",
           "shortName": "LAD @ MIL",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             },
             {
               "side": "home",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             }
           ],
@@ -68,7 +68,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": []
     },
     {
@@ -76,22 +76,22 @@
       "league": "NFL",
       "status": "active",
       "games": 13,
-      "completed": 0,
+      "completed": 11,
       "live": 1,
-      "scheduled": 12,
+      "scheduled": 1,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-10-11T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "nfl-401872981",
           "date": "2026-10-11T13:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "8:09 - 4th",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Philadelphia Eagles at Jacksonville Jaguars",
           "shortName": "PHI VS JAX",
           "competitors": [
@@ -99,15 +99,15 @@
               "side": "home",
               "name": "Jacksonville Jaguars",
               "abbreviation": "JAX",
-              "score": "10",
-              "record": "3-1"
+              "score": "19",
+              "record": "4-1"
             },
             {
               "side": "away",
               "name": "Philadelphia Eagles",
               "abbreviation": "PHI",
-              "score": "14",
-              "record": "2-2"
+              "score": "17",
+              "record": "2-3"
             }
           ],
           "venue": "Tottenham Hotspur Stadium",
@@ -115,14 +115,14 @@
           "broadcasts": [
             "NFL Net"
           ],
-          "source": "https://www.espn.com/nfl/scoreboard/_/date/20261011"
+          "source": "https://www.espn.com/nfl/game/_/gameId/401872981/eagles-jaguars"
         },
         {
           "id": "nfl-401872990",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Chicago Bears at Green Bay Packers",
           "shortName": "CHI @ GB",
           "competitors": [
@@ -130,15 +130,15 @@
               "side": "home",
               "name": "Green Bay Packers",
               "abbreviation": "GB",
-              "score": "0",
-              "record": "2-2"
+              "score": "31",
+              "record": "3-2"
             },
             {
               "side": "away",
               "name": "Chicago Bears",
               "abbreviation": "CHI",
-              "score": "0",
-              "record": "3-1"
+              "score": "7",
+              "record": "3-2"
             }
           ],
           "venue": "Lambeau Field",
@@ -151,9 +151,9 @@
         {
           "id": "nfl-401872984",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Houston Texans at Tennessee Titans",
           "shortName": "HOU @ TEN",
           "competitors": [
@@ -161,15 +161,15 @@
               "side": "home",
               "name": "Tennessee Titans",
               "abbreviation": "TEN",
-              "score": "0",
-              "record": "0-4"
+              "score": "3",
+              "record": "0-5"
             },
             {
               "side": "away",
               "name": "Houston Texans",
               "abbreviation": "HOU",
-              "score": "0",
-              "record": "0-4"
+              "score": "26",
+              "record": "1-4"
             }
           ],
           "venue": "Nissan Stadium",
@@ -182,9 +182,9 @@
         {
           "id": "nfl-401872982",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Cincinnati Bengals at Miami Dolphins",
           "shortName": "CIN @ MIA",
           "competitors": [
@@ -192,15 +192,15 @@
               "side": "home",
               "name": "Miami Dolphins",
               "abbreviation": "MIA",
-              "score": "0",
-              "record": "0-4"
+              "score": "24",
+              "record": "0-5"
             },
             {
               "side": "away",
               "name": "Cincinnati Bengals",
               "abbreviation": "CIN",
-              "score": "0",
-              "record": "2-2"
+              "score": "31",
+              "record": "3-2"
             }
           ],
           "venue": "Hard Rock Stadium",
@@ -213,9 +213,9 @@
         {
           "id": "nfl-401872986",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Las Vegas Raiders at New England Patriots",
           "shortName": "LV @ NE",
           "competitors": [
@@ -223,15 +223,15 @@
               "side": "home",
               "name": "New England Patriots",
               "abbreviation": "NE",
-              "score": "0",
-              "record": "2-2"
+              "score": "45",
+              "record": "3-2"
             },
             {
               "side": "away",
               "name": "Las Vegas Raiders",
               "abbreviation": "LV",
-              "score": "0",
-              "record": "3-1"
+              "score": "17",
+              "record": "3-2"
             }
           ],
           "venue": "Gillette Stadium",
@@ -244,9 +244,9 @@
         {
           "id": "nfl-401872987",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Minnesota Vikings at New Orleans Saints",
           "shortName": "MIN @ NO",
           "competitors": [
@@ -254,15 +254,15 @@
               "side": "home",
               "name": "New Orleans Saints",
               "abbreviation": "NO",
-              "score": "0",
-              "record": "1-3"
+              "score": "13",
+              "record": "1-4"
             },
             {
               "side": "away",
               "name": "Minnesota Vikings",
               "abbreviation": "MIN",
-              "score": "0",
-              "record": "4-0"
+              "score": "23",
+              "record": "5-0"
             }
           ],
           "venue": "Caesars Superdome",
@@ -275,9 +275,9 @@
         {
           "id": "nfl-401872983",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Cleveland Browns at New York Jets",
           "shortName": "CLE @ NYJ",
           "competitors": [
@@ -285,15 +285,15 @@
               "side": "home",
               "name": "New York Jets",
               "abbreviation": "NYJ",
-              "score": "0",
-              "record": "1-3"
+              "score": "17",
+              "record": "2-3"
             },
             {
               "side": "away",
               "name": "Cleveland Browns",
               "abbreviation": "CLE",
-              "score": "0",
-              "record": "3-1"
+              "score": "12",
+              "record": "3-2"
             }
           ],
           "venue": "MetLife Stadium",
@@ -306,9 +306,9 @@
         {
           "id": "nfl-401872985",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Indianapolis Colts at Pittsburgh Steelers",
           "shortName": "IND @ PIT",
           "competitors": [
@@ -316,15 +316,15 @@
               "side": "home",
               "name": "Pittsburgh Steelers",
               "abbreviation": "PIT",
-              "score": "0",
-              "record": "2-2"
+              "score": "34",
+              "record": "3-2"
             },
             {
               "side": "away",
               "name": "Indianapolis Colts",
               "abbreviation": "IND",
-              "score": "0",
-              "record": "2-2"
+              "score": "22",
+              "record": "2-3"
             }
           ],
           "venue": "Acrisure Stadium",
@@ -337,9 +337,9 @@
         {
           "id": "nfl-401872988",
           "date": "2026-10-11T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final/OT",
           "name": "New York Giants at Washington Commanders",
           "shortName": "NYG @ WSH",
           "competitors": [
@@ -347,15 +347,15 @@
               "side": "home",
               "name": "Washington Commanders",
               "abbreviation": "WSH",
-              "score": "0",
-              "record": "1-3"
+              "score": "27",
+              "record": "1-3-1"
             },
             {
               "side": "away",
               "name": "New York Giants",
               "abbreviation": "NYG",
-              "score": "0",
-              "record": "3-1"
+              "score": "27",
+              "record": "3-1-1"
             }
           ],
           "venue": "Northwest Stadium",
@@ -368,9 +368,9 @@
         {
           "id": "nfl-401872989",
           "date": "2026-10-11T20:05Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 4:05 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Denver Broncos at Los Angeles Chargers",
           "shortName": "DEN @ LAC",
           "competitors": [
@@ -378,15 +378,15 @@
               "side": "home",
               "name": "Los Angeles Chargers",
               "abbreviation": "LAC",
-              "score": "0",
-              "record": "0-4"
+              "score": "17",
+              "record": "0-5"
             },
             {
               "side": "away",
               "name": "Denver Broncos",
               "abbreviation": "DEN",
-              "score": "0",
-              "record": "2-2"
+              "score": "23",
+              "record": "3-2"
             }
           ],
           "venue": "SoFi Stadium",
@@ -397,42 +397,11 @@
           "source": "https://www.espn.com/nfl/game/_/gameId/401872989/broncos-chargers"
         },
         {
-          "id": "nfl-401872991",
-          "date": "2026-10-11T20:25Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/11 - 4:25 PM EDT",
-          "name": "Detroit Lions at Arizona Cardinals",
-          "shortName": "DET @ ARI",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Arizona Cardinals",
-              "abbreviation": "ARI",
-              "score": "0",
-              "record": "1-3"
-            },
-            {
-              "side": "away",
-              "name": "Detroit Lions",
-              "abbreviation": "DET",
-              "score": "0",
-              "record": "2-2"
-            }
-          ],
-          "venue": "State Farm Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fox"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872991/lions-cardinals"
-        },
-        {
           "id": "nfl-401872992",
           "date": "2026-10-11T20:25Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/11 - 4:25 PM EDT",
+          "state": "in",
+          "status": "0:54 - 4th",
           "name": "San Francisco 49ers at Seattle Seahawks",
           "shortName": "SF @ SEA",
           "competitors": [
@@ -440,14 +409,14 @@
               "side": "home",
               "name": "Seattle Seahawks",
               "abbreviation": "SEA",
-              "score": "0",
+              "score": "29",
               "record": "3-1"
             },
             {
               "side": "away",
               "name": "San Francisco 49ers",
               "abbreviation": "SF",
-              "score": "0",
+              "score": "32",
               "record": "4-0"
             }
           ],
@@ -456,7 +425,38 @@
           "broadcasts": [
             "Fox"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872992/49ers-seahawks"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20261011"
+        },
+        {
+          "id": "nfl-401872991",
+          "date": "2026-10-11T20:25Z",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
+          "name": "Detroit Lions at Arizona Cardinals",
+          "shortName": "DET @ ARI",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Arizona Cardinals",
+              "abbreviation": "ARI",
+              "score": "21",
+              "record": "1-4"
+            },
+            {
+              "side": "away",
+              "name": "Detroit Lions",
+              "abbreviation": "DET",
+              "score": "45",
+              "record": "3-2"
+            }
+          ],
+          "venue": "State Farm Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fox"
+          ],
+          "source": "https://www.espn.com/nfl/game/_/gameId/401872991/lions-cardinals"
         },
         {
           "id": "nfl-401872993",
@@ -504,7 +504,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": []
     },
     {
@@ -513,14 +513,14 @@
       "status": "active",
       "games": 4,
       "completed": 1,
-      "live": 0,
-      "scheduled": 3,
+      "live": 2,
+      "scheduled": 1,
       "earliestStart": "6:00 AM EDT",
       "earliestStartIso": "2026-10-11T10:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "nba-401898400",
@@ -557,8 +557,8 @@
           "id": "nba-401898401",
           "date": "2026-10-11T22:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/11 - 6:30 PM EDT",
+          "state": "in",
+          "status": "3:15 - 2nd",
           "name": "Orlando Magic at Cleveland Cavaliers",
           "shortName": "ORL @ CLE",
           "competitors": [
@@ -566,14 +566,14 @@
               "side": "home",
               "name": "Cleveland Cavaliers",
               "abbreviation": "CLE",
-              "score": "0",
+              "score": "51",
               "record": "0-1"
             },
             {
               "side": "away",
               "name": "Orlando Magic",
               "abbreviation": "ORL",
-              "score": "0",
+              "score": "40",
               "record": "1-0"
             }
           ],
@@ -582,14 +582,14 @@
           "broadcasts": [
             "ESPN"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401898401/magic-cavaliers"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261011"
         },
         {
           "id": "nba-401901821",
           "date": "2026-10-11T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/11 - 7:00 PM EDT",
+          "state": "in",
+          "status": "9:09 - 2nd",
           "name": "Milwaukee Bucks at Charlotte Hornets",
           "shortName": "MIL @ CHA",
           "competitors": [
@@ -597,21 +597,21 @@
               "side": "home",
               "name": "Charlotte Hornets",
               "abbreviation": "CHA",
-              "score": "0",
+              "score": "37",
               "record": "0-1"
             },
             {
               "side": "away",
               "name": "Milwaukee Bucks",
               "abbreviation": "MIL",
-              "score": "0",
+              "score": "31",
               "record": "1-1"
             }
           ],
           "venue": "Spectrum Center",
           "probablePitchers": null,
           "broadcasts": [],
-          "source": "https://www.espn.com/nba/game/_/gameId/401901821/bucks-hornets"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261011"
         },
         {
           "id": "nba-401908941",
@@ -652,21 +652,21 @@
       "status": "active",
       "games": 3,
       "completed": 0,
-      "live": 0,
-      "scheduled": 3,
+      "live": 3,
+      "scheduled": 0,
       "earliestStart": "5:00 PM EDT",
       "earliestStartIso": "2026-10-11T21:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "nhl-401892482",
           "date": "2026-10-11T21:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/11 - 5:00 PM EDT",
+          "state": "in",
+          "status": "1:51 - 3rd",
           "name": "Seattle Kraken at Washington Capitals",
           "shortName": "SEA @ WSH",
           "competitors": [
@@ -674,14 +674,14 @@
               "side": "home",
               "name": "Washington Capitals",
               "abbreviation": "WSH",
-              "score": "0",
+              "score": "3",
               "record": "3-1-0"
             },
             {
               "side": "away",
               "name": "Seattle Kraken",
               "abbreviation": "SEA",
-              "score": "0",
+              "score": "5",
               "record": "3-2-0"
             }
           ],
@@ -694,14 +694,14 @@
             "KHN",
             "Prime Video (Local)"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892482/kraken-capitals"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261011"
         },
         {
           "id": "nhl-401892483",
           "date": "2026-10-11T22:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/11 - 6:00 PM EDT",
+          "state": "in",
+          "status": "End of 2nd",
           "name": "Vancouver Canucks at New York Rangers",
           "shortName": "VAN @ NYR",
           "competitors": [
@@ -709,14 +709,14 @@
               "side": "home",
               "name": "New York Rangers",
               "abbreviation": "NYR",
-              "score": "0",
+              "score": "3",
               "record": "4-2-0"
             },
             {
               "side": "away",
               "name": "Vancouver Canucks",
               "abbreviation": "VAN",
-              "score": "0",
+              "score": "2",
               "record": "2-4-0"
             }
           ],
@@ -726,14 +726,14 @@
             "ESPN+",
             "MSG"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892483/canucks-rangers"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261011"
         },
         {
           "id": "nhl-401892484",
           "date": "2026-10-11T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/11 - 7:00 PM EDT",
+          "state": "in",
+          "status": "5:57 - 1st",
           "name": "Carolina Hurricanes at Philadelphia Flyers",
           "shortName": "CAR @ PHI",
           "competitors": [
@@ -759,7 +759,7 @@
             "NBC Sports Phil",
             "CARNHL"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892484/hurricanes-flyers"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261011"
         }
       ]
     },
@@ -768,15 +768,15 @@
       "league": "EPL",
       "status": "active",
       "games": 3,
-      "completed": 2,
-      "live": 1,
+      "completed": 3,
+      "live": 0,
       "scheduled": 0,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-10-11T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "eng.1-401879266",
@@ -844,9 +844,9 @@
         {
           "id": "eng.1-401879264",
           "date": "2026-10-11T15:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "50'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Manchester City at Liverpool",
           "shortName": "MNC @ LIV",
           "competitors": [
@@ -855,14 +855,14 @@
               "name": "Liverpool",
               "abbreviation": "LIV",
               "score": "0",
-              "record": "2-3-0"
+              "record": "2-3-1"
             },
             {
               "side": "away",
               "name": "Manchester City",
               "abbreviation": "MNC",
-              "score": "0",
-              "record": "5-0-0"
+              "score": "3",
+              "record": "6-0-0"
             }
           ],
           "venue": "Anfield",
@@ -871,7 +871,7 @@
             "NBC",
             "Tele"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261011"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879264/manchester-city-liverpool"
         }
       ]
     },
@@ -880,15 +880,15 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 4,
-      "completed": 2,
-      "live": 1,
-      "scheduled": 1,
+      "completed": 4,
+      "live": 0,
+      "scheduled": 0,
       "earliestStart": "8:00 AM EDT",
       "earliestStartIso": "2026-10-11T12:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "esp.1-401882854",
@@ -955,9 +955,9 @@
         {
           "id": "esp.1-401882855",
           "date": "2026-10-11T16:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "4'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Osasuna at Real Betis",
           "shortName": "OSA @ BET",
           "competitors": [
@@ -965,15 +965,15 @@
               "side": "home",
               "name": "Real Betis",
               "abbreviation": "BET",
-              "score": "0",
-              "record": "5-1-1"
+              "score": "5",
+              "record": "6-1-1"
             },
             {
               "side": "away",
               "name": "Osasuna",
               "abbreviation": "OSA",
-              "score": "0",
-              "record": "2-2-3"
+              "score": "2",
+              "record": "2-2-4"
             }
           ],
           "venue": "Estadio La Cartuja",
@@ -982,14 +982,14 @@
             "ESPN Deportes",
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261011"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882855/osasuna-real-betis"
         },
         {
           "id": "esp.1-401882850",
           "date": "2026-10-11T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Valencia at Racing Santander",
           "shortName": "VAL @ RAC",
           "competitors": [
@@ -997,15 +997,15 @@
               "side": "home",
               "name": "Racing Santander",
               "abbreviation": "RAC",
-              "score": "0",
-              "record": "2-1-4"
+              "score": "2",
+              "record": "2-2-4"
             },
             {
               "side": "away",
               "name": "Valencia",
               "abbreviation": "VAL",
-              "score": "0",
-              "record": "1-1-5"
+              "score": "2",
+              "record": "1-2-5"
             }
           ],
           "venue": "El Sardineros",
@@ -1023,15 +1023,15 @@
       "league": "BUNDESLIGA",
       "status": "active",
       "games": 2,
-      "completed": 1,
-      "live": 1,
+      "completed": 2,
+      "live": 0,
       "scheduled": 0,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-10-11T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "ger.1-401884774",
@@ -1067,9 +1067,9 @@
         {
           "id": "ger.1-401884778",
           "date": "2026-10-11T15:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "49'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Schalke 04 at SC Freiburg",
           "shortName": "S04 @ SCF",
           "competitors": [
@@ -1077,15 +1077,15 @@
               "side": "home",
               "name": "SC Freiburg",
               "abbreviation": "SCF",
-              "score": "1",
-              "record": "3-1-0"
+              "score": "2",
+              "record": "4-1-0"
             },
             {
               "side": "away",
               "name": "Schalke 04",
               "abbreviation": "S04",
               "score": "1",
-              "record": "1-2-1"
+              "record": "1-2-2"
             }
           ],
           "venue": "Europa-Park Stadion",
@@ -1093,7 +1093,7 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261011"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884778/schalke-04-sc-freiburg"
         }
       ]
     },
@@ -1102,15 +1102,15 @@
       "league": "SERIE A",
       "status": "active",
       "games": 5,
-      "completed": 3,
-      "live": 1,
-      "scheduled": 1,
+      "completed": 5,
+      "live": 0,
+      "scheduled": 0,
       "earliestStart": "6:30 AM EDT",
       "earliestStartIso": "2026-10-11T10:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "ita.1-401874940",
@@ -1210,9 +1210,9 @@
         {
           "id": "ita.1-401874789",
           "date": "2026-10-11T16:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "37'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "AC Milan at Sassuolo",
           "shortName": "MIL @ SAS",
           "competitors": [
@@ -1220,15 +1220,15 @@
               "side": "home",
               "name": "Sassuolo",
               "abbreviation": "SAS",
-              "score": "0",
-              "record": "2-1-2"
+              "score": "1",
+              "record": "2-2-2"
             },
             {
               "side": "away",
               "name": "AC Milan",
               "abbreviation": "MIL",
-              "score": "0",
-              "record": "3-2-0"
+              "score": "1",
+              "record": "3-3-0"
             }
           ],
           "venue": "Mapei Stadium",
@@ -1236,14 +1236,14 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261011"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874789/ac-milan-sassuolo"
         },
         {
           "id": "ita.1-401874764",
           "date": "2026-10-11T18:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Juventus at Cagliari",
           "shortName": "JUV @ CAG",
           "competitors": [
@@ -1251,15 +1251,15 @@
               "side": "home",
               "name": "Cagliari",
               "abbreviation": "CAG",
-              "score": "0",
-              "record": "4-0-1"
+              "score": "1",
+              "record": "4-1-1"
             },
             {
               "side": "away",
               "name": "Juventus",
               "abbreviation": "JUV",
-              "score": "0",
-              "record": "3-1-1"
+              "score": "1",
+              "record": "3-2-1"
             }
           ],
           "venue": "Unipol Domus",
@@ -1276,15 +1276,15 @@
       "league": "LIGUE 1",
       "status": "active",
       "games": 3,
-      "completed": 1,
-      "live": 1,
-      "scheduled": 1,
+      "completed": 3,
+      "live": 0,
+      "scheduled": 0,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-10-11T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": [
         {
           "id": "fra.1-401876443",
@@ -1320,9 +1320,9 @@
         {
           "id": "fra.1-401876441",
           "date": "2026-10-11T15:15Z",
-          "completed": false,
-          "state": "in",
-          "status": "65'",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "AJ Auxerre at Stade Rennais",
           "shortName": "AUX @ REN",
           "competitors": [
@@ -1330,15 +1330,15 @@
               "side": "home",
               "name": "Stade Rennais",
               "abbreviation": "REN",
-              "score": "2",
-              "record": "3-1-1"
+              "score": "4",
+              "record": "4-1-1"
             },
             {
               "side": "away",
               "name": "AJ Auxerre",
               "abbreviation": "AUX",
               "score": "1",
-              "record": "2-0-3"
+              "record": "2-0-4"
             }
           ],
           "venue": "Roazhon Park",
@@ -1346,14 +1346,14 @@
           "broadcasts": [
             "beIn Sports"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261011"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401876441/aj-auxerre-stade-rennais"
         },
         {
           "id": "fra.1-401876440",
           "date": "2026-10-11T18:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Marseille at Troyes",
           "shortName": "OLM @ TRY",
           "competitors": [
@@ -1362,14 +1362,14 @@
               "name": "Troyes",
               "abbreviation": "TRY",
               "score": "0",
-              "record": "1-1-3"
+              "record": "1-1-4"
             },
             {
               "side": "away",
               "name": "Marseille",
               "abbreviation": "OLM",
-              "score": "0",
-              "record": "1-0-4"
+              "score": "2",
+              "record": "2-0-4"
             }
           ],
           "venue": "Stade de l'Aube",
@@ -1394,7 +1394,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": []
     },
     {
@@ -1410,7 +1410,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261011",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261011&limit=200",
-      "sourceVerifiedAt": "2026-10-11T16:38:37.901Z",
+      "sourceVerifiedAt": "2026-10-11T23:39:16.284Z",
       "events": []
     }
   ],
