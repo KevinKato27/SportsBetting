@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-12",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-12T10:48:05.088Z",
+  "lastVerified": "2026-10-12T20:17:23.112Z",
   "gate": "PRELIMINARY",
   "activeGames": 15,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-12",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-12&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": [
         {
           "id": "mlb-849812",
           "date": "2026-10-12T21:00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Los Angeles Dodgers at Milwaukee Brewers",
           "shortName": "LAD @ MIL",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "0-1"
             },
             {
               "side": "home",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "1-0"
             }
           ],
@@ -58,7 +58,7 @@
           "date": "2026-10-13T00:00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Cleveland Guardians at Tampa Bay Rays",
           "shortName": "CLE @ TB",
           "competitors": [
@@ -66,14 +66,14 @@
               "side": "away",
               "name": "Cleveland Guardians",
               "abbreviation": "CLE",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             },
             {
               "side": "home",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "0-0"
             }
           ],
@@ -100,7 +100,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": []
     },
     {
@@ -116,7 +116,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": [
         {
           "id": "nfl-401872994",
@@ -165,7 +165,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": []
     },
     {
@@ -174,21 +174,21 @@
       "status": "active",
       "games": 5,
       "completed": 0,
-      "live": 0,
-      "scheduled": 5,
+      "live": 1,
+      "scheduled": 4,
       "earliestStart": "4:00 PM EDT",
       "earliestStartIso": "2026-10-12T20:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": [
         {
           "id": "nba-401914130",
           "date": "2026-10-12T20:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/12 - 4:00 PM EDT",
+          "state": "in",
+          "status": "8:41 - 1st",
           "name": "London Lions at Portland Trail Blazers",
           "shortName": "LON @ POR",
           "competitors": [
@@ -196,21 +196,21 @@
               "side": "home",
               "name": "Portland Trail Blazers",
               "abbreviation": "POR",
-              "score": "0",
+              "score": "8",
               "record": "1-0"
             },
             {
               "side": "away",
               "name": "London Lions",
               "abbreviation": "LON",
-              "score": "0",
+              "score": "4",
               "record": null
             }
           ],
           "venue": "Moda Center",
           "probablePitchers": null,
           "broadcasts": [],
-          "source": "https://www.espn.com/nba/game/_/gameId/401914130/lions-trail-blazers"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261012"
         },
         {
           "id": "nba-401898402",
@@ -339,22 +339,22 @@
       "league": "NHL",
       "status": "active",
       "games": 3,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 3,
+      "scheduled": 2,
       "earliestStart": "1:00 PM EDT",
       "earliestStartIso": "2026-10-12T17:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": [
         {
           "id": "nhl-401892485",
           "date": "2026-10-12T17:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/12 - 1:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Florida Panthers at Buffalo Sabres",
           "shortName": "FLA @ BUF",
           "competitors": [
@@ -362,15 +362,15 @@
               "side": "home",
               "name": "Buffalo Sabres",
               "abbreviation": "BUF",
-              "score": "0",
-              "record": "2-3-0"
+              "score": "5",
+              "record": "3-3-0"
             },
             {
               "side": "away",
               "name": "Florida Panthers",
               "abbreviation": "FLA",
-              "score": "0",
-              "record": "2-1-2"
+              "score": "3",
+              "record": "2-2-2"
             }
           ],
           "venue": "KeyBank Center",
@@ -455,21 +455,21 @@
       "status": "active",
       "games": 1,
       "completed": 0,
-      "live": 0,
-      "scheduled": 1,
+      "live": 1,
+      "scheduled": 0,
       "earliestStart": "3:00 PM EDT",
       "earliestStartIso": "2026-10-12T19:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": [
         {
           "id": "eng.1-401879267",
           "date": "2026-10-12T19:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "59'",
           "name": "Newcastle United at Coventry City",
           "shortName": "NEW @ COV",
           "competitors": [
@@ -477,7 +477,7 @@
               "side": "home",
               "name": "Coventry City",
               "abbreviation": "COV",
-              "score": "0",
+              "score": "2",
               "record": "1-0-4"
             },
             {
@@ -493,7 +493,7 @@
           "broadcasts": [
             "USA Net"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879267/newcastle-united-coventry-city"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261012"
         }
       ]
     },
@@ -503,21 +503,21 @@
       "status": "active",
       "games": 1,
       "completed": 0,
-      "live": 0,
-      "scheduled": 1,
+      "live": 1,
+      "scheduled": 0,
       "earliestStart": "3:00 PM EDT",
       "earliestStartIso": "2026-10-12T19:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": [
         {
           "id": "esp.1-401882852",
           "date": "2026-10-12T19:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "58'",
           "name": "Sevilla at Levante",
           "shortName": "SEV @ LEV",
           "competitors": [
@@ -525,14 +525,14 @@
               "side": "home",
               "name": "Levante",
               "abbreviation": "LEV",
-              "score": "0",
+              "score": "1",
               "record": "1-2-3"
             },
             {
               "side": "away",
               "name": "Sevilla",
               "abbreviation": "SEV",
-              "score": "0",
+              "score": "2",
               "record": "4-1-2"
             }
           ],
@@ -542,7 +542,7 @@
             "ESPN Deportes",
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882852/sevilla-levante"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261012"
         }
       ]
     },
@@ -559,7 +559,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": []
     },
     {
@@ -567,22 +567,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 2,
-      "completed": 0,
-      "live": 0,
-      "scheduled": 2,
+      "completed": 1,
+      "live": 1,
+      "scheduled": 0,
       "earliestStart": "12:30 PM EDT",
       "earliestStartIso": "2026-10-12T16:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": [
         {
           "id": "ita.1-401875005",
           "date": "2026-10-12T16:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Venezia at Atalanta",
           "shortName": "VEN @ ATA",
           "competitors": [
@@ -590,15 +590,15 @@
               "side": "home",
               "name": "Atalanta",
               "abbreviation": "ATA",
-              "score": "0",
-              "record": "2-0-3"
+              "score": "3",
+              "record": "3-0-3"
             },
             {
               "side": "away",
               "name": "Venezia",
               "abbreviation": "VEN",
-              "score": "0",
-              "record": "0-0-5"
+              "score": "1",
+              "record": "0-0-6"
             }
           ],
           "venue": "New Balance Arena",
@@ -612,8 +612,8 @@
           "id": "ita.1-401874763",
           "date": "2026-10-12T18:45Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "72'",
           "name": "Udinese at Torino",
           "shortName": "UDI @ TOR",
           "competitors": [
@@ -621,14 +621,14 @@
               "side": "home",
               "name": "Torino",
               "abbreviation": "TOR",
-              "score": "0",
+              "score": "2",
               "record": "1-1-3"
             },
             {
               "side": "away",
               "name": "Udinese",
               "abbreviation": "UDI",
-              "score": "0",
+              "score": "1",
               "record": "1-1-3"
             }
           ],
@@ -637,7 +637,7 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874763/udinese-torino"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261012"
         }
       ]
     },
@@ -654,7 +654,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": []
     },
     {
@@ -670,7 +670,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": []
     },
     {
@@ -686,7 +686,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261012",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261012&limit=200",
-      "sourceVerifiedAt": "2026-10-12T10:48:05.088Z",
+      "sourceVerifiedAt": "2026-10-12T20:17:23.112Z",
       "events": []
     }
   ],
