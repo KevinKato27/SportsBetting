@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-14",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-14T15:49:32.612Z",
+  "lastVerified": "2026-10-14T23:13:31.783Z",
   "gate": "PRELIMINARY",
   "activeGames": 21,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-14",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-14&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": [
         {
           "id": "mlb-849811",
           "date": "2026-10-15T00:00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Milwaukee Brewers at Los Angeles Dodgers",
           "shortName": "MIL @ LAD",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "2-0"
             },
             {
               "side": "home",
               "name": "Los Angeles Dodgers",
               "abbreviation": "LAD",
-              "score": null,
+              "score": 0,
               "record": "0-2"
             }
           ],
@@ -68,7 +68,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": [
         {
           "id": "college-football-401871054",
@@ -147,7 +147,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     },
     {
@@ -163,7 +163,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     },
     {
@@ -179,7 +179,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": [
         {
           "id": "nba-401898404",
@@ -403,7 +403,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": [
         {
           "id": "nhl-401892504",
@@ -484,7 +484,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     },
     {
@@ -500,7 +500,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     },
     {
@@ -516,7 +516,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     },
     {
@@ -532,7 +532,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     },
     {
@@ -548,7 +548,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     },
     {
@@ -556,22 +556,22 @@
       "league": "UCL",
       "status": "active",
       "games": 9,
-      "completed": 0,
+      "completed": 9,
       "live": 0,
-      "scheduled": 9,
+      "scheduled": 0,
       "earliestStart": "12:45 PM EDT",
       "earliestStartIso": "2026-10-14T16:45Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": [
         {
           "id": "uefa.champions-401915416",
           "date": "2026-10-14T16:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Como at Feyenoord Rotterdam",
           "shortName": "COMO @ FEY",
           "competitors": [
@@ -579,15 +579,15 @@
               "side": "home",
               "name": "Feyenoord Rotterdam",
               "abbreviation": "FEY",
-              "score": "0",
-              "record": "0-0-1"
+              "score": "3",
+              "record": "1-0-1"
             },
             {
               "side": "away",
               "name": "Como",
               "abbreviation": "COMO",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "2",
+              "record": "1-0-1"
             }
           ],
           "venue": "De Kuip",
@@ -601,9 +601,9 @@
         {
           "id": "uefa.champions-401915415",
           "date": "2026-10-14T16:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Liverpool at LASK Linz",
           "shortName": "LIV @ LAS",
           "competitors": [
@@ -611,15 +611,15 @@
               "side": "home",
               "name": "LASK Linz",
               "abbreviation": "LAS",
-              "score": "0",
-              "record": "0-0-1"
+              "score": "3",
+              "record": "0-0-2"
             },
             {
               "side": "away",
               "name": "Liverpool",
               "abbreviation": "LIV",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "6",
+              "record": "2-0-0"
             }
           ],
           "venue": "Raiffeisen Arena (Linz)",
@@ -632,9 +632,9 @@
         {
           "id": "uefa.champions-401915414",
           "date": "2026-10-14T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Real Madrid at AS Roma",
           "shortName": "RMA @ ROMA",
           "competitors": [
@@ -642,15 +642,15 @@
               "side": "home",
               "name": "AS Roma",
               "abbreviation": "ROMA",
-              "score": "0",
-              "record": "0-1-0"
+              "score": "3",
+              "record": "0-1-1"
             },
             {
               "side": "away",
               "name": "Real Madrid",
               "abbreviation": "RMA",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "4",
+              "record": "2-0-0"
             }
           ],
           "venue": "Olimpico",
@@ -663,9 +663,9 @@
         {
           "id": "uefa.champions-401915409",
           "date": "2026-10-14T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Fenerbahce at Aston Villa",
           "shortName": "FEN @ AVL",
           "competitors": [
@@ -673,15 +673,15 @@
               "side": "home",
               "name": "Aston Villa",
               "abbreviation": "AVL",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "6",
+              "record": "2-0-0"
             },
             {
               "side": "away",
               "name": "Fenerbahce",
               "abbreviation": "FEN",
               "score": "0",
-              "record": "0-1-0"
+              "record": "0-1-1"
             }
           ],
           "venue": "Villa Park",
@@ -694,9 +694,9 @@
         {
           "id": "uefa.champions-401915393",
           "date": "2026-10-14T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Borussia Dortmund at Bodo/Glimt",
           "shortName": "DOR @ BODO",
           "competitors": [
@@ -704,15 +704,15 @@
               "side": "home",
               "name": "Bodo/Glimt",
               "abbreviation": "BODO",
-              "score": "0",
-              "record": "0-0-1"
+              "score": "1",
+              "record": "1-0-1"
             },
             {
               "side": "away",
               "name": "Borussia Dortmund",
               "abbreviation": "DOR",
               "score": "0",
-              "record": "1-0-0"
+              "record": "1-0-1"
             }
           ],
           "venue": "Aspmyra Stadion",
@@ -726,9 +726,9 @@
         {
           "id": "uefa.champions-401915407",
           "date": "2026-10-14T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Paris Saint-Germain at Manchester City",
           "shortName": "PSG @ MNC",
           "competitors": [
@@ -736,15 +736,15 @@
               "side": "home",
               "name": "Manchester City",
               "abbreviation": "MNC",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "2",
+              "record": "1-0-1"
             },
             {
               "side": "away",
               "name": "Paris Saint-Germain",
               "abbreviation": "PSG",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "4",
+              "record": "2-0-0"
             }
           ],
           "venue": "Etihad Stadium",
@@ -757,9 +757,9 @@
         {
           "id": "uefa.champions-401915408",
           "date": "2026-10-14T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "FC Porto at Real Betis",
           "shortName": "FCP @ BET",
           "competitors": [
@@ -767,15 +767,15 @@
               "side": "home",
               "name": "Real Betis",
               "abbreviation": "BET",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "3",
+              "record": "2-0-0"
             },
             {
               "side": "away",
               "name": "FC Porto",
               "abbreviation": "FCP",
-              "score": "0",
-              "record": "0-0-1"
+              "score": "2",
+              "record": "0-0-2"
             }
           ],
           "venue": "Estadio La Cartuja",
@@ -788,9 +788,9 @@
         {
           "id": "uefa.champions-401915406",
           "date": "2026-10-14T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "AEK Athens at Shakhtar Donetsk",
           "shortName": "AEK @ SHK",
           "competitors": [
@@ -798,15 +798,15 @@
               "side": "home",
               "name": "Shakhtar Donetsk",
               "abbreviation": "SHK",
-              "score": "0",
-              "record": "0-1-0"
+              "score": "3",
+              "record": "1-1-0"
             },
             {
               "side": "away",
               "name": "AEK Athens",
               "abbreviation": "AEK",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "1",
+              "record": "1-0-1"
             }
           ],
           "venue": "Stamford Bridge",
@@ -819,9 +819,9 @@
         {
           "id": "uefa.champions-401915405",
           "date": "2026-10-14T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "VfB Stuttgart at Slovan Bratislava",
           "shortName": "VFB @ SLB",
           "competitors": [
@@ -830,14 +830,14 @@
               "name": "Slovan Bratislava",
               "abbreviation": "SLB",
               "score": "0",
-              "record": "0-0-1"
+              "record": "0-0-2"
             },
             {
               "side": "away",
               "name": "VfB Stuttgart",
               "abbreviation": "VFB",
-              "score": "0",
-              "record": "1-0-0"
+              "score": "3",
+              "record": "2-0-0"
             }
           ],
           "venue": "Národny Futbalovy Stadión",
@@ -862,7 +862,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261014",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261014&limit=200",
-      "sourceVerifiedAt": "2026-10-14T15:49:32.612Z",
+      "sourceVerifiedAt": "2026-10-14T23:13:31.783Z",
       "events": []
     }
   ],
