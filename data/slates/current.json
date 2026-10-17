@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-17",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-17T07:46:32.160Z",
+  "lastVerified": "2026-10-17T14:12:23.973Z",
   "gate": "PRELIMINARY",
   "activeGames": 89,
   "leagues": [
@@ -14,16 +14,16 @@
       "completed": 0,
       "live": 0,
       "scheduled": 1,
-      "earliestStart": "8:00 PM EDT",
-      "earliestStartIso": "2026-10-18T00:00:00Z",
+      "earliestStart": "8:08 PM EDT",
+      "earliestStartIso": "2026-10-18T00:08:00Z",
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-17",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-17&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "mlb-849816",
-          "date": "2026-10-18T00:00:00Z",
+          "date": "2026-10-18T00:08:00Z",
           "completed": false,
           "state": "pre",
           "status": "Scheduled",
@@ -68,7 +68,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "college-football-401858488",
@@ -1699,7 +1699,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": []
     },
     {
@@ -1715,7 +1715,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "wnba-401918305",
@@ -1764,7 +1764,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": []
     },
     {
@@ -1780,7 +1780,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "nhl-401892519",
@@ -2247,22 +2247,22 @@
       "league": "EPL",
       "status": "active",
       "games": 5,
-      "completed": 0,
-      "live": 0,
-      "scheduled": 5,
+      "completed": 1,
+      "live": 3,
+      "scheduled": 1,
       "earliestStart": "7:30 AM EDT",
       "earliestStartIso": "2026-10-17T11:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "eng.1-401878771",
           "date": "2026-10-17T11:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Chelsea at Everton",
           "shortName": "CHE @ EVE",
           "competitors": [
@@ -2271,14 +2271,14 @@
               "name": "Everton",
               "abbreviation": "EVE",
               "score": "0",
-              "record": "2-4-0"
+              "record": "2-4-1"
             },
             {
               "side": "away",
               "name": "Chelsea",
               "abbreviation": "CHE",
-              "score": "0",
-              "record": "3-1-2"
+              "score": "2",
+              "record": "4-1-2"
             }
           ],
           "venue": "Hill Dickinson Stadium",
@@ -2293,8 +2293,8 @@
           "id": "eng.1-401879262",
           "date": "2026-10-17T14:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "12'",
           "name": "Liverpool at Brentford",
           "shortName": "LIV @ BRE",
           "competitors": [
@@ -2318,14 +2318,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879262/liverpool-brentford"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261017"
         },
         {
           "id": "eng.1-401878770",
           "date": "2026-10-17T14:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "12'",
           "name": "Hull City at Fulham",
           "shortName": "HUL @ FUL",
           "competitors": [
@@ -2349,14 +2349,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401878770/hull-city-fulham"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261017"
         },
         {
           "id": "eng.1-401879259",
           "date": "2026-10-17T14:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "10'",
           "name": "Ipswich Town at Manchester City",
           "shortName": "IPS @ MNC",
           "competitors": [
@@ -2381,7 +2381,7 @@
             "USA Net",
             "Universo"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879259/ipswich-town-manchester-city"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261017"
         },
         {
           "id": "eng.1-401879258",
@@ -2422,22 +2422,22 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 4,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 4,
+      "scheduled": 3,
       "earliestStart": "8:00 AM EDT",
       "earliestStartIso": "2026-10-17T12:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "esp.1-401882843",
           "date": "2026-10-17T12:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Atlético Madrid at Espanyol",
           "shortName": "ATM @ ESP",
           "competitors": [
@@ -2446,14 +2446,14 @@
               "name": "Espanyol",
               "abbreviation": "ESP",
               "score": "0",
-              "record": "2-2-4"
+              "record": "2-2-5"
             },
             {
               "side": "away",
               "name": "Atlético Madrid",
               "abbreviation": "ATM",
-              "score": "0",
-              "record": "6-1-1"
+              "score": "1",
+              "record": "7-1-1"
             }
           ],
           "venue": "RCDE Stadium",
@@ -2568,21 +2568,21 @@
       "status": "active",
       "games": 6,
       "completed": 0,
-      "live": 0,
-      "scheduled": 6,
+      "live": 5,
+      "scheduled": 1,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-10-17T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "ger.1-401884769",
           "date": "2026-10-17T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "42'",
           "name": "Borussia Dortmund at 1. FC Union Berlin",
           "shortName": "DOR @ FCU",
           "competitors": [
@@ -2606,14 +2606,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884769/borussia-dortmund-1-fc-union-berlin"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261017"
         },
         {
           "id": "ger.1-401884767",
           "date": "2026-10-17T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "42'",
           "name": "VfB Stuttgart at Hamburg SV",
           "shortName": "VFB @ HSV",
           "competitors": [
@@ -2637,14 +2637,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884767/vfb-stuttgart-hamburg-sv"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261017"
         },
         {
           "id": "ger.1-401884765",
           "date": "2026-10-17T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "42'",
           "name": "Mainz at Schalke 04",
           "shortName": "M05 @ S04",
           "competitors": [
@@ -2659,7 +2659,7 @@
               "side": "away",
               "name": "Mainz",
               "abbreviation": "M05",
-              "score": "0",
+              "score": "1",
               "record": "2-1-2"
             }
           ],
@@ -2668,14 +2668,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884765/mainz-schalke-04"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261017"
         },
         {
           "id": "ger.1-401884764",
           "date": "2026-10-17T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "42'",
           "name": "FC Augsburg at SV Elversberg",
           "shortName": "FCA @ ELV",
           "competitors": [
@@ -2683,7 +2683,7 @@
               "side": "home",
               "name": "SV Elversberg",
               "abbreviation": "ELV",
-              "score": "0",
+              "score": "3",
               "record": "2-1-2"
             },
             {
@@ -2699,14 +2699,14 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884764/fc-augsburg-sv-elversberg"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261017"
         },
         {
           "id": "ger.1-401884766",
           "date": "2026-10-17T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "42'",
           "name": "SC Paderborn 07 at Werder Bremen",
           "shortName": "SCP @ SVW",
           "competitors": [
@@ -2721,7 +2721,7 @@
               "side": "away",
               "name": "SC Paderborn 07",
               "abbreviation": "SCP",
-              "score": "0",
+              "score": "2",
               "record": "1-1-3"
             }
           ],
@@ -2730,7 +2730,7 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884766/sc-paderborn-07-werder-bremen"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261017"
         },
         {
           "id": "ger.1-401884772",
@@ -2771,21 +2771,21 @@
       "status": "active",
       "games": 3,
       "completed": 0,
-      "live": 0,
-      "scheduled": 3,
+      "live": 1,
+      "scheduled": 2,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-10-17T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "ita.1-401874760",
           "date": "2026-10-17T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "53'",
           "name": "Napoli at Venezia",
           "shortName": "NAP @ VEN",
           "competitors": [
@@ -2793,7 +2793,7 @@
               "side": "home",
               "name": "Venezia",
               "abbreviation": "VEN",
-              "score": "0",
+              "score": "1",
               "record": "0-0-6"
             },
             {
@@ -2809,7 +2809,7 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874760/napoli-venezia"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261017"
         },
         {
           "id": "ita.1-401874953",
@@ -2888,7 +2888,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": [
         {
           "id": "fra.1-401876432",
@@ -2996,7 +2996,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": []
     },
     {
@@ -3012,7 +3012,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261017",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261017&limit=200",
-      "sourceVerifiedAt": "2026-10-17T07:46:32.160Z",
+      "sourceVerifiedAt": "2026-10-17T14:12:23.973Z",
       "events": []
     }
   ],
