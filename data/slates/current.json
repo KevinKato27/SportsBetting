@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-18",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-18T08:00:57.953Z",
+  "lastVerified": "2026-10-18T14:33:35.959Z",
   "gate": "PRELIMINARY",
   "activeGames": 34,
   "leagues": [
@@ -19,7 +19,7 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-18",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-18&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "mlb-849817",
@@ -68,7 +68,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": []
     },
     {
@@ -77,21 +77,21 @@
       "status": "active",
       "games": 12,
       "completed": 0,
-      "live": 0,
-      "scheduled": 12,
+      "live": 1,
+      "scheduled": 11,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-10-18T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "nfl-401872996",
           "date": "2026-10-18T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/18 - 9:30 AM EDT",
+          "state": "in",
+          "status": "6:47 - 2nd",
           "name": "Houston Texans at Jacksonville Jaguars",
           "shortName": "HOU VS JAX",
           "competitors": [
@@ -99,14 +99,14 @@
               "side": "home",
               "name": "Jacksonville Jaguars",
               "abbreviation": "JAX",
-              "score": "0",
+              "score": "6",
               "record": "4-1"
             },
             {
               "side": "away",
               "name": "Houston Texans",
               "abbreviation": "HOU",
-              "score": "0",
+              "score": "7",
               "record": "1-4"
             }
           ],
@@ -115,7 +115,7 @@
           "broadcasts": [
             "NFL Net"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401872996/texans-jaguars"
+          "source": "https://www.espn.com/nfl/scoreboard/_/date/20261018"
         },
         {
           "id": "nfl-401872999",
@@ -473,7 +473,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": []
     },
     {
@@ -489,7 +489,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": []
     },
     {
@@ -505,7 +505,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "nhl-401892533",
@@ -580,21 +580,21 @@
       "status": "active",
       "games": 4,
       "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "live": 3,
+      "scheduled": 1,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-10-18T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "eng.1-401879263",
           "date": "2026-10-18T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "72'",
           "name": "Sunderland at AFC Bournemouth",
           "shortName": "SUN @ BOU",
           "competitors": [
@@ -602,7 +602,7 @@
               "side": "home",
               "name": "AFC Bournemouth",
               "abbreviation": "BOU",
-              "score": "0",
+              "score": "2",
               "record": "0-3-3"
             },
             {
@@ -618,14 +618,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879263/sunderland-afc-bournemouth"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261018"
         },
         {
           "id": "eng.1-401879261",
           "date": "2026-10-18T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "75'",
           "name": "Crystal Palace at Brighton & Hove Albion",
           "shortName": "CRY @ BHA",
           "competitors": [
@@ -633,7 +633,7 @@
               "side": "home",
               "name": "Brighton & Hove Albion",
               "abbreviation": "BHA",
-              "score": "0",
+              "score": "4",
               "record": "4-1-1"
             },
             {
@@ -649,14 +649,14 @@
           "broadcasts": [
             "Peacock"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879261/crystal-palace-brighton-hove-albion"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261018"
         },
         {
           "id": "eng.1-401879260",
           "date": "2026-10-18T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "75'",
           "name": "Manchester United at Leeds United",
           "shortName": "MAN @ LEE",
           "competitors": [
@@ -664,14 +664,14 @@
               "side": "home",
               "name": "Leeds United",
               "abbreviation": "LEE",
-              "score": "0",
+              "score": "1",
               "record": "2-3-1"
             },
             {
               "side": "away",
               "name": "Manchester United",
               "abbreviation": "MAN",
-              "score": "0",
+              "score": "1",
               "record": "1-3-2"
             }
           ],
@@ -681,7 +681,7 @@
             "USA Net",
             "Tele"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879260/manchester-united-leeds-united"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261018"
         },
         {
           "id": "eng.1-401878769",
@@ -721,22 +721,22 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 4,
-      "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "completed": 1,
+      "live": 1,
+      "scheduled": 2,
       "earliestStart": "8:00 AM EDT",
       "earliestStartIso": "2026-10-18T12:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "esp.1-401882840",
           "date": "2026-10-18T12:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Racing Santander at Osasuna",
           "shortName": "RAC @ OSA",
           "competitors": [
@@ -744,15 +744,15 @@
               "side": "home",
               "name": "Osasuna",
               "abbreviation": "OSA",
-              "score": "0",
-              "record": "2-2-4"
+              "score": "2",
+              "record": "3-2-4"
             },
             {
               "side": "away",
               "name": "Racing Santander",
               "abbreviation": "RAC",
               "score": "0",
-              "record": "2-2-4"
+              "record": "2-2-5"
             }
           ],
           "venue": "El Sadar",
@@ -766,8 +766,8 @@
           "id": "esp.1-401882845",
           "date": "2026-10-18T14:15Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "17'",
           "name": "Alavés at Celta Vigo",
           "shortName": "ALA @ CEL",
           "competitors": [
@@ -791,7 +791,7 @@
           "broadcasts": [
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882845/alaves-celta-vigo"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261018"
         },
         {
           "id": "esp.1-401882841",
@@ -866,21 +866,21 @@
       "status": "active",
       "games": 2,
       "completed": 0,
-      "live": 0,
-      "scheduled": 2,
+      "live": 1,
+      "scheduled": 1,
       "earliestStart": "9:30 AM EDT",
       "earliestStartIso": "2026-10-18T13:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "ger.1-401884771",
           "date": "2026-10-18T13:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "HT",
           "name": "SC Freiburg at Bayer Leverkusen",
           "shortName": "SCF @ B04",
           "competitors": [
@@ -888,14 +888,14 @@
               "side": "home",
               "name": "Bayer Leverkusen",
               "abbreviation": "B04",
-              "score": "0",
+              "score": "1",
               "record": "3-1-1"
             },
             {
               "side": "away",
               "name": "SC Freiburg",
               "abbreviation": "SCF",
-              "score": "0",
+              "score": "1",
               "record": "4-1-0"
             }
           ],
@@ -904,7 +904,7 @@
           "broadcasts": [
             "Fandango"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884771/sc-freiburg-bayer-leverkusen"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261018"
         },
         {
           "id": "ger.1-401884768",
@@ -944,22 +944,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 4,
-      "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "completed": 1,
+      "live": 1,
+      "scheduled": 2,
       "earliestStart": "6:30 AM EDT",
       "earliestStartIso": "2026-10-18T10:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "ita.1-401874771",
           "date": "2026-10-18T10:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Lecce at Udinese",
           "shortName": "LEC @ UDI",
           "competitors": [
@@ -968,14 +968,14 @@
               "name": "Udinese",
               "abbreviation": "UDI",
               "score": "0",
-              "record": "1-1-4"
+              "record": "1-1-5"
             },
             {
               "side": "away",
               "name": "Lecce",
               "abbreviation": "LEC",
-              "score": "0",
-              "record": "2-0-4"
+              "score": "3",
+              "record": "3-0-4"
             }
           ],
           "venue": "Stadio Friuli",
@@ -989,8 +989,8 @@
           "id": "ita.1-401874774",
           "date": "2026-10-18T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "64'",
           "name": "Como at Fiorentina",
           "shortName": "COMO @ FIO",
           "competitors": [
@@ -998,14 +998,14 @@
               "side": "home",
               "name": "Fiorentina",
               "abbreviation": "FIO",
-              "score": "0",
+              "score": "1",
               "record": "1-1-4"
             },
             {
               "side": "away",
               "name": "Como",
               "abbreviation": "COMO",
-              "score": "0",
+              "score": "3",
               "record": "3-2-1"
             }
           ],
@@ -1014,7 +1014,7 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874774/como-fiorentina"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261018"
         },
         {
           "id": "ita.1-401874978",
@@ -1086,21 +1086,21 @@
       "status": "active",
       "games": 5,
       "completed": 0,
-      "live": 0,
-      "scheduled": 5,
+      "live": 1,
+      "scheduled": 4,
       "earliestStart": "9:00 AM EDT",
       "earliestStartIso": "2026-10-18T13:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": [
         {
           "id": "fra.1-401876439",
           "date": "2026-10-18T13:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "78'",
           "name": "Marseille at Angers",
           "shortName": "OLM @ ANG",
           "competitors": [
@@ -1108,14 +1108,14 @@
               "side": "home",
               "name": "Angers",
               "abbreviation": "ANG",
-              "score": "0",
+              "score": "2",
               "record": "2-1-3"
             },
             {
               "side": "away",
               "name": "Marseille",
               "abbreviation": "OLM",
-              "score": "0",
+              "score": "3",
               "record": "2-0-4"
             }
           ],
@@ -1124,7 +1124,7 @@
           "broadcasts": [
             "beIn Sports"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876439/marseille-angers"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261018"
         },
         {
           "id": "fra.1-401876438",
@@ -1261,7 +1261,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": []
     },
     {
@@ -1277,7 +1277,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261018",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261018&limit=200",
-      "sourceVerifiedAt": "2026-10-18T08:00:57.953Z",
+      "sourceVerifiedAt": "2026-10-18T14:33:35.959Z",
       "events": []
     }
   ],
