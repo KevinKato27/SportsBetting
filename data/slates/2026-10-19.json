@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-19",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-19T17:28:14.110Z",
+  "lastVerified": "2026-10-19T23:40:29.197Z",
   "gate": "PRELIMINARY",
   "activeGames": 11,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-19",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-19&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": [
         {
           "id": "mlb-849815",
           "date": "2026-10-20T00:08:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Cleveland Guardians at Tampa Bay Rays",
           "shortName": "CLE @ TB",
           "competitors": [
@@ -34,14 +34,14 @@
               "side": "away",
               "name": "Cleveland Guardians",
               "abbreviation": "CLE",
-              "score": null,
+              "score": 0,
               "record": "2-3"
             },
             {
               "side": "home",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "3-2"
             }
           ],
@@ -68,7 +68,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": []
     },
     {
@@ -84,7 +84,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": [
         {
           "id": "nfl-401873008",
@@ -133,7 +133,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": [
         {
           "id": "wnba-401918306",
@@ -184,7 +184,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": []
     },
     {
@@ -193,21 +193,21 @@
       "status": "active",
       "games": 4,
       "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "live": 3,
+      "scheduled": 1,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-10-19T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": [
         {
           "id": "nhl-401892535",
           "date": "2026-10-19T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/19 - 7:00 PM EDT",
+          "state": "in",
+          "status": "2:27 - 1st",
           "name": "Anaheim Ducks at New York Rangers",
           "shortName": "ANA @ NYR",
           "competitors": [
@@ -215,7 +215,7 @@
               "side": "home",
               "name": "New York Rangers",
               "abbreviation": "NYR",
-              "score": "0",
+              "score": "1",
               "record": "6-3-1"
             },
             {
@@ -232,16 +232,17 @@
             "ESPN+",
             "MSG",
             "KCOP",
-            "Prime Video (Local)"
+            "Prime Video (Local)",
+            "Fox 11 Plus"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892535/ducks-rangers"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261019"
         },
         {
           "id": "nhl-401892536",
           "date": "2026-10-19T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/19 - 7:00 PM EDT",
+          "state": "in",
+          "status": "5:15 - 1st",
           "name": "Colorado Avalanche at Philadelphia Flyers",
           "shortName": "COL @ PHI",
           "competitors": [
@@ -249,7 +250,7 @@
               "side": "home",
               "name": "Philadelphia Flyers",
               "abbreviation": "PHI",
-              "score": "0",
+              "score": "1",
               "record": "1-6-3"
             },
             {
@@ -267,14 +268,14 @@
             "NBC Sports Phil",
             "Altitude Sports"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892536/avalanche-flyers"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261019"
         },
         {
           "id": "nhl-401892537",
           "date": "2026-10-19T23:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/19 - 7:30 PM EDT",
+          "state": "in",
+          "status": "20:00 - 1st",
           "name": "San Jose Sharks at Toronto Maple Leafs",
           "shortName": "SJ @ TOR",
           "competitors": [
@@ -299,7 +300,7 @@
             "ESPN+",
             "NBC Sports BA"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892537/sharks-maple-leafs"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261019"
         },
         {
           "id": "nhl-401892538",
@@ -329,7 +330,8 @@
           "probablePitchers": null,
           "broadcasts": [
             "ESPN+",
-            "Utah 16"
+            "Utah 16",
+            "Mammoth+"
           ],
           "source": "https://www.espn.com/nhl/game/_/gameId/401892538/penguins-mammoth"
         }
@@ -340,22 +342,22 @@
       "league": "EPL",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "3:00 PM EDT",
       "earliestStartIso": "2026-10-19T19:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": [
         {
           "id": "eng.1-401879257",
           "date": "2026-10-19T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Coventry City at Tottenham Hotspur",
           "shortName": "COV @ TOT",
           "competitors": [
@@ -363,15 +365,15 @@
               "side": "home",
               "name": "Tottenham Hotspur",
               "abbreviation": "TOT",
-              "score": "0",
-              "record": "0-3-3"
+              "score": "3",
+              "record": "1-3-3"
             },
             {
               "side": "away",
               "name": "Coventry City",
               "abbreviation": "COV",
-              "score": "0",
-              "record": "2-0-4"
+              "score": "1",
+              "record": "2-0-5"
             }
           ],
           "venue": "Tottenham Hotspur Stadium",
@@ -389,22 +391,22 @@
       "league": "LA LIGA",
       "status": "active",
       "games": 1,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 1,
+      "scheduled": 0,
       "earliestStart": "3:00 PM EDT",
       "earliestStartIso": "2026-10-19T19:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": [
         {
           "id": "esp.1-401882842",
           "date": "2026-10-19T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Rayo Vallecano at Getafe",
           "shortName": "RAY @ GET",
           "competitors": [
@@ -412,15 +414,15 @@
               "side": "home",
               "name": "Getafe",
               "abbreviation": "GET",
-              "score": "0",
-              "record": "2-2-4"
+              "score": "1",
+              "record": "2-3-4"
             },
             {
               "side": "away",
               "name": "Rayo Vallecano",
               "abbreviation": "RAY",
-              "score": "0",
-              "record": "2-2-3"
+              "score": "1",
+              "record": "2-3-3"
             }
           ],
           "venue": "Estadio Coliseum",
@@ -446,7 +448,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": []
     },
     {
@@ -454,22 +456,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 2,
-      "completed": 0,
-      "live": 1,
-      "scheduled": 1,
+      "completed": 2,
+      "live": 0,
+      "scheduled": 0,
       "earliestStart": "12:30 PM EDT",
       "earliestStartIso": "2026-10-19T16:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": [
         {
           "id": "ita.1-401874762",
           "date": "2026-10-19T16:30Z",
-          "completed": false,
-          "state": "in",
-          "status": "HT",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Cagliari at Monza",
           "shortName": "CAG @ MON",
           "competitors": [
@@ -477,15 +479,15 @@
               "side": "home",
               "name": "Monza",
               "abbreviation": "MON",
-              "score": "1",
-              "record": "1-1-4"
+              "score": "4",
+              "record": "2-1-4"
             },
             {
               "side": "away",
               "name": "Cagliari",
               "abbreviation": "CAG",
               "score": "0",
-              "record": "4-1-1"
+              "record": "4-1-2"
             }
           ],
           "venue": "U-Power Stadium",
@@ -493,14 +495,14 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261019"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874762/cagliari-monza"
         },
         {
           "id": "ita.1-401874784",
           "date": "2026-10-19T18:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Torino at Parma",
           "shortName": "TOR @ PAR",
           "competitors": [
@@ -509,14 +511,14 @@
               "name": "Parma",
               "abbreviation": "PAR",
               "score": "0",
-              "record": "1-1-4"
+              "record": "1-1-5"
             },
             {
               "side": "away",
               "name": "Torino",
               "abbreviation": "TOR",
-              "score": "0",
-              "record": "2-1-3"
+              "score": "3",
+              "record": "3-1-3"
             }
           ],
           "venue": "Ennio Tardini",
@@ -541,7 +543,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": []
     },
     {
@@ -557,7 +559,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": []
     },
     {
@@ -573,7 +575,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261019",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261019&limit=200",
-      "sourceVerifiedAt": "2026-10-19T17:28:14.110Z",
+      "sourceVerifiedAt": "2026-10-19T23:40:29.197Z",
       "events": []
     }
   ],
