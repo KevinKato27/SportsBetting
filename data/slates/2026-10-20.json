@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-20",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-20T15:38:56.213Z",
+  "lastVerified": "2026-10-20T23:10:53.475Z",
   "gate": "PRELIMINARY",
   "activeGames": 26,
   "leagues": [
@@ -19,7 +19,7 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-20",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-20&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -28,21 +28,21 @@
       "status": "active",
       "games": 3,
       "completed": 0,
-      "live": 0,
-      "scheduled": 3,
+      "live": 2,
+      "scheduled": 1,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-10-20T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": [
         {
           "id": "college-football-401871055",
           "date": "2026-10-20T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/20 - 7:00 PM EDT",
+          "state": "in",
+          "status": "12:02 - 1st",
           "name": "Middle Tennessee Blue Raiders at Florida International Panthers",
           "shortName": "MTSU @ FIU",
           "competitors": [
@@ -66,14 +66,14 @@
           "broadcasts": [
             "CBSSN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401871055/mtsu-fiu"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261020"
         },
         {
           "id": "college-football-401871069",
           "date": "2026-10-20T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/20 - 7:00 PM EDT",
+          "state": "in",
+          "status": "11:27 - 1st",
           "name": "Missouri State Bears at Delaware Blue Hens",
           "shortName": "MOST @ DEL",
           "competitors": [
@@ -97,7 +97,7 @@
           "broadcasts": [
             "ESPNU"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401871069/missouri-st-delaware"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261020"
         },
         {
           "id": "college-football-401871092",
@@ -145,7 +145,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -161,7 +161,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -169,22 +169,22 @@
       "league": "NBA",
       "status": "active",
       "games": 3,
-      "completed": 0,
+      "completed": 1,
       "live": 0,
-      "scheduled": 3,
+      "scheduled": 2,
       "earliestStart": "3:00 PM EDT",
       "earliestStartIso": "2026-10-20T19:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": [
         {
           "id": "nba-401909088",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/20 - 3:00 PM EDT",
+          "completed": true,
+          "state": "post",
+          "status": "Final",
           "name": "Boston Celtics at Detroit Pistons",
           "shortName": "BOS @ DET",
           "competitors": [
@@ -192,15 +192,15 @@
               "side": "home",
               "name": "Detroit Pistons",
               "abbreviation": "DET",
-              "score": "0",
-              "record": "0-0"
+              "score": "121",
+              "record": "1-0"
             },
             {
               "side": "away",
               "name": "Boston Celtics",
               "abbreviation": "BOS",
-              "score": "0",
-              "record": "0-0"
+              "score": "113",
+              "record": "0-1"
             }
           ],
           "venue": "Little Caesars Arena",
@@ -280,21 +280,21 @@
       "status": "active",
       "games": 11,
       "completed": 0,
-      "live": 0,
-      "scheduled": 11,
+      "live": 4,
+      "scheduled": 7,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-10-20T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": [
         {
           "id": "nhl-401892539",
           "date": "2026-10-20T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/20 - 7:00 PM EDT",
+          "state": "in",
+          "status": "18:12 - 1st",
           "name": "San Jose Sharks at Montreal Canadiens",
           "shortName": "SJ @ MTL",
           "competitors": [
@@ -319,7 +319,7 @@
             "ESPN+",
             "NBC Sports BA"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892539/sharks-canadiens"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261020"
         },
         {
           "id": "nhl-401892540",
@@ -360,8 +360,8 @@
           "id": "nhl-401892541",
           "date": "2026-10-20T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/20 - 7:00 PM EDT",
+          "state": "in",
+          "status": "18:48 - 1st",
           "name": "Anaheim Ducks at New York Islanders",
           "shortName": "ANA @ NYI",
           "competitors": [
@@ -386,16 +386,17 @@
             "ESPN+",
             "MSGSN",
             "KCOP",
-            "Prime Video (Local)"
+            "Prime Video (Local)",
+            "Fox 11 Plus"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892541/ducks-islanders"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261020"
         },
         {
           "id": "nhl-401892542",
           "date": "2026-10-20T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/20 - 7:00 PM EDT",
+          "state": "in",
+          "status": "17:55 - 1st",
           "name": "Los Angeles Kings at Washington Capitals",
           "shortName": "LA @ WSH",
           "competitors": [
@@ -421,14 +422,14 @@
             "MNMT",
             "ABTV"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892542/kings-capitals"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261020"
         },
         {
           "id": "nhl-401892543",
           "date": "2026-10-20T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/20 - 7:00 PM EDT",
+          "state": "in",
+          "status": "18:51 - 1st",
           "name": "Toronto Maple Leafs at Columbus Blue Jackets",
           "shortName": "TOR @ CBJ",
           "competitors": [
@@ -453,7 +454,7 @@
             "ESPN+",
             "CBJNHL"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892543/maple-leafs-blue-jackets"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261020"
         },
         {
           "id": "nhl-401892544",
@@ -664,7 +665,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -680,7 +681,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -696,7 +697,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -712,7 +713,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -728,7 +729,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     },
     {
@@ -736,22 +737,22 @@
       "league": "UCL",
       "status": "active",
       "games": 9,
-      "completed": 0,
+      "completed": 9,
       "live": 0,
-      "scheduled": 9,
+      "scheduled": 0,
       "earliestStart": "12:45 PM EDT",
       "earliestStartIso": "2026-10-20T16:45Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": [
         {
           "id": "uefa.champions-401915403",
           "date": "2026-10-20T16:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Slavia Prague at Fenerbahce",
           "shortName": "SLP @ FEN",
           "competitors": [
@@ -759,15 +760,15 @@
               "side": "home",
               "name": "Fenerbahce",
               "abbreviation": "FEN",
-              "score": "0",
-              "record": "0-1-1"
+              "score": "2",
+              "record": "0-2-1"
             },
             {
               "side": "away",
               "name": "Slavia Prague",
               "abbreviation": "SLP",
-              "score": "0",
-              "record": "0-0-2"
+              "score": "2",
+              "record": "0-1-2"
             }
           ],
           "venue": "Şükrü Saracoğlu Stadium",
@@ -780,9 +781,9 @@
         {
           "id": "uefa.champions-401915404",
           "date": "2026-10-20T16:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Borussia Dortmund at Sabah FK",
           "shortName": "DOR @ SAB",
           "competitors": [
@@ -790,15 +791,15 @@
               "side": "home",
               "name": "Sabah FK",
               "abbreviation": "SAB",
-              "score": "0",
-              "record": "1-0-1"
+              "score": "1",
+              "record": "1-0-2"
             },
             {
               "side": "away",
               "name": "Borussia Dortmund",
               "abbreviation": "DOR",
-              "score": "0",
-              "record": "1-0-1"
+              "score": "2",
+              "record": "2-0-1"
             }
           ],
           "venue": "Baku Olympic Stadium",
@@ -811,9 +812,9 @@
         {
           "id": "uefa.champions-401915402",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Slovan Bratislava at AS Roma",
           "shortName": "SLB @ ROMA",
           "competitors": [
@@ -821,15 +822,15 @@
               "side": "home",
               "name": "AS Roma",
               "abbreviation": "ROMA",
-              "score": "0",
-              "record": "0-1-1"
+              "score": "4",
+              "record": "1-1-1"
             },
             {
               "side": "away",
               "name": "Slovan Bratislava",
               "abbreviation": "SLB",
               "score": "0",
-              "record": "0-0-2"
+              "record": "0-0-3"
             }
           ],
           "venue": "Olimpico",
@@ -842,9 +843,9 @@
         {
           "id": "uefa.champions-401915398",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "PSV Eindhoven at FC Porto",
           "shortName": "PSV @ FCP",
           "competitors": [
@@ -853,14 +854,14 @@
               "name": "FC Porto",
               "abbreviation": "FCP",
               "score": "0",
-              "record": "0-0-2"
+              "record": "0-0-3"
             },
             {
               "side": "away",
               "name": "PSV Eindhoven",
               "abbreviation": "PSV",
-              "score": "0",
-              "record": "0-1-1"
+              "score": "1",
+              "record": "1-1-1"
             }
           ],
           "venue": "Estádio do Dragão",
@@ -874,9 +875,9 @@
         {
           "id": "uefa.champions-401915397",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Villarreal at Liverpool",
           "shortName": "VIL @ LIV",
           "competitors": [
@@ -884,15 +885,15 @@
               "side": "home",
               "name": "Liverpool",
               "abbreviation": "LIV",
-              "score": "0",
-              "record": "2-0-0"
+              "score": "4",
+              "record": "3-0-0"
             },
             {
               "side": "away",
               "name": "Villarreal",
               "abbreviation": "VIL",
-              "score": "0",
-              "record": "1-0-1"
+              "score": "3",
+              "record": "1-0-2"
             }
           ],
           "venue": "Anfield",
@@ -905,9 +906,9 @@
         {
           "id": "uefa.champions-401915401",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "AEK Athens at Manchester City",
           "shortName": "AEK @ MNC",
           "competitors": [
@@ -915,15 +916,15 @@
               "side": "home",
               "name": "Manchester City",
               "abbreviation": "MNC",
-              "score": "0",
-              "record": "1-0-1"
+              "score": "5",
+              "record": "2-0-1"
             },
             {
               "side": "away",
               "name": "AEK Athens",
               "abbreviation": "AEK",
-              "score": "0",
-              "record": "1-0-1"
+              "score": "1",
+              "record": "1-0-2"
             }
           ],
           "venue": "Etihad Stadium",
@@ -936,9 +937,9 @@
         {
           "id": "uefa.champions-401915400",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Bodo/Glimt at Napoli",
           "shortName": "BODO @ NAP",
           "competitors": [
@@ -946,15 +947,15 @@
               "side": "home",
               "name": "Napoli",
               "abbreviation": "NAP",
-              "score": "0",
-              "record": "0-0-2"
+              "score": "4",
+              "record": "1-0-2"
             },
             {
               "side": "away",
               "name": "Bodo/Glimt",
               "abbreviation": "BODO",
-              "score": "0",
-              "record": "1-0-1"
+              "score": "3",
+              "record": "1-0-2"
             }
           ],
           "venue": "Stadio Diego Armando Maradona",
@@ -967,9 +968,9 @@
         {
           "id": "uefa.champions-401915399",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Barcelona at Paris Saint-Germain",
           "shortName": "BAR @ PSG",
           "competitors": [
@@ -977,15 +978,15 @@
               "side": "home",
               "name": "Paris Saint-Germain",
               "abbreviation": "PSG",
-              "score": "0",
-              "record": "2-0-0"
+              "score": "4",
+              "record": "3-0-0"
             },
             {
               "side": "away",
               "name": "Barcelona",
               "abbreviation": "BAR",
-              "score": "0",
-              "record": "2-0-0"
+              "score": "2",
+              "record": "2-0-1"
             }
           ],
           "venue": "Parc des Princes",
@@ -998,9 +999,9 @@
         {
           "id": "uefa.champions-401915392",
           "date": "2026-10-20T19:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Atlético Madrid at VfB Stuttgart",
           "shortName": "ATM @ VFB",
           "competitors": [
@@ -1008,15 +1009,15 @@
               "side": "home",
               "name": "VfB Stuttgart",
               "abbreviation": "VFB",
-              "score": "0",
-              "record": "2-0-0"
+              "score": "1",
+              "record": "2-1-0"
             },
             {
               "side": "away",
               "name": "Atlético Madrid",
               "abbreviation": "ATM",
-              "score": "0",
-              "record": "1-0-1"
+              "score": "1",
+              "record": "1-1-1"
             }
           ],
           "venue": "MHPArena",
@@ -1041,7 +1042,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261020",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261020&limit=200",
-      "sourceVerifiedAt": "2026-10-20T15:38:56.213Z",
+      "sourceVerifiedAt": "2026-10-20T23:10:53.475Z",
       "events": []
     }
   ],
