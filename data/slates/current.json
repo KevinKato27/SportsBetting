@@ -1,26 +1,59 @@
 {
   "schemaVersion": "1.1",
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-25T22:32:37.931Z",
+  "lastVerified": "2026-10-26T08:53:51.213Z",
   "gate": "PRELIMINARY",
-  "activeGames": 46,
+  "activeGames": 17,
   "leagues": [
     {
       "sport": "Baseball",
       "league": "MLB",
-      "status": "no_slate",
-      "games": 0,
+      "status": "active",
+      "games": 1,
       "completed": 0,
       "live": 0,
-      "scheduled": 0,
-      "earliestStart": null,
-      "earliestStartIso": null,
+      "scheduled": 1,
+      "earliestStart": "8:00 PM EDT",
+      "earliestStartIso": "2026-10-27T00:00:00Z",
       "provider": "MLB Stats API",
-      "source": "https://www.mlb.com/schedule/2026-10-25",
-      "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-25&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
-      "events": []
+      "source": "https://www.mlb.com/schedule/2026-10-26",
+      "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-26&hydrate=probablePitcher,team,venue",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
+      "events": [
+        {
+          "id": "mlb-849804",
+          "date": "2026-10-27T00:00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Milwaukee Brewers at Tampa Bay Rays",
+          "shortName": "MIL @ TB",
+          "competitors": [
+            {
+              "side": "away",
+              "name": "Milwaukee Brewers",
+              "abbreviation": "MIL",
+              "score": null,
+              "record": "2-0"
+            },
+            {
+              "side": "home",
+              "name": "Tampa Bay Rays",
+              "abbreviation": "TB",
+              "score": null,
+              "record": "0-2"
+            }
+          ],
+          "venue": "Tropicana Field",
+          "probablePitchers": {
+            "away": "Robert Gasser",
+            "home": "Freddy Peralta"
+          },
+          "broadcasts": [],
+          "source": "https://www.mlb.com/gameday/849804"
+        }
+      ]
     },
     {
       "sport": "Football",
@@ -33,582 +66,307 @@
       "earliestStart": null,
       "earliestStartIso": null,
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/college-football/scoreboard/_/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/college-football/scoreboard/_/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": []
     },
     {
       "sport": "Football",
       "league": "NFL",
       "status": "active",
-      "games": 12,
-      "completed": 8,
-      "live": 3,
+      "games": 1,
+      "completed": 0,
+      "live": 0,
       "scheduled": 1,
-      "earliestStart": "9:30 AM EDT",
-      "earliestStartIso": "2026-10-25T13:30Z",
+      "earliestStart": "8:15 PM EDT",
+      "earliestStartIso": "2026-10-27T00:15Z",
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/nfl/scoreboard/_/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/nfl/scoreboard/_/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": [
         {
-          "id": "nfl-401873011",
-          "date": "2026-10-25T13:30Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "Pittsburgh Steelers at New Orleans Saints",
-          "shortName": "PIT VS NO",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "New Orleans Saints",
-              "abbreviation": "NO",
-              "score": "10",
-              "record": "2-5"
-            },
-            {
-              "side": "away",
-              "name": "Pittsburgh Steelers",
-              "abbreviation": "PIT",
-              "score": "16",
-              "record": "5-2"
-            }
-          ],
-          "venue": "Stade de France",
-          "probablePitchers": null,
-          "broadcasts": [
-            "NFL Net"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873011/steelers-saints"
-        },
-        {
-          "id": "nfl-401873017",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "San Francisco 49ers at Atlanta Falcons",
-          "shortName": "SF @ ATL",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Atlanta Falcons",
-              "abbreviation": "ATL",
-              "score": "29",
-              "record": "3-4"
-            },
-            {
-              "side": "away",
-              "name": "San Francisco 49ers",
-              "abbreviation": "SF",
-              "score": "20",
-              "record": "6-1"
-            }
-          ],
-          "venue": "Mercedes-Benz Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fox"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873017/49ers-falcons"
-        },
-        {
-          "id": "nfl-401873013",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "Cleveland Browns at Tennessee Titans",
-          "shortName": "CLE @ TEN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Tennessee Titans",
-              "abbreviation": "TEN",
-              "score": "24",
-              "record": "1-6"
-            },
-            {
-              "side": "away",
-              "name": "Cleveland Browns",
-              "abbreviation": "CLE",
-              "score": "27",
-              "record": "5-2"
-            }
-          ],
-          "venue": "Nissan Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "CBS"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873013/browns-titans"
-        },
-        {
-          "id": "nfl-401873014",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "Indianapolis Colts at Minnesota Vikings",
-          "shortName": "IND @ MIN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Minnesota Vikings",
-              "abbreviation": "MIN",
-              "score": "16",
-              "record": "6-0"
-            },
-            {
-              "side": "away",
-              "name": "Indianapolis Colts",
-              "abbreviation": "IND",
-              "score": "10",
-              "record": "2-5"
-            }
-          ],
-          "venue": "U.S. Bank Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "CBS"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873014/colts-vikings"
-        },
-        {
-          "id": "nfl-401873015",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "Miami Dolphins at New York Jets",
-          "shortName": "MIA @ NYJ",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "New York Jets",
-              "abbreviation": "NYJ",
-              "score": "25",
-              "record": "2-5"
-            },
-            {
-              "side": "away",
-              "name": "Miami Dolphins",
-              "abbreviation": "MIA",
-              "score": "28",
-              "record": "1-5"
-            }
-          ],
-          "venue": "MetLife Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "CBS"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873015/dolphins-jets"
-        },
-        {
-          "id": "nfl-401873018",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "Tampa Bay Buccaneers at Carolina Panthers",
-          "shortName": "TB @ CAR",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Carolina Panthers",
-              "abbreviation": "CAR",
-              "score": "13",
-              "record": "3-3"
-            },
-            {
-              "side": "away",
-              "name": "Tampa Bay Buccaneers",
-              "abbreviation": "TB",
-              "score": "43",
-              "record": "2-5"
-            }
-          ],
-          "venue": "Bank of America Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fox"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873018/buccaneers-panthers"
-        },
-        {
-          "id": "nfl-401873012",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "Cincinnati Bengals at Baltimore Ravens",
-          "shortName": "CIN @ BAL",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Baltimore Ravens",
-              "abbreviation": "BAL",
-              "score": "13",
-              "record": "4-3"
-            },
-            {
-              "side": "away",
-              "name": "Cincinnati Bengals",
-              "abbreviation": "CIN",
-              "score": "35",
-              "record": "4-2"
-            }
-          ],
-          "venue": "M&T Bank Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "CBS"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873012/bengals-ravens"
-        },
-        {
-          "id": "nfl-401873016",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final/OT",
-          "name": "New York Giants at Houston Texans",
-          "shortName": "NYG @ HOU",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Houston Texans",
-              "abbreviation": "HOU",
-              "score": "21",
-              "record": "2-5"
-            },
-            {
-              "side": "away",
-              "name": "New York Giants",
-              "abbreviation": "NYG",
-              "score": "27",
-              "record": "4-2-1"
-            }
-          ],
-          "venue": "Reliant Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fox"
-          ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873016/giants-texans"
-        },
-        {
-          "id": "nfl-401873019",
-          "date": "2026-10-25T20:05Z",
-          "completed": false,
-          "state": "in",
-          "status": "End of 3rd",
-          "name": "Denver Broncos at Arizona Cardinals",
-          "shortName": "DEN @ ARI",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Arizona Cardinals",
-              "abbreviation": "ARI",
-              "score": "13",
-              "record": "2-4"
-            },
-            {
-              "side": "away",
-              "name": "Denver Broncos",
-              "abbreviation": "DEN",
-              "score": "27",
-              "record": "4-2"
-            }
-          ],
-          "venue": "State Farm Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "CBS"
-          ],
-          "source": "https://www.espn.com/nfl/scoreboard/_/date/20261025"
-        },
-        {
-          "id": "nfl-401873020",
-          "date": "2026-10-25T20:25Z",
-          "completed": false,
-          "state": "in",
-          "status": "4:09 - 3rd",
-          "name": "Green Bay Packers at Detroit Lions",
-          "shortName": "GB @ DET",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Detroit Lions",
-              "abbreviation": "DET",
-              "score": "17",
-              "record": "3-2"
-            },
-            {
-              "side": "away",
-              "name": "Green Bay Packers",
-              "abbreviation": "GB",
-              "score": "14",
-              "record": "4-2"
-            }
-          ],
-          "venue": "Ford Field",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fox"
-          ],
-          "source": "https://www.espn.com/nfl/scoreboard/_/date/20261025"
-        },
-        {
-          "id": "nfl-401873021",
-          "date": "2026-10-25T20:25Z",
-          "completed": false,
-          "state": "in",
-          "status": "7:05 - 3rd",
-          "name": "Los Angeles Rams at Las Vegas Raiders",
-          "shortName": "LAR @ LV",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Las Vegas Raiders",
-              "abbreviation": "LV",
-              "score": "6",
-              "record": "3-3"
-            },
-            {
-              "side": "away",
-              "name": "Los Angeles Rams",
-              "abbreviation": "LAR",
-              "score": "28",
-              "record": "2-4"
-            }
-          ],
-          "venue": "Allegiant Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fox"
-          ],
-          "source": "https://www.espn.com/nfl/scoreboard/_/date/20261025"
-        },
-        {
-          "id": "nfl-401873022",
-          "date": "2026-10-26T00:20Z",
+          "id": "nfl-401873009",
+          "date": "2026-10-27T00:15Z",
           "completed": false,
           "state": "pre",
-          "status": "10/25 - 8:20 PM EDT",
-          "name": "Kansas City Chiefs at Seattle Seahawks",
-          "shortName": "KC @ SEA",
+          "status": "10/26 - 8:15 PM EDT",
+          "name": "Dallas Cowboys at Philadelphia Eagles",
+          "shortName": "DAL @ PHI",
           "competitors": [
             {
               "side": "home",
-              "name": "Seattle Seahawks",
-              "abbreviation": "SEA",
+              "name": "Philadelphia Eagles",
+              "abbreviation": "PHI",
               "score": "0",
-              "record": "3-3"
+              "record": "2-4"
             },
             {
               "side": "away",
-              "name": "Kansas City Chiefs",
-              "abbreviation": "KC",
+              "name": "Dallas Cowboys",
+              "abbreviation": "DAL",
               "score": "0",
-              "record": "5-0"
+              "record": "2-4"
             }
           ],
-          "venue": "Lumen Field",
+          "venue": "Lincoln Financial Field",
           "probablePitchers": null,
           "broadcasts": [
-            "NBC"
+            "ESPN",
+            "ABC",
+            "Disney+"
           ],
-          "source": "https://www.espn.com/nfl/game/_/gameId/401873022/chiefs-seahawks"
+          "source": "https://www.espn.com/nfl/game/_/gameId/401873009/cowboys-eagles"
         }
       ]
     },
     {
       "sport": "Basketball",
       "league": "WNBA",
-      "status": "no_slate",
-      "games": 0,
+      "status": "active",
+      "games": 1,
       "completed": 0,
       "live": 0,
-      "scheduled": 0,
-      "earliestStart": null,
-      "earliestStartIso": null,
+      "scheduled": 1,
+      "earliestStart": "8:00 PM EDT",
+      "earliestStartIso": "2026-10-27T00:00Z",
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/wnba/scoreboard/_/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
-      "events": []
+      "source": "https://www.espn.com/wnba/scoreboard/_/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
+      "events": [
+        {
+          "id": "wnba-401918309",
+          "date": "2026-10-27T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/26 - 8:00 PM EDT",
+          "name": "Atlanta Dream at Golden State Valkyries",
+          "shortName": "ATL @ GS",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Golden State Valkyries",
+              "abbreviation": "GS",
+              "score": "0",
+              "record": "32-12"
+            },
+            {
+              "side": "away",
+              "name": "Atlanta Dream",
+              "abbreviation": "ATL",
+              "score": "0",
+              "record": "30-14"
+            }
+          ],
+          "venue": "Chase Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "USA Net",
+            "CNBC"
+          ],
+          "source": "https://www.espn.com/wnba/game/_/gameId/401918309/dream-valkyries"
+        }
+      ]
     },
     {
       "sport": "Basketball",
       "league": "NBA",
       "status": "active",
-      "games": 7,
+      "games": 9,
       "completed": 0,
-      "live": 2,
-      "scheduled": 5,
-      "earliestStart": "5:00 PM EDT",
-      "earliestStartIso": "2026-10-25T21:00Z",
+      "live": 0,
+      "scheduled": 9,
+      "earliestStart": "7:00 PM EDT",
+      "earliestStartIso": "2026-10-26T23:00Z",
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/nba/scoreboard/_/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/nba/scoreboard/_/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": [
         {
-          "id": "nba-401909861",
-          "date": "2026-10-25T21:00Z",
+          "id": "nba-401909868",
+          "date": "2026-10-26T23:00Z",
           "completed": false,
-          "state": "in",
-          "status": "10:43 - 3rd",
-          "name": "Los Angeles Lakers at Utah Jazz",
-          "shortName": "LAL @ UTAH",
+          "state": "pre",
+          "status": "10/26 - 7:00 PM EDT",
+          "name": "Washington Wizards at Charlotte Hornets",
+          "shortName": "WSH @ CHA",
           "competitors": [
             {
               "side": "home",
-              "name": "Utah Jazz",
-              "abbreviation": "UTAH",
-              "score": "73",
+              "name": "Charlotte Hornets",
+              "abbreviation": "CHA",
+              "score": "0",
+              "record": "2-1"
+            },
+            {
+              "side": "away",
+              "name": "Washington Wizards",
+              "abbreviation": "WSH",
+              "score": "0",
+              "record": "2-1"
+            }
+          ],
+          "venue": "Spectrum Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "MNMT",
+            "NBA League Pass"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909868/wizards-hornets"
+        },
+        {
+          "id": "nba-401909869",
+          "date": "2026-10-26T23:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/26 - 7:00 PM EDT",
+          "name": "Minnesota Timberwolves at Cleveland Cavaliers",
+          "shortName": "MIN @ CLE",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Cleveland Cavaliers",
+              "abbreviation": "CLE",
+              "score": "0",
               "record": "1-1"
             },
             {
               "side": "away",
-              "name": "Los Angeles Lakers",
-              "abbreviation": "LAL",
-              "score": "77",
-              "record": "2-0"
+              "name": "Minnesota Timberwolves",
+              "abbreviation": "MIN",
+              "score": "0",
+              "record": "3-0"
             }
           ],
-          "venue": "Delta Center",
+          "venue": "Rocket Arena",
           "probablePitchers": null,
           "broadcasts": [
             "NBA League Pass",
-            "Spectrum Sports Net",
-            "Spectrum Sports Net +",
-            "KJZZ-TV",
-            "Jazz+"
+            "DAZN MIN"
           ],
-          "source": "https://www.espn.com/nba/scoreboard/_/date/20261025"
+          "source": "https://www.espn.com/nba/game/_/gameId/401909869/timberwolves-cavaliers"
         },
         {
-          "id": "nba-401909862",
-          "date": "2026-10-25T22:00Z",
+          "id": "nba-401909870",
+          "date": "2026-10-26T23:30Z",
           "completed": false,
-          "state": "in",
-          "status": "2:41 - 1st",
-          "name": "Indiana Pacers at Brooklyn Nets",
-          "shortName": "IND @ BKN",
+          "state": "pre",
+          "status": "10/26 - 7:30 PM EDT",
+          "name": "Chicago Bulls at Boston Celtics",
+          "shortName": "CHI @ BOS",
           "competitors": [
             {
               "side": "home",
-              "name": "Brooklyn Nets",
-              "abbreviation": "BKN",
-              "score": "20",
-              "record": "0-2"
+              "name": "Boston Celtics",
+              "abbreviation": "BOS",
+              "score": "0",
+              "record": "1-1"
+            },
+            {
+              "side": "away",
+              "name": "Chicago Bulls",
+              "abbreviation": "CHI",
+              "score": "0",
+              "record": "1-2"
+            }
+          ],
+          "venue": "TD Garden",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA League Pass"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909870/bulls-celtics"
+        },
+        {
+          "id": "nba-401909871",
+          "date": "2026-10-26T23:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/26 - 7:30 PM EDT",
+          "name": "Dallas Mavericks at Miami Heat",
+          "shortName": "DAL @ MIA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Miami Heat",
+              "abbreviation": "MIA",
+              "score": "0",
+              "record": "0-3"
+            },
+            {
+              "side": "away",
+              "name": "Dallas Mavericks",
+              "abbreviation": "DAL",
+              "score": "0",
+              "record": "1-2"
+            }
+          ],
+          "venue": "Kaseya Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA TV",
+            "KFAA-TV",
+            "MavsTV"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909871/mavericks-heat"
+        },
+        {
+          "id": "nba-401909872",
+          "date": "2026-10-27T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/26 - 8:00 PM EDT",
+          "name": "Indiana Pacers at Milwaukee Bucks",
+          "shortName": "IND @ MIL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Milwaukee Bucks",
+              "abbreviation": "MIL",
+              "score": "0",
+              "record": "0-3"
             },
             {
               "side": "away",
               "name": "Indiana Pacers",
               "abbreviation": "IND",
-              "score": "21",
-              "record": "1-1"
+              "score": "0",
+              "record": "2-1"
             }
           ],
-          "venue": "Barclays Center",
+          "venue": "Fiserv Forum",
           "probablePitchers": null,
           "broadcasts": [
             "NBA League Pass",
             "DAZN IND",
-            "DAZN (YES)"
+            "MyMi",
+            "Bucks App"
           ],
-          "source": "https://www.espn.com/nba/scoreboard/_/date/20261025"
+          "source": "https://www.espn.com/nba/game/_/gameId/401909872/pacers-bucks"
         },
         {
-          "id": "nba-401909863",
-          "date": "2026-10-25T23:00Z",
+          "id": "nba-401909873",
+          "date": "2026-10-27T00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "10/25 - 7:00 PM EDT",
-          "name": "Orlando Magic at New York Knicks",
-          "shortName": "ORL @ NY",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "New York Knicks",
-              "abbreviation": "NY",
-              "score": "0",
-              "record": "0-2"
-            },
-            {
-              "side": "away",
-              "name": "Orlando Magic",
-              "abbreviation": "ORL",
-              "score": "0",
-              "record": "0-2"
-            }
-          ],
-          "venue": "Madison Square Garden",
-          "probablePitchers": null,
-          "broadcasts": [
-            "NBA League Pass"
-          ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909863/magic-knicks"
-        },
-        {
-          "id": "nba-401909864",
-          "date": "2026-10-25T23:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/25 - 7:00 PM EDT",
-          "name": "Toronto Raptors at Minnesota Timberwolves",
-          "shortName": "TOR @ MIN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Minnesota Timberwolves",
-              "abbreviation": "MIN",
-              "score": "0",
-              "record": "2-0"
-            },
-            {
-              "side": "away",
-              "name": "Toronto Raptors",
-              "abbreviation": "TOR",
-              "score": "0",
-              "record": "2-0"
-            }
-          ],
-          "venue": "Target Center",
-          "probablePitchers": null,
-          "broadcasts": [
-            "NBA TV",
-            "DAZN MIN"
-          ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909864/raptors-timberwolves"
-        },
-        {
-          "id": "nba-401909865",
-          "date": "2026-10-25T23:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/25 - 7:00 PM EDT",
-          "name": "LA Clippers at Oklahoma City Thunder",
-          "shortName": "LAC @ OKC",
+          "status": "10/26 - 8:00 PM EDT",
+          "name": "Phoenix Suns at Oklahoma City Thunder",
+          "shortName": "PHX @ OKC",
           "competitors": [
             {
               "side": "home",
               "name": "Oklahoma City Thunder",
               "abbreviation": "OKC",
               "score": "0",
-              "record": "2-0"
+              "record": "3-0"
             },
             {
               "side": "away",
-              "name": "LA Clippers",
-              "abbreviation": "LAC",
+              "name": "Phoenix Suns",
+              "abbreviation": "PHX",
               "score": "0",
               "record": "1-1"
             }
@@ -617,74 +375,108 @@
           "probablePitchers": null,
           "broadcasts": [
             "NBA League Pass",
-            "ClipperVision",
+            "Suns Live",
+            "Arizona's Family 3TV",
             "KSBI",
             "Thunder App"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909865/clippers-thunder"
+          "source": "https://www.espn.com/nba/game/_/gameId/401909873/suns-thunder"
         },
         {
-          "id": "nba-401909866",
-          "date": "2026-10-25T23:30Z",
+          "id": "nba-401909874",
+          "date": "2026-10-27T00:30Z",
           "completed": false,
           "state": "pre",
-          "status": "10/25 - 7:30 PM EDT",
-          "name": "Detroit Pistons at Philadelphia 76ers",
-          "shortName": "DET @ PHI",
+          "status": "10/26 - 8:30 PM EDT",
+          "name": "Atlanta Hawks at Houston Rockets",
+          "shortName": "ATL @ HOU",
           "competitors": [
             {
               "side": "home",
-              "name": "Philadelphia 76ers",
-              "abbreviation": "PHI",
+              "name": "Houston Rockets",
+              "abbreviation": "HOU",
               "score": "0",
               "record": "3-0"
             },
             {
               "side": "away",
-              "name": "Detroit Pistons",
-              "abbreviation": "DET",
+              "name": "Atlanta Hawks",
+              "abbreviation": "ATL",
               "score": "0",
-              "record": "2-0"
+              "record": "2-1"
             }
           ],
-          "venue": "Xfinity Mobile Arena",
+          "venue": "Toyota Center (Houston)",
           "probablePitchers": null,
           "broadcasts": [
             "NBA League Pass"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909866/pistons-76ers"
+          "source": "https://www.espn.com/nba/game/_/gameId/401909874/hawks-rockets"
         },
         {
-          "id": "nba-401909867",
-          "date": "2026-10-26T01:00Z",
+          "id": "nba-401909875",
+          "date": "2026-10-27T01:00Z",
           "completed": false,
           "state": "pre",
-          "status": "10/25 - 9:00 PM EDT",
-          "name": "Memphis Grizzlies at Sacramento Kings",
-          "shortName": "MEM @ SAC",
+          "status": "10/26 - 9:00 PM EDT",
+          "name": "Memphis Grizzlies at Utah Jazz",
+          "shortName": "MEM @ UTAH",
           "competitors": [
             {
               "side": "home",
-              "name": "Sacramento Kings",
-              "abbreviation": "SAC",
+              "name": "Utah Jazz",
+              "abbreviation": "UTAH",
               "score": "0",
-              "record": "0-2"
+              "record": "1-2"
             },
             {
               "side": "away",
               "name": "Memphis Grizzlies",
               "abbreviation": "MEM",
               "score": "0",
-              "record": "2-0"
+              "record": "3-0"
             }
           ],
-          "venue": "Golden 1 Center",
+          "venue": "Delta Center",
           "probablePitchers": null,
           "broadcasts": [
             "NBA League Pass",
-            "DAZN MEM"
+            "DAZN MEM",
+            "KJZZ-TV",
+            "Jazz+"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909867/grizzlies-kings"
+          "source": "https://www.espn.com/nba/game/_/gameId/401909875/grizzlies-jazz"
+        },
+        {
+          "id": "nba-401909876",
+          "date": "2026-10-27T02:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/26 - 10:00 PM EDT",
+          "name": "Golden State Warriors at Denver Nuggets",
+          "shortName": "GS @ DEN",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Denver Nuggets",
+              "abbreviation": "DEN",
+              "score": "0",
+              "record": "1-1"
+            },
+            {
+              "side": "away",
+              "name": "Golden State Warriors",
+              "abbreviation": "GS",
+              "score": "0",
+              "record": "0-3"
+            }
+          ],
+          "venue": "Ball Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBCSN"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909876/warriors-nuggets"
         }
       ]
     },
@@ -692,946 +484,255 @@
       "sport": "Hockey",
       "league": "NHL",
       "status": "active",
-      "games": 5,
-      "completed": 1,
-      "live": 1,
+      "games": 3,
+      "completed": 0,
+      "live": 0,
       "scheduled": 3,
-      "earliestStart": "3:00 PM EDT",
-      "earliestStartIso": "2026-10-25T19:00Z",
+      "earliestStart": "7:00 PM EDT",
+      "earliestStartIso": "2026-10-26T23:00Z",
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/nhl/scoreboard/_/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/nhl/scoreboard/_/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": [
         {
-          "id": "nhl-401892578",
-          "date": "2026-10-25T19:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "Final",
-          "name": "Florida Panthers at Chicago Blackhawks",
-          "shortName": "FLA @ CHI",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Chicago Blackhawks",
-              "abbreviation": "CHI",
-              "score": "2",
-              "record": "3-8-0"
-            },
-            {
-              "side": "away",
-              "name": "Florida Panthers",
-              "abbreviation": "FLA",
-              "score": "3",
-              "record": "6-4-2"
-            }
-          ],
-          "venue": "United Center",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ESPN+",
-            "Scripps Sports",
-            "CHSN"
-          ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892578/panthers-blackhawks"
-        },
-        {
-          "id": "nhl-401892579",
-          "date": "2026-10-25T22:00Z",
-          "completed": false,
-          "state": "in",
-          "status": "6:41 - 1st",
-          "name": "New York Islanders at Dallas Stars",
-          "shortName": "NYI @ DAL",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Dallas Stars",
-              "abbreviation": "DAL",
-              "score": "1",
-              "record": "6-3-1"
-            },
-            {
-              "side": "away",
-              "name": "New York Islanders",
-              "abbreviation": "NYI",
-              "score": "0",
-              "record": "5-3-2"
-            }
-          ],
-          "venue": "American Airlines Center",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ESPN+",
-            "MSGSN",
-            "Prime Video (Local)"
-          ],
-          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261025"
-        },
-        {
-          "id": "nhl-401891807",
-          "date": "2026-10-25T23:00Z",
+          "id": "nhl-401892582",
+          "date": "2026-10-26T23:00Z",
           "completed": false,
           "state": "pre",
-          "status": "10/25 - 7:00 PM EDT",
-          "name": "Montreal Canadiens at Winnipeg Jets",
-          "shortName": "MTL @ WPG",
+          "status": "10/26 - 7:00 PM EDT",
+          "name": "Los Angeles Kings at New York Rangers",
+          "shortName": "LA @ NYR",
           "competitors": [
             {
               "side": "home",
-              "name": "Winnipeg Jets",
-              "abbreviation": "WPG",
+              "name": "New York Rangers",
+              "abbreviation": "NYR",
               "score": "0",
-              "record": "4-3-3"
+              "record": "7-5-1"
             },
             {
               "side": "away",
-              "name": "Montreal Canadiens",
-              "abbreviation": "MTL",
+              "name": "Los Angeles Kings",
+              "abbreviation": "LA",
               "score": "0",
-              "record": "5-3-2"
+              "record": "2-5-2"
             }
           ],
-          "venue": "Princess Auto Stadium",
+          "venue": "Madison Square Garden",
           "probablePitchers": null,
           "broadcasts": [
-            "TNT",
-            "truTV"
+            "NHL Net",
+            "MSG",
+            "ABTV"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401891807/canadiens-jets"
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892582/kings-rangers"
         },
         {
-          "id": "nhl-401892580",
-          "date": "2026-10-26T00:00Z",
+          "id": "nhl-401892583",
+          "date": "2026-10-27T00:30Z",
           "completed": false,
           "state": "pre",
-          "status": "10/25 - 8:00 PM EDT",
-          "name": "Colorado Avalanche at Nashville Predators",
-          "shortName": "COL @ NSH",
+          "status": "10/26 - 8:30 PM EDT",
+          "name": "Toronto Maple Leafs at Calgary Flames",
+          "shortName": "TOR @ CGY",
           "competitors": [
             {
               "side": "home",
-              "name": "Nashville Predators",
-              "abbreviation": "NSH",
+              "name": "Calgary Flames",
+              "abbreviation": "CGY",
               "score": "0",
-              "record": "3-3-4"
+              "record": "4-6-0"
             },
             {
               "side": "away",
-              "name": "Colorado Avalanche",
-              "abbreviation": "COL",
+              "name": "Toronto Maple Leafs",
+              "abbreviation": "TOR",
               "score": "0",
-              "record": "6-4-1"
+              "record": "7-4-2"
             }
           ],
-          "venue": "Bridgestone Arena",
+          "venue": "Scotiabank Saddledome",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892583/maple-leafs-flames"
+        },
+        {
+          "id": "nhl-401892584",
+          "date": "2026-10-27T01:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/26 - 9:30 PM EDT",
+          "name": "Detroit Red Wings at Edmonton Oilers",
+          "shortName": "DET @ EDM",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Edmonton Oilers",
+              "abbreviation": "EDM",
+              "score": "0",
+              "record": "8-2-1"
+            },
+            {
+              "side": "away",
+              "name": "Detroit Red Wings",
+              "abbreviation": "DET",
+              "score": "0",
+              "record": "4-4-3"
+            }
+          ],
+          "venue": "Rogers Place",
           "probablePitchers": null,
           "broadcasts": [
             "ESPN+",
-            "Scripps Sports",
-            "Altitude Sports"
+            "DSN"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892580/avalanche-predators"
-        },
-        {
-          "id": "nhl-401892581",
-          "date": "2026-10-26T02:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "10/25 - 10:00 PM EDT",
-          "name": "Minnesota Wild at Vancouver Canucks",
-          "shortName": "MIN @ VAN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Vancouver Canucks",
-              "abbreviation": "VAN",
-              "score": "0",
-              "record": "2-9-1"
-            },
-            {
-              "side": "away",
-              "name": "Minnesota Wild",
-              "abbreviation": "MIN",
-              "score": "0",
-              "record": "7-3-2"
-            }
-          ],
-          "venue": "Rogers Arena",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ESPN+",
-            "MINNHL"
-          ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892581/wild-canucks"
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892584/red-wings-oilers"
         }
       ]
     },
     {
       "sport": "Soccer",
       "league": "EPL",
-      "status": "active",
-      "games": 5,
-      "completed": 5,
+      "status": "no_slate",
+      "games": 0,
+      "completed": 0,
       "live": 0,
       "scheduled": 0,
-      "earliestStart": "10:00 AM EDT",
-      "earliestStartIso": "2026-10-25T14:00Z",
+      "earliestStart": null,
+      "earliestStartIso": null,
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
-      "events": [
-        {
-          "id": "eng.1-401879254",
-          "date": "2026-10-25T14:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Newcastle United at Crystal Palace",
-          "shortName": "NEW @ CRY",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Crystal Palace",
-              "abbreviation": "CRY",
-              "score": "0",
-              "record": "2-1-5"
-            },
-            {
-              "side": "away",
-              "name": "Newcastle United",
-              "abbreviation": "NEW",
-              "score": "2",
-              "record": "3-2-3"
-            }
-          ],
-          "venue": "Selhurst Park",
-          "probablePitchers": null,
-          "broadcasts": [
-            "USA Net",
-            "Tele"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879254/newcastle-united-crystal-palace"
-        },
-        {
-          "id": "eng.1-401878766",
-          "date": "2026-10-25T14:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Brentford at Hull City",
-          "shortName": "BRE @ HUL",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Hull City",
-              "abbreviation": "HUL",
-              "score": "1",
-              "record": "2-4-2"
-            },
-            {
-              "side": "away",
-              "name": "Brentford",
-              "abbreviation": "BRE",
-              "score": "1",
-              "record": "2-5-1"
-            }
-          ],
-          "venue": "The MKM Stadium",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Peacock"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401878766/brentford-hull-city"
-        },
-        {
-          "id": "eng.1-401878765",
-          "date": "2026-10-25T14:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Brighton & Hove Albion at Liverpool",
-          "shortName": "BHA @ LIV",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Liverpool",
-              "abbreviation": "LIV",
-              "score": "2",
-              "record": "4-3-1"
-            },
-            {
-              "side": "away",
-              "name": "Brighton & Hove Albion",
-              "abbreviation": "BHA",
-              "score": "0",
-              "record": "5-1-2"
-            }
-          ],
-          "venue": "Anfield",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Peacock"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401878765/brighton-hove-albion-liverpool"
-        },
-        {
-          "id": "eng.1-401879252",
-          "date": "2026-10-25T14:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "AFC Bournemouth at Manchester United",
-          "shortName": "BOU @ MAN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Manchester United",
-              "abbreviation": "MAN",
-              "score": "0",
-              "record": "1-4-3"
-            },
-            {
-              "side": "away",
-              "name": "AFC Bournemouth",
-              "abbreviation": "BOU",
-              "score": "3",
-              "record": "2-3-3"
-            }
-          ],
-          "venue": "Old Trafford",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Peacock"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401879252/afc-bournemouth-manchester-united"
-        },
-        {
-          "id": "eng.1-401878764",
-          "date": "2026-10-25T16:30Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Leeds United at Sunderland",
-          "shortName": "LEE @ SUN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Sunderland",
-              "abbreviation": "SUN",
-              "score": "0",
-              "record": "1-2-5"
-            },
-            {
-              "side": "away",
-              "name": "Leeds United",
-              "abbreviation": "LEE",
-              "score": "0",
-              "record": "2-5-1"
-            }
-          ],
-          "venue": "Stadium of Light",
-          "probablePitchers": null,
-          "broadcasts": [
-            "USA Net"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401878764/leeds-united-sunderland"
-        }
-      ]
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
+      "events": []
     },
     {
       "sport": "Soccer",
       "league": "LA LIGA",
       "status": "active",
-      "games": 4,
-      "completed": 4,
+      "games": 1,
+      "completed": 0,
       "live": 0,
-      "scheduled": 0,
-      "earliestStart": "9:00 AM EDT",
-      "earliestStartIso": "2026-10-25T13:00Z",
+      "scheduled": 1,
+      "earliestStart": "4:00 PM EDT",
+      "earliestStartIso": "2026-10-26T20:00Z",
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": [
         {
-          "id": "esp.1-401882835",
-          "date": "2026-10-25T13:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Getafe at Athletic Club",
-          "shortName": "GET @ ATH",
+          "id": "esp.1-401882828",
+          "date": "2026-10-26T20:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Osasuna at Sevilla",
+          "shortName": "OSA @ SEV",
           "competitors": [
             {
               "side": "home",
-              "name": "Athletic Club",
-              "abbreviation": "ATH",
-              "score": "4",
-              "record": "3-3-3"
+              "name": "Sevilla",
+              "abbreviation": "SEV",
+              "score": "0",
+              "record": "4-2-3"
             },
             {
               "side": "away",
-              "name": "Getafe",
-              "abbreviation": "GET",
+              "name": "Osasuna",
+              "abbreviation": "OSA",
               "score": "0",
-              "record": "2-3-5"
+              "record": "3-2-4"
             }
           ],
-          "venue": "San Mamés",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ESPN+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882835/getafe-athletic-club"
-        },
-        {
-          "id": "esp.1-401882833",
-          "date": "2026-10-25T15:15Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Real Betis at Celta Vigo",
-          "shortName": "BET @ CEL",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Celta Vigo",
-              "abbreviation": "CEL",
-              "score": "0",
-              "record": "2-6-2"
-            },
-            {
-              "side": "away",
-              "name": "Real Betis",
-              "abbreviation": "BET",
-              "score": "0",
-              "record": "6-2-2"
-            }
-          ],
-          "venue": "Balaidos",
+          "venue": "Ramón Sánchez Pizjuán Stadium",
           "probablePitchers": null,
           "broadcasts": [
             "ESPN Deportes",
             "ESPN+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882833/real-betis-celta-vigo"
-        },
-        {
-          "id": "esp.1-401882829",
-          "date": "2026-10-25T17:30Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Levante at Real Sociedad",
-          "shortName": "LEV @ RSO",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Real Sociedad",
-              "abbreviation": "RSO",
-              "score": "2",
-              "record": "6-1-3"
-            },
-            {
-              "side": "away",
-              "name": "Levante",
-              "abbreviation": "LEV",
-              "score": "1",
-              "record": "2-4-4"
-            }
-          ],
-          "venue": "Reale Arena",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ESPN Deportes",
-            "ESPN+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882829/levante-real-sociedad"
-        },
-        {
-          "id": "esp.1-401882832",
-          "date": "2026-10-25T20:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Real Madrid at Barcelona",
-          "shortName": "RMA @ BAR",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Barcelona",
-              "abbreviation": "BAR",
-              "score": "1",
-              "record": "9-0-1"
-            },
-            {
-              "side": "away",
-              "name": "Real Madrid",
-              "abbreviation": "RMA",
-              "score": "2",
-              "record": "8-0-2"
-            }
-          ],
-          "venue": "Spotify Camp Nou",
-          "probablePitchers": null,
-          "broadcasts": [
-            "ABC",
-            "ESPN Deportes",
-            "ESPN+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401882832/real-madrid-barcelona"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882828/osasuna-sevilla"
         }
       ]
     },
     {
       "sport": "Soccer",
       "league": "BUNDESLIGA",
-      "status": "active",
-      "games": 2,
-      "completed": 2,
+      "status": "no_slate",
+      "games": 0,
+      "completed": 0,
       "live": 0,
       "scheduled": 0,
-      "earliestStart": "10:30 AM EDT",
-      "earliestStartIso": "2026-10-25T14:30Z",
+      "earliestStart": null,
+      "earliestStartIso": null,
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
-      "events": [
-        {
-          "id": "ger.1-401884760",
-          "date": "2026-10-25T14:30Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Bayer Leverkusen at TSG Hoffenheim",
-          "shortName": "B04 @ TSG",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "TSG Hoffenheim",
-              "abbreviation": "TSG",
-              "score": "3",
-              "record": "3-0-4"
-            },
-            {
-              "side": "away",
-              "name": "Bayer Leverkusen",
-              "abbreviation": "B04",
-              "score": "0",
-              "record": "4-1-2"
-            }
-          ],
-          "venue": "PreZero Arena",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fandango"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884760/bayer-leverkusen-tsg-hoffenheim"
-        },
-        {
-          "id": "ger.1-401884759",
-          "date": "2026-10-25T16:30Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Bayern Munich at SC Freiburg",
-          "shortName": "MUN @ SCF",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "SC Freiburg",
-              "abbreviation": "SCF",
-              "score": "1",
-              "record": "4-1-2"
-            },
-            {
-              "side": "away",
-              "name": "Bayern Munich",
-              "abbreviation": "MUN",
-              "score": "3",
-              "record": "5-2-0"
-            }
-          ],
-          "venue": "Europa-Park Stadion",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Fandango"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401884759/bayern-munich-sc-freiburg"
-        }
-      ]
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
+      "events": []
     },
     {
       "sport": "Soccer",
       "league": "SERIE A",
-      "status": "active",
-      "games": 5,
-      "completed": 5,
+      "status": "no_slate",
+      "games": 0,
+      "completed": 0,
       "live": 0,
       "scheduled": 0,
-      "earliestStart": "7:30 AM EDT",
-      "earliestStartIso": "2026-10-25T11:30Z",
+      "earliestStart": null,
+      "earliestStartIso": null,
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
-      "events": [
-        {
-          "id": "ita.1-401875036",
-          "date": "2026-10-25T11:30Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Fiorentina at Internazionale",
-          "shortName": "FIO @ INT",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Internazionale",
-              "abbreviation": "INT",
-              "score": "2",
-              "record": "7-1-0"
-            },
-            {
-              "side": "away",
-              "name": "Fiorentina",
-              "abbreviation": "FIO",
-              "score": "1",
-              "record": "1-1-6"
-            }
-          ],
-          "venue": "San Siro",
-          "probablePitchers": null,
-          "broadcasts": [
-            "CBSSN",
-            "Paramount+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401875036/fiorentina-internazionale"
-        },
-        {
-          "id": "ita.1-401874972",
-          "date": "2026-10-25T14:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Frosinone at Atalanta",
-          "shortName": "FRO @ ATA",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Atalanta",
-              "abbreviation": "ATA",
-              "score": "4",
-              "record": "3-1-4"
-            },
-            {
-              "side": "away",
-              "name": "Frosinone",
-              "abbreviation": "FRO",
-              "score": "4",
-              "record": "4-2-2"
-            }
-          ],
-          "venue": "New Balance Arena",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Paramount+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874972/frosinone-atalanta"
-        },
-        {
-          "id": "ita.1-401874952",
-          "date": "2026-10-25T14:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Venezia at Genoa",
-          "shortName": "VEN @ GEN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Genoa",
-              "abbreviation": "GEN",
-              "score": "1",
-              "record": "2-1-5"
-            },
-            {
-              "side": "away",
-              "name": "Venezia",
-              "abbreviation": "VEN",
-              "score": "0",
-              "record": "1-0-7"
-            }
-          ],
-          "venue": "Stadio Luigi Ferraris",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Paramount+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874952/venezia-genoa"
-        },
-        {
-          "id": "ita.1-401874772",
-          "date": "2026-10-25T17:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Juventus at Lecce",
-          "shortName": "JUV @ LEC",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Lecce",
-              "abbreviation": "LEC",
-              "score": "0",
-              "record": "3-0-5"
-            },
-            {
-              "side": "away",
-              "name": "Juventus",
-              "abbreviation": "JUV",
-              "score": "2",
-              "record": "4-2-2"
-            }
-          ],
-          "venue": "Via Del Mare",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Paramount+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874772/juventus-lecce"
-        },
-        {
-          "id": "ita.1-401874779",
-          "date": "2026-10-25T19:45Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "AC Milan at Udinese",
-          "shortName": "MIL @ UDI",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Udinese",
-              "abbreviation": "UDI",
-              "score": "0",
-              "record": "1-1-6"
-            },
-            {
-              "side": "away",
-              "name": "AC Milan",
-              "abbreviation": "MIL",
-              "score": "2",
-              "record": "5-3-0"
-            }
-          ],
-          "venue": "Stadio Friuli",
-          "probablePitchers": null,
-          "broadcasts": [
-            "Paramount+"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401874779/ac-milan-udinese"
-        }
-      ]
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
+      "events": []
     },
     {
       "sport": "Soccer",
       "league": "LIGUE 1",
       "status": "active",
-      "games": 6,
-      "completed": 6,
+      "games": 1,
+      "completed": 0,
       "live": 0,
-      "scheduled": 0,
-      "earliestStart": "10:00 AM EDT",
-      "earliestStartIso": "2026-10-25T14:00Z",
+      "scheduled": 1,
+      "earliestStart": "3:30 PM EDT",
+      "earliestStartIso": "2026-10-26T19:30Z",
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": [
         {
-          "id": "fra.1-401876425",
-          "date": "2026-10-25T14:00Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Lille at AS Monaco",
-          "shortName": "LILL @ MON",
+          "id": "fra.1-401876422",
+          "date": "2026-10-26T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Lyon at Paris Saint-Germain",
+          "shortName": "LYON @ PSG",
           "competitors": [
             {
               "side": "home",
-              "name": "AS Monaco",
-              "abbreviation": "MON",
-              "score": "1",
-              "record": "4-3-1"
+              "name": "Paris Saint-Germain",
+              "abbreviation": "PSG",
+              "score": "0",
+              "record": "4-2-1"
             },
             {
               "side": "away",
-              "name": "Lille",
-              "abbreviation": "LILL",
-              "score": "1",
-              "record": "4-3-1"
+              "name": "Lyon",
+              "abbreviation": "LYON",
+              "score": "0",
+              "record": "4-2-1"
             }
           ],
-          "venue": "Stade Louis II",
-          "probablePitchers": null,
-          "broadcasts": [
-            "beIn Sports"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876425/lille-as-monaco"
-        },
-        {
-          "id": "fra.1-401876429",
-          "date": "2026-10-25T16:15Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Le Mans at AJ Auxerre",
-          "shortName": "MNS @ AUX",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "AJ Auxerre",
-              "abbreviation": "AUX",
-              "score": "1",
-              "record": "3-1-4"
-            },
-            {
-              "side": "away",
-              "name": "Le Mans",
-              "abbreviation": "MNS",
-              "score": "1",
-              "record": "1-4-3"
-            }
-          ],
-          "venue": "Stade de l'Abbé-Deschamps",
+          "venue": "Parc des Princes",
           "probablePitchers": null,
           "broadcasts": [],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876429/le-mans-aj-auxerre"
-        },
-        {
-          "id": "fra.1-401876430",
-          "date": "2026-10-25T16:15Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Lorient at Angers",
-          "shortName": "LOR @ ANG",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Angers",
-              "abbreviation": "ANG",
-              "score": "0",
-              "record": "2-2-4"
-            },
-            {
-              "side": "away",
-              "name": "Lorient",
-              "abbreviation": "LOR",
-              "score": "0",
-              "record": "3-3-2"
-            }
-          ],
-          "venue": "Stade Raymond Kopa",
-          "probablePitchers": null,
-          "broadcasts": [],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876430/lorient-angers"
-        },
-        {
-          "id": "fra.1-401876426",
-          "date": "2026-10-25T16:15Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Le Havre AC at Marseille",
-          "shortName": "HAC @ OLM",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Marseille",
-              "abbreviation": "OLM",
-              "score": "4",
-              "record": "4-0-4"
-            },
-            {
-              "side": "away",
-              "name": "Le Havre AC",
-              "abbreviation": "HAC",
-              "score": "3",
-              "record": "0-2-6"
-            }
-          ],
-          "venue": "Stade Vélodrome",
-          "probablePitchers": null,
-          "broadcasts": [
-            "beIn Sports"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876426/le-havre-ac-marseille"
-        },
-        {
-          "id": "fra.1-401876424",
-          "date": "2026-10-25T16:15Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Strasbourg at Stade Rennais",
-          "shortName": "STR @ REN",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Stade Rennais",
-              "abbreviation": "REN",
-              "score": "3",
-              "record": "5-1-2"
-            },
-            {
-              "side": "away",
-              "name": "Strasbourg",
-              "abbreviation": "STR",
-              "score": "0",
-              "record": "2-1-5"
-            }
-          ],
-          "venue": "Roazhon Park",
-          "probablePitchers": null,
-          "broadcasts": [],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876424/strasbourg-stade-rennais"
-        },
-        {
-          "id": "fra.1-401876423",
-          "date": "2026-10-25T16:15Z",
-          "completed": true,
-          "state": "post",
-          "status": "FT",
-          "name": "Troyes at Toulouse",
-          "shortName": "TRY @ TOU",
-          "competitors": [
-            {
-              "side": "home",
-              "name": "Toulouse",
-              "abbreviation": "TOU",
-              "score": "0",
-              "record": "2-4-2"
-            },
-            {
-              "side": "away",
-              "name": "Troyes",
-              "abbreviation": "TRY",
-              "score": "0",
-              "record": "1-2-5"
-            }
-          ],
-          "venue": "Stadium Municipal de Toulouse",
-          "probablePitchers": null,
-          "broadcasts": [
-            "beIn Sports"
-          ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401876423/troyes-toulouse"
+          "source": "https://www.espn.com/soccer/match/_/gameId/401876422/lyon-paris-saint-germain"
         }
       ]
     },
@@ -1646,9 +747,9 @@
       "earliestStart": null,
       "earliestStartIso": null,
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": []
     },
     {
@@ -1662,9 +763,9 @@
       "earliestStart": null,
       "earliestStartIso": null,
       "provider": "ESPN Scoreboard API",
-      "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261025",
-      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261025&limit=200",
-      "sourceVerifiedAt": "2026-10-25T22:32:37.931Z",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261026",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261026&limit=200",
+      "sourceVerifiedAt": "2026-10-26T08:53:51.213Z",
       "events": []
     }
   ],
@@ -1698,5 +799,5 @@
     ],
     "analysisGate": "Do not issue a soccer Leg Grade, Confidence score, recommendation, or FINAL wager until a versioned soccer market model and all required market inputs have been verified."
   },
-  "note": "46 schedule entries found across 8 active leagues. Soccer is limited to the European Big Five plus UEFA Champions League and Europa League; MLS and the Saudi Pro League are excluded. Schedule and result facts are collected separately from betting inputs. No wager may become FINAL from this file."
+  "note": "17 schedule entries found across 7 active leagues. Soccer is limited to the European Big Five plus UEFA Champions League and Europa League; MLS and the Saudi Pro League are excluded. Schedule and result facts are collected separately from betting inputs. No wager may become FINAL from this file."
 }
