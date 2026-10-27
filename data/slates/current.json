@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-10-27",
   "timezone": "America/New_York",
-  "lastVerified": "2026-10-27T16:37:26.471Z",
+  "lastVerified": "2026-10-27T23:45:54.697Z",
   "gate": "PRELIMINARY",
   "activeGames": 21,
   "leagues": [
@@ -19,14 +19,14 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-10-27",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-27&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": [
         {
           "id": "mlb-849803",
           "date": "2026-10-28T00:00:00Z",
           "completed": false,
           "state": "pre",
-          "status": "Scheduled",
+          "status": "Pre-Game",
           "name": "Milwaukee Brewers at Tampa Bay Rays",
           "shortName": "MIL @ TB",
           "competitors": [
@@ -34,20 +34,20 @@
               "side": "away",
               "name": "Milwaukee Brewers",
               "abbreviation": "MIL",
-              "score": null,
+              "score": 0,
               "record": "3-0"
             },
             {
               "side": "home",
               "name": "Tampa Bay Rays",
               "abbreviation": "TB",
-              "score": null,
+              "score": 0,
               "record": "0-3"
             }
           ],
           "venue": "Tropicana Field",
           "probablePitchers": {
-            "away": null,
+            "away": "Dustin May",
             "home": "Griffin Jax"
           },
           "broadcasts": [],
@@ -61,21 +61,21 @@
       "status": "active",
       "games": 2,
       "completed": 0,
-      "live": 0,
-      "scheduled": 2,
+      "live": 1,
+      "scheduled": 1,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-10-27T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": [
         {
           "id": "college-football-401871071",
           "date": "2026-10-27T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/27 - 7:00 PM EDT",
+          "state": "in",
+          "status": "12:42 - 2nd",
           "name": "Delaware Blue Hens at Western Kentucky Hilltoppers",
           "shortName": "DEL @ WKU",
           "competitors": [
@@ -83,14 +83,14 @@
               "side": "home",
               "name": "Western Kentucky Hilltoppers",
               "abbreviation": "WKU",
-              "score": "0",
+              "score": "14",
               "record": "3-4"
             },
             {
               "side": "away",
               "name": "Delaware Blue Hens",
               "abbreviation": "DEL",
-              "score": "0",
+              "score": "13",
               "record": "3-4"
             }
           ],
@@ -99,7 +99,7 @@
           "broadcasts": [
             "CBSSN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401871071/delaware-western-ky"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261027"
         },
         {
           "id": "college-football-401871072",
@@ -147,7 +147,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     },
     {
@@ -163,7 +163,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     },
     {
@@ -172,21 +172,21 @@
       "status": "active",
       "games": 4,
       "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "live": 1,
+      "scheduled": 3,
       "earliestStart": "7:30 PM EDT",
       "earliestStartIso": "2026-10-27T23:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": [
         {
           "id": "nba-401909877",
           "date": "2026-10-27T23:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/27 - 7:30 PM EDT",
+          "state": "in",
+          "status": "8:37 - 1st",
           "name": "Brooklyn Nets at Boston Celtics",
           "shortName": "BKN @ BOS",
           "competitors": [
@@ -194,14 +194,14 @@
               "side": "home",
               "name": "Boston Celtics",
               "abbreviation": "BOS",
-              "score": "0",
+              "score": "6",
               "record": "2-1"
             },
             {
               "side": "away",
               "name": "Brooklyn Nets",
               "abbreviation": "BKN",
-              "score": "0",
+              "score": "10",
               "record": "0-3"
             }
           ],
@@ -211,7 +211,7 @@
             "NBA League Pass",
             "DAZN (YES)"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909877/nets-celtics"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261027"
         },
         {
           "id": "nba-401909878",
@@ -317,21 +317,21 @@
       "status": "active",
       "games": 11,
       "completed": 0,
-      "live": 0,
-      "scheduled": 11,
+      "live": 1,
+      "scheduled": 10,
       "earliestStart": "7:00 PM EDT",
       "earliestStartIso": "2026-10-27T23:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": [
         {
           "id": "nhl-401892585",
           "date": "2026-10-27T23:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "10/27 - 7:00 PM EDT",
+          "state": "in",
+          "status": "End of 1st",
           "name": "Columbus Blue Jackets at Philadelphia Flyers",
           "shortName": "CBJ @ PHI",
           "competitors": [
@@ -346,7 +346,7 @@
               "side": "away",
               "name": "Columbus Blue Jackets",
               "abbreviation": "CBJ",
-              "score": "0",
+              "score": "3",
               "record": "4-5-0"
             }
           ],
@@ -357,7 +357,7 @@
             "NBC Sports Phil",
             "CBJNHL"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892585/blue-jackets-flyers"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261027"
         },
         {
           "id": "nhl-401892586",
@@ -583,7 +583,8 @@
           "broadcasts": [
             "ESPN+",
             "MINNHL",
-            "Utah 16"
+            "Utah 16",
+            "Mammoth+"
           ],
           "source": "https://www.espn.com/nhl/game/_/gameId/401892592/wild-mammoth"
         },
@@ -648,7 +649,8 @@
           "broadcasts": [
             "ESPN+",
             "KCOP",
-            "Prime Video (Local)"
+            "Prime Video (Local)",
+            "Fox 11 Plus"
           ],
           "source": "https://www.espn.com/nhl/game/_/gameId/401892594/canucks-ducks"
         },
@@ -698,7 +700,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     },
     {
@@ -714,7 +716,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     },
     {
@@ -730,7 +732,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     },
     {
@@ -738,22 +740,22 @@
       "league": "SERIE A",
       "status": "active",
       "games": 3,
-      "completed": 0,
+      "completed": 3,
       "live": 0,
-      "scheduled": 3,
+      "scheduled": 0,
       "earliestStart": "1:30 PM EDT",
       "earliestStartIso": "2026-10-27T17:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": [
         {
           "id": "ita.1-401874980",
           "date": "2026-10-27T17:30Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Lazio at Sassuolo",
           "shortName": "LAZ @ SAS",
           "competitors": [
@@ -761,15 +763,15 @@
               "side": "home",
               "name": "Sassuolo",
               "abbreviation": "SAS",
-              "score": "0",
-              "record": "2-2-4"
+              "score": "2",
+              "record": "2-2-5"
             },
             {
               "side": "away",
               "name": "Lazio",
               "abbreviation": "LAZ",
-              "score": "0",
-              "record": "7-1-0"
+              "score": "6",
+              "record": "8-1-0"
             }
           ],
           "venue": "Mapei Stadium",
@@ -782,9 +784,9 @@
         {
           "id": "ita.1-401874780",
           "date": "2026-10-27T19:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Cagliari at AS Roma",
           "shortName": "CAG @ ROMA",
           "competitors": [
@@ -792,15 +794,15 @@
               "side": "home",
               "name": "AS Roma",
               "abbreviation": "ROMA",
-              "score": "0",
-              "record": "5-3-0"
+              "score": "4",
+              "record": "6-3-0"
             },
             {
               "side": "away",
               "name": "Cagliari",
               "abbreviation": "CAG",
-              "score": "0",
-              "record": "4-1-3"
+              "score": "2",
+              "record": "4-1-4"
             }
           ],
           "venue": "Olimpico",
@@ -813,9 +815,9 @@
         {
           "id": "ita.1-401874786",
           "date": "2026-10-27T19:45Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Como at Torino",
           "shortName": "COMO @ TOR",
           "competitors": [
@@ -823,15 +825,15 @@
               "side": "home",
               "name": "Torino",
               "abbreviation": "TOR",
-              "score": "0",
-              "record": "4-1-3"
+              "score": "1",
+              "record": "4-1-4"
             },
             {
               "side": "away",
               "name": "Como",
               "abbreviation": "COMO",
-              "score": "0",
-              "record": "5-2-1"
+              "score": "3",
+              "record": "6-2-1"
             }
           ],
           "venue": "Stadio Olimpico Grande Torino",
@@ -856,7 +858,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     },
     {
@@ -872,7 +874,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     },
     {
@@ -888,7 +890,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261027",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261027&limit=200",
-      "sourceVerifiedAt": "2026-10-27T16:37:26.471Z",
+      "sourceVerifiedAt": "2026-10-27T23:45:54.697Z",
       "events": []
     }
   ],
