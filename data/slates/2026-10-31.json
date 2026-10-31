@@ -1,0 +1,2994 @@
+{
+  "schemaVersion": "1.1",
+  "date": "2026-10-31",
+  "timezone": "America/New_York",
+  "lastVerified": "2026-10-31T09:37:46.128Z",
+  "gate": "PRELIMINARY",
+  "activeGames": 87,
+  "leagues": [
+    {
+      "sport": "Baseball",
+      "league": "MLB",
+      "status": "no_slate",
+      "games": 0,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 0,
+      "earliestStart": null,
+      "earliestStartIso": null,
+      "provider": "MLB Stats API",
+      "source": "https://www.mlb.com/schedule/2026-10-31",
+      "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-31&hydrate=probablePitcher,team,venue",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": []
+    },
+    {
+      "sport": "Football",
+      "league": "CFB",
+      "status": "active",
+      "games": 47,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 47,
+      "earliestStart": "12:00 PM EDT",
+      "earliestStartIso": "2026-10-31T16:00Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/college-football/scoreboard/_/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "college-football-401859185",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "Notre Dame Fighting Irish at Navy Midshipmen",
+          "shortName": "ND VS NAVY",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Navy Midshipmen",
+              "abbreviation": "NAVY",
+              "score": "0",
+              "record": "2-5"
+            },
+            {
+              "side": "away",
+              "name": "Notre Dame Fighting Irish",
+              "abbreviation": "ND",
+              "score": "0",
+              "record": "6-1"
+            }
+          ],
+          "venue": "Gillette Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ABC"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401859185/notre-dame-navy"
+        },
+        {
+          "id": "college-football-401856842",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "Arizona Wildcats at Texas Tech Red Raiders",
+          "shortName": "ARIZ @ TTU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Texas Tech Red Raiders",
+              "abbreviation": "TTU",
+              "score": "0",
+              "record": "6-1"
+            },
+            {
+              "side": "away",
+              "name": "Arizona Wildcats",
+              "abbreviation": "ARIZ",
+              "score": "0",
+              "record": "6-1"
+            }
+          ],
+          "venue": "Galaxy Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856842/arizona-texas-tech"
+        },
+        {
+          "id": "college-football-401858278",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "SMU Mustangs at Syracuse Orange",
+          "shortName": "SMU @ SYR",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Syracuse Orange",
+              "abbreviation": "SYR",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "SMU Mustangs",
+              "abbreviation": "SMU",
+              "score": "0",
+              "record": "6-1"
+            }
+          ],
+          "venue": "JMA Wireless Dome",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN2"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858278/smu-syracuse"
+        },
+        {
+          "id": "college-football-401858502",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "Wisconsin Badgers at Iowa Hawkeyes",
+          "shortName": "WIS @ IOWA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Iowa Hawkeyes",
+              "abbreviation": "IOWA",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "Wisconsin Badgers",
+              "abbreviation": "WIS",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Kinnick Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fox"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858502/wisconsin-iowa"
+        },
+        {
+          "id": "college-football-401858277",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "California Golden Bears at NC State Wolfpack",
+          "shortName": "CAL @ NCSU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "NC State Wolfpack",
+              "abbreviation": "NCSU",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "California Golden Bears",
+              "abbreviation": "CAL",
+              "score": "0",
+              "record": "3-5"
+            }
+          ],
+          "venue": "Carter-Finley Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ACC Network"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858277/california-nc-state"
+        },
+        {
+          "id": "college-football-401858279",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "Boston College Eagles at Duke Blue Devils",
+          "shortName": "BC @ DUKE",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Duke Blue Devils",
+              "abbreviation": "DUKE",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "Boston College Eagles",
+              "abbreviation": "BC",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Wallace Wade Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CW"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858279/boston-college-duke"
+        },
+        {
+          "id": "college-football-401858503",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "Illinois Fighting Illini at Maryland Terrapins",
+          "shortName": "ILL @ MD",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Maryland Terrapins",
+              "abbreviation": "MD",
+              "score": "0",
+              "record": "2-5"
+            },
+            {
+              "side": "away",
+              "name": "Illinois Fighting Illini",
+              "abbreviation": "ILL",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "SECU Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "FS1"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858503/illinois-maryland"
+        },
+        {
+          "id": "college-football-401862816",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "UAB Blazers at South Florida Bulls",
+          "shortName": "UAB @ USF",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "South Florida Bulls",
+              "abbreviation": "USF",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "UAB Blazers",
+              "abbreviation": "UAB",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Raymond James Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPNU"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401862816/uab-south-florida"
+        },
+        {
+          "id": "college-football-401866452",
+          "date": "2026-10-31T16:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:00 PM EDT",
+          "name": "Bowling Green Falcons at Western Michigan Broncos",
+          "shortName": "BGSU @ WMU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Western Michigan Broncos",
+              "abbreviation": "WMU",
+              "score": "0",
+              "record": "5-3"
+            },
+            {
+              "side": "away",
+              "name": "Bowling Green Falcons",
+              "abbreviation": "BGSU",
+              "score": "0",
+              "record": "2-6"
+            }
+          ],
+          "venue": "Waldo Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CBSSN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401866452/bowling-green-w-michigan"
+        },
+        {
+          "id": "college-football-401858507",
+          "date": "2026-10-31T16:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:30 PM EDT",
+          "name": "Michigan Wolverines at Rutgers Scarlet Knights",
+          "shortName": "MICH @ RUTG",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Rutgers Scarlet Knights",
+              "abbreviation": "RUTG",
+              "score": "0",
+              "record": "2-5"
+            },
+            {
+              "side": "away",
+              "name": "Michigan Wolverines",
+              "abbreviation": "MICH",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "SHI Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "BTN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858507/michigan-rutgers"
+        },
+        {
+          "id": "college-football-401856735",
+          "date": "2026-10-31T16:45Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 12:45 PM EDT",
+          "name": "Auburn Tigers at Ole Miss Rebels",
+          "shortName": "AUB @ MISS",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Ole Miss Rebels",
+              "abbreviation": "MISS",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "Auburn Tigers",
+              "abbreviation": "AUB",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Vaught-Hemingway Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "SEC Network"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856735/auburn-ole-miss"
+        },
+        {
+          "id": "college-football-401871096",
+          "date": "2026-10-31T17:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 1:00 PM EDT",
+          "name": "Marshall Thundering Herd at Old Dominion Monarchs",
+          "shortName": "MRSH @ ODU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Old Dominion Monarchs",
+              "abbreviation": "ODU",
+              "score": "0",
+              "record": "2-6"
+            },
+            {
+              "side": "away",
+              "name": "Marshall Thundering Herd",
+              "abbreviation": "MRSH",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "S.B. Ballard Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401871096/marshall-old-dominion"
+        },
+        {
+          "id": "college-football-401856846",
+          "date": "2026-10-31T18:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 2:00 PM EDT",
+          "name": "Kansas State Wildcats at Colorado Buffaloes",
+          "shortName": "KSU @ COLO",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Colorado Buffaloes",
+              "abbreviation": "COLO",
+              "score": "0",
+              "record": "2-5"
+            },
+            {
+              "side": "away",
+              "name": "Kansas State Wildcats",
+              "abbreviation": "KSU",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Folsom Field",
+          "probablePitchers": null,
+          "broadcasts": [
+            "TNT"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856846/kansas-st-colorado"
+        },
+        {
+          "id": "college-football-401869944",
+          "date": "2026-10-31T18:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 2:00 PM EDT",
+          "name": "Coastal Carolina Chanticleers at Georgia State Panthers",
+          "shortName": "CCU @ GAST",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Georgia State Panthers",
+              "abbreviation": "GAST",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "Coastal Carolina Chanticleers",
+              "abbreviation": "CCU",
+              "score": "0",
+              "record": "2-5"
+            }
+          ],
+          "venue": "Center Parc Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401869944/coastal-georgia-st"
+        },
+        {
+          "id": "college-football-401861966",
+          "date": "2026-10-31T19:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:00 PM EDT",
+          "name": "UConn Huskies at Air Force Falcons",
+          "shortName": "CONN @ AFA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Air Force Falcons",
+              "abbreviation": "AFA",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "UConn Huskies",
+              "abbreviation": "CONN",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Falcon Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "MW+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401861966/uconn-air-force"
+        },
+        {
+          "id": "college-football-401862815",
+          "date": "2026-10-31T19:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:00 PM EDT",
+          "name": "Temple Owls at East Carolina Pirates",
+          "shortName": "TEM @ ECU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "East Carolina Pirates",
+              "abbreviation": "ECU",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "Temple Owls",
+              "abbreviation": "TEM",
+              "score": "0",
+              "record": "2-5"
+            }
+          ],
+          "venue": "Dowdy-Ficklen Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401862815/temple-east-carolina"
+        },
+        {
+          "id": "college-football-401871097",
+          "date": "2026-10-31T19:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:00 PM EDT",
+          "name": "Louisiana Tech Bulldogs at South Alabama Jaguars",
+          "shortName": "LT @ USA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "South Alabama Jaguars",
+              "abbreviation": "USA",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "Louisiana Tech Bulldogs",
+              "abbreviation": "LT",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Hancock Whitney Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401871097/louisiana-tech-south-alabama"
+        },
+        {
+          "id": "college-football-401858283",
+          "date": "2026-10-31T19:15Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:15 PM EDT",
+          "name": "Stanford Cardinal at Louisville Cardinals",
+          "shortName": "STAN @ LOU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Louisville Cardinals",
+              "abbreviation": "LOU",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "Stanford Cardinal",
+              "abbreviation": "STAN",
+              "score": "0",
+              "record": "4-4"
+            }
+          ],
+          "venue": "L&N Federal Credit Union Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ACC Network"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858283/stanford-louisville"
+        },
+        {
+          "id": "college-football-401856734",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Florida Gators at Georgia Bulldogs",
+          "shortName": "FLA VS UGA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Georgia Bulldogs",
+              "abbreviation": "UGA",
+              "score": "0",
+              "record": "6-1"
+            },
+            {
+              "side": "away",
+              "name": "Florida Gators",
+              "abbreviation": "FLA",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Mercedes-Benz Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ABC",
+            "Disney+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856734/florida-georgia"
+        },
+        {
+          "id": "college-football-401858501",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Minnesota Golden Gophers at Indiana Hoosiers",
+          "shortName": "MINN @ IU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Indiana Hoosiers",
+              "abbreviation": "IU",
+              "score": "0",
+              "record": "7-1"
+            },
+            {
+              "side": "away",
+              "name": "Minnesota Golden Gophers",
+              "abbreviation": "MINN",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Memorial Stadium (Bloomington, IN)",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CBS"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858501/minnesota-indiana"
+        },
+        {
+          "id": "college-football-401856843",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Arizona State Sun Devils at BYU Cougars",
+          "shortName": "ASU @ BYU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "BYU Cougars",
+              "abbreviation": "BYU",
+              "score": "0",
+              "record": "6-1"
+            },
+            {
+              "side": "away",
+              "name": "Arizona State Sun Devils",
+              "abbreviation": "ASU",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "LaVell Edwards Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fox"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856843/arizona-st-byu"
+        },
+        {
+          "id": "college-football-401858505",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Northwestern Wildcats at Oregon Ducks",
+          "shortName": "NU @ ORE",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Oregon Ducks",
+              "abbreviation": "ORE",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "Northwestern Wildcats",
+              "abbreviation": "NU",
+              "score": "0",
+              "record": "6-1"
+            }
+          ],
+          "venue": "Autzen Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Peacock"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858505/northwestern-oregon"
+        },
+        {
+          "id": "college-football-401856845",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Kansas Jayhawks at TCU Horned Frogs",
+          "shortName": "KU @ TCU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "TCU Horned Frogs",
+              "abbreviation": "TCU",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "Kansas Jayhawks",
+              "abbreviation": "KU",
+              "score": "0",
+              "record": "3-4"
+            }
+          ],
+          "venue": "Amon G. Carter Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "FS1"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856845/kansas-tcu"
+        },
+        {
+          "id": "college-football-401860910",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Colorado State Rams at Utah State Aggies",
+          "shortName": "CSU @ USU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Utah State Aggies",
+              "abbreviation": "USU",
+              "score": "0",
+              "record": "2-5"
+            },
+            {
+              "side": "away",
+              "name": "Colorado State Rams",
+              "abbreviation": "CSU",
+              "score": "0",
+              "record": "3-4"
+            }
+          ],
+          "venue": "Maverik Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "USA Net"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401860910/colorado-st-utah-state"
+        },
+        {
+          "id": "college-football-401864531",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "UTEP Miners at North Dakota State Bison",
+          "shortName": "UTEP @ NDSU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "North Dakota State Bison",
+              "abbreviation": "NDSU",
+              "score": "0",
+              "record": "6-2"
+            },
+            {
+              "side": "away",
+              "name": "UTEP Miners",
+              "abbreviation": "UTEP",
+              "score": "0",
+              "record": "1-6"
+            }
+          ],
+          "venue": "Fargodome",
+          "probablePitchers": null,
+          "broadcasts": [
+            "MW+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401864531/utep-n-dakota-st"
+        },
+        {
+          "id": "college-football-401871059",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Florida International Panthers at Liberty Flames",
+          "shortName": "FIU @ LIB",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Liberty Flames",
+              "abbreviation": "LIB",
+              "score": "0",
+              "record": "6-1"
+            },
+            {
+              "side": "away",
+              "name": "Florida International Panthers",
+              "abbreviation": "FIU",
+              "score": "0",
+              "record": "3-4"
+            }
+          ],
+          "venue": "Williams Stadium (VA)",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CBSSN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401871059/fiu-liberty"
+        },
+        {
+          "id": "college-football-401871095",
+          "date": "2026-10-31T19:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:30 PM EDT",
+          "name": "Southern Miss Golden Eagles at UL Monroe Warhawks",
+          "shortName": "USM @ ULM",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "UL Monroe Warhawks",
+              "abbreviation": "ULM",
+              "score": "0",
+              "record": "1-6"
+            },
+            {
+              "side": "away",
+              "name": "Southern Miss Golden Eagles",
+              "abbreviation": "USM",
+              "score": "0",
+              "record": "2-5"
+            }
+          ],
+          "venue": "Malone Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401871095/southern-miss-ul-monroe"
+        },
+        {
+          "id": "college-football-401856848",
+          "date": "2026-10-31T19:45Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:45 PM EDT",
+          "name": "Utah Utes at Cincinnati Bearcats",
+          "shortName": "UTAH @ CIN",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Cincinnati Bearcats",
+              "abbreviation": "CIN",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "Utah Utes",
+              "abbreviation": "UTAH",
+              "score": "0",
+              "record": "7-0"
+            }
+          ],
+          "venue": "Nippert Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856848/utah-cincinnati"
+        },
+        {
+          "id": "college-football-401858284",
+          "date": "2026-10-31T19:45Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:45 PM EDT",
+          "name": "Virginia Cavaliers at Wake Forest Demon Deacons",
+          "shortName": "UVA @ WAKE",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Wake Forest Demon Deacons",
+              "abbreviation": "WAKE",
+              "score": "0",
+              "record": "6-1"
+            },
+            {
+              "side": "away",
+              "name": "Virginia Cavaliers",
+              "abbreviation": "UVA",
+              "score": "0",
+              "record": "4-4"
+            }
+          ],
+          "venue": "Allegacy Federal Credit Union Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN2"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858284/virginia-wake-forest"
+        },
+        {
+          "id": "college-football-401864529",
+          "date": "2026-10-31T20:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 4:00 PM EDT",
+          "name": "New Mexico Lobos at San José State Spartans",
+          "shortName": "UNM @ SJSU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "San José State Spartans",
+              "abbreviation": "SJSU",
+              "score": "0",
+              "record": "4-4"
+            },
+            {
+              "side": "away",
+              "name": "New Mexico Lobos",
+              "abbreviation": "UNM",
+              "score": "0",
+              "record": "6-1"
+            }
+          ],
+          "venue": "CEFCU Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "MW+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401864529/new-mexico-san-jose-st"
+        },
+        {
+          "id": "college-football-401858508",
+          "date": "2026-10-31T20:15Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 4:15 PM EDT",
+          "name": "Nevada Wolf Pack at UCLA Bruins",
+          "shortName": "NEV @ UCLA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "UCLA Bruins",
+              "abbreviation": "UCLA",
+              "score": "0",
+              "record": "7-0"
+            },
+            {
+              "side": "away",
+              "name": "Nevada Wolf Pack",
+              "abbreviation": "NEV",
+              "score": "0",
+              "record": "3-4"
+            }
+          ],
+          "venue": "Rose Bowl",
+          "probablePitchers": null,
+          "broadcasts": [
+            "BTN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858508/nevada-ucla"
+        },
+        {
+          "id": "college-football-401856736",
+          "date": "2026-10-31T20:15Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 4:15 PM EDT",
+          "name": "South Carolina Gamecocks at Oklahoma Sooners",
+          "shortName": "SC @ OU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Oklahoma Sooners",
+              "abbreviation": "OU",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "South Carolina Gamecocks",
+              "abbreviation": "SC",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Memorial Stadium (Norman, OK)",
+          "probablePitchers": null,
+          "broadcasts": [
+            "SEC Network"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856736/south-carolina-oklahoma"
+        },
+        {
+          "id": "college-football-401858506",
+          "date": "2026-10-31T20:15Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 4:15 PM EDT",
+          "name": "Purdue Boilermakers at Penn State Nittany Lions",
+          "shortName": "PUR @ PSU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Penn State Nittany Lions",
+              "abbreviation": "PSU",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "Purdue Boilermakers",
+              "abbreviation": "PUR",
+              "score": "0",
+              "record": "3-4"
+            }
+          ],
+          "venue": "Beaver Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "BTN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858506/purdue-penn-state"
+        },
+        {
+          "id": "college-football-401869846",
+          "date": "2026-10-31T22:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 6:30 PM EDT",
+          "name": "App State Mountaineers at Georgia Southern Eagles",
+          "shortName": "APP @ GASO",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Georgia Southern Eagles",
+              "abbreviation": "GASO",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "App State Mountaineers",
+              "abbreviation": "APP",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Allen E. Paulson Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401869846/app-state-ga-southern"
+        },
+        {
+          "id": "college-football-401856847",
+          "date": "2026-10-31T23:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:00 PM EDT",
+          "name": "Oklahoma State Cowboys at Iowa State Cyclones",
+          "shortName": "OKST @ ISU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Iowa State Cyclones",
+              "abbreviation": "ISU",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "Oklahoma State Cowboys",
+              "abbreviation": "OKST",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Jack Trice Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fox"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856847/oklahoma-st-iowa-state"
+        },
+        {
+          "id": "college-football-401858280",
+          "date": "2026-10-31T23:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:00 PM EDT",
+          "name": "Clemson Tigers at Florida State Seminoles",
+          "shortName": "CLEM @ FSU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Florida State Seminoles",
+              "abbreviation": "FSU",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "Clemson Tigers",
+              "abbreviation": "CLEM",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Doak Campbell Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ACC Network"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858280/clemson-florida-st"
+        },
+        {
+          "id": "college-football-401860909",
+          "date": "2026-10-31T23:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:00 PM EDT",
+          "name": "Washington State Cougars at San Diego State Aztecs",
+          "shortName": "WSU @ SDSU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "San Diego State Aztecs",
+              "abbreviation": "SDSU",
+              "score": "0",
+              "record": "3-5"
+            },
+            {
+              "side": "away",
+              "name": "Washington State Cougars",
+              "abbreviation": "WSU",
+              "score": "0",
+              "record": "1-7"
+            }
+          ],
+          "venue": "Snapdragon Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CBSSN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401860909/washington-st-san-diego-st"
+        },
+        {
+          "id": "college-football-401858282",
+          "date": "2026-10-31T23:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:30 PM EDT",
+          "name": "Miami Hurricanes at North Carolina Tar Heels",
+          "shortName": "MIA @ UNC",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "North Carolina Tar Heels",
+              "abbreviation": "UNC",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "Miami Hurricanes",
+              "abbreviation": "MIA",
+              "score": "0",
+              "record": "7-0"
+            }
+          ],
+          "venue": "Kenan Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ABC"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858282/miami-north-carolina"
+        },
+        {
+          "id": "college-football-401858509",
+          "date": "2026-10-31T23:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:30 PM EDT",
+          "name": "Ohio State Buckeyes at USC Trojans",
+          "shortName": "OSU @ USC",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "USC Trojans",
+              "abbreviation": "USC",
+              "score": "0",
+              "record": "6-2"
+            },
+            {
+              "side": "away",
+              "name": "Ohio State Buckeyes",
+              "abbreviation": "OSU",
+              "score": "0",
+              "record": "6-1"
+            }
+          ],
+          "venue": "Los Angeles Memorial Coliseum",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBC"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858509/ohio-state-usc"
+        },
+        {
+          "id": "college-football-401856737",
+          "date": "2026-10-31T23:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:30 PM EDT",
+          "name": "Mississippi State Bulldogs at Texas Longhorns",
+          "shortName": "MSST @ TEX",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Texas Longhorns",
+              "abbreviation": "TEX",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "Mississippi State Bulldogs",
+              "abbreviation": "MSST",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "DKR-Texas Memorial Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN",
+            "Disney+"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856737/mississippi-st-texas"
+        },
+        {
+          "id": "college-football-401858281",
+          "date": "2026-10-31T23:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:30 PM EDT",
+          "name": "Georgia Tech Yellow Jackets at Pittsburgh Panthers",
+          "shortName": "GT @ PITT",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Pittsburgh Panthers",
+              "abbreviation": "PITT",
+              "score": "0",
+              "record": "5-3"
+            },
+            {
+              "side": "away",
+              "name": "Georgia Tech Yellow Jackets",
+              "abbreviation": "GT",
+              "score": "0",
+              "record": "2-5"
+            }
+          ],
+          "venue": "Acrisure Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN2"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858281/georgia-tech-pitt"
+        },
+        {
+          "id": "college-football-401856733",
+          "date": "2026-10-31T23:45Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:45 PM EDT",
+          "name": "Missouri Tigers at Arkansas Razorbacks",
+          "shortName": "MIZ @ ARK",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Arkansas Razorbacks",
+              "abbreviation": "ARK",
+              "score": "0",
+              "record": "3-4"
+            },
+            {
+              "side": "away",
+              "name": "Missouri Tigers",
+              "abbreviation": "MIZ",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Donald W. Reynolds Razorback Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "SEC Network"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401856733/missouri-arkansas"
+        },
+        {
+          "id": "college-football-401858504",
+          "date": "2026-11-01T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:00 PM EDT",
+          "name": "Washington Huskies at Nebraska Cornhuskers",
+          "shortName": "WASH @ NEB",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Nebraska Cornhuskers",
+              "abbreviation": "NEB",
+              "score": "0",
+              "record": "5-2"
+            },
+            {
+              "side": "away",
+              "name": "Washington Huskies",
+              "abbreviation": "WASH",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Memorial Stadium (Lincoln, NE)",
+          "probablePitchers": null,
+          "broadcasts": [
+            "BTN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401858504/washington-nebraska"
+        },
+        {
+          "id": "college-football-401862814",
+          "date": "2026-11-01T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:00 PM EDT",
+          "name": "Army Black Knights at Memphis Tigers",
+          "shortName": "ARMY @ MEM",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Memphis Tigers",
+              "abbreviation": "MEM",
+              "score": "0",
+              "record": "6-2"
+            },
+            {
+              "side": "away",
+              "name": "Army Black Knights",
+              "abbreviation": "ARMY",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Simmons Bank Liberty Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPNU"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401862814/army-memphis"
+        },
+        {
+          "id": "college-football-401860908",
+          "date": "2026-11-01T02:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 10:00 PM EDT",
+          "name": "Texas State Bobcats at Boise State Broncos",
+          "shortName": "TXST @ BOIS",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Boise State Broncos",
+              "abbreviation": "BOIS",
+              "score": "0",
+              "record": "6-1"
+            },
+            {
+              "side": "away",
+              "name": "Texas State Bobcats",
+              "abbreviation": "TXST",
+              "score": "0",
+              "record": "4-3"
+            }
+          ],
+          "venue": "Albertsons Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CW"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401860908/texas-st-boise-st"
+        },
+        {
+          "id": "college-football-401864530",
+          "date": "2026-11-01T02:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 10:30 PM EDT",
+          "name": "Northern Illinois Huskies at UNLV Rebels",
+          "shortName": "NIU @ UNLV",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "UNLV Rebels",
+              "abbreviation": "UNLV",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "Northern Illinois Huskies",
+              "abbreviation": "NIU",
+              "score": "0",
+              "record": "0-7"
+            }
+          ],
+          "venue": "Allegiant Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CBSSN"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401864530/n-illinois-unlv"
+        },
+        {
+          "id": "college-football-401860924",
+          "date": "2026-11-01T03:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 11:00 PM EDT",
+          "name": "Oregon State Beavers at Fresno State Bulldogs",
+          "shortName": "ORST @ FRES",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Fresno State Bulldogs",
+              "abbreviation": "FRES",
+              "score": "0",
+              "record": "4-3"
+            },
+            {
+              "side": "away",
+              "name": "Oregon State Beavers",
+              "abbreviation": "ORST",
+              "score": "0",
+              "record": "5-2"
+            }
+          ],
+          "venue": "Valley Children's Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "USA Net"
+          ],
+          "source": "https://www.espn.com/college-football/game/_/gameId/401860924/oregon-st-fresno-st"
+        }
+      ]
+    },
+    {
+      "sport": "Football",
+      "league": "NFL",
+      "status": "no_slate",
+      "games": 0,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 0,
+      "earliestStart": null,
+      "earliestStartIso": null,
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/nfl/scoreboard/_/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": []
+    },
+    {
+      "sport": "Basketball",
+      "league": "WNBA",
+      "status": "active",
+      "games": 1,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 1,
+      "earliestStart": "8:00 PM EDT",
+      "earliestStartIso": "2026-11-01T00:00Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/wnba/scoreboard/_/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "wnba-401918311",
+          "date": "2026-11-01T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:00 PM EDT",
+          "name": "Atlanta Dream at Golden State Valkyries",
+          "shortName": "ATL @ GS",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Golden State Valkyries",
+              "abbreviation": "GS",
+              "score": "0",
+              "record": "32-12"
+            },
+            {
+              "side": "away",
+              "name": "Atlanta Dream",
+              "abbreviation": "ATL",
+              "score": "0",
+              "record": "30-14"
+            }
+          ],
+          "venue": "Chase Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "USA Net",
+            "CNBC"
+          ],
+          "source": "https://www.espn.com/wnba/game/_/gameId/401918311/dream-valkyries"
+        }
+      ]
+    },
+    {
+      "sport": "Basketball",
+      "league": "NBA",
+      "status": "active",
+      "games": 7,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 7,
+      "earliestStart": "3:00 PM EDT",
+      "earliestStartIso": "2026-10-31T19:00Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/nba/scoreboard/_/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "nba-401909896",
+          "date": "2026-10-31T19:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 3:00 PM EDT",
+          "name": "Portland Trail Blazers at Utah Jazz",
+          "shortName": "POR @ UTAH",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Utah Jazz",
+              "abbreviation": "UTAH",
+              "score": "0",
+              "record": "1-4"
+            },
+            {
+              "side": "away",
+              "name": "Portland Trail Blazers",
+              "abbreviation": "POR",
+              "score": "0",
+              "record": "3-1"
+            }
+          ],
+          "venue": "Delta Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA League Pass",
+            "KUNP 16",
+            "BlazerVision",
+            "KJZZ-TV",
+            "Jazz+"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909896/trail-blazers-jazz"
+        },
+        {
+          "id": "nba-401909897",
+          "date": "2026-10-31T22:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 6:00 PM EDT",
+          "name": "Philadelphia 76ers at Charlotte Hornets",
+          "shortName": "PHI @ CHA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Charlotte Hornets",
+              "abbreviation": "CHA",
+              "score": "0",
+              "record": "3-3"
+            },
+            {
+              "side": "away",
+              "name": "Philadelphia 76ers",
+              "abbreviation": "PHI",
+              "score": "0",
+              "record": "5-1"
+            }
+          ],
+          "venue": "Spectrum Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA TV"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909897/76ers-hornets"
+        },
+        {
+          "id": "nba-401909898",
+          "date": "2026-10-31T23:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:00 PM EDT",
+          "name": "Atlanta Hawks at New Orleans Pelicans",
+          "shortName": "ATL @ NO",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "New Orleans Pelicans",
+              "abbreviation": "NO",
+              "score": "0",
+              "record": "1-4"
+            },
+            {
+              "side": "away",
+              "name": "Atlanta Hawks",
+              "abbreviation": "ATL",
+              "score": "0",
+              "record": "3-3"
+            }
+          ],
+          "venue": "Smoothie King Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA League Pass",
+            "GCSEN",
+            "Pelicans.com"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909898/hawks-pelicans"
+        },
+        {
+          "id": "nba-401909899",
+          "date": "2026-11-01T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:00 PM EDT",
+          "name": "Sacramento Kings at Memphis Grizzlies",
+          "shortName": "SAC @ MEM",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Memphis Grizzlies",
+              "abbreviation": "MEM",
+              "score": "0",
+              "record": "5-0"
+            },
+            {
+              "side": "away",
+              "name": "Sacramento Kings",
+              "abbreviation": "SAC",
+              "score": "0",
+              "record": "0-5"
+            }
+          ],
+          "venue": "FedExForum",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA League Pass",
+            "DAZN MEM"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909899/kings-grizzlies"
+        },
+        {
+          "id": "nba-401909900",
+          "date": "2026-11-01T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:00 PM EDT",
+          "name": "Cleveland Cavaliers at Milwaukee Bucks",
+          "shortName": "CLE @ MIL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Milwaukee Bucks",
+              "abbreviation": "MIL",
+              "score": "0",
+              "record": "1-4"
+            },
+            {
+              "side": "away",
+              "name": "Cleveland Cavaliers",
+              "abbreviation": "CLE",
+              "score": "0",
+              "record": "3-2"
+            }
+          ],
+          "venue": "Fiserv Forum",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA League Pass",
+            "DAZN CLE",
+            "MyMi",
+            "Bucks App"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909900/cavaliers-bucks"
+        },
+        {
+          "id": "nba-401909901",
+          "date": "2026-11-01T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:00 PM EDT",
+          "name": "Minnesota Timberwolves at San Antonio Spurs",
+          "shortName": "MIN @ SA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "San Antonio Spurs",
+              "abbreviation": "SA",
+              "score": "0",
+              "record": "3-2"
+            },
+            {
+              "side": "away",
+              "name": "Minnesota Timberwolves",
+              "abbreviation": "MIN",
+              "score": "0",
+              "record": "4-2"
+            }
+          ],
+          "venue": "Frost Bank Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA League Pass",
+            "DAZN MIN",
+            "DAZN SAS"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909901/timberwolves-spurs"
+        },
+        {
+          "id": "nba-401909902",
+          "date": "2026-11-01T00:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:30 PM EDT",
+          "name": "Oklahoma City Thunder at Houston Rockets",
+          "shortName": "OKC @ HOU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Houston Rockets",
+              "abbreviation": "HOU",
+              "score": "0",
+              "record": "5-1"
+            },
+            {
+              "side": "away",
+              "name": "Oklahoma City Thunder",
+              "abbreviation": "OKC",
+              "score": "0",
+              "record": "4-1"
+            }
+          ],
+          "venue": "Toyota Center (Houston)",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBA TV",
+            "Thunder App"
+          ],
+          "source": "https://www.espn.com/nba/game/_/gameId/401909902/thunder-rockets"
+        }
+      ]
+    },
+    {
+      "sport": "Hockey",
+      "league": "NHL",
+      "status": "active",
+      "games": 10,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 10,
+      "earliestStart": "1:00 PM EDT",
+      "earliestStartIso": "2026-10-31T17:00Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/nhl/scoreboard/_/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "nhl-401892614",
+          "date": "2026-10-31T17:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 1:00 PM EDT",
+          "name": "Chicago Blackhawks at Boston Bruins",
+          "shortName": "CHI @ BOS",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Boston Bruins",
+              "abbreviation": "BOS",
+              "score": "0",
+              "record": "9-4-1"
+            },
+            {
+              "side": "away",
+              "name": "Chicago Blackhawks",
+              "abbreviation": "CHI",
+              "score": "0",
+              "record": "4-9-0"
+            }
+          ],
+          "venue": "TD Garden",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "CHSN",
+            "NESN"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892614/blackhawks-bruins"
+        },
+        {
+          "id": "nhl-401892615",
+          "date": "2026-10-31T17:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 1:00 PM EDT",
+          "name": "St. Louis Blues at Detroit Red Wings",
+          "shortName": "STL @ DET",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Detroit Red Wings",
+              "abbreviation": "DET",
+              "score": "0",
+              "record": "6-4-3"
+            },
+            {
+              "side": "away",
+              "name": "St. Louis Blues",
+              "abbreviation": "STL",
+              "score": "0",
+              "record": "6-6-1"
+            }
+          ],
+          "venue": "Little Caesars Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "Blues App",
+            "BN+",
+            "DSN"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892615/blues-red-wings"
+        },
+        {
+          "id": "nhl-401892616",
+          "date": "2026-10-31T18:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 2:00 PM EDT",
+          "name": "Tampa Bay Lightning at Nashville Predators",
+          "shortName": "TB @ NSH",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Nashville Predators",
+              "abbreviation": "NSH",
+              "score": "0",
+              "record": "4-4-5"
+            },
+            {
+              "side": "away",
+              "name": "Tampa Bay Lightning",
+              "abbreviation": "TB",
+              "score": "0",
+              "record": "8-3-1"
+            }
+          ],
+          "venue": "Bridgestone Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports",
+            "The Spot - MTN"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892616/lightning-predators"
+        },
+        {
+          "id": "nhl-401892617",
+          "date": "2026-10-31T18:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 2:00 PM EDT",
+          "name": "Edmonton Oilers at New York Islanders",
+          "shortName": "EDM @ NYI",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "New York Islanders",
+              "abbreviation": "NYI",
+              "score": "0",
+              "record": "7-4-2"
+            },
+            {
+              "side": "away",
+              "name": "Edmonton Oilers",
+              "abbreviation": "EDM",
+              "score": "0",
+              "record": "9-2-2"
+            }
+          ],
+          "venue": "UBS Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "MSGSN"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892617/oilers-islanders"
+        },
+        {
+          "id": "nhl-401892618",
+          "date": "2026-10-31T20:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 4:00 PM EDT",
+          "name": "Buffalo Sabres at Los Angeles Kings",
+          "shortName": "BUF @ LA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Los Angeles Kings",
+              "abbreviation": "LA",
+              "score": "0",
+              "record": "4-6-2"
+            },
+            {
+              "side": "away",
+              "name": "Buffalo Sabres",
+              "abbreviation": "BUF",
+              "score": "0",
+              "record": "6-4-3"
+            }
+          ],
+          "venue": "crypto.com Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "MSGB",
+            "ABTV"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892618/sabres-kings"
+        },
+        {
+          "id": "nhl-401892619",
+          "date": "2026-10-31T20:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 4:00 PM EDT",
+          "name": "Ottawa Senators at San Jose Sharks",
+          "shortName": "OTT @ SJ",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "San Jose Sharks",
+              "abbreviation": "SJ",
+              "score": "0",
+              "record": "7-6-1"
+            },
+            {
+              "side": "away",
+              "name": "Ottawa Senators",
+              "abbreviation": "OTT",
+              "score": "0",
+              "record": "8-5-1"
+            }
+          ],
+          "venue": "SAP Center at San Jose",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "NBC Sports BA"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892619/senators-sharks"
+        },
+        {
+          "id": "nhl-401892620",
+          "date": "2026-10-31T23:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:00 PM EDT",
+          "name": "Pittsburgh Penguins at Montreal Canadiens",
+          "shortName": "PIT @ MTL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Montreal Canadiens",
+              "abbreviation": "MTL",
+              "score": "0",
+              "record": "8-3-2"
+            },
+            {
+              "side": "away",
+              "name": "Pittsburgh Penguins",
+              "abbreviation": "PIT",
+              "score": "0",
+              "record": "5-6-2"
+            }
+          ],
+          "venue": "Bell Centre",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892620/penguins-canadiens"
+        },
+        {
+          "id": "nhl-401892621",
+          "date": "2026-10-31T23:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 7:00 PM EDT",
+          "name": "Toronto Maple Leafs at Vancouver Canucks",
+          "shortName": "TOR @ VAN",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Vancouver Canucks",
+              "abbreviation": "VAN",
+              "score": "0",
+              "record": "3-11-1"
+            },
+            {
+              "side": "away",
+              "name": "Toronto Maple Leafs",
+              "abbreviation": "TOR",
+              "score": "0",
+              "record": "7-6-2"
+            }
+          ],
+          "venue": "Rogers Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892621/maple-leafs-canucks"
+        },
+        {
+          "id": "nhl-401892622",
+          "date": "2026-11-01T00:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 8:00 PM EDT",
+          "name": "Columbus Blue Jackets at Dallas Stars",
+          "shortName": "CBJ @ DAL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Dallas Stars",
+              "abbreviation": "DAL",
+              "score": "0",
+              "record": "7-5-1"
+            },
+            {
+              "side": "away",
+              "name": "Columbus Blue Jackets",
+              "abbreviation": "CBJ",
+              "score": "0",
+              "record": "5-6-0"
+            }
+          ],
+          "venue": "American Airlines Center",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "CBJNHL",
+            "Prime Video (Local)"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892622/blue-jackets-stars"
+        },
+        {
+          "id": "nhl-401892623",
+          "date": "2026-11-01T02:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "10/31 - 10:00 PM EDT",
+          "name": "Calgary Flames at Colorado Avalanche",
+          "shortName": "CGY @ COL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Colorado Avalanche",
+              "abbreviation": "COL",
+              "score": "0",
+              "record": "7-5-1"
+            },
+            {
+              "side": "away",
+              "name": "Calgary Flames",
+              "abbreviation": "CGY",
+              "score": "0",
+              "record": "6-7-0"
+            }
+          ],
+          "venue": "Ball Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN+",
+            "Altitude Sports"
+          ],
+          "source": "https://www.espn.com/nhl/game/_/gameId/401892623/flames-avalanche"
+        }
+      ]
+    },
+    {
+      "sport": "Soccer",
+      "league": "EPL",
+      "status": "active",
+      "games": 8,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 8,
+      "earliestStart": "8:30 AM EDT",
+      "earliestStartIso": "2026-10-31T12:30Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "eng.1-401879248",
+          "date": "2026-10-31T12:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Manchester United at Chelsea",
+          "shortName": "MAN @ CHE",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Chelsea",
+              "abbreviation": "CHE",
+              "score": "0",
+              "record": "4-1-3"
+            },
+            {
+              "side": "away",
+              "name": "Manchester United",
+              "abbreviation": "MAN",
+              "score": "0",
+              "record": "1-4-3"
+            }
+          ],
+          "venue": "Stamford Bridge",
+          "probablePitchers": null,
+          "broadcasts": [
+            "USA Net",
+            "Tele"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879248/manchester-united-chelsea"
+        },
+        {
+          "id": "eng.1-401879251",
+          "date": "2026-10-31T15:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Leeds United at AFC Bournemouth",
+          "shortName": "LEE @ BOU",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "AFC Bournemouth",
+              "abbreviation": "BOU",
+              "score": "0",
+              "record": "2-3-3"
+            },
+            {
+              "side": "away",
+              "name": "Leeds United",
+              "abbreviation": "LEE",
+              "score": "0",
+              "record": "2-5-1"
+            }
+          ],
+          "venue": "Vitality Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Peacock"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879251/leeds-united-afc-bournemouth"
+        },
+        {
+          "id": "eng.1-401879249",
+          "date": "2026-10-31T15:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Nottingham Forest at Brentford",
+          "shortName": "NFO @ BRE",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Brentford",
+              "abbreviation": "BRE",
+              "score": "0",
+              "record": "2-5-1"
+            },
+            {
+              "side": "away",
+              "name": "Nottingham Forest",
+              "abbreviation": "NFO",
+              "score": "0",
+              "record": "1-3-4"
+            }
+          ],
+          "venue": "Gtech Community Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "USA Net",
+            "Universo"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879249/nottingham-forest-brentford"
+        },
+        {
+          "id": "eng.1-401879247",
+          "date": "2026-10-31T15:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Sunderland at Coventry City",
+          "shortName": "SUN @ COV",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Coventry City",
+              "abbreviation": "COV",
+              "score": "0",
+              "record": "2-0-6"
+            },
+            {
+              "side": "away",
+              "name": "Sunderland",
+              "abbreviation": "SUN",
+              "score": "0",
+              "record": "1-2-5"
+            }
+          ],
+          "venue": "Coventry Building Society Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Peacock"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879247/sunderland-coventry-city"
+        },
+        {
+          "id": "eng.1-401878763",
+          "date": "2026-10-31T15:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Ipswich Town at Hull City",
+          "shortName": "IPS @ HUL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Hull City",
+              "abbreviation": "HUL",
+              "score": "0",
+              "record": "2-4-2"
+            },
+            {
+              "side": "away",
+              "name": "Ipswich Town",
+              "abbreviation": "IPS",
+              "score": "0",
+              "record": "3-1-4"
+            }
+          ],
+          "venue": "The MKM Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Peacock"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401878763/ipswich-town-hull-city"
+        },
+        {
+          "id": "eng.1-401879245",
+          "date": "2026-10-31T15:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Brighton & Hove Albion at Manchester City",
+          "shortName": "BHA @ MNC",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Manchester City",
+              "abbreviation": "MNC",
+              "score": "0",
+              "record": "7-0-1"
+            },
+            {
+              "side": "away",
+              "name": "Brighton & Hove Albion",
+              "abbreviation": "BHA",
+              "score": "0",
+              "record": "5-1-2"
+            }
+          ],
+          "venue": "Etihad Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Peacock"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879245/brighton-hove-albion-manchester-city"
+        },
+        {
+          "id": "eng.1-401878761",
+          "date": "2026-10-31T17:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Crystal Palace at Tottenham Hotspur",
+          "shortName": "CRY @ TOT",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Tottenham Hotspur",
+              "abbreviation": "TOT",
+              "score": "0",
+              "record": "2-3-3"
+            },
+            {
+              "side": "away",
+              "name": "Crystal Palace",
+              "abbreviation": "CRY",
+              "score": "0",
+              "record": "2-1-5"
+            }
+          ],
+          "venue": "Tottenham Hotspur Stadium",
+          "probablePitchers": null,
+          "broadcasts": [
+            "NBC",
+            "Universo"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401878761/crystal-palace-tottenham-hotspur"
+        },
+        {
+          "id": "eng.1-401879250",
+          "date": "2026-10-31T20:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Fulham at Aston Villa",
+          "shortName": "FUL @ AVL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Aston Villa",
+              "abbreviation": "AVL",
+              "score": "0",
+              "record": "3-2-3"
+            },
+            {
+              "side": "away",
+              "name": "Fulham",
+              "abbreviation": "FUL",
+              "score": "0",
+              "record": "2-2-4"
+            }
+          ],
+          "venue": "Villa Park",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Peacock"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401879250/fulham-aston-villa"
+        }
+      ]
+    },
+    {
+      "sport": "Soccer",
+      "league": "LA LIGA",
+      "status": "active",
+      "games": 4,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 4,
+      "earliestStart": "9:00 AM EDT",
+      "earliestStartIso": "2026-10-31T13:00Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "esp.1-401882820",
+          "date": "2026-10-31T13:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Atlético Madrid at Levante",
+          "shortName": "ATM @ LEV",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Levante",
+              "abbreviation": "LEV",
+              "score": "0",
+              "record": "2-4-4"
+            },
+            {
+              "side": "away",
+              "name": "Atlético Madrid",
+              "abbreviation": "ATM",
+              "score": "0",
+              "record": "8-1-1"
+            }
+          ],
+          "venue": "Estadi Ciutat de València",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN Deportes",
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882820/atletico-madrid-levante"
+        },
+        {
+          "id": "esp.1-401882818",
+          "date": "2026-10-31T15:15Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Celta Vigo at Rayo Vallecano",
+          "shortName": "CEL @ RAY",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Rayo Vallecano",
+              "abbreviation": "RAY",
+              "score": "0",
+              "record": "2-3-4"
+            },
+            {
+              "side": "away",
+              "name": "Celta Vigo",
+              "abbreviation": "CEL",
+              "score": "0",
+              "record": "2-6-2"
+            }
+          ],
+          "venue": "Estadio de Vallecas",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN Deportes",
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882818/celta-vigo-rayo-vallecano"
+        },
+        {
+          "id": "esp.1-401882825",
+          "date": "2026-10-31T17:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Málaga at Real Betis",
+          "shortName": "MCF @ BET",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Real Betis",
+              "abbreviation": "BET",
+              "score": "0",
+              "record": "6-2-2"
+            },
+            {
+              "side": "away",
+              "name": "Málaga",
+              "abbreviation": "MCF",
+              "score": "0",
+              "record": "0-5-5"
+            }
+          ],
+          "venue": "Estadio La Cartuja",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN Deportes",
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882825/malaga-real-betis"
+        },
+        {
+          "id": "esp.1-401882822",
+          "date": "2026-10-31T20:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Alavés at Barcelona",
+          "shortName": "ALA @ BAR",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Barcelona",
+              "abbreviation": "BAR",
+              "score": "0",
+              "record": "9-0-1"
+            },
+            {
+              "side": "away",
+              "name": "Alavés",
+              "abbreviation": "ALA",
+              "score": "0",
+              "record": "3-3-4"
+            }
+          ],
+          "venue": "Spotify Camp Nou",
+          "probablePitchers": null,
+          "broadcasts": [
+            "ESPN Deportes",
+            "ESPN+"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401882822/alaves-barcelona"
+        }
+      ]
+    },
+    {
+      "sport": "Soccer",
+      "league": "BUNDESLIGA",
+      "status": "active",
+      "games": 6,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 6,
+      "earliestStart": "10:30 AM EDT",
+      "earliestStartIso": "2026-10-31T14:30Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "ger.1-401884753",
+          "date": "2026-10-31T14:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "VfB Stuttgart at Bayer Leverkusen",
+          "shortName": "VFB @ B04",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Bayer Leverkusen",
+              "abbreviation": "B04",
+              "score": "0",
+              "record": "4-1-2"
+            },
+            {
+              "side": "away",
+              "name": "VfB Stuttgart",
+              "abbreviation": "VFB",
+              "score": "0",
+              "record": "2-0-5"
+            }
+          ],
+          "venue": "BayArena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fandango"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884753/vfb-stuttgart-bayer-leverkusen"
+        },
+        {
+          "id": "ger.1-401884749",
+          "date": "2026-10-31T14:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "SC Paderborn 07 at Borussia Mönchengladbach",
+          "shortName": "SCP @ BMG",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Borussia Mönchengladbach",
+              "abbreviation": "BMG",
+              "score": "0",
+              "record": "1-0-6"
+            },
+            {
+              "side": "away",
+              "name": "SC Paderborn 07",
+              "abbreviation": "SCP",
+              "score": "0",
+              "record": "2-2-3"
+            }
+          ],
+          "venue": "BORUSSIA-PARK",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fandango"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884749/sc-paderborn-07-borussia-monchengladbach"
+        },
+        {
+          "id": "ger.1-401884751",
+          "date": "2026-10-31T14:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "SC Freiburg at FC Augsburg",
+          "shortName": "SCF @ FCA",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "FC Augsburg",
+              "abbreviation": "FCA",
+              "score": "0",
+              "record": "2-3-2"
+            },
+            {
+              "side": "away",
+              "name": "SC Freiburg",
+              "abbreviation": "SCF",
+              "score": "0",
+              "record": "4-1-2"
+            }
+          ],
+          "venue": "WWK Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fandango"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884751/sc-freiburg-fc-augsburg"
+        },
+        {
+          "id": "ger.1-401884747",
+          "date": "2026-10-31T14:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "RB Leipzig at Schalke 04",
+          "shortName": "RBL @ S04",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Schalke 04",
+              "abbreviation": "S04",
+              "score": "0",
+              "record": "1-3-3"
+            },
+            {
+              "side": "away",
+              "name": "RB Leipzig",
+              "abbreviation": "RBL",
+              "score": "0",
+              "record": "4-0-3"
+            }
+          ],
+          "venue": "Veltins Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fandango"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884747/rb-leipzig-schalke-04"
+        },
+        {
+          "id": "ger.1-401884748",
+          "date": "2026-10-31T14:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "TSG Hoffenheim at Werder Bremen",
+          "shortName": "TSG @ SVW",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Werder Bremen",
+              "abbreviation": "SVW",
+              "score": "0",
+              "record": "3-3-1"
+            },
+            {
+              "side": "away",
+              "name": "TSG Hoffenheim",
+              "abbreviation": "TSG",
+              "score": "0",
+              "record": "3-0-4"
+            }
+          ],
+          "venue": "Weserstadion",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Fandango"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884748/tsg-hoffenheim-werder-bremen"
+        },
+        {
+          "id": "ger.1-401884754",
+          "date": "2026-10-31T17:30Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Borussia Dortmund at Bayern Munich",
+          "shortName": "DOR @ MUN",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Bayern Munich",
+              "abbreviation": "MUN",
+              "score": "0",
+              "record": "5-2-0"
+            },
+            {
+              "side": "away",
+              "name": "Borussia Dortmund",
+              "abbreviation": "DOR",
+              "score": "0",
+              "record": "5-2-0"
+            }
+          ],
+          "venue": "Allianz Arena",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CNBC",
+            "Fandango"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401884754/borussia-dortmund-bayern-munich"
+        }
+      ]
+    },
+    {
+      "sport": "Soccer",
+      "league": "SERIE A",
+      "status": "active",
+      "games": 3,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 3,
+      "earliestStart": "10:00 AM EDT",
+      "earliestStartIso": "2026-10-31T14:00Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "ita.1-401874798",
+          "date": "2026-10-31T14:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Monza at Bologna",
+          "shortName": "MON @ BOL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Bologna",
+              "abbreviation": "BOL",
+              "score": "0",
+              "record": "3-2-4"
+            },
+            {
+              "side": "away",
+              "name": "Monza",
+              "abbreviation": "MON",
+              "score": "0",
+              "record": "2-1-6"
+            }
+          ],
+          "venue": "Renato Dall'Ara",
+          "probablePitchers": null,
+          "broadcasts": [
+            "CBSSN",
+            "Paramount+"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874798/monza-bologna"
+        },
+        {
+          "id": "ita.1-401874990",
+          "date": "2026-10-31T17:00Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "AS Roma at Udinese",
+          "shortName": "ROMA @ UDI",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Udinese",
+              "abbreviation": "UDI",
+              "score": "0",
+              "record": "1-2-6"
+            },
+            {
+              "side": "away",
+              "name": "AS Roma",
+              "abbreviation": "ROMA",
+              "score": "0",
+              "record": "6-3-0"
+            }
+          ],
+          "venue": "Stadio Friuli",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Paramount+"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874990/as-roma-udinese"
+        },
+        {
+          "id": "ita.1-401874795",
+          "date": "2026-10-31T19:45Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Internazionale at AC Milan",
+          "shortName": "INT @ MIL",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "AC Milan",
+              "abbreviation": "MIL",
+              "score": "0",
+              "record": "5-3-1"
+            },
+            {
+              "side": "away",
+              "name": "Internazionale",
+              "abbreviation": "INT",
+              "score": "0",
+              "record": "8-1-0"
+            }
+          ],
+          "venue": "San Siro",
+          "probablePitchers": null,
+          "broadcasts": [
+            "Paramount+"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401874795/internazionale-ac-milan"
+        }
+      ]
+    },
+    {
+      "sport": "Soccer",
+      "league": "LIGUE 1",
+      "status": "active",
+      "games": 1,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 1,
+      "earliestStart": "3:45 PM EDT",
+      "earliestStartIso": "2026-10-31T19:45Z",
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": [
+        {
+          "id": "fra.1-401876413",
+          "date": "2026-10-31T19:45Z",
+          "completed": false,
+          "state": "pre",
+          "status": "Scheduled",
+          "name": "Le Mans at Troyes",
+          "shortName": "MNS @ TRY",
+          "competitors": [
+            {
+              "side": "home",
+              "name": "Troyes",
+              "abbreviation": "TRY",
+              "score": "0",
+              "record": "1-2-5"
+            },
+            {
+              "side": "away",
+              "name": "Le Mans",
+              "abbreviation": "MNS",
+              "score": "0",
+              "record": "1-4-3"
+            }
+          ],
+          "venue": "Stade de l'Aube",
+          "probablePitchers": null,
+          "broadcasts": [
+            "beIn Sports"
+          ],
+          "source": "https://www.espn.com/soccer/match/_/gameId/401876413/le-mans-troyes"
+        }
+      ]
+    },
+    {
+      "sport": "Soccer",
+      "league": "UCL",
+      "status": "no_slate",
+      "games": 0,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 0,
+      "earliestStart": null,
+      "earliestStartIso": null,
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": []
+    },
+    {
+      "sport": "Soccer",
+      "league": "UEL",
+      "status": "no_slate",
+      "games": 0,
+      "completed": 0,
+      "live": 0,
+      "scheduled": 0,
+      "earliestStart": null,
+      "earliestStartIso": null,
+      "provider": "ESPN Scoreboard API",
+      "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261031",
+      "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261031&limit=200",
+      "sourceVerifiedAt": "2026-10-31T09:37:46.128Z",
+      "events": []
+    }
+  ],
+  "dataAvailability": {
+    "schedules": "verified",
+    "results": "verified",
+    "odds": "unavailable",
+    "lineups": "unavailable",
+    "injuries": "unavailable",
+    "weather": "unavailable",
+    "promos": "unavailable",
+    "bankroll": "historical_only",
+    "gptGrades": "unavailable"
+  },
+  "errors": [],
+  "soccerScope": {
+    "configVersion": "0.2",
+    "trackingMode": "schedule_and_results_only",
+    "included": [
+      "EPL",
+      "LA LIGA",
+      "BUNDESLIGA",
+      "SERIE A",
+      "LIGUE 1",
+      "UCL",
+      "UEL"
+    ],
+    "excluded": [
+      "MLS",
+      "SAUDI PRO LEAGUE"
+    ],
+    "analysisGate": "Do not issue a soccer Leg Grade, Confidence score, recommendation, or FINAL wager until a versioned soccer market model and all required market inputs have been verified."
+  },
+  "note": "87 schedule entries found across 9 active leagues. Soccer is limited to the European Big Five plus UEFA Champions League and Europa League; MLS and the Saudi Pro League are excluded. Schedule and result facts are collected separately from betting inputs. No wager may become FINAL from this file."
+}
