@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-11-03",
   "timezone": "America/New_York",
-  "lastVerified": "2026-11-03T11:54:56.802Z",
+  "lastVerified": "2026-11-03T19:29:25.654Z",
   "gate": "PRELIMINARY",
   "activeGames": 22,
   "leagues": [
@@ -19,7 +19,7 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-11-03",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-03&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -35,7 +35,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": [
         {
           "id": "college-football-401866453",
@@ -114,7 +114,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -130,7 +130,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -146,7 +146,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -162,7 +162,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": [
         {
           "id": "nhl-401892633",
@@ -538,7 +538,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -554,7 +554,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -570,7 +570,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -586,7 +586,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -602,7 +602,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     },
     {
@@ -611,21 +611,21 @@
       "status": "active",
       "games": 9,
       "completed": 0,
-      "live": 0,
-      "scheduled": 9,
+      "live": 2,
+      "scheduled": 7,
       "earliestStart": "12:45 PM EST",
       "earliestStartIso": "2026-11-03T17:45Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": [
         {
           "id": "uefa.champions-401915311",
           "date": "2026-11-03T17:45Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "83'",
           "name": "VfB Stuttgart at Galatasaray",
           "shortName": "VFB @ GAL",
           "competitors": [
@@ -633,7 +633,7 @@
               "side": "home",
               "name": "Galatasaray",
               "abbreviation": "GAL",
-              "score": "0",
+              "score": "2",
               "record": "1-0-2"
             },
             {
@@ -649,14 +649,14 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401915311/vfb-stuttgart-galatasaray"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261103"
         },
         {
           "id": "uefa.champions-401915310",
           "date": "2026-11-03T17:45Z",
           "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "state": "in",
+          "status": "86'",
           "name": "Sporting CP at Shakhtar Donetsk",
           "shortName": "SCP @ SHK",
           "competitors": [
@@ -671,7 +671,7 @@
               "side": "away",
               "name": "Sporting CP",
               "abbreviation": "SCP",
-              "score": "0",
+              "score": "1",
               "record": "2-0-1"
             }
           ],
@@ -680,7 +680,7 @@
           "broadcasts": [
             "Paramount+"
           ],
-          "source": "https://www.espn.com/soccer/match/_/gameId/401915310/sporting-cp-shakhtar-donetsk"
+          "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261103"
         },
         {
           "id": "uefa.champions-401915386",
@@ -771,6 +771,7 @@
           "venue": "Aspmyra Stadion",
           "probablePitchers": null,
           "broadcasts": [
+            "CBSSN",
             "Paramount+"
           ],
           "source": "https://www.espn.com/soccer/match/_/gameId/401915384/lille-bodoglimt"
@@ -914,7 +915,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261103",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261103&limit=200",
-      "sourceVerifiedAt": "2026-11-03T11:54:56.802Z",
+      "sourceVerifiedAt": "2026-11-03T19:29:25.654Z",
       "events": []
     }
   ],
