@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "date": "2026-11-04",
   "timezone": "America/New_York",
-  "lastVerified": "2026-11-04T19:44:14.261Z",
+  "lastVerified": "2026-11-05T01:27:33.471Z",
   "gate": "PRELIMINARY",
   "activeGames": 31,
   "leagues": [
@@ -19,7 +19,7 @@
       "provider": "MLB Stats API",
       "source": "https://www.mlb.com/schedule/2026-11-04",
       "endpoint": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-11-04&hydrate=probablePitcher,team,venue",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -28,21 +28,21 @@
       "status": "active",
       "games": 3,
       "completed": 0,
-      "live": 0,
-      "scheduled": 3,
+      "live": 3,
+      "scheduled": 0,
       "earliestStart": "7:00 PM EST",
       "earliestStartIso": "2026-11-05T00:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/college-football/scoreboard/_/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": [
         {
           "id": "college-football-401866455",
           "date": "2026-11-05T00:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:00 PM EST",
+          "state": "in",
+          "status": "0:42 - 2nd",
           "name": "Ball State Cardinals at Massachusetts Minutemen",
           "shortName": "BALL @ MASS",
           "competitors": [
@@ -50,14 +50,14 @@
               "side": "home",
               "name": "Massachusetts Minutemen",
               "abbreviation": "MASS",
-              "score": "0",
+              "score": "7",
               "record": "4-4"
             },
             {
               "side": "away",
               "name": "Ball State Cardinals",
               "abbreviation": "BALL",
-              "score": "0",
+              "score": "7",
               "record": "3-5"
             }
           ],
@@ -66,14 +66,14 @@
           "broadcasts": [
             "ESPNU"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401866455/ball-state-umass"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261104"
         },
         {
           "id": "college-football-401866457",
           "date": "2026-11-05T00:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:00 PM EST",
+          "state": "in",
+          "status": "Halftime",
           "name": "Toledo Rockets at Sacramento State Hornets",
           "shortName": "TOL @ SAC",
           "competitors": [
@@ -81,14 +81,14 @@
               "side": "home",
               "name": "Sacramento State Hornets",
               "abbreviation": "SAC",
-              "score": "0",
+              "score": "10",
               "record": "2-7"
             },
             {
               "side": "away",
               "name": "Toledo Rockets",
               "abbreviation": "TOL",
-              "score": "0",
+              "score": "7",
               "record": "6-2"
             }
           ],
@@ -97,14 +97,14 @@
           "broadcasts": [
             "CBSSN"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401866457/toledo-sacramento-st"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261104"
         },
         {
           "id": "college-football-401866456",
           "date": "2026-11-05T00:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:30 PM EST",
+          "state": "in",
+          "status": "10:25 - 2nd",
           "name": "Central Michigan Chippewas at Eastern Michigan Eagles",
           "shortName": "CMU VS EMU",
           "competitors": [
@@ -119,7 +119,7 @@
               "side": "away",
               "name": "Central Michigan Chippewas",
               "abbreviation": "CMU",
-              "score": "0",
+              "score": "14",
               "record": "3-5"
             }
           ],
@@ -128,7 +128,7 @@
           "broadcasts": [
             "ESPN2"
           ],
-          "source": "https://www.espn.com/college-football/game/_/gameId/401866456/c-michigan-e-michigan"
+          "source": "https://www.espn.com/college-football/scoreboard/_/date/20261104"
         }
       ]
     },
@@ -145,7 +145,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nfl/scoreboard/_/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -161,7 +161,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/wnba/scoreboard/_/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -170,21 +170,21 @@
       "status": "active",
       "games": 14,
       "completed": 0,
-      "live": 0,
-      "scheduled": 14,
+      "live": 8,
+      "scheduled": 6,
       "earliestStart": "7:00 PM EST",
       "earliestStartIso": "2026-11-05T00:00Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nba/scoreboard/_/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": [
         {
           "id": "nba-401909922",
           "date": "2026-11-05T00:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:00 PM EST",
+          "state": "in",
+          "status": "0.0 - 2nd",
           "name": "Philadelphia 76ers at Detroit Pistons",
           "shortName": "PHI @ DET",
           "competitors": [
@@ -192,14 +192,14 @@
               "side": "home",
               "name": "Detroit Pistons",
               "abbreviation": "DET",
-              "score": "0",
+              "score": "42",
               "record": "6-1"
             },
             {
               "side": "away",
               "name": "Philadelphia 76ers",
               "abbreviation": "PHI",
-              "score": "0",
+              "score": "56",
               "record": "7-1"
             }
           ],
@@ -208,14 +208,14 @@
           "broadcasts": [
             "ESPN"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909922/76ers-pistons"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909923",
           "date": "2026-11-05T00:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:00 PM EST",
+          "state": "in",
+          "status": "8:59 - 3rd",
           "name": "Atlanta Hawks at Washington Wizards",
           "shortName": "ATL @ WSH",
           "competitors": [
@@ -223,14 +223,14 @@
               "side": "home",
               "name": "Washington Wizards",
               "abbreviation": "WSH",
-              "score": "0",
+              "score": "63",
               "record": "4-3"
             },
             {
               "side": "away",
               "name": "Atlanta Hawks",
               "abbreviation": "ATL",
-              "score": "0",
+              "score": "71",
               "record": "4-4"
             }
           ],
@@ -239,14 +239,14 @@
           "broadcasts": [
             "MNMT"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909923/hawks-wizards"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909924",
           "date": "2026-11-05T00:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:30 PM EST",
+          "state": "in",
+          "status": "4:49 - 2nd",
           "name": "Milwaukee Bucks at Boston Celtics",
           "shortName": "MIL @ BOS",
           "competitors": [
@@ -254,14 +254,14 @@
               "side": "home",
               "name": "Boston Celtics",
               "abbreviation": "BOS",
-              "score": "0",
+              "score": "48",
               "record": "5-2"
             },
             {
               "side": "away",
               "name": "Milwaukee Bucks",
               "abbreviation": "MIL",
-              "score": "0",
+              "score": "27",
               "record": "1-6"
             }
           ],
@@ -271,14 +271,14 @@
             "MyMi",
             "Bucks App"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909924/bucks-celtics"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909925",
           "date": "2026-11-05T00:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:30 PM EST",
+          "state": "in",
+          "status": "8:10 - 2nd",
           "name": "Charlotte Hornets at Brooklyn Nets",
           "shortName": "CHA @ BKN",
           "competitors": [
@@ -286,14 +286,14 @@
               "side": "home",
               "name": "Brooklyn Nets",
               "abbreviation": "BKN",
-              "score": "0",
+              "score": "30",
               "record": "1-6"
             },
             {
               "side": "away",
               "name": "Charlotte Hornets",
               "abbreviation": "CHA",
-              "score": "0",
+              "score": "29",
               "record": "3-5"
             }
           ],
@@ -302,14 +302,14 @@
           "broadcasts": [
             "DAZN (YES)"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909925/hornets-nets"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909926",
           "date": "2026-11-05T00:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:30 PM EST",
+          "state": "in",
+          "status": "6:36 - 2nd",
           "name": "Chicago Bulls at New York Knicks",
           "shortName": "CHI @ NY",
           "competitors": [
@@ -317,28 +317,28 @@
               "side": "home",
               "name": "New York Knicks",
               "abbreviation": "NY",
-              "score": "0",
+              "score": "62",
               "record": "3-4"
             },
             {
               "side": "away",
               "name": "Chicago Bulls",
               "abbreviation": "CHI",
-              "score": "0",
+              "score": "36",
               "record": "1-6"
             }
           ],
           "venue": "Madison Square Garden",
           "probablePitchers": null,
           "broadcasts": [],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909926/bulls-knicks"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909927",
           "date": "2026-11-05T01:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 8:00 PM EST",
+          "state": "in",
+          "status": "2:52 - 1st",
           "name": "Indiana Pacers at Memphis Grizzlies",
           "shortName": "IND @ MEM",
           "competitors": [
@@ -346,14 +346,14 @@
               "side": "home",
               "name": "Memphis Grizzlies",
               "abbreviation": "MEM",
-              "score": "0",
+              "score": "22",
               "record": "6-1"
             },
             {
               "side": "away",
               "name": "Indiana Pacers",
               "abbreviation": "IND",
-              "score": "0",
+              "score": "23",
               "record": "2-6"
             }
           ],
@@ -363,14 +363,14 @@
             "DAZN MEM",
             "DAZN IND"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909927/pacers-grizzlies"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909928",
           "date": "2026-11-05T01:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 8:00 PM EST",
+          "state": "in",
+          "status": "4:45 - 1st",
           "name": "Utah Jazz at New Orleans Pelicans",
           "shortName": "UTAH @ NO",
           "competitors": [
@@ -378,14 +378,14 @@
               "side": "home",
               "name": "New Orleans Pelicans",
               "abbreviation": "NO",
-              "score": "0",
+              "score": "15",
               "record": "3-4"
             },
             {
               "side": "away",
               "name": "Utah Jazz",
               "abbreviation": "UTAH",
-              "score": "0",
+              "score": "12",
               "record": "1-6"
             }
           ],
@@ -397,14 +397,14 @@
             "KJZZ-TV",
             "Jazz+"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909928/jazz-pelicans"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909929",
           "date": "2026-11-05T01:00Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 8:00 PM EST",
+          "state": "in",
+          "status": "3:37 - 1st",
           "name": "Cleveland Cavaliers at Oklahoma City Thunder",
           "shortName": "CLE @ OKC",
           "competitors": [
@@ -412,14 +412,14 @@
               "side": "home",
               "name": "Oklahoma City Thunder",
               "abbreviation": "OKC",
-              "score": "0",
+              "score": "25",
               "record": "5-2"
             },
             {
               "side": "away",
               "name": "Cleveland Cavaliers",
               "abbreviation": "CLE",
-              "score": "0",
+              "score": "9",
               "record": "4-3"
             }
           ],
@@ -430,7 +430,7 @@
             "Thunder App",
             "DAZN CLE"
           ],
-          "source": "https://www.espn.com/nba/game/_/gameId/401909929/cavaliers-thunder"
+          "source": "https://www.espn.com/nba/scoreboard/_/date/20261104"
         },
         {
           "id": "nba-401909930",
@@ -628,21 +628,21 @@
       "status": "active",
       "games": 4,
       "completed": 0,
-      "live": 0,
-      "scheduled": 4,
+      "live": 2,
+      "scheduled": 2,
       "earliestStart": "7:30 PM EST",
       "earliestStartIso": "2026-11-05T00:30Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/nhl/scoreboard/_/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": [
         {
           "id": "nhl-401892644",
           "date": "2026-11-05T00:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:30 PM EST",
+          "state": "in",
+          "status": "End of 1st",
           "name": "Ottawa Senators at Buffalo Sabres",
           "shortName": "OTT @ BUF",
           "competitors": [
@@ -667,14 +667,14 @@
             "ESPN+",
             "MSGB"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892644/senators-sabres"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261104"
         },
         {
           "id": "nhl-401892645",
           "date": "2026-11-05T00:30Z",
           "completed": false,
-          "state": "pre",
-          "status": "11/4 - 7:30 PM EST",
+          "state": "in",
+          "status": "End of 1st",
           "name": "Chicago Blackhawks at Florida Panthers",
           "shortName": "CHI @ FLA",
           "competitors": [
@@ -682,7 +682,7 @@
               "side": "home",
               "name": "Florida Panthers",
               "abbreviation": "FLA",
-              "score": "0",
+              "score": "2",
               "record": "8-5-2"
             },
             {
@@ -699,7 +699,7 @@
             "TNT",
             "truTV"
           ],
-          "source": "https://www.espn.com/nhl/game/_/gameId/401892645/blackhawks-panthers"
+          "source": "https://www.espn.com/nhl/scoreboard/_/date/20261104"
         },
         {
           "id": "nhl-401892646",
@@ -781,7 +781,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/eng.1/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -797,7 +797,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/esp.1/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -813,7 +813,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ger.1/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -829,7 +829,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -845,7 +845,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/fra.1/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": []
     },
     {
@@ -853,15 +853,15 @@
       "league": "UCL",
       "status": "active",
       "games": 9,
-      "completed": 2,
+      "completed": 9,
       "live": 0,
-      "scheduled": 7,
+      "scheduled": 0,
       "earliestStart": "12:45 PM EST",
       "earliestStartIso": "2026-11-04T17:45Z",
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.champions/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": [
         {
           "id": "uefa.champions-401915383",
@@ -928,9 +928,9 @@
         {
           "id": "uefa.champions-401915304",
           "date": "2026-11-04T20:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Real Betis at Borussia Dortmund",
           "shortName": "BET @ DOR",
           "competitors": [
@@ -938,15 +938,15 @@
               "side": "home",
               "name": "Borussia Dortmund",
               "abbreviation": "DOR",
-              "score": "0",
-              "record": "2-0-1"
+              "score": "2",
+              "record": "3-0-1"
             },
             {
               "side": "away",
               "name": "Real Betis",
               "abbreviation": "BET",
-              "score": "0",
-              "record": "3-0-0"
+              "score": "1",
+              "record": "3-0-1"
             }
           ],
           "venue": "Signal Iduna Park",
@@ -959,9 +959,9 @@
         {
           "id": "uefa.champions-401915301",
           "date": "2026-11-04T20:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Napoli at FC Porto",
           "shortName": "NAP @ FCP",
           "competitors": [
@@ -969,15 +969,15 @@
               "side": "home",
               "name": "FC Porto",
               "abbreviation": "FCP",
-              "score": "0",
-              "record": "0-0-3"
+              "score": "4",
+              "record": "1-0-3"
             },
             {
               "side": "away",
               "name": "Napoli",
               "abbreviation": "NAP",
-              "score": "0",
-              "record": "1-0-2"
+              "score": "1",
+              "record": "1-0-3"
             }
           ],
           "venue": "Estádio do Dragão",
@@ -991,9 +991,9 @@
         {
           "id": "uefa.champions-401915305",
           "date": "2026-11-04T20:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Como at Lens",
           "shortName": "COMO @ RCL",
           "competitors": [
@@ -1001,15 +1001,15 @@
               "side": "home",
               "name": "Lens",
               "abbreviation": "RCL",
-              "score": "0",
-              "record": "1-0-2"
+              "score": "1",
+              "record": "1-0-3"
             },
             {
               "side": "away",
               "name": "Como",
               "abbreviation": "COMO",
-              "score": "0",
-              "record": "2-0-1"
+              "score": "9",
+              "record": "3-0-1"
             }
           ],
           "venue": "Stade Bollaert-Delelis",
@@ -1022,9 +1022,9 @@
         {
           "id": "uefa.champions-401915303",
           "date": "2026-11-04T20:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Club Brugge at PSV Eindhoven",
           "shortName": "BRU @ PSV",
           "competitors": [
@@ -1032,15 +1032,15 @@
               "side": "home",
               "name": "PSV Eindhoven",
               "abbreviation": "PSV",
-              "score": "0",
-              "record": "1-1-1"
+              "score": "1",
+              "record": "1-1-2"
             },
             {
               "side": "away",
               "name": "Club Brugge",
               "abbreviation": "BRU",
-              "score": "0",
-              "record": "2-0-1"
+              "score": "2",
+              "record": "3-0-1"
             }
           ],
           "venue": "Philips Stadion",
@@ -1053,9 +1053,9 @@
         {
           "id": "uefa.champions-401915306",
           "date": "2026-11-04T20:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Manchester City at RB Leipzig",
           "shortName": "MNC @ RBL",
           "competitors": [
@@ -1063,15 +1063,15 @@
               "side": "home",
               "name": "RB Leipzig",
               "abbreviation": "RBL",
-              "score": "0",
-              "record": "1-0-2"
+              "score": "2",
+              "record": "1-0-3"
             },
             {
               "side": "away",
               "name": "Manchester City",
               "abbreviation": "MNC",
-              "score": "0",
-              "record": "2-0-1"
+              "score": "3",
+              "record": "3-0-1"
             }
           ],
           "venue": "Red Bull Arena",
@@ -1084,9 +1084,9 @@
         {
           "id": "uefa.champions-401915381",
           "date": "2026-11-04T20:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Arsenal at Slavia Prague",
           "shortName": "ARS @ SLP",
           "competitors": [
@@ -1094,15 +1094,15 @@
               "side": "home",
               "name": "Slavia Prague",
               "abbreviation": "SLP",
-              "score": "0",
-              "record": "0-1-2"
+              "score": "1",
+              "record": "0-1-3"
             },
             {
               "side": "away",
               "name": "Arsenal",
               "abbreviation": "ARS",
-              "score": "0",
-              "record": "2-1-0"
+              "score": "2",
+              "record": "3-1-0"
             }
           ],
           "venue": "Fortuna Arena",
@@ -1115,9 +1115,9 @@
         {
           "id": "uefa.champions-401915302",
           "date": "2026-11-04T20:00Z",
-          "completed": false,
-          "state": "pre",
-          "status": "Scheduled",
+          "completed": true,
+          "state": "post",
+          "status": "FT",
           "name": "Sabah FK at Viking FK",
           "shortName": "SAB @ VFK",
           "competitors": [
@@ -1125,15 +1125,15 @@
               "side": "home",
               "name": "Viking FK",
               "abbreviation": "VFK",
-              "score": "0",
-              "record": "0-1-2"
+              "score": "4",
+              "record": "1-1-2"
             },
             {
               "side": "away",
               "name": "Sabah FK",
               "abbreviation": "SAB",
-              "score": "0",
-              "record": "1-0-2"
+              "score": "1",
+              "record": "1-0-3"
             }
           ],
           "venue": "Viking Stadion",
@@ -1158,7 +1158,7 @@
       "provider": "ESPN Scoreboard API",
       "source": "https://www.espn.com/soccer/scoreboard/_/league/uefa.europa/date/20261104",
       "endpoint": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261104&limit=200",
-      "sourceVerifiedAt": "2026-11-04T19:44:14.261Z",
+      "sourceVerifiedAt": "2026-11-05T01:27:33.471Z",
       "events": [
         {
           "id": "uefa.europa-401915551",
